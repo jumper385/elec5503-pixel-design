@@ -1,0 +1,7 @@
+DEFINE cdsDefTechLib $CDSHOME/tools/dfII/etc/cdsDefTechLib 
+DEFINE basic $CDSHOME/tools/dfII/etc/cdslib/basic 
+DEFINE analogLib $CDSHOME/tools/dfII/etc/cdslib/artist/analogLib 
+
+DEFINE umc13mmrf /usr/local/cadence6/G-9FD-MIXED_MODE_RFCMOS13-1P8M-MMC_FSG_L130E_UM130FDKMFC0000OA-FDK-Ver.A02_PB/umc13mmrf
+
+DEFINE avTech $ASSURAHOME/tools.lnx86/assura/etc/avtech/avTech
