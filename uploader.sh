@@ -46,17 +46,17 @@ if [ "$MODE" == "upload" ]; then
     # zip the current directory
     tar -czf /tmp/$REPO_NAME.tar.gz --no-xattrs --exclude='.git' --exclude 'ssh_key*' .
     # upload to remote server
-    scp /tmp/$REPO_NAME.tar.gz $REMOTE_USER@$REMOTE_HOST:/tmp
+    scp -i ./ssh_key_$REMOTE_USER /tmp/$REPO_NAME.tar.gz $REMOTE_USER@$REMOTE_HOST:/tmp
     # unzip the file on remote server
-    ssh $REMOTE_USER@$REMOTE_HOST "mkdir -p ~/$REPO_NAME"
-    ssh $REMOTE_USER@$REMOTE_HOST "tar -xf /tmp/$REPO_NAME.tar.gz -C ~/$REPO_NAME"
+    ssh -i ./ssh_key_$REMOTE_USER $REMOTE_USER@$REMOTE_HOST "mkdir -p ~/$REPO_NAME"
+    ssh -i ./ssh_key_$REMOTE_USER $REMOTE_USER@$REMOTE_HOST "tar -xf /tmp/$REPO_NAME.tar.gz -C ~/$REPO_NAME"
 fi
 
 # Download from directory
 if [ "$MODE" == "download" ]; then
     # download the current directory from the remote server
     # ignore .git directory
-    ssh $REMOTE_USER@$REMOTE_HOST "tar -czf /tmp/$REPO_NAME.tar.gz --exclude .git --exclude 'ssh_key*' $REPO_NAME"
-    scp $REMOTE_USER@$REMOTE_HOST:/tmp/$REPO_NAME.tar.gz ../
+    ssh -i ./ssh_key_$REMOTE_USER $REMOTE_USER@$REMOTE_HOST "tar -czf /tmp/$REPO_NAME.tar.gz --exclude .git --exclude 'ssh_key*' $REPO_NAME"
+    scp -i ./ssh_key_$REMOTE_USER $REMOTE_USER@$REMOTE_HOST:/tmp/$REPO_NAME.tar.gz ../
     tar -xf ../$REPO_NAME.tar.gz -C ../
 fi
