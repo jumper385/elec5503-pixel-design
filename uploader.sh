@@ -44,7 +44,7 @@ fi
 # Upload from directory
 if [ "$MODE" == "upload" ]; then
     # zip the current directory
-    tar -czf ../$REPO_NAME.tar.gz --exclude='.git *.tar.gz' .
+    tar -czf ../$REPO_NAME.tar.gz --exclude='.git' .
     # upload to remote server
     scp ../$REPO_NAME.tar.gz $REMOTE_USER@$REMOTE_HOST:~/
     # unzip the file on remote server
