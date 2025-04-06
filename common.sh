@@ -9,7 +9,7 @@ function setup_env() {
         # prompt for username
         read -p "Enter your username: " USERNAME
         HOSTNAME=172.105.254.131
-        REPO_NAME=elec5503-remote
+        REPO_NAME=elec5503-pixel-design
 
         # create .env file
         echo "REMOTE_USER=$USERNAME" > $ENV_FILE
