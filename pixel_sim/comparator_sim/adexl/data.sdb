@@ -73,19 +73,19 @@
 				</dependentTests>
 			</var>
 			<var>w_a
-				<value>0.3</value>
+				<value>0.323</value>
 				<dependentTests>
 					<dependentTest enabled="1">pixel_sim:comparator_sim:1</dependentTest>
 				</dependentTests>
 			</var>
 			<var>w_b
-				<value>0.13</value>
+				<value>0.142</value>
 				<dependentTests>
 					<dependentTest enabled="1">pixel_sim:comparator_sim:1</dependentTest>
 				</dependentTests>
 			</var>
 			<var>w_base
-				<value>0.42</value>
+				<value>0.453</value>
 				<dependentTests>
 					<dependentTest enabled="1">pixel_sim:comparator_sim:1</dependentTest>
 				</dependentTests>
@@ -97,7 +97,7 @@
 				</dependentTests>
 			</var>
 			<var enabled="1">w_nandab
-				<value>0.04</value>
+				<value>0.03:0.001:0.06</value>
 				<dependentTests>
 					<dependentTest enabled="1" omitted="0">pixel_sim:comparator_sim:1</dependentTest>
 				</dependentTests>
@@ -126,8 +126,8 @@
 				<testname>pixel_sim:comparator_sim:1</testname>
 				<resname>cross(VDC("OUT") 0.6 1 "either" nil nil)</resname>
 				<specType>range</specType>
-				<min>0.49</min>
-				<max>0.51</max>
+				<min>0.59</min>
+				<max>0.61</max>
 				<target></target>
 				<tol></tol>
 				<specWeight>100</specWeight>
@@ -173,7 +173,7 @@
 		</runoptions>
 	</active>
 	<history>History
-		<historyentry assemblerOrExplorer="adexl" roOrView="view">Interactive.117
+		<historyentry assemblerOrExplorer="adexl" roOrView="view">Interactive.148
 			<checkpoint>
 				<corners>
 					<corner enabled="1">_default</corner>
@@ -207,1147 +207,7 @@
 								<value>$AXL_SETUPDB_DIR/test_states</value>
 							</option>
 							<option>state
-								<value>pixel_sim:comparator_sim:1_none_Interactive.117</value>
-							</option>
-						</tooloptions>
-						<outputs>
-							<output>cross(VDC("OUT") 0.6 1 "either" nil nil)
-								<evalType>point</evalType>
-								<units>V</units>
-								<significantDigits>3</significantDigits>
-							</output>
-						</outputs>
-						<origoptions>
-							<option>cell
-								<value>comparator_sim</value>
-							</option>
-							<option>lib
-								<value>pixel_sim</value>
-							</option>
-							<option>sim
-								<value>spectre</value>
-							</option>
-							<option>view
-								<value>schematic</value>
-							</option>
-						</origoptions>
-					</test>
-				</tests>
-				<vars>
-					<var enabled="1">Vb
-						<value>0</value>
-						<dependentTests>
-							<dependentTest enabled="1" omitted="0">pixel_sim:comparator_sim:1</dependentTest>
-						</dependentTests>
-					</var>
-					<var enabled="1">Va
-						<value>0</value>
-						<dependentTests>
-							<dependentTest enabled="1" omitted="0">pixel_sim:comparator_sim:1</dependentTest>
-						</dependentTests>
-					</var>
-					<var>w_a
-						<value>0.3</value>
-						<dependentTests>
-							<dependentTest enabled="1">pixel_sim:comparator_sim:1</dependentTest>
-						</dependentTests>
-					</var>
-					<var>w_b
-						<value>0.13</value>
-						<dependentTests>
-							<dependentTest enabled="1">pixel_sim:comparator_sim:1</dependentTest>
-						</dependentTests>
-					</var>
-					<var>w_base
-						<value>0.42</value>
-						<dependentTests>
-							<dependentTest enabled="1">pixel_sim:comparator_sim:1</dependentTest>
-						</dependentTests>
-					</var>
-					<var>w_nmos
-						<value>1</value>
-						<dependentTests>
-							<dependentTest enabled="1">pixel_sim:comparator_sim:1</dependentTest>
-						</dependentTests>
-					</var>
-					<var enabled="1">w_nandab
-						<value>0.1:0.1:2</value>
-						<dependentTests>
-							<dependentTest enabled="1" omitted="0">pixel_sim:comparator_sim:1</dependentTest>
-						</dependentTests>
-					</var>
-					<var enabled="0">w_
-						<value>1</value>
-						<dependentTests>
-							<dependentTest enabled="1" omitted="0">pixel_sim:comparator_sim:1</dependentTest>
-						</dependentTests>
-					</var>
-				</vars>
-				<overwritehistoryname>Interactive.0</overwritehistoryname>
-				<plottingoptions>
-					<plottingoption>plottype
-						<value>None</value>
-					</plottingoption>
-					<plottingoption>usewaveformtemplate
-						<value>no</value>
-					</plottingoption>
-					<plottingoption>waveformtemplate
-						<value></value>
-					</plottingoption>
-				</plottingoptions>
-				<specs>
-					<spec>pixel_sim:comparator_sim:1.cross(VDC("OUT") 0.6 1 "either" nil nil)
-						<testname>pixel_sim:comparator_sim:1</testname>
-						<resname>cross(VDC("OUT") 0.6 1 "either" nil nil)</resname>
-						<specType>range</specType>
-						<min>0.49</min>
-						<max>0.51</max>
-						<target></target>
-						<tol></tol>
-						<specWeight>100</specWeight>
-					</spec>
-				</specs>
-				<startingpoint>
-					<vars>
-						<var>w_a
-							<value>400n</value>
-						</var>
-						<var>w_b
-							<value>400n</value>
-						</var>
-						<var>w_base
-							<value>400n</value>
-						</var>
-					</vars>
-				</startingpoint>
-				<runoptions>
-					<mode>Local Optimization
-						<runoption>effort
-							<value>brentPowell</value>
-						</runoption>
-						<runoption>lazy
-							<value>1</value>
-						</runoption>
-						<runoption>tillsatisfied
-							<value>1</value>
-						</runoption>
-						<runoption>startingstateorpoint
-							<value>Reference Point</value>
-						</runoption>
-						<runoption>startingstatename
-							<value>NONE</value>
-						</runoption>
-						<runoption>timelimit
-							<value></value>
-						</runoption>
-						<runoption>numpoints
-							<value></value>
-						</runoption>
-					</mode>
-				</runoptions>
-				<sortVariableValues>0</sortVariableValues>
-			</checkpoint>
-			<timestamp>Fri May  2 21:30:34 2025
-</timestamp>
-			<resultsname>/home/22703907/Downloads/elec5503-pixel-design/pixel_sim/comparator_sim/adexl/results/data/Interactive.117.rdb</resultsname>
-			<simresults>$AXL_SETUPDB_DIR/results/data/Interactive.117.rdb</simresults>
-			<rawdatadelstrategy>SaveAll</rawdatadelstrategy>
-			<netlistdelstrategy>SaveAll</netlistdelstrategy>
-			<uselocalpsfdir>false</uselocalpsfdir>
-			<localpsfdir>/tmp/vdi-l-cos-011_22703907_213034822</localpsfdir>
-			<psfdir>/home/22703907/simulation/pixel_sim/comparator_sim/adexl/results/data/Interactive.117</psfdir>
-			<simdir>$AXL_PROJECT_DIR/pixel_sim/comparator_sim/adexl/results/data/Interactive.117</simdir>
-			<gendatasheetplotsonsimulation>1</gendatasheetplotsonsimulation>
-			<runlog>/home/22703907/Downloads/elec5503-pixel-design/pixel_sim/comparator_sim/adexl/results/data/Interactive.117.log</runlog>
-			<runlogfile>$AXL_SETUPDB_DIR/results/data/Interactive.117.log</runlogfile>
-			<schematicpoint></schematicpoint>
-			<test>all</test>
-		</historyentry>
-		<historyentry assemblerOrExplorer="adexl" roOrView="view">Interactive.118
-			<checkpoint>
-				<corners>
-					<corner enabled="1">_default</corner>
-				</corners>
-				<extensions>
-					<extension>Parasitics
-						<callback>_parSetupDBExtensionCB</callback>
-						<iconvalue></iconvalue>
-						<icontype></icontype>
-					</extension>
-				</extensions>
-				<currentmode>Single Run, Sweeps and Corners</currentmode>
-				<overwritehistory>0</overwritehistory>
-				<tests>
-					<test>pixel_sim:comparator_sim:1
-						<tool>ADE</tool>
-						<tooloptions>
-							<option>cell
-								<value>comparator_sim</value>
-							</option>
-							<option>lib
-								<value>pixel_sim</value>
-							</option>
-							<option>sim
-								<value>spectre</value>
-							</option>
-							<option>view
-								<value>schematic</value>
-							</option>
-							<option>path
-								<value>$AXL_SETUPDB_DIR/test_states</value>
-							</option>
-							<option>state
-								<value>pixel_sim:comparator_sim:1_none_Interactive.118</value>
-							</option>
-						</tooloptions>
-						<outputs>
-							<output>cross(VDC("OUT") 0.6 1 "either" nil nil)
-								<evalType>point</evalType>
-								<units>V</units>
-								<significantDigits>3</significantDigits>
-							</output>
-						</outputs>
-						<origoptions>
-							<option>cell
-								<value>comparator_sim</value>
-							</option>
-							<option>lib
-								<value>pixel_sim</value>
-							</option>
-							<option>sim
-								<value>spectre</value>
-							</option>
-							<option>view
-								<value>schematic</value>
-							</option>
-						</origoptions>
-					</test>
-				</tests>
-				<vars>
-					<var enabled="1">Vb
-						<value>0</value>
-						<dependentTests>
-							<dependentTest enabled="1" omitted="0">pixel_sim:comparator_sim:1</dependentTest>
-						</dependentTests>
-					</var>
-					<var enabled="1">Va
-						<value>0</value>
-						<dependentTests>
-							<dependentTest enabled="1" omitted="0">pixel_sim:comparator_sim:1</dependentTest>
-						</dependentTests>
-					</var>
-					<var>w_a
-						<value>0.3</value>
-						<dependentTests>
-							<dependentTest enabled="1">pixel_sim:comparator_sim:1</dependentTest>
-						</dependentTests>
-					</var>
-					<var>w_b
-						<value>0.13</value>
-						<dependentTests>
-							<dependentTest enabled="1">pixel_sim:comparator_sim:1</dependentTest>
-						</dependentTests>
-					</var>
-					<var>w_base
-						<value>0.42</value>
-						<dependentTests>
-							<dependentTest enabled="1">pixel_sim:comparator_sim:1</dependentTest>
-						</dependentTests>
-					</var>
-					<var>w_nmos
-						<value>1</value>
-						<dependentTests>
-							<dependentTest enabled="1">pixel_sim:comparator_sim:1</dependentTest>
-						</dependentTests>
-					</var>
-					<var enabled="1">w_nandab
-						<value>0.08:0.1:2</value>
-						<dependentTests>
-							<dependentTest enabled="1" omitted="0">pixel_sim:comparator_sim:1</dependentTest>
-						</dependentTests>
-					</var>
-					<var enabled="0">w_
-						<value>1</value>
-						<dependentTests>
-							<dependentTest enabled="1" omitted="0">pixel_sim:comparator_sim:1</dependentTest>
-						</dependentTests>
-					</var>
-				</vars>
-				<overwritehistoryname>Interactive.0</overwritehistoryname>
-				<plottingoptions>
-					<plottingoption>plottype
-						<value>None</value>
-					</plottingoption>
-					<plottingoption>usewaveformtemplate
-						<value>no</value>
-					</plottingoption>
-					<plottingoption>waveformtemplate
-						<value></value>
-					</plottingoption>
-				</plottingoptions>
-				<specs>
-					<spec>pixel_sim:comparator_sim:1.cross(VDC("OUT") 0.6 1 "either" nil nil)
-						<testname>pixel_sim:comparator_sim:1</testname>
-						<resname>cross(VDC("OUT") 0.6 1 "either" nil nil)</resname>
-						<specType>range</specType>
-						<min>0.49</min>
-						<max>0.51</max>
-						<target></target>
-						<tol></tol>
-						<specWeight>100</specWeight>
-					</spec>
-				</specs>
-				<startingpoint>
-					<vars>
-						<var>w_a
-							<value>400n</value>
-						</var>
-						<var>w_b
-							<value>400n</value>
-						</var>
-						<var>w_base
-							<value>400n</value>
-						</var>
-					</vars>
-				</startingpoint>
-				<runoptions>
-					<mode>Local Optimization
-						<runoption>effort
-							<value>brentPowell</value>
-						</runoption>
-						<runoption>lazy
-							<value>1</value>
-						</runoption>
-						<runoption>tillsatisfied
-							<value>1</value>
-						</runoption>
-						<runoption>startingstateorpoint
-							<value>Reference Point</value>
-						</runoption>
-						<runoption>startingstatename
-							<value>NONE</value>
-						</runoption>
-						<runoption>timelimit
-							<value></value>
-						</runoption>
-						<runoption>numpoints
-							<value></value>
-						</runoption>
-					</mode>
-				</runoptions>
-				<sortVariableValues>0</sortVariableValues>
-			</checkpoint>
-			<timestamp>Fri May  2 21:31:10 2025
-</timestamp>
-			<resultsname>/home/22703907/Downloads/elec5503-pixel-design/pixel_sim/comparator_sim/adexl/results/data/Interactive.118.rdb</resultsname>
-			<simresults>$AXL_SETUPDB_DIR/results/data/Interactive.118.rdb</simresults>
-			<rawdatadelstrategy>SaveAll</rawdatadelstrategy>
-			<netlistdelstrategy>SaveAll</netlistdelstrategy>
-			<uselocalpsfdir>false</uselocalpsfdir>
-			<localpsfdir>/tmp/vdi-l-cos-011_22703907_213111410</localpsfdir>
-			<psfdir>/home/22703907/simulation/pixel_sim/comparator_sim/adexl/results/data/Interactive.118</psfdir>
-			<simdir>$AXL_PROJECT_DIR/pixel_sim/comparator_sim/adexl/results/data/Interactive.118</simdir>
-			<gendatasheetplotsonsimulation>1</gendatasheetplotsonsimulation>
-			<runlog>/home/22703907/Downloads/elec5503-pixel-design/pixel_sim/comparator_sim/adexl/results/data/Interactive.118.log</runlog>
-			<runlogfile>$AXL_SETUPDB_DIR/results/data/Interactive.118.log</runlogfile>
-			<schematicpoint></schematicpoint>
-			<test>all</test>
-		</historyentry>
-		<historyentry assemblerOrExplorer="adexl" roOrView="view">Interactive.119
-			<checkpoint>
-				<corners>
-					<corner enabled="1">_default</corner>
-				</corners>
-				<extensions>
-					<extension>Parasitics
-						<callback>_parSetupDBExtensionCB</callback>
-						<iconvalue></iconvalue>
-						<icontype></icontype>
-					</extension>
-				</extensions>
-				<currentmode>Single Run, Sweeps and Corners</currentmode>
-				<overwritehistory>0</overwritehistory>
-				<tests>
-					<test>pixel_sim:comparator_sim:1
-						<tool>ADE</tool>
-						<tooloptions>
-							<option>cell
-								<value>comparator_sim</value>
-							</option>
-							<option>lib
-								<value>pixel_sim</value>
-							</option>
-							<option>sim
-								<value>spectre</value>
-							</option>
-							<option>view
-								<value>schematic</value>
-							</option>
-							<option>path
-								<value>$AXL_SETUPDB_DIR/test_states</value>
-							</option>
-							<option>state
-								<value>pixel_sim:comparator_sim:1_none_Interactive.119</value>
-							</option>
-						</tooloptions>
-						<outputs>
-							<output>cross(VDC("OUT") 0.6 1 "either" nil nil)
-								<evalType>point</evalType>
-								<units>V</units>
-								<significantDigits>3</significantDigits>
-							</output>
-						</outputs>
-						<origoptions>
-							<option>cell
-								<value>comparator_sim</value>
-							</option>
-							<option>lib
-								<value>pixel_sim</value>
-							</option>
-							<option>sim
-								<value>spectre</value>
-							</option>
-							<option>view
-								<value>schematic</value>
-							</option>
-						</origoptions>
-					</test>
-				</tests>
-				<vars>
-					<var enabled="1">Vb
-						<value>0</value>
-						<dependentTests>
-							<dependentTest enabled="1" omitted="0">pixel_sim:comparator_sim:1</dependentTest>
-						</dependentTests>
-					</var>
-					<var enabled="1">Va
-						<value>0</value>
-						<dependentTests>
-							<dependentTest enabled="1" omitted="0">pixel_sim:comparator_sim:1</dependentTest>
-						</dependentTests>
-					</var>
-					<var>w_a
-						<value>0.3</value>
-						<dependentTests>
-							<dependentTest enabled="1">pixel_sim:comparator_sim:1</dependentTest>
-						</dependentTests>
-					</var>
-					<var>w_b
-						<value>0.13</value>
-						<dependentTests>
-							<dependentTest enabled="1">pixel_sim:comparator_sim:1</dependentTest>
-						</dependentTests>
-					</var>
-					<var>w_base
-						<value>0.42</value>
-						<dependentTests>
-							<dependentTest enabled="1">pixel_sim:comparator_sim:1</dependentTest>
-						</dependentTests>
-					</var>
-					<var>w_nmos
-						<value>1</value>
-						<dependentTests>
-							<dependentTest enabled="1">pixel_sim:comparator_sim:1</dependentTest>
-						</dependentTests>
-					</var>
-					<var enabled="1">w_nandab
-						<value>0.08:0.1:2</value>
-						<dependentTests>
-							<dependentTest enabled="1" omitted="0">pixel_sim:comparator_sim:1</dependentTest>
-						</dependentTests>
-					</var>
-					<var enabled="0">w_
-						<value>1</value>
-						<dependentTests>
-							<dependentTest enabled="1" omitted="0">pixel_sim:comparator_sim:1</dependentTest>
-						</dependentTests>
-					</var>
-				</vars>
-				<overwritehistoryname>Interactive.0</overwritehistoryname>
-				<plottingoptions>
-					<plottingoption>plottype
-						<value>None</value>
-					</plottingoption>
-					<plottingoption>usewaveformtemplate
-						<value>no</value>
-					</plottingoption>
-					<plottingoption>waveformtemplate
-						<value></value>
-					</plottingoption>
-				</plottingoptions>
-				<specs>
-					<spec>pixel_sim:comparator_sim:1.cross(VDC("OUT") 0.6 1 "either" nil nil)
-						<testname>pixel_sim:comparator_sim:1</testname>
-						<resname>cross(VDC("OUT") 0.6 1 "either" nil nil)</resname>
-						<specType>range</specType>
-						<min>0.49</min>
-						<max>0.51</max>
-						<target></target>
-						<tol></tol>
-						<specWeight>100</specWeight>
-					</spec>
-				</specs>
-				<startingpoint>
-					<vars>
-						<var>w_a
-							<value>400n</value>
-						</var>
-						<var>w_b
-							<value>400n</value>
-						</var>
-						<var>w_base
-							<value>400n</value>
-						</var>
-					</vars>
-				</startingpoint>
-				<runoptions>
-					<mode>Local Optimization
-						<runoption>effort
-							<value>brentPowell</value>
-						</runoption>
-						<runoption>lazy
-							<value>1</value>
-						</runoption>
-						<runoption>tillsatisfied
-							<value>1</value>
-						</runoption>
-						<runoption>startingstateorpoint
-							<value>Reference Point</value>
-						</runoption>
-						<runoption>startingstatename
-							<value>NONE</value>
-						</runoption>
-						<runoption>timelimit
-							<value></value>
-						</runoption>
-						<runoption>numpoints
-							<value></value>
-						</runoption>
-					</mode>
-				</runoptions>
-				<sortVariableValues>0</sortVariableValues>
-			</checkpoint>
-			<timestamp>Fri May  2 21:32:29 2025
-</timestamp>
-			<resultsname>/home/22703907/Downloads/elec5503-pixel-design/pixel_sim/comparator_sim/adexl/results/data/Interactive.119.rdb</resultsname>
-			<simresults>$AXL_SETUPDB_DIR/results/data/Interactive.119.rdb</simresults>
-			<rawdatadelstrategy>SaveAll</rawdatadelstrategy>
-			<netlistdelstrategy>SaveAll</netlistdelstrategy>
-			<uselocalpsfdir>false</uselocalpsfdir>
-			<localpsfdir>/tmp/vdi-l-cos-011_22703907_213229673</localpsfdir>
-			<psfdir>/home/22703907/simulation/pixel_sim/comparator_sim/adexl/results/data/Interactive.119</psfdir>
-			<simdir>$AXL_PROJECT_DIR/pixel_sim/comparator_sim/adexl/results/data/Interactive.119</simdir>
-			<gendatasheetplotsonsimulation>1</gendatasheetplotsonsimulation>
-			<runlog>/home/22703907/Downloads/elec5503-pixel-design/pixel_sim/comparator_sim/adexl/results/data/Interactive.119.log</runlog>
-			<runlogfile>$AXL_SETUPDB_DIR/results/data/Interactive.119.log</runlogfile>
-			<schematicpoint></schematicpoint>
-			<test>all</test>
-		</historyentry>
-		<historyentry assemblerOrExplorer="adexl" roOrView="view">Interactive.120
-			<checkpoint>
-				<corners>
-					<corner enabled="1">_default</corner>
-				</corners>
-				<extensions>
-					<extension>Parasitics
-						<callback>_parSetupDBExtensionCB</callback>
-						<iconvalue></iconvalue>
-						<icontype></icontype>
-					</extension>
-				</extensions>
-				<currentmode>Single Run, Sweeps and Corners</currentmode>
-				<overwritehistory>0</overwritehistory>
-				<tests>
-					<test>pixel_sim:comparator_sim:1
-						<tool>ADE</tool>
-						<tooloptions>
-							<option>cell
-								<value>comparator_sim</value>
-							</option>
-							<option>lib
-								<value>pixel_sim</value>
-							</option>
-							<option>sim
-								<value>spectre</value>
-							</option>
-							<option>view
-								<value>schematic</value>
-							</option>
-							<option>path
-								<value>$AXL_SETUPDB_DIR/test_states</value>
-							</option>
-							<option>state
-								<value>pixel_sim:comparator_sim:1_none_Interactive.120</value>
-							</option>
-						</tooloptions>
-						<outputs>
-							<output>cross(VDC("OUT") 0.6 1 "either" nil nil)
-								<evalType>point</evalType>
-								<units>V</units>
-								<significantDigits>3</significantDigits>
-							</output>
-						</outputs>
-						<origoptions>
-							<option>cell
-								<value>comparator_sim</value>
-							</option>
-							<option>lib
-								<value>pixel_sim</value>
-							</option>
-							<option>sim
-								<value>spectre</value>
-							</option>
-							<option>view
-								<value>schematic</value>
-							</option>
-						</origoptions>
-					</test>
-				</tests>
-				<vars>
-					<var enabled="1">Vb
-						<value>0</value>
-						<dependentTests>
-							<dependentTest enabled="1" omitted="0">pixel_sim:comparator_sim:1</dependentTest>
-						</dependentTests>
-					</var>
-					<var enabled="1">Va
-						<value>0</value>
-						<dependentTests>
-							<dependentTest enabled="1" omitted="0">pixel_sim:comparator_sim:1</dependentTest>
-						</dependentTests>
-					</var>
-					<var>w_a
-						<value>0.3</value>
-						<dependentTests>
-							<dependentTest enabled="1">pixel_sim:comparator_sim:1</dependentTest>
-						</dependentTests>
-					</var>
-					<var>w_b
-						<value>0.13</value>
-						<dependentTests>
-							<dependentTest enabled="1">pixel_sim:comparator_sim:1</dependentTest>
-						</dependentTests>
-					</var>
-					<var>w_base
-						<value>0.42</value>
-						<dependentTests>
-							<dependentTest enabled="1">pixel_sim:comparator_sim:1</dependentTest>
-						</dependentTests>
-					</var>
-					<var>w_nmos
-						<value>1</value>
-						<dependentTests>
-							<dependentTest enabled="1">pixel_sim:comparator_sim:1</dependentTest>
-						</dependentTests>
-					</var>
-					<var enabled="1">w_nandab
-						<value>0.05:0.1:2</value>
-						<dependentTests>
-							<dependentTest enabled="1" omitted="0">pixel_sim:comparator_sim:1</dependentTest>
-						</dependentTests>
-					</var>
-					<var enabled="0">w_
-						<value>1</value>
-						<dependentTests>
-							<dependentTest enabled="1" omitted="0">pixel_sim:comparator_sim:1</dependentTest>
-						</dependentTests>
-					</var>
-				</vars>
-				<overwritehistoryname>Interactive.0</overwritehistoryname>
-				<plottingoptions>
-					<plottingoption>plottype
-						<value>None</value>
-					</plottingoption>
-					<plottingoption>usewaveformtemplate
-						<value>no</value>
-					</plottingoption>
-					<plottingoption>waveformtemplate
-						<value></value>
-					</plottingoption>
-				</plottingoptions>
-				<specs>
-					<spec>pixel_sim:comparator_sim:1.cross(VDC("OUT") 0.6 1 "either" nil nil)
-						<testname>pixel_sim:comparator_sim:1</testname>
-						<resname>cross(VDC("OUT") 0.6 1 "either" nil nil)</resname>
-						<specType>range</specType>
-						<min>0.49</min>
-						<max>0.51</max>
-						<target></target>
-						<tol></tol>
-						<specWeight>100</specWeight>
-					</spec>
-				</specs>
-				<startingpoint>
-					<vars>
-						<var>w_a
-							<value>400n</value>
-						</var>
-						<var>w_b
-							<value>400n</value>
-						</var>
-						<var>w_base
-							<value>400n</value>
-						</var>
-					</vars>
-				</startingpoint>
-				<runoptions>
-					<mode>Local Optimization
-						<runoption>effort
-							<value>brentPowell</value>
-						</runoption>
-						<runoption>lazy
-							<value>1</value>
-						</runoption>
-						<runoption>tillsatisfied
-							<value>1</value>
-						</runoption>
-						<runoption>startingstateorpoint
-							<value>Reference Point</value>
-						</runoption>
-						<runoption>startingstatename
-							<value>NONE</value>
-						</runoption>
-						<runoption>timelimit
-							<value></value>
-						</runoption>
-						<runoption>numpoints
-							<value></value>
-						</runoption>
-					</mode>
-				</runoptions>
-				<sortVariableValues>0</sortVariableValues>
-			</checkpoint>
-			<timestamp>Fri May  2 22:45:43 2025
-</timestamp>
-			<resultsname>/home/22703907/Downloads/elec5503-pixel-design/pixel_sim/comparator_sim/adexl/results/data/Interactive.120.rdb</resultsname>
-			<simresults>$AXL_SETUPDB_DIR/results/data/Interactive.120.rdb</simresults>
-			<rawdatadelstrategy>SaveAll</rawdatadelstrategy>
-			<netlistdelstrategy>SaveAll</netlistdelstrategy>
-			<uselocalpsfdir>false</uselocalpsfdir>
-			<localpsfdir>/tmp/vdi-l-cos-011_22703907_224543790</localpsfdir>
-			<psfdir>/home/22703907/simulation/pixel_sim/comparator_sim/adexl/results/data/Interactive.120</psfdir>
-			<simdir>$AXL_PROJECT_DIR/pixel_sim/comparator_sim/adexl/results/data/Interactive.120</simdir>
-			<gendatasheetplotsonsimulation>1</gendatasheetplotsonsimulation>
-			<runlog>/home/22703907/Downloads/elec5503-pixel-design/pixel_sim/comparator_sim/adexl/results/data/Interactive.120.log</runlog>
-			<runlogfile>$AXL_SETUPDB_DIR/results/data/Interactive.120.log</runlogfile>
-			<schematicpoint></schematicpoint>
-			<test>all</test>
-		</historyentry>
-		<historyentry assemblerOrExplorer="adexl" roOrView="view">Interactive.121
-			<checkpoint>
-				<corners>
-					<corner enabled="1">_default</corner>
-				</corners>
-				<extensions>
-					<extension>Parasitics
-						<callback>_parSetupDBExtensionCB</callback>
-						<iconvalue></iconvalue>
-						<icontype></icontype>
-					</extension>
-				</extensions>
-				<currentmode>Single Run, Sweeps and Corners</currentmode>
-				<overwritehistory>0</overwritehistory>
-				<tests>
-					<test>pixel_sim:comparator_sim:1
-						<tool>ADE</tool>
-						<tooloptions>
-							<option>cell
-								<value>comparator_sim</value>
-							</option>
-							<option>lib
-								<value>pixel_sim</value>
-							</option>
-							<option>sim
-								<value>spectre</value>
-							</option>
-							<option>view
-								<value>schematic</value>
-							</option>
-							<option>path
-								<value>$AXL_SETUPDB_DIR/test_states</value>
-							</option>
-							<option>state
-								<value>pixel_sim:comparator_sim:1_none_Interactive.121</value>
-							</option>
-						</tooloptions>
-						<outputs>
-							<output>cross(VDC("OUT") 0.6 1 "either" nil nil)
-								<evalType>point</evalType>
-								<units>V</units>
-								<significantDigits>3</significantDigits>
-							</output>
-						</outputs>
-						<origoptions>
-							<option>cell
-								<value>comparator_sim</value>
-							</option>
-							<option>lib
-								<value>pixel_sim</value>
-							</option>
-							<option>sim
-								<value>spectre</value>
-							</option>
-							<option>view
-								<value>schematic</value>
-							</option>
-						</origoptions>
-					</test>
-				</tests>
-				<vars>
-					<var enabled="1">Vb
-						<value>0</value>
-						<dependentTests>
-							<dependentTest enabled="1" omitted="0">pixel_sim:comparator_sim:1</dependentTest>
-						</dependentTests>
-					</var>
-					<var enabled="1">Va
-						<value>0</value>
-						<dependentTests>
-							<dependentTest enabled="1" omitted="0">pixel_sim:comparator_sim:1</dependentTest>
-						</dependentTests>
-					</var>
-					<var>w_a
-						<value>0.3</value>
-						<dependentTests>
-							<dependentTest enabled="1">pixel_sim:comparator_sim:1</dependentTest>
-						</dependentTests>
-					</var>
-					<var>w_b
-						<value>0.13</value>
-						<dependentTests>
-							<dependentTest enabled="1">pixel_sim:comparator_sim:1</dependentTest>
-						</dependentTests>
-					</var>
-					<var>w_base
-						<value>0.42</value>
-						<dependentTests>
-							<dependentTest enabled="1">pixel_sim:comparator_sim:1</dependentTest>
-						</dependentTests>
-					</var>
-					<var>w_nmos
-						<value>1</value>
-						<dependentTests>
-							<dependentTest enabled="1">pixel_sim:comparator_sim:1</dependentTest>
-						</dependentTests>
-					</var>
-					<var enabled="1">w_nandab
-						<value>0.05:0.1:2</value>
-						<dependentTests>
-							<dependentTest enabled="1" omitted="0">pixel_sim:comparator_sim:1</dependentTest>
-						</dependentTests>
-					</var>
-					<var enabled="0">w_
-						<value>1</value>
-						<dependentTests>
-							<dependentTest enabled="1" omitted="0">pixel_sim:comparator_sim:1</dependentTest>
-						</dependentTests>
-					</var>
-				</vars>
-				<overwritehistoryname>Interactive.0</overwritehistoryname>
-				<plottingoptions>
-					<plottingoption>plottype
-						<value>None</value>
-					</plottingoption>
-					<plottingoption>usewaveformtemplate
-						<value>no</value>
-					</plottingoption>
-					<plottingoption>waveformtemplate
-						<value></value>
-					</plottingoption>
-				</plottingoptions>
-				<specs>
-					<spec>pixel_sim:comparator_sim:1.cross(VDC("OUT") 0.6 1 "either" nil nil)
-						<testname>pixel_sim:comparator_sim:1</testname>
-						<resname>cross(VDC("OUT") 0.6 1 "either" nil nil)</resname>
-						<specType>range</specType>
-						<min>0.49</min>
-						<max>0.51</max>
-						<target></target>
-						<tol></tol>
-						<specWeight>100</specWeight>
-					</spec>
-				</specs>
-				<startingpoint>
-					<vars>
-						<var>w_a
-							<value>400n</value>
-						</var>
-						<var>w_b
-							<value>400n</value>
-						</var>
-						<var>w_base
-							<value>400n</value>
-						</var>
-					</vars>
-				</startingpoint>
-				<runoptions>
-					<mode>Local Optimization
-						<runoption>effort
-							<value>brentPowell</value>
-						</runoption>
-						<runoption>lazy
-							<value>1</value>
-						</runoption>
-						<runoption>tillsatisfied
-							<value>1</value>
-						</runoption>
-						<runoption>startingstateorpoint
-							<value>Reference Point</value>
-						</runoption>
-						<runoption>startingstatename
-							<value>NONE</value>
-						</runoption>
-						<runoption>timelimit
-							<value></value>
-						</runoption>
-						<runoption>numpoints
-							<value></value>
-						</runoption>
-					</mode>
-				</runoptions>
-				<sortVariableValues>0</sortVariableValues>
-			</checkpoint>
-			<timestamp>Fri May  2 22:58:31 2025
-</timestamp>
-			<resultsname>/home/22703907/Downloads/elec5503-pixel-design/pixel_sim/comparator_sim/adexl/results/data/Interactive.121.rdb</resultsname>
-			<simresults>$AXL_SETUPDB_DIR/results/data/Interactive.121.rdb</simresults>
-			<rawdatadelstrategy>SaveAll</rawdatadelstrategy>
-			<netlistdelstrategy>SaveAll</netlistdelstrategy>
-			<uselocalpsfdir>false</uselocalpsfdir>
-			<localpsfdir>/tmp/vdi-l-cos-011_22703907_225831693</localpsfdir>
-			<psfdir>/home/22703907/simulation/pixel_sim/comparator_sim/adexl/results/data/Interactive.121</psfdir>
-			<simdir>$AXL_PROJECT_DIR/pixel_sim/comparator_sim/adexl/results/data/Interactive.121</simdir>
-			<gendatasheetplotsonsimulation>1</gendatasheetplotsonsimulation>
-			<runlog>/home/22703907/Downloads/elec5503-pixel-design/pixel_sim/comparator_sim/adexl/results/data/Interactive.121.log</runlog>
-			<runlogfile>$AXL_SETUPDB_DIR/results/data/Interactive.121.log</runlogfile>
-			<schematicpoint></schematicpoint>
-			<test>all</test>
-		</historyentry>
-		<historyentry assemblerOrExplorer="adexl" roOrView="view">Interactive.122
-			<checkpoint>
-				<corners>
-					<corner enabled="1">_default</corner>
-				</corners>
-				<extensions>
-					<extension>Parasitics
-						<callback>_parSetupDBExtensionCB</callback>
-						<iconvalue></iconvalue>
-						<icontype></icontype>
-					</extension>
-				</extensions>
-				<currentmode>Single Run, Sweeps and Corners</currentmode>
-				<overwritehistory>0</overwritehistory>
-				<tests>
-					<test>pixel_sim:comparator_sim:1
-						<tool>ADE</tool>
-						<tooloptions>
-							<option>cell
-								<value>comparator_sim</value>
-							</option>
-							<option>lib
-								<value>pixel_sim</value>
-							</option>
-							<option>sim
-								<value>spectre</value>
-							</option>
-							<option>view
-								<value>schematic</value>
-							</option>
-							<option>path
-								<value>$AXL_SETUPDB_DIR/test_states</value>
-							</option>
-							<option>state
-								<value>pixel_sim:comparator_sim:1_none_Interactive.122</value>
-							</option>
-						</tooloptions>
-						<outputs>
-							<output>cross(VDC("OUT") 0.6 1 "either" nil nil)
-								<evalType>point</evalType>
-								<units>V</units>
-								<significantDigits>3</significantDigits>
-							</output>
-						</outputs>
-						<origoptions>
-							<option>cell
-								<value>comparator_sim</value>
-							</option>
-							<option>lib
-								<value>pixel_sim</value>
-							</option>
-							<option>sim
-								<value>spectre</value>
-							</option>
-							<option>view
-								<value>schematic</value>
-							</option>
-						</origoptions>
-					</test>
-				</tests>
-				<vars>
-					<var enabled="1">Vb
-						<value>0</value>
-						<dependentTests>
-							<dependentTest enabled="1" omitted="0">pixel_sim:comparator_sim:1</dependentTest>
-						</dependentTests>
-					</var>
-					<var enabled="1">Va
-						<value>0</value>
-						<dependentTests>
-							<dependentTest enabled="1" omitted="0">pixel_sim:comparator_sim:1</dependentTest>
-						</dependentTests>
-					</var>
-					<var>w_a
-						<value>0.3</value>
-						<dependentTests>
-							<dependentTest enabled="1">pixel_sim:comparator_sim:1</dependentTest>
-						</dependentTests>
-					</var>
-					<var>w_b
-						<value>0.13</value>
-						<dependentTests>
-							<dependentTest enabled="1">pixel_sim:comparator_sim:1</dependentTest>
-						</dependentTests>
-					</var>
-					<var>w_base
-						<value>0.42</value>
-						<dependentTests>
-							<dependentTest enabled="1">pixel_sim:comparator_sim:1</dependentTest>
-						</dependentTests>
-					</var>
-					<var>w_nmos
-						<value>1</value>
-						<dependentTests>
-							<dependentTest enabled="1">pixel_sim:comparator_sim:1</dependentTest>
-						</dependentTests>
-					</var>
-					<var enabled="1">w_nandab
-						<value>0.04:0.1:2</value>
-						<dependentTests>
-							<dependentTest enabled="1" omitted="0">pixel_sim:comparator_sim:1</dependentTest>
-						</dependentTests>
-					</var>
-					<var enabled="0">w_
-						<value>1</value>
-						<dependentTests>
-							<dependentTest enabled="1" omitted="0">pixel_sim:comparator_sim:1</dependentTest>
-						</dependentTests>
-					</var>
-				</vars>
-				<overwritehistoryname>Interactive.0</overwritehistoryname>
-				<plottingoptions>
-					<plottingoption>plottype
-						<value>None</value>
-					</plottingoption>
-					<plottingoption>usewaveformtemplate
-						<value>no</value>
-					</plottingoption>
-					<plottingoption>waveformtemplate
-						<value></value>
-					</plottingoption>
-				</plottingoptions>
-				<specs>
-					<spec>pixel_sim:comparator_sim:1.cross(VDC("OUT") 0.6 1 "either" nil nil)
-						<testname>pixel_sim:comparator_sim:1</testname>
-						<resname>cross(VDC("OUT") 0.6 1 "either" nil nil)</resname>
-						<specType>range</specType>
-						<min>0.49</min>
-						<max>0.51</max>
-						<target></target>
-						<tol></tol>
-						<specWeight>100</specWeight>
-					</spec>
-				</specs>
-				<startingpoint>
-					<vars>
-						<var>w_a
-							<value>400n</value>
-						</var>
-						<var>w_b
-							<value>400n</value>
-						</var>
-						<var>w_base
-							<value>400n</value>
-						</var>
-					</vars>
-				</startingpoint>
-				<runoptions>
-					<mode>Local Optimization
-						<runoption>effort
-							<value>brentPowell</value>
-						</runoption>
-						<runoption>lazy
-							<value>1</value>
-						</runoption>
-						<runoption>tillsatisfied
-							<value>1</value>
-						</runoption>
-						<runoption>startingstateorpoint
-							<value>Reference Point</value>
-						</runoption>
-						<runoption>startingstatename
-							<value>NONE</value>
-						</runoption>
-						<runoption>timelimit
-							<value></value>
-						</runoption>
-						<runoption>numpoints
-							<value></value>
-						</runoption>
-					</mode>
-				</runoptions>
-				<sortVariableValues>0</sortVariableValues>
-			</checkpoint>
-			<timestamp>Fri May  2 22:59:00 2025
-</timestamp>
-			<resultsname>/home/22703907/Downloads/elec5503-pixel-design/pixel_sim/comparator_sim/adexl/results/data/Interactive.122.rdb</resultsname>
-			<simresults>$AXL_SETUPDB_DIR/results/data/Interactive.122.rdb</simresults>
-			<rawdatadelstrategy>SaveAll</rawdatadelstrategy>
-			<netlistdelstrategy>SaveAll</netlistdelstrategy>
-			<uselocalpsfdir>false</uselocalpsfdir>
-			<localpsfdir>/tmp/vdi-l-cos-011_22703907_225900470</localpsfdir>
-			<psfdir>/home/22703907/simulation/pixel_sim/comparator_sim/adexl/results/data/Interactive.122</psfdir>
-			<simdir>$AXL_PROJECT_DIR/pixel_sim/comparator_sim/adexl/results/data/Interactive.122</simdir>
-			<gendatasheetplotsonsimulation>1</gendatasheetplotsonsimulation>
-			<runlog>/home/22703907/Downloads/elec5503-pixel-design/pixel_sim/comparator_sim/adexl/results/data/Interactive.122.log</runlog>
-			<runlogfile>$AXL_SETUPDB_DIR/results/data/Interactive.122.log</runlogfile>
-			<schematicpoint></schematicpoint>
-			<test>all</test>
-		</historyentry>
-		<historyentry assemblerOrExplorer="adexl" roOrView="view">Interactive.123
-			<checkpoint>
-				<corners>
-					<corner enabled="1">_default</corner>
-				</corners>
-				<extensions>
-					<extension>Parasitics
-						<callback>_parSetupDBExtensionCB</callback>
-						<iconvalue></iconvalue>
-						<icontype></icontype>
-					</extension>
-				</extensions>
-				<currentmode>Single Run, Sweeps and Corners</currentmode>
-				<overwritehistory>0</overwritehistory>
-				<tests>
-					<test>pixel_sim:comparator_sim:1
-						<tool>ADE</tool>
-						<tooloptions>
-							<option>cell
-								<value>comparator_sim</value>
-							</option>
-							<option>lib
-								<value>pixel_sim</value>
-							</option>
-							<option>sim
-								<value>spectre</value>
-							</option>
-							<option>view
-								<value>schematic</value>
-							</option>
-							<option>path
-								<value>$AXL_SETUPDB_DIR/test_states</value>
-							</option>
-							<option>state
-								<value>pixel_sim:comparator_sim:1_none_Interactive.123</value>
+								<value>pixel_sim:comparator_sim:1_none_Interactive.148</value>
 							</option>
 						</tooloptions>
 						<outputs>
@@ -1381,25 +241,975 @@
 						</dependentTests>
 					</var>
 					<var enabled="1">Va
+						<value>0</value>
+						<dependentTests>
+							<dependentTest enabled="1" omitted="0">pixel_sim:comparator_sim:1</dependentTest>
+						</dependentTests>
+					</var>
+					<var>w_a
+						<value>0.1:0.01:0.4</value>
+						<dependentTests>
+							<dependentTest enabled="1">pixel_sim:comparator_sim:1</dependentTest>
+						</dependentTests>
+					</var>
+					<var>w_b
+						<value>1</value>
+						<dependentTests>
+							<dependentTest enabled="1">pixel_sim:comparator_sim:1</dependentTest>
+						</dependentTests>
+					</var>
+					<var>w_base
+						<value>0.453</value>
+						<dependentTests>
+							<dependentTest enabled="1">pixel_sim:comparator_sim:1</dependentTest>
+						</dependentTests>
+					</var>
+					<var>w_nmos
+						<value>1</value>
+						<dependentTests>
+							<dependentTest enabled="1">pixel_sim:comparator_sim:1</dependentTest>
+						</dependentTests>
+					</var>
+					<var enabled="1">w_nandab
+						<value>0.04</value>
+						<dependentTests>
+							<dependentTest enabled="1" omitted="0">pixel_sim:comparator_sim:1</dependentTest>
+						</dependentTests>
+					</var>
+					<var enabled="0">w_
+						<value>1</value>
+						<dependentTests>
+							<dependentTest enabled="1" omitted="0">pixel_sim:comparator_sim:1</dependentTest>
+						</dependentTests>
+					</var>
+				</vars>
+				<overwritehistoryname>Interactive.0</overwritehistoryname>
+				<plottingoptions>
+					<plottingoption>plottype
+						<value>None</value>
+					</plottingoption>
+					<plottingoption>usewaveformtemplate
+						<value>no</value>
+					</plottingoption>
+					<plottingoption>waveformtemplate
+						<value></value>
+					</plottingoption>
+				</plottingoptions>
+				<specs>
+					<spec>pixel_sim:comparator_sim:1.cross(VDC("OUT") 0.6 1 "either" nil nil)
+						<testname>pixel_sim:comparator_sim:1</testname>
+						<resname>cross(VDC("OUT") 0.6 1 "either" nil nil)</resname>
+						<specType>range</specType>
+						<min>0.54</min>
+						<max>0.56</max>
+						<target></target>
+						<tol></tol>
+						<specWeight>100</specWeight>
+					</spec>
+				</specs>
+				<startingpoint>
+					<vars>
+						<var>w_a
+							<value>400n</value>
+						</var>
+						<var>w_b
+							<value>400n</value>
+						</var>
+						<var>w_base
+							<value>400n</value>
+						</var>
+					</vars>
+				</startingpoint>
+				<runoptions>
+					<mode>Local Optimization
+						<runoption>effort
+							<value>brentPowell</value>
+						</runoption>
+						<runoption>lazy
+							<value>1</value>
+						</runoption>
+						<runoption>tillsatisfied
+							<value>1</value>
+						</runoption>
+						<runoption>startingstateorpoint
+							<value>Reference Point</value>
+						</runoption>
+						<runoption>startingstatename
+							<value>NONE</value>
+						</runoption>
+						<runoption>timelimit
+							<value></value>
+						</runoption>
+						<runoption>numpoints
+							<value></value>
+						</runoption>
+					</mode>
+				</runoptions>
+				<sortVariableValues>0</sortVariableValues>
+			</checkpoint>
+			<timestamp>Sat May  3 00:38:17 2025
+</timestamp>
+			<resultsname>/home/22703907/Downloads/elec5503-pixel-design/pixel_sim/comparator_sim/adexl/results/data/Interactive.148.rdb</resultsname>
+			<simresults>$AXL_SETUPDB_DIR/results/data/Interactive.148.rdb</simresults>
+			<rawdatadelstrategy>SaveAll</rawdatadelstrategy>
+			<netlistdelstrategy>SaveAll</netlistdelstrategy>
+			<uselocalpsfdir>false</uselocalpsfdir>
+			<localpsfdir>/tmp/vdi-l-cos-011_22703907_003817055</localpsfdir>
+			<psfdir>/home/22703907/simulation/pixel_sim/comparator_sim/adexl/results/data/Interactive.148</psfdir>
+			<simdir>$AXL_PROJECT_DIR/pixel_sim/comparator_sim/adexl/results/data/Interactive.148</simdir>
+			<gendatasheetplotsonsimulation>1</gendatasheetplotsonsimulation>
+			<runlog>/home/22703907/Downloads/elec5503-pixel-design/pixel_sim/comparator_sim/adexl/results/data/Interactive.148.log</runlog>
+			<runlogfile>$AXL_SETUPDB_DIR/results/data/Interactive.148.log</runlogfile>
+			<schematicpoint></schematicpoint>
+			<test>all</test>
+		</historyentry>
+		<historyentry assemblerOrExplorer="adexl" roOrView="view">Interactive.149
+			<checkpoint>
+				<corners>
+					<corner enabled="1">_default</corner>
+				</corners>
+				<extensions>
+					<extension>Parasitics
+						<callback>_parSetupDBExtensionCB</callback>
+						<iconvalue></iconvalue>
+						<icontype></icontype>
+					</extension>
+				</extensions>
+				<currentmode>Single Run, Sweeps and Corners</currentmode>
+				<overwritehistory>0</overwritehistory>
+				<tests>
+					<test>pixel_sim:comparator_sim:1
+						<tool>ADE</tool>
+						<tooloptions>
+							<option>cell
+								<value>comparator_sim</value>
+							</option>
+							<option>lib
+								<value>pixel_sim</value>
+							</option>
+							<option>sim
+								<value>spectre</value>
+							</option>
+							<option>view
+								<value>schematic</value>
+							</option>
+							<option>path
+								<value>$AXL_SETUPDB_DIR/test_states</value>
+							</option>
+							<option>state
+								<value>pixel_sim:comparator_sim:1_none_Interactive.149</value>
+							</option>
+						</tooloptions>
+						<outputs>
+							<output>cross(VDC("OUT") 0.6 1 "either" nil nil)
+								<evalType>point</evalType>
+								<units>V</units>
+								<significantDigits>3</significantDigits>
+							</output>
+						</outputs>
+						<origoptions>
+							<option>cell
+								<value>comparator_sim</value>
+							</option>
+							<option>lib
+								<value>pixel_sim</value>
+							</option>
+							<option>sim
+								<value>spectre</value>
+							</option>
+							<option>view
+								<value>schematic</value>
+							</option>
+						</origoptions>
+					</test>
+				</tests>
+				<vars>
+					<var enabled="1">Vb
+						<value>1.2</value>
+						<dependentTests>
+							<dependentTest enabled="1" omitted="0">pixel_sim:comparator_sim:1</dependentTest>
+						</dependentTests>
+					</var>
+					<var enabled="1">Va
+						<value>0</value>
+						<dependentTests>
+							<dependentTest enabled="1" omitted="0">pixel_sim:comparator_sim:1</dependentTest>
+						</dependentTests>
+					</var>
+					<var>w_a
+						<value>0.1:0.01:0.4</value>
+						<dependentTests>
+							<dependentTest enabled="1">pixel_sim:comparator_sim:1</dependentTest>
+						</dependentTests>
+					</var>
+					<var>w_b
+						<value>1</value>
+						<dependentTests>
+							<dependentTest enabled="1">pixel_sim:comparator_sim:1</dependentTest>
+						</dependentTests>
+					</var>
+					<var>w_base
+						<value>0.453</value>
+						<dependentTests>
+							<dependentTest enabled="1">pixel_sim:comparator_sim:1</dependentTest>
+						</dependentTests>
+					</var>
+					<var>w_nmos
+						<value>1</value>
+						<dependentTests>
+							<dependentTest enabled="1">pixel_sim:comparator_sim:1</dependentTest>
+						</dependentTests>
+					</var>
+					<var enabled="1">w_nandab
+						<value>0.04</value>
+						<dependentTests>
+							<dependentTest enabled="1" omitted="0">pixel_sim:comparator_sim:1</dependentTest>
+						</dependentTests>
+					</var>
+					<var enabled="0">w_
+						<value>1</value>
+						<dependentTests>
+							<dependentTest enabled="1" omitted="0">pixel_sim:comparator_sim:1</dependentTest>
+						</dependentTests>
+					</var>
+				</vars>
+				<overwritehistoryname>Interactive.0</overwritehistoryname>
+				<plottingoptions>
+					<plottingoption>plottype
+						<value>None</value>
+					</plottingoption>
+					<plottingoption>usewaveformtemplate
+						<value>no</value>
+					</plottingoption>
+					<plottingoption>waveformtemplate
+						<value></value>
+					</plottingoption>
+				</plottingoptions>
+				<specs>
+					<spec>pixel_sim:comparator_sim:1.cross(VDC("OUT") 0.6 1 "either" nil nil)
+						<testname>pixel_sim:comparator_sim:1</testname>
+						<resname>cross(VDC("OUT") 0.6 1 "either" nil nil)</resname>
+						<specType>range</specType>
+						<min>0.54</min>
+						<max>0.56</max>
+						<target></target>
+						<tol></tol>
+						<specWeight>100</specWeight>
+					</spec>
+				</specs>
+				<startingpoint>
+					<vars>
+						<var>w_a
+							<value>400n</value>
+						</var>
+						<var>w_b
+							<value>400n</value>
+						</var>
+						<var>w_base
+							<value>400n</value>
+						</var>
+					</vars>
+				</startingpoint>
+				<runoptions>
+					<mode>Local Optimization
+						<runoption>effort
+							<value>brentPowell</value>
+						</runoption>
+						<runoption>lazy
+							<value>1</value>
+						</runoption>
+						<runoption>tillsatisfied
+							<value>1</value>
+						</runoption>
+						<runoption>startingstateorpoint
+							<value>Reference Point</value>
+						</runoption>
+						<runoption>startingstatename
+							<value>NONE</value>
+						</runoption>
+						<runoption>timelimit
+							<value></value>
+						</runoption>
+						<runoption>numpoints
+							<value></value>
+						</runoption>
+					</mode>
+				</runoptions>
+				<sortVariableValues>0</sortVariableValues>
+			</checkpoint>
+			<timestamp>Sat May  3 00:39:09 2025
+</timestamp>
+			<resultsname>/home/22703907/Downloads/elec5503-pixel-design/pixel_sim/comparator_sim/adexl/results/data/Interactive.149.rdb</resultsname>
+			<simresults>$AXL_SETUPDB_DIR/results/data/Interactive.149.rdb</simresults>
+			<rawdatadelstrategy>SaveAll</rawdatadelstrategy>
+			<netlistdelstrategy>SaveAll</netlistdelstrategy>
+			<uselocalpsfdir>false</uselocalpsfdir>
+			<localpsfdir>/tmp/vdi-l-cos-011_22703907_003909111</localpsfdir>
+			<psfdir>/home/22703907/simulation/pixel_sim/comparator_sim/adexl/results/data/Interactive.149</psfdir>
+			<simdir>$AXL_PROJECT_DIR/pixel_sim/comparator_sim/adexl/results/data/Interactive.149</simdir>
+			<gendatasheetplotsonsimulation>1</gendatasheetplotsonsimulation>
+			<runlog>/home/22703907/Downloads/elec5503-pixel-design/pixel_sim/comparator_sim/adexl/results/data/Interactive.149.log</runlog>
+			<runlogfile>$AXL_SETUPDB_DIR/results/data/Interactive.149.log</runlogfile>
+			<schematicpoint></schematicpoint>
+			<test>all</test>
+		</historyentry>
+		<historyentry assemblerOrExplorer="adexl" roOrView="view">Interactive.150
+			<checkpoint>
+				<corners>
+					<corner enabled="1">_default</corner>
+				</corners>
+				<extensions>
+					<extension>Parasitics
+						<callback>_parSetupDBExtensionCB</callback>
+						<iconvalue></iconvalue>
+						<icontype></icontype>
+					</extension>
+				</extensions>
+				<currentmode>Single Run, Sweeps and Corners</currentmode>
+				<overwritehistory>0</overwritehistory>
+				<tests>
+					<test>pixel_sim:comparator_sim:1
+						<tool>ADE</tool>
+						<tooloptions>
+							<option>cell
+								<value>comparator_sim</value>
+							</option>
+							<option>lib
+								<value>pixel_sim</value>
+							</option>
+							<option>sim
+								<value>spectre</value>
+							</option>
+							<option>view
+								<value>schematic</value>
+							</option>
+							<option>path
+								<value>$AXL_SETUPDB_DIR/test_states</value>
+							</option>
+							<option>state
+								<value>pixel_sim:comparator_sim:1_none_Interactive.150</value>
+							</option>
+						</tooloptions>
+						<outputs>
+							<output>cross(VDC("OUT") 0.6 1 "either" nil nil)
+								<evalType>point</evalType>
+								<units>V</units>
+								<significantDigits>3</significantDigits>
+							</output>
+						</outputs>
+						<origoptions>
+							<option>cell
+								<value>comparator_sim</value>
+							</option>
+							<option>lib
+								<value>pixel_sim</value>
+							</option>
+							<option>sim
+								<value>spectre</value>
+							</option>
+							<option>view
+								<value>schematic</value>
+							</option>
+						</origoptions>
+					</test>
+				</tests>
+				<vars>
+					<var enabled="1">Vb
+						<value>1.2</value>
+						<dependentTests>
+							<dependentTest enabled="1" omitted="0">pixel_sim:comparator_sim:1</dependentTest>
+						</dependentTests>
+					</var>
+					<var enabled="1">Va
+						<value>0</value>
+						<dependentTests>
+							<dependentTest enabled="1" omitted="0">pixel_sim:comparator_sim:1</dependentTest>
+						</dependentTests>
+					</var>
+					<var>w_a
+						<value>0.330:0.001:0.350</value>
+						<dependentTests>
+							<dependentTest enabled="1">pixel_sim:comparator_sim:1</dependentTest>
+						</dependentTests>
+					</var>
+					<var>w_b
+						<value>1</value>
+						<dependentTests>
+							<dependentTest enabled="1">pixel_sim:comparator_sim:1</dependentTest>
+						</dependentTests>
+					</var>
+					<var>w_base
+						<value>0.453</value>
+						<dependentTests>
+							<dependentTest enabled="1">pixel_sim:comparator_sim:1</dependentTest>
+						</dependentTests>
+					</var>
+					<var>w_nmos
+						<value>1</value>
+						<dependentTests>
+							<dependentTest enabled="1">pixel_sim:comparator_sim:1</dependentTest>
+						</dependentTests>
+					</var>
+					<var enabled="1">w_nandab
+						<value>0.04</value>
+						<dependentTests>
+							<dependentTest enabled="1" omitted="0">pixel_sim:comparator_sim:1</dependentTest>
+						</dependentTests>
+					</var>
+					<var enabled="0">w_
+						<value>1</value>
+						<dependentTests>
+							<dependentTest enabled="1" omitted="0">pixel_sim:comparator_sim:1</dependentTest>
+						</dependentTests>
+					</var>
+				</vars>
+				<overwritehistoryname>Interactive.0</overwritehistoryname>
+				<plottingoptions>
+					<plottingoption>plottype
+						<value>None</value>
+					</plottingoption>
+					<plottingoption>usewaveformtemplate
+						<value>no</value>
+					</plottingoption>
+					<plottingoption>waveformtemplate
+						<value></value>
+					</plottingoption>
+				</plottingoptions>
+				<specs>
+					<spec>pixel_sim:comparator_sim:1.cross(VDC("OUT") 0.6 1 "either" nil nil)
+						<testname>pixel_sim:comparator_sim:1</testname>
+						<resname>cross(VDC("OUT") 0.6 1 "either" nil nil)</resname>
+						<specType>range</specType>
+						<min>0.54</min>
+						<max>0.56</max>
+						<target></target>
+						<tol></tol>
+						<specWeight>100</specWeight>
+					</spec>
+				</specs>
+				<startingpoint>
+					<vars>
+						<var>w_a
+							<value>400n</value>
+						</var>
+						<var>w_b
+							<value>400n</value>
+						</var>
+						<var>w_base
+							<value>400n</value>
+						</var>
+					</vars>
+				</startingpoint>
+				<runoptions>
+					<mode>Local Optimization
+						<runoption>effort
+							<value>brentPowell</value>
+						</runoption>
+						<runoption>lazy
+							<value>1</value>
+						</runoption>
+						<runoption>tillsatisfied
+							<value>1</value>
+						</runoption>
+						<runoption>startingstateorpoint
+							<value>Reference Point</value>
+						</runoption>
+						<runoption>startingstatename
+							<value>NONE</value>
+						</runoption>
+						<runoption>timelimit
+							<value></value>
+						</runoption>
+						<runoption>numpoints
+							<value></value>
+						</runoption>
+					</mode>
+				</runoptions>
+				<sortVariableValues>0</sortVariableValues>
+			</checkpoint>
+			<timestamp>Sat May  3 00:39:46 2025
+</timestamp>
+			<resultsname>/home/22703907/Downloads/elec5503-pixel-design/pixel_sim/comparator_sim/adexl/results/data/Interactive.150.rdb</resultsname>
+			<simresults>$AXL_SETUPDB_DIR/results/data/Interactive.150.rdb</simresults>
+			<rawdatadelstrategy>SaveAll</rawdatadelstrategy>
+			<netlistdelstrategy>SaveAll</netlistdelstrategy>
+			<uselocalpsfdir>false</uselocalpsfdir>
+			<localpsfdir>/tmp/vdi-l-cos-011_22703907_003946182</localpsfdir>
+			<psfdir>/home/22703907/simulation/pixel_sim/comparator_sim/adexl/results/data/Interactive.150</psfdir>
+			<simdir>$AXL_PROJECT_DIR/pixel_sim/comparator_sim/adexl/results/data/Interactive.150</simdir>
+			<gendatasheetplotsonsimulation>1</gendatasheetplotsonsimulation>
+			<runlog>/home/22703907/Downloads/elec5503-pixel-design/pixel_sim/comparator_sim/adexl/results/data/Interactive.150.log</runlog>
+			<runlogfile>$AXL_SETUPDB_DIR/results/data/Interactive.150.log</runlogfile>
+			<schematicpoint></schematicpoint>
+			<test>all</test>
+		</historyentry>
+		<historyentry assemblerOrExplorer="adexl" roOrView="view">Interactive.151
+			<checkpoint>
+				<corners>
+					<corner enabled="1">_default</corner>
+				</corners>
+				<extensions>
+					<extension>Parasitics
+						<callback>_parSetupDBExtensionCB</callback>
+						<iconvalue></iconvalue>
+						<icontype></icontype>
+					</extension>
+				</extensions>
+				<currentmode>Single Run, Sweeps and Corners</currentmode>
+				<overwritehistory>0</overwritehistory>
+				<tests>
+					<test>pixel_sim:comparator_sim:1
+						<tool>ADE</tool>
+						<tooloptions>
+							<option>cell
+								<value>comparator_sim</value>
+							</option>
+							<option>lib
+								<value>pixel_sim</value>
+							</option>
+							<option>sim
+								<value>spectre</value>
+							</option>
+							<option>view
+								<value>schematic</value>
+							</option>
+							<option>path
+								<value>$AXL_SETUPDB_DIR/test_states</value>
+							</option>
+							<option>state
+								<value>pixel_sim:comparator_sim:1_none_Interactive.151</value>
+							</option>
+						</tooloptions>
+						<outputs>
+							<output>cross(VDC("OUT") 0.6 1 "either" nil nil)
+								<evalType>point</evalType>
+								<units>V</units>
+								<significantDigits>3</significantDigits>
+							</output>
+						</outputs>
+						<origoptions>
+							<option>cell
+								<value>comparator_sim</value>
+							</option>
+							<option>lib
+								<value>pixel_sim</value>
+							</option>
+							<option>sim
+								<value>spectre</value>
+							</option>
+							<option>view
+								<value>schematic</value>
+							</option>
+						</origoptions>
+					</test>
+				</tests>
+				<vars>
+					<var enabled="1">Vb
+						<value>1.2</value>
+						<dependentTests>
+							<dependentTest enabled="1" omitted="0">pixel_sim:comparator_sim:1</dependentTest>
+						</dependentTests>
+					</var>
+					<var enabled="1">Va
+						<value>0</value>
+						<dependentTests>
+							<dependentTest enabled="1" omitted="0">pixel_sim:comparator_sim:1</dependentTest>
+						</dependentTests>
+					</var>
+					<var>w_a
+						<value>0.320:0.001:0.350</value>
+						<dependentTests>
+							<dependentTest enabled="1">pixel_sim:comparator_sim:1</dependentTest>
+						</dependentTests>
+					</var>
+					<var>w_b
+						<value>1</value>
+						<dependentTests>
+							<dependentTest enabled="1">pixel_sim:comparator_sim:1</dependentTest>
+						</dependentTests>
+					</var>
+					<var>w_base
+						<value>0.453</value>
+						<dependentTests>
+							<dependentTest enabled="1">pixel_sim:comparator_sim:1</dependentTest>
+						</dependentTests>
+					</var>
+					<var>w_nmos
+						<value>1</value>
+						<dependentTests>
+							<dependentTest enabled="1">pixel_sim:comparator_sim:1</dependentTest>
+						</dependentTests>
+					</var>
+					<var enabled="1">w_nandab
+						<value>0.04</value>
+						<dependentTests>
+							<dependentTest enabled="1" omitted="0">pixel_sim:comparator_sim:1</dependentTest>
+						</dependentTests>
+					</var>
+					<var enabled="0">w_
+						<value>1</value>
+						<dependentTests>
+							<dependentTest enabled="1" omitted="0">pixel_sim:comparator_sim:1</dependentTest>
+						</dependentTests>
+					</var>
+				</vars>
+				<overwritehistoryname>Interactive.0</overwritehistoryname>
+				<plottingoptions>
+					<plottingoption>plottype
+						<value>None</value>
+					</plottingoption>
+					<plottingoption>usewaveformtemplate
+						<value>no</value>
+					</plottingoption>
+					<plottingoption>waveformtemplate
+						<value></value>
+					</plottingoption>
+				</plottingoptions>
+				<specs>
+					<spec>pixel_sim:comparator_sim:1.cross(VDC("OUT") 0.6 1 "either" nil nil)
+						<testname>pixel_sim:comparator_sim:1</testname>
+						<resname>cross(VDC("OUT") 0.6 1 "either" nil nil)</resname>
+						<specType>range</specType>
+						<min>0.54</min>
+						<max>0.56</max>
+						<target></target>
+						<tol></tol>
+						<specWeight>100</specWeight>
+					</spec>
+				</specs>
+				<startingpoint>
+					<vars>
+						<var>w_a
+							<value>400n</value>
+						</var>
+						<var>w_b
+							<value>400n</value>
+						</var>
+						<var>w_base
+							<value>400n</value>
+						</var>
+					</vars>
+				</startingpoint>
+				<runoptions>
+					<mode>Local Optimization
+						<runoption>effort
+							<value>brentPowell</value>
+						</runoption>
+						<runoption>lazy
+							<value>1</value>
+						</runoption>
+						<runoption>tillsatisfied
+							<value>1</value>
+						</runoption>
+						<runoption>startingstateorpoint
+							<value>Reference Point</value>
+						</runoption>
+						<runoption>startingstatename
+							<value>NONE</value>
+						</runoption>
+						<runoption>timelimit
+							<value></value>
+						</runoption>
+						<runoption>numpoints
+							<value></value>
+						</runoption>
+					</mode>
+				</runoptions>
+				<sortVariableValues>0</sortVariableValues>
+			</checkpoint>
+			<timestamp>Sat May  3 00:40:12 2025
+</timestamp>
+			<resultsname>/home/22703907/Downloads/elec5503-pixel-design/pixel_sim/comparator_sim/adexl/results/data/Interactive.151.rdb</resultsname>
+			<simresults>$AXL_SETUPDB_DIR/results/data/Interactive.151.rdb</simresults>
+			<rawdatadelstrategy>SaveAll</rawdatadelstrategy>
+			<netlistdelstrategy>SaveAll</netlistdelstrategy>
+			<uselocalpsfdir>false</uselocalpsfdir>
+			<localpsfdir>/tmp/vdi-l-cos-011_22703907_004012373</localpsfdir>
+			<psfdir>/home/22703907/simulation/pixel_sim/comparator_sim/adexl/results/data/Interactive.151</psfdir>
+			<simdir>$AXL_PROJECT_DIR/pixel_sim/comparator_sim/adexl/results/data/Interactive.151</simdir>
+			<gendatasheetplotsonsimulation>1</gendatasheetplotsonsimulation>
+			<runlog>/home/22703907/Downloads/elec5503-pixel-design/pixel_sim/comparator_sim/adexl/results/data/Interactive.151.log</runlog>
+			<runlogfile>$AXL_SETUPDB_DIR/results/data/Interactive.151.log</runlogfile>
+			<schematicpoint></schematicpoint>
+			<test>all</test>
+		</historyentry>
+		<historyentry assemblerOrExplorer="adexl" roOrView="view">Interactive.152
+			<checkpoint>
+				<corners>
+					<corner enabled="1">_default</corner>
+				</corners>
+				<extensions>
+					<extension>Parasitics
+						<callback>_parSetupDBExtensionCB</callback>
+						<iconvalue></iconvalue>
+						<icontype></icontype>
+					</extension>
+				</extensions>
+				<currentmode>Single Run, Sweeps and Corners</currentmode>
+				<overwritehistory>0</overwritehistory>
+				<tests>
+					<test>pixel_sim:comparator_sim:1
+						<tool>ADE</tool>
+						<tooloptions>
+							<option>cell
+								<value>comparator_sim</value>
+							</option>
+							<option>lib
+								<value>pixel_sim</value>
+							</option>
+							<option>sim
+								<value>spectre</value>
+							</option>
+							<option>view
+								<value>schematic</value>
+							</option>
+							<option>path
+								<value>$AXL_SETUPDB_DIR/test_states</value>
+							</option>
+							<option>state
+								<value>pixel_sim:comparator_sim:1_none_Interactive.152</value>
+							</option>
+						</tooloptions>
+						<outputs>
+							<output>cross(VDC("OUT") 0.6 1 "either" nil nil)
+								<evalType>point</evalType>
+								<units>V</units>
+								<significantDigits>3</significantDigits>
+							</output>
+						</outputs>
+						<origoptions>
+							<option>cell
+								<value>comparator_sim</value>
+							</option>
+							<option>lib
+								<value>pixel_sim</value>
+							</option>
+							<option>sim
+								<value>spectre</value>
+							</option>
+							<option>view
+								<value>schematic</value>
+							</option>
+						</origoptions>
+					</test>
+				</tests>
+				<vars>
+					<var enabled="1">Vb
+						<value>0</value>
+						<dependentTests>
+							<dependentTest enabled="1" omitted="0">pixel_sim:comparator_sim:1</dependentTest>
+						</dependentTests>
+					</var>
+					<var enabled="1">Va
 						<value>1.2</value>
 						<dependentTests>
 							<dependentTest enabled="1" omitted="0">pixel_sim:comparator_sim:1</dependentTest>
 						</dependentTests>
 					</var>
 					<var>w_a
-						<value>0.3</value>
+						<value>0.323</value>
 						<dependentTests>
 							<dependentTest enabled="1">pixel_sim:comparator_sim:1</dependentTest>
 						</dependentTests>
 					</var>
 					<var>w_b
-						<value>0.13</value>
+						<value>0.1:0.01:0.2</value>
 						<dependentTests>
 							<dependentTest enabled="1">pixel_sim:comparator_sim:1</dependentTest>
 						</dependentTests>
 					</var>
 					<var>w_base
-						<value>0.42</value>
+						<value>0.453</value>
+						<dependentTests>
+							<dependentTest enabled="1">pixel_sim:comparator_sim:1</dependentTest>
+						</dependentTests>
+					</var>
+					<var>w_nmos
+						<value>1</value>
+						<dependentTests>
+							<dependentTest enabled="1">pixel_sim:comparator_sim:1</dependentTest>
+						</dependentTests>
+					</var>
+					<var enabled="1">w_nandab
+						<value>0.04</value>
+						<dependentTests>
+							<dependentTest enabled="1" omitted="0">pixel_sim:comparator_sim:1</dependentTest>
+						</dependentTests>
+					</var>
+					<var enabled="0">w_
+						<value>1</value>
+						<dependentTests>
+							<dependentTest enabled="1" omitted="0">pixel_sim:comparator_sim:1</dependentTest>
+						</dependentTests>
+					</var>
+				</vars>
+				<overwritehistoryname>Interactive.0</overwritehistoryname>
+				<plottingoptions>
+					<plottingoption>plottype
+						<value>None</value>
+					</plottingoption>
+					<plottingoption>usewaveformtemplate
+						<value>no</value>
+					</plottingoption>
+					<plottingoption>waveformtemplate
+						<value></value>
+					</plottingoption>
+				</plottingoptions>
+				<specs>
+					<spec>pixel_sim:comparator_sim:1.cross(VDC("OUT") 0.6 1 "either" nil nil)
+						<testname>pixel_sim:comparator_sim:1</testname>
+						<resname>cross(VDC("OUT") 0.6 1 "either" nil nil)</resname>
+						<specType>range</specType>
+						<min>0.54</min>
+						<max>0.56</max>
+						<target></target>
+						<tol></tol>
+						<specWeight>100</specWeight>
+					</spec>
+				</specs>
+				<startingpoint>
+					<vars>
+						<var>w_a
+							<value>400n</value>
+						</var>
+						<var>w_b
+							<value>400n</value>
+						</var>
+						<var>w_base
+							<value>400n</value>
+						</var>
+					</vars>
+				</startingpoint>
+				<runoptions>
+					<mode>Local Optimization
+						<runoption>effort
+							<value>brentPowell</value>
+						</runoption>
+						<runoption>lazy
+							<value>1</value>
+						</runoption>
+						<runoption>tillsatisfied
+							<value>1</value>
+						</runoption>
+						<runoption>startingstateorpoint
+							<value>Reference Point</value>
+						</runoption>
+						<runoption>startingstatename
+							<value>NONE</value>
+						</runoption>
+						<runoption>timelimit
+							<value></value>
+						</runoption>
+						<runoption>numpoints
+							<value></value>
+						</runoption>
+					</mode>
+				</runoptions>
+				<sortVariableValues>0</sortVariableValues>
+			</checkpoint>
+			<timestamp>Sat May  3 00:41:04 2025
+</timestamp>
+			<resultsname>/home/22703907/Downloads/elec5503-pixel-design/pixel_sim/comparator_sim/adexl/results/data/Interactive.152.rdb</resultsname>
+			<simresults>$AXL_SETUPDB_DIR/results/data/Interactive.152.rdb</simresults>
+			<rawdatadelstrategy>SaveAll</rawdatadelstrategy>
+			<netlistdelstrategy>SaveAll</netlistdelstrategy>
+			<uselocalpsfdir>false</uselocalpsfdir>
+			<localpsfdir>/tmp/vdi-l-cos-011_22703907_004104257</localpsfdir>
+			<psfdir>/home/22703907/simulation/pixel_sim/comparator_sim/adexl/results/data/Interactive.152</psfdir>
+			<simdir>$AXL_PROJECT_DIR/pixel_sim/comparator_sim/adexl/results/data/Interactive.152</simdir>
+			<gendatasheetplotsonsimulation>1</gendatasheetplotsonsimulation>
+			<runlog>/home/22703907/Downloads/elec5503-pixel-design/pixel_sim/comparator_sim/adexl/results/data/Interactive.152.log</runlog>
+			<runlogfile>$AXL_SETUPDB_DIR/results/data/Interactive.152.log</runlogfile>
+			<schematicpoint></schematicpoint>
+			<test>all</test>
+		</historyentry>
+		<historyentry assemblerOrExplorer="adexl" roOrView="view">Interactive.153
+			<checkpoint>
+				<corners>
+					<corner enabled="1">_default</corner>
+				</corners>
+				<extensions>
+					<extension>Parasitics
+						<callback>_parSetupDBExtensionCB</callback>
+						<iconvalue></iconvalue>
+						<icontype></icontype>
+					</extension>
+				</extensions>
+				<currentmode>Single Run, Sweeps and Corners</currentmode>
+				<overwritehistory>0</overwritehistory>
+				<tests>
+					<test>pixel_sim:comparator_sim:1
+						<tool>ADE</tool>
+						<tooloptions>
+							<option>cell
+								<value>comparator_sim</value>
+							</option>
+							<option>lib
+								<value>pixel_sim</value>
+							</option>
+							<option>sim
+								<value>spectre</value>
+							</option>
+							<option>view
+								<value>schematic</value>
+							</option>
+							<option>path
+								<value>$AXL_SETUPDB_DIR/test_states</value>
+							</option>
+							<option>state
+								<value>pixel_sim:comparator_sim:1_none_Interactive.153</value>
+							</option>
+						</tooloptions>
+						<outputs>
+							<output>cross(VDC("OUT") 0.6 1 "either" nil nil)
+								<evalType>point</evalType>
+								<units>V</units>
+								<significantDigits>3</significantDigits>
+							</output>
+						</outputs>
+						<origoptions>
+							<option>cell
+								<value>comparator_sim</value>
+							</option>
+							<option>lib
+								<value>pixel_sim</value>
+							</option>
+							<option>sim
+								<value>spectre</value>
+							</option>
+							<option>view
+								<value>schematic</value>
+							</option>
+						</origoptions>
+					</test>
+				</tests>
+				<vars>
+					<var enabled="1">Vb
+						<value>0</value>
+						<dependentTests>
+							<dependentTest enabled="1" omitted="0">pixel_sim:comparator_sim:1</dependentTest>
+						</dependentTests>
+					</var>
+					<var enabled="1">Va
+						<value>1.2</value>
+						<dependentTests>
+							<dependentTest enabled="1" omitted="0">pixel_sim:comparator_sim:1</dependentTest>
+						</dependentTests>
+					</var>
+					<var>w_a
+						<value>0.323</value>
+						<dependentTests>
+							<dependentTest enabled="1">pixel_sim:comparator_sim:1</dependentTest>
+						</dependentTests>
+					</var>
+					<var>w_b
+						<value>0.1:0.01:0.2</value>
+						<dependentTests>
+							<dependentTest enabled="1">pixel_sim:comparator_sim:1</dependentTest>
+						</dependentTests>
+					</var>
+					<var>w_base
+						<value>0.453</value>
 						<dependentTests>
 							<dependentTest enabled="1">pixel_sim:comparator_sim:1</dependentTest>
 						</dependentTests>
@@ -1487,23 +1297,23 @@
 				</runoptions>
 				<sortVariableValues>0</sortVariableValues>
 			</checkpoint>
-			<timestamp>Fri May  2 23:00:10 2025
+			<timestamp>Sat May  3 00:41:29 2025
 </timestamp>
-			<resultsname>/home/22703907/Downloads/elec5503-pixel-design/pixel_sim/comparator_sim/adexl/results/data/Interactive.123.rdb</resultsname>
-			<simresults>$AXL_SETUPDB_DIR/results/data/Interactive.123.rdb</simresults>
+			<resultsname>/home/22703907/Downloads/elec5503-pixel-design/pixel_sim/comparator_sim/adexl/results/data/Interactive.153.rdb</resultsname>
+			<simresults>$AXL_SETUPDB_DIR/results/data/Interactive.153.rdb</simresults>
 			<rawdatadelstrategy>SaveAll</rawdatadelstrategy>
 			<netlistdelstrategy>SaveAll</netlistdelstrategy>
 			<uselocalpsfdir>false</uselocalpsfdir>
-			<localpsfdir>/tmp/vdi-l-cos-011_22703907_230010195</localpsfdir>
-			<psfdir>/home/22703907/simulation/pixel_sim/comparator_sim/adexl/results/data/Interactive.123</psfdir>
-			<simdir>$AXL_PROJECT_DIR/pixel_sim/comparator_sim/adexl/results/data/Interactive.123</simdir>
+			<localpsfdir>/tmp/vdi-l-cos-011_22703907_004129604</localpsfdir>
+			<psfdir>/home/22703907/simulation/pixel_sim/comparator_sim/adexl/results/data/Interactive.153</psfdir>
+			<simdir>$AXL_PROJECT_DIR/pixel_sim/comparator_sim/adexl/results/data/Interactive.153</simdir>
 			<gendatasheetplotsonsimulation>1</gendatasheetplotsonsimulation>
-			<runlog>/home/22703907/Downloads/elec5503-pixel-design/pixel_sim/comparator_sim/adexl/results/data/Interactive.123.log</runlog>
-			<runlogfile>$AXL_SETUPDB_DIR/results/data/Interactive.123.log</runlogfile>
+			<runlog>/home/22703907/Downloads/elec5503-pixel-design/pixel_sim/comparator_sim/adexl/results/data/Interactive.153.log</runlog>
+			<runlogfile>$AXL_SETUPDB_DIR/results/data/Interactive.153.log</runlogfile>
 			<schematicpoint></schematicpoint>
 			<test>all</test>
 		</historyentry>
-		<historyentry assemblerOrExplorer="adexl" roOrView="view">Interactive.124
+		<historyentry assemblerOrExplorer="adexl" roOrView="view">Interactive.154
 			<checkpoint>
 				<corners>
 					<corner enabled="1">_default</corner>
@@ -1537,197 +1347,7 @@
 								<value>$AXL_SETUPDB_DIR/test_states</value>
 							</option>
 							<option>state
-								<value>pixel_sim:comparator_sim:1_none_Interactive.124</value>
-							</option>
-						</tooloptions>
-						<outputs>
-							<output>cross(VDC("OUT") 0.6 1 "either" nil nil)
-								<evalType>point</evalType>
-								<units>V</units>
-								<significantDigits>3</significantDigits>
-							</output>
-						</outputs>
-						<origoptions>
-							<option>cell
-								<value>comparator_sim</value>
-							</option>
-							<option>lib
-								<value>pixel_sim</value>
-							</option>
-							<option>sim
-								<value>spectre</value>
-							</option>
-							<option>view
-								<value>schematic</value>
-							</option>
-						</origoptions>
-					</test>
-				</tests>
-				<vars>
-					<var enabled="1">Vb
-						<value>1.2</value>
-						<dependentTests>
-							<dependentTest enabled="1" omitted="0">pixel_sim:comparator_sim:1</dependentTest>
-						</dependentTests>
-					</var>
-					<var enabled="1">Va
-						<value>0</value>
-						<dependentTests>
-							<dependentTest enabled="1" omitted="0">pixel_sim:comparator_sim:1</dependentTest>
-						</dependentTests>
-					</var>
-					<var>w_a
-						<value>0.3</value>
-						<dependentTests>
-							<dependentTest enabled="1">pixel_sim:comparator_sim:1</dependentTest>
-						</dependentTests>
-					</var>
-					<var>w_b
-						<value>0.13</value>
-						<dependentTests>
-							<dependentTest enabled="1">pixel_sim:comparator_sim:1</dependentTest>
-						</dependentTests>
-					</var>
-					<var>w_base
-						<value>0.42</value>
-						<dependentTests>
-							<dependentTest enabled="1">pixel_sim:comparator_sim:1</dependentTest>
-						</dependentTests>
-					</var>
-					<var>w_nmos
-						<value>1</value>
-						<dependentTests>
-							<dependentTest enabled="1">pixel_sim:comparator_sim:1</dependentTest>
-						</dependentTests>
-					</var>
-					<var enabled="1">w_nandab
-						<value>0.04</value>
-						<dependentTests>
-							<dependentTest enabled="1" omitted="0">pixel_sim:comparator_sim:1</dependentTest>
-						</dependentTests>
-					</var>
-					<var enabled="0">w_
-						<value>1</value>
-						<dependentTests>
-							<dependentTest enabled="1" omitted="0">pixel_sim:comparator_sim:1</dependentTest>
-						</dependentTests>
-					</var>
-				</vars>
-				<overwritehistoryname>Interactive.0</overwritehistoryname>
-				<plottingoptions>
-					<plottingoption>plottype
-						<value>None</value>
-					</plottingoption>
-					<plottingoption>usewaveformtemplate
-						<value>no</value>
-					</plottingoption>
-					<plottingoption>waveformtemplate
-						<value></value>
-					</plottingoption>
-				</plottingoptions>
-				<specs>
-					<spec>pixel_sim:comparator_sim:1.cross(VDC("OUT") 0.6 1 "either" nil nil)
-						<testname>pixel_sim:comparator_sim:1</testname>
-						<resname>cross(VDC("OUT") 0.6 1 "either" nil nil)</resname>
-						<specType>range</specType>
-						<min>0.49</min>
-						<max>0.51</max>
-						<target></target>
-						<tol></tol>
-						<specWeight>100</specWeight>
-					</spec>
-				</specs>
-				<startingpoint>
-					<vars>
-						<var>w_a
-							<value>400n</value>
-						</var>
-						<var>w_b
-							<value>400n</value>
-						</var>
-						<var>w_base
-							<value>400n</value>
-						</var>
-					</vars>
-				</startingpoint>
-				<runoptions>
-					<mode>Local Optimization
-						<runoption>effort
-							<value>brentPowell</value>
-						</runoption>
-						<runoption>lazy
-							<value>1</value>
-						</runoption>
-						<runoption>tillsatisfied
-							<value>1</value>
-						</runoption>
-						<runoption>startingstateorpoint
-							<value>Reference Point</value>
-						</runoption>
-						<runoption>startingstatename
-							<value>NONE</value>
-						</runoption>
-						<runoption>timelimit
-							<value></value>
-						</runoption>
-						<runoption>numpoints
-							<value></value>
-						</runoption>
-					</mode>
-				</runoptions>
-				<sortVariableValues>0</sortVariableValues>
-			</checkpoint>
-			<timestamp>Fri May  2 23:00:27 2025
-</timestamp>
-			<resultsname>/home/22703907/Downloads/elec5503-pixel-design/pixel_sim/comparator_sim/adexl/results/data/Interactive.124.rdb</resultsname>
-			<simresults>$AXL_SETUPDB_DIR/results/data/Interactive.124.rdb</simresults>
-			<rawdatadelstrategy>SaveAll</rawdatadelstrategy>
-			<netlistdelstrategy>SaveAll</netlistdelstrategy>
-			<uselocalpsfdir>false</uselocalpsfdir>
-			<localpsfdir>/tmp/vdi-l-cos-011_22703907_230027427</localpsfdir>
-			<psfdir>/home/22703907/simulation/pixel_sim/comparator_sim/adexl/results/data/Interactive.124</psfdir>
-			<simdir>$AXL_PROJECT_DIR/pixel_sim/comparator_sim/adexl/results/data/Interactive.124</simdir>
-			<gendatasheetplotsonsimulation>1</gendatasheetplotsonsimulation>
-			<runlog>/home/22703907/Downloads/elec5503-pixel-design/pixel_sim/comparator_sim/adexl/results/data/Interactive.124.log</runlog>
-			<runlogfile>$AXL_SETUPDB_DIR/results/data/Interactive.124.log</runlogfile>
-			<schematicpoint></schematicpoint>
-			<test>all</test>
-		</historyentry>
-		<historyentry assemblerOrExplorer="adexl" roOrView="view">Interactive.125
-			<checkpoint>
-				<corners>
-					<corner enabled="1">_default</corner>
-				</corners>
-				<extensions>
-					<extension>Parasitics
-						<callback>_parSetupDBExtensionCB</callback>
-						<iconvalue></iconvalue>
-						<icontype></icontype>
-					</extension>
-				</extensions>
-				<currentmode>Single Run, Sweeps and Corners</currentmode>
-				<overwritehistory>0</overwritehistory>
-				<tests>
-					<test>pixel_sim:comparator_sim:1
-						<tool>ADE</tool>
-						<tooloptions>
-							<option>cell
-								<value>comparator_sim</value>
-							</option>
-							<option>lib
-								<value>pixel_sim</value>
-							</option>
-							<option>sim
-								<value>spectre</value>
-							</option>
-							<option>view
-								<value>schematic</value>
-							</option>
-							<option>path
-								<value>$AXL_SETUPDB_DIR/test_states</value>
-							</option>
-							<option>state
-								<value>pixel_sim:comparator_sim:1_none_Interactive.125</value>
+								<value>pixel_sim:comparator_sim:1_none_Interactive.154</value>
 							</option>
 						</tooloptions>
 						<outputs>
@@ -1767,19 +1387,19 @@
 						</dependentTests>
 					</var>
 					<var>w_a
-						<value>0.3</value>
+						<value>0.323</value>
 						<dependentTests>
 							<dependentTest enabled="1">pixel_sim:comparator_sim:1</dependentTest>
 						</dependentTests>
 					</var>
 					<var>w_b
-						<value>0.13</value>
+						<value>0.14:0.001:0.15</value>
 						<dependentTests>
 							<dependentTest enabled="1">pixel_sim:comparator_sim:1</dependentTest>
 						</dependentTests>
 					</var>
 					<var>w_base
-						<value>0.42</value>
+						<value>0.453</value>
 						<dependentTests>
 							<dependentTest enabled="1">pixel_sim:comparator_sim:1</dependentTest>
 						</dependentTests>
@@ -1867,23 +1487,23 @@
 				</runoptions>
 				<sortVariableValues>0</sortVariableValues>
 			</checkpoint>
-			<timestamp>Fri May  2 23:00:46 2025
+			<timestamp>Sat May  3 00:42:04 2025
 </timestamp>
-			<resultsname>/home/22703907/Downloads/elec5503-pixel-design/pixel_sim/comparator_sim/adexl/results/data/Interactive.125.rdb</resultsname>
-			<simresults>$AXL_SETUPDB_DIR/results/data/Interactive.125.rdb</simresults>
+			<resultsname>/home/22703907/Downloads/elec5503-pixel-design/pixel_sim/comparator_sim/adexl/results/data/Interactive.154.rdb</resultsname>
+			<simresults>$AXL_SETUPDB_DIR/results/data/Interactive.154.rdb</simresults>
 			<rawdatadelstrategy>SaveAll</rawdatadelstrategy>
 			<netlistdelstrategy>SaveAll</netlistdelstrategy>
 			<uselocalpsfdir>false</uselocalpsfdir>
-			<localpsfdir>/tmp/vdi-l-cos-011_22703907_230046673</localpsfdir>
-			<psfdir>/home/22703907/simulation/pixel_sim/comparator_sim/adexl/results/data/Interactive.125</psfdir>
-			<simdir>$AXL_PROJECT_DIR/pixel_sim/comparator_sim/adexl/results/data/Interactive.125</simdir>
+			<localpsfdir>/tmp/vdi-l-cos-011_22703907_004204543</localpsfdir>
+			<psfdir>/home/22703907/simulation/pixel_sim/comparator_sim/adexl/results/data/Interactive.154</psfdir>
+			<simdir>$AXL_PROJECT_DIR/pixel_sim/comparator_sim/adexl/results/data/Interactive.154</simdir>
 			<gendatasheetplotsonsimulation>1</gendatasheetplotsonsimulation>
-			<runlog>/home/22703907/Downloads/elec5503-pixel-design/pixel_sim/comparator_sim/adexl/results/data/Interactive.125.log</runlog>
-			<runlogfile>$AXL_SETUPDB_DIR/results/data/Interactive.125.log</runlogfile>
+			<runlog>/home/22703907/Downloads/elec5503-pixel-design/pixel_sim/comparator_sim/adexl/results/data/Interactive.154.log</runlog>
+			<runlogfile>$AXL_SETUPDB_DIR/results/data/Interactive.154.log</runlogfile>
 			<schematicpoint></schematicpoint>
 			<test>all</test>
 		</historyentry>
-		<historyentry assemblerOrExplorer="adexl" roOrView="view">Interactive.126
+		<historyentry assemblerOrExplorer="adexl" roOrView="view">Interactive.155
 			<checkpoint>
 				<corners>
 					<corner enabled="1">_default</corner>
@@ -1917,7 +1537,197 @@
 								<value>$AXL_SETUPDB_DIR/test_states</value>
 							</option>
 							<option>state
-								<value>pixel_sim:comparator_sim:1_none_Interactive.126</value>
+								<value>pixel_sim:comparator_sim:1_none_Interactive.155</value>
+							</option>
+						</tooloptions>
+						<outputs>
+							<output>cross(VDC("OUT") 0.6 1 "either" nil nil)
+								<evalType>point</evalType>
+								<units>V</units>
+								<significantDigits>3</significantDigits>
+							</output>
+						</outputs>
+						<origoptions>
+							<option>cell
+								<value>comparator_sim</value>
+							</option>
+							<option>lib
+								<value>pixel_sim</value>
+							</option>
+							<option>sim
+								<value>spectre</value>
+							</option>
+							<option>view
+								<value>schematic</value>
+							</option>
+						</origoptions>
+					</test>
+				</tests>
+				<vars>
+					<var enabled="1">Vb
+						<value>1.2</value>
+						<dependentTests>
+							<dependentTest enabled="1" omitted="0">pixel_sim:comparator_sim:1</dependentTest>
+						</dependentTests>
+					</var>
+					<var enabled="1">Va
+						<value>1.2</value>
+						<dependentTests>
+							<dependentTest enabled="1" omitted="0">pixel_sim:comparator_sim:1</dependentTest>
+						</dependentTests>
+					</var>
+					<var>w_a
+						<value>0.323</value>
+						<dependentTests>
+							<dependentTest enabled="1">pixel_sim:comparator_sim:1</dependentTest>
+						</dependentTests>
+					</var>
+					<var>w_b
+						<value>0.142</value>
+						<dependentTests>
+							<dependentTest enabled="1">pixel_sim:comparator_sim:1</dependentTest>
+						</dependentTests>
+					</var>
+					<var>w_base
+						<value>0.453</value>
+						<dependentTests>
+							<dependentTest enabled="1">pixel_sim:comparator_sim:1</dependentTest>
+						</dependentTests>
+					</var>
+					<var>w_nmos
+						<value>1</value>
+						<dependentTests>
+							<dependentTest enabled="1">pixel_sim:comparator_sim:1</dependentTest>
+						</dependentTests>
+					</var>
+					<var enabled="1">w_nandab
+						<value>0.04:0.001:0.06</value>
+						<dependentTests>
+							<dependentTest enabled="1" omitted="0">pixel_sim:comparator_sim:1</dependentTest>
+						</dependentTests>
+					</var>
+					<var enabled="0">w_
+						<value>1</value>
+						<dependentTests>
+							<dependentTest enabled="1" omitted="0">pixel_sim:comparator_sim:1</dependentTest>
+						</dependentTests>
+					</var>
+				</vars>
+				<overwritehistoryname>Interactive.0</overwritehistoryname>
+				<plottingoptions>
+					<plottingoption>plottype
+						<value>None</value>
+					</plottingoption>
+					<plottingoption>usewaveformtemplate
+						<value>no</value>
+					</plottingoption>
+					<plottingoption>waveformtemplate
+						<value></value>
+					</plottingoption>
+				</plottingoptions>
+				<specs>
+					<spec>pixel_sim:comparator_sim:1.cross(VDC("OUT") 0.6 1 "either" nil nil)
+						<testname>pixel_sim:comparator_sim:1</testname>
+						<resname>cross(VDC("OUT") 0.6 1 "either" nil nil)</resname>
+						<specType>range</specType>
+						<min>0.49</min>
+						<max>0.51</max>
+						<target></target>
+						<tol></tol>
+						<specWeight>100</specWeight>
+					</spec>
+				</specs>
+				<startingpoint>
+					<vars>
+						<var>w_a
+							<value>400n</value>
+						</var>
+						<var>w_b
+							<value>400n</value>
+						</var>
+						<var>w_base
+							<value>400n</value>
+						</var>
+					</vars>
+				</startingpoint>
+				<runoptions>
+					<mode>Local Optimization
+						<runoption>effort
+							<value>brentPowell</value>
+						</runoption>
+						<runoption>lazy
+							<value>1</value>
+						</runoption>
+						<runoption>tillsatisfied
+							<value>1</value>
+						</runoption>
+						<runoption>startingstateorpoint
+							<value>Reference Point</value>
+						</runoption>
+						<runoption>startingstatename
+							<value>NONE</value>
+						</runoption>
+						<runoption>timelimit
+							<value></value>
+						</runoption>
+						<runoption>numpoints
+							<value></value>
+						</runoption>
+					</mode>
+				</runoptions>
+				<sortVariableValues>0</sortVariableValues>
+			</checkpoint>
+			<timestamp>Sat May  3 00:43:06 2025
+</timestamp>
+			<resultsname>/home/22703907/Downloads/elec5503-pixel-design/pixel_sim/comparator_sim/adexl/results/data/Interactive.155.rdb</resultsname>
+			<simresults>$AXL_SETUPDB_DIR/results/data/Interactive.155.rdb</simresults>
+			<rawdatadelstrategy>SaveAll</rawdatadelstrategy>
+			<netlistdelstrategy>SaveAll</netlistdelstrategy>
+			<uselocalpsfdir>false</uselocalpsfdir>
+			<localpsfdir>/tmp/vdi-l-cos-011_22703907_004306403</localpsfdir>
+			<psfdir>/home/22703907/simulation/pixel_sim/comparator_sim/adexl/results/data/Interactive.155</psfdir>
+			<simdir>$AXL_PROJECT_DIR/pixel_sim/comparator_sim/adexl/results/data/Interactive.155</simdir>
+			<gendatasheetplotsonsimulation>1</gendatasheetplotsonsimulation>
+			<runlog>/home/22703907/Downloads/elec5503-pixel-design/pixel_sim/comparator_sim/adexl/results/data/Interactive.155.log</runlog>
+			<runlogfile>$AXL_SETUPDB_DIR/results/data/Interactive.155.log</runlogfile>
+			<schematicpoint></schematicpoint>
+			<test>all</test>
+		</historyentry>
+		<historyentry assemblerOrExplorer="adexl" roOrView="view">Interactive.156
+			<checkpoint>
+				<corners>
+					<corner enabled="1">_default</corner>
+				</corners>
+				<extensions>
+					<extension>Parasitics
+						<callback>_parSetupDBExtensionCB</callback>
+						<iconvalue></iconvalue>
+						<icontype></icontype>
+					</extension>
+				</extensions>
+				<currentmode>Single Run, Sweeps and Corners</currentmode>
+				<overwritehistory>0</overwritehistory>
+				<tests>
+					<test>pixel_sim:comparator_sim:1
+						<tool>ADE</tool>
+						<tooloptions>
+							<option>cell
+								<value>comparator_sim</value>
+							</option>
+							<option>lib
+								<value>pixel_sim</value>
+							</option>
+							<option>sim
+								<value>spectre</value>
+							</option>
+							<option>view
+								<value>schematic</value>
+							</option>
+							<option>path
+								<value>$AXL_SETUPDB_DIR/test_states</value>
+							</option>
+							<option>state
+								<value>pixel_sim:comparator_sim:1_none_Interactive.156</value>
 							</option>
 						</tooloptions>
 						<outputs>
@@ -1957,19 +1767,19 @@
 						</dependentTests>
 					</var>
 					<var>w_a
-						<value>0.3</value>
+						<value>0.323</value>
 						<dependentTests>
 							<dependentTest enabled="1">pixel_sim:comparator_sim:1</dependentTest>
 						</dependentTests>
 					</var>
 					<var>w_b
-						<value>0.13</value>
+						<value>0.142</value>
 						<dependentTests>
 							<dependentTest enabled="1">pixel_sim:comparator_sim:1</dependentTest>
 						</dependentTests>
 					</var>
 					<var>w_base
-						<value>0.42</value>
+						<value>0.453</value>
 						<dependentTests>
 							<dependentTest enabled="1">pixel_sim:comparator_sim:1</dependentTest>
 						</dependentTests>
@@ -1981,7 +1791,7 @@
 						</dependentTests>
 					</var>
 					<var enabled="1">w_nandab
-						<value>0.04</value>
+						<value>0.04:0.001:0.06</value>
 						<dependentTests>
 							<dependentTest enabled="1" omitted="0">pixel_sim:comparator_sim:1</dependentTest>
 						</dependentTests>
@@ -2010,8 +1820,8 @@
 						<testname>pixel_sim:comparator_sim:1</testname>
 						<resname>cross(VDC("OUT") 0.6 1 "either" nil nil)</resname>
 						<specType>range</specType>
-						<min>0.49</min>
-						<max>0.51</max>
+						<min>0.59</min>
+						<max>0.61</max>
 						<target></target>
 						<tol></tol>
 						<specWeight>100</specWeight>
@@ -2057,19 +1867,209 @@
 				</runoptions>
 				<sortVariableValues>0</sortVariableValues>
 			</checkpoint>
-			<timestamp>Fri May  2 23:01:19 2025
+			<timestamp>Sat May  3 00:43:38 2025
 </timestamp>
-			<resultsname>/home/22703907/Downloads/elec5503-pixel-design/pixel_sim/comparator_sim/adexl/results/data/Interactive.126.rdb</resultsname>
-			<simresults>$AXL_SETUPDB_DIR/results/data/Interactive.126.rdb</simresults>
+			<resultsname>/home/22703907/Downloads/elec5503-pixel-design/pixel_sim/comparator_sim/adexl/results/data/Interactive.156.rdb</resultsname>
+			<simresults>$AXL_SETUPDB_DIR/results/data/Interactive.156.rdb</simresults>
 			<rawdatadelstrategy>SaveAll</rawdatadelstrategy>
 			<netlistdelstrategy>SaveAll</netlistdelstrategy>
 			<uselocalpsfdir>false</uselocalpsfdir>
-			<localpsfdir>/tmp/vdi-l-cos-011_22703907_230119915</localpsfdir>
-			<psfdir>/home/22703907/simulation/pixel_sim/comparator_sim/adexl/results/data/Interactive.126</psfdir>
-			<simdir>$AXL_PROJECT_DIR/pixel_sim/comparator_sim/adexl/results/data/Interactive.126</simdir>
+			<localpsfdir>/tmp/vdi-l-cos-011_22703907_004338936</localpsfdir>
+			<psfdir>/home/22703907/simulation/pixel_sim/comparator_sim/adexl/results/data/Interactive.156</psfdir>
+			<simdir>$AXL_PROJECT_DIR/pixel_sim/comparator_sim/adexl/results/data/Interactive.156</simdir>
 			<gendatasheetplotsonsimulation>1</gendatasheetplotsonsimulation>
-			<runlog>/home/22703907/Downloads/elec5503-pixel-design/pixel_sim/comparator_sim/adexl/results/data/Interactive.126.log</runlog>
-			<runlogfile>$AXL_SETUPDB_DIR/results/data/Interactive.126.log</runlogfile>
+			<runlog>/home/22703907/Downloads/elec5503-pixel-design/pixel_sim/comparator_sim/adexl/results/data/Interactive.156.log</runlog>
+			<runlogfile>$AXL_SETUPDB_DIR/results/data/Interactive.156.log</runlogfile>
+			<schematicpoint></schematicpoint>
+			<test>all</test>
+		</historyentry>
+		<historyentry assemblerOrExplorer="adexl" roOrView="view">Interactive.157
+			<checkpoint>
+				<corners>
+					<corner enabled="1">_default</corner>
+				</corners>
+				<extensions>
+					<extension>Parasitics
+						<callback>_parSetupDBExtensionCB</callback>
+						<iconvalue></iconvalue>
+						<icontype></icontype>
+					</extension>
+				</extensions>
+				<currentmode>Single Run, Sweeps and Corners</currentmode>
+				<overwritehistory>0</overwritehistory>
+				<tests>
+					<test>pixel_sim:comparator_sim:1
+						<tool>ADE</tool>
+						<tooloptions>
+							<option>cell
+								<value>comparator_sim</value>
+							</option>
+							<option>lib
+								<value>pixel_sim</value>
+							</option>
+							<option>sim
+								<value>spectre</value>
+							</option>
+							<option>view
+								<value>schematic</value>
+							</option>
+							<option>path
+								<value>$AXL_SETUPDB_DIR/test_states</value>
+							</option>
+							<option>state
+								<value>pixel_sim:comparator_sim:1_none_Interactive.157</value>
+							</option>
+						</tooloptions>
+						<outputs>
+							<output>cross(VDC("OUT") 0.6 1 "either" nil nil)
+								<evalType>point</evalType>
+								<units>V</units>
+								<significantDigits>3</significantDigits>
+							</output>
+						</outputs>
+						<origoptions>
+							<option>cell
+								<value>comparator_sim</value>
+							</option>
+							<option>lib
+								<value>pixel_sim</value>
+							</option>
+							<option>sim
+								<value>spectre</value>
+							</option>
+							<option>view
+								<value>schematic</value>
+							</option>
+						</origoptions>
+					</test>
+				</tests>
+				<vars>
+					<var enabled="1">Vb
+						<value>0</value>
+						<dependentTests>
+							<dependentTest enabled="1" omitted="0">pixel_sim:comparator_sim:1</dependentTest>
+						</dependentTests>
+					</var>
+					<var enabled="1">Va
+						<value>0</value>
+						<dependentTests>
+							<dependentTest enabled="1" omitted="0">pixel_sim:comparator_sim:1</dependentTest>
+						</dependentTests>
+					</var>
+					<var>w_a
+						<value>0.323</value>
+						<dependentTests>
+							<dependentTest enabled="1">pixel_sim:comparator_sim:1</dependentTest>
+						</dependentTests>
+					</var>
+					<var>w_b
+						<value>0.142</value>
+						<dependentTests>
+							<dependentTest enabled="1">pixel_sim:comparator_sim:1</dependentTest>
+						</dependentTests>
+					</var>
+					<var>w_base
+						<value>0.453</value>
+						<dependentTests>
+							<dependentTest enabled="1">pixel_sim:comparator_sim:1</dependentTest>
+						</dependentTests>
+					</var>
+					<var>w_nmos
+						<value>1</value>
+						<dependentTests>
+							<dependentTest enabled="1">pixel_sim:comparator_sim:1</dependentTest>
+						</dependentTests>
+					</var>
+					<var enabled="1">w_nandab
+						<value>0.03:0.001:0.06</value>
+						<dependentTests>
+							<dependentTest enabled="1" omitted="0">pixel_sim:comparator_sim:1</dependentTest>
+						</dependentTests>
+					</var>
+					<var enabled="0">w_
+						<value>1</value>
+						<dependentTests>
+							<dependentTest enabled="1" omitted="0">pixel_sim:comparator_sim:1</dependentTest>
+						</dependentTests>
+					</var>
+				</vars>
+				<overwritehistoryname>Interactive.0</overwritehistoryname>
+				<plottingoptions>
+					<plottingoption>plottype
+						<value>None</value>
+					</plottingoption>
+					<plottingoption>usewaveformtemplate
+						<value>no</value>
+					</plottingoption>
+					<plottingoption>waveformtemplate
+						<value></value>
+					</plottingoption>
+				</plottingoptions>
+				<specs>
+					<spec>pixel_sim:comparator_sim:1.cross(VDC("OUT") 0.6 1 "either" nil nil)
+						<testname>pixel_sim:comparator_sim:1</testname>
+						<resname>cross(VDC("OUT") 0.6 1 "either" nil nil)</resname>
+						<specType>range</specType>
+						<min>0.59</min>
+						<max>0.61</max>
+						<target></target>
+						<tol></tol>
+						<specWeight>100</specWeight>
+					</spec>
+				</specs>
+				<startingpoint>
+					<vars>
+						<var>w_a
+							<value>400n</value>
+						</var>
+						<var>w_b
+							<value>400n</value>
+						</var>
+						<var>w_base
+							<value>400n</value>
+						</var>
+					</vars>
+				</startingpoint>
+				<runoptions>
+					<mode>Local Optimization
+						<runoption>effort
+							<value>brentPowell</value>
+						</runoption>
+						<runoption>lazy
+							<value>1</value>
+						</runoption>
+						<runoption>tillsatisfied
+							<value>1</value>
+						</runoption>
+						<runoption>startingstateorpoint
+							<value>Reference Point</value>
+						</runoption>
+						<runoption>startingstatename
+							<value>NONE</value>
+						</runoption>
+						<runoption>timelimit
+							<value></value>
+						</runoption>
+						<runoption>numpoints
+							<value></value>
+						</runoption>
+					</mode>
+				</runoptions>
+				<sortVariableValues>0</sortVariableValues>
+			</checkpoint>
+			<timestamp>Sat May  3 00:44:42 2025
+</timestamp>
+			<resultsname>/home/22703907/Downloads/elec5503-pixel-design/pixel_sim/comparator_sim/adexl/results/data/Interactive.157.rdb</resultsname>
+			<simresults>$AXL_SETUPDB_DIR/results/data/Interactive.157.rdb</simresults>
+			<rawdatadelstrategy>SaveAll</rawdatadelstrategy>
+			<netlistdelstrategy>SaveAll</netlistdelstrategy>
+			<uselocalpsfdir>false</uselocalpsfdir>
+			<localpsfdir>/tmp/vdi-l-cos-011_22703907_004442891</localpsfdir>
+			<psfdir>/home/22703907/simulation/pixel_sim/comparator_sim/adexl/results/data/Interactive.157</psfdir>
+			<simdir>$AXL_PROJECT_DIR/pixel_sim/comparator_sim/adexl/results/data/Interactive.157</simdir>
+			<gendatasheetplotsonsimulation>1</gendatasheetplotsonsimulation>
+			<runlog>/home/22703907/Downloads/elec5503-pixel-design/pixel_sim/comparator_sim/adexl/results/data/Interactive.157.log</runlog>
+			<runlogfile>$AXL_SETUPDB_DIR/results/data/Interactive.157.log</runlogfile>
 			<schematicpoint></schematicpoint>
 			<test>all</test>
 		</historyentry>
