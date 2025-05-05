@@ -22,3 +22,4 @@ drcRunDir/*
 # Abstract generation tool
 abstract.log*
 abstract.record*
+.cadence/*
