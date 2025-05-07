@@ -1,0 +1,3 @@
+projectDir = '"~/simulation"
+designInfo = '("pixel_sim" "dff_sim" "schematic" "spectre")
+descriptionText = "None"
