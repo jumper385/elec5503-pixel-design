@@ -1,41 +1,328 @@
 \o Program:		@(#)$CDS: libManager version 6.1.7 - CAT35 11/09/2015 17:30 (sjfnl634) $
 \o Sub version:		sub-version  s001 
-\o Arguments:		-unmapped -mpssession virtuoso26027 -mpshost vdi-l-cos-024 
-\o Working Directory:	vdi-l-cos-024:/home/22703907/Downloads/elec5503-pixel-design
+\o Arguments:		-unmapped -mpssession virtuoso18737 -mpshost vdi-l-cos-006 
+\o Working Directory:	vdi-l-cos-006:/home/23247166/Downloads/elec5503-pixel-design
 \o 64-bit offsets
 \o Qt version: 		4.8.5
-\o changeWorkingDir("/home/22703907/Downloads/elec5503-pixel-design") unnecessary.
+\o changeWorkingDir("/home/23247166/Downloads/elec5503-pixel-design") unnecessary.
 \o ddSetForcedLib("") unnecessary.
-\o Log file is "/home/22703907/Downloads/elec5503-pixel-design/libManager.log.1".
+\o Log file is "/home/23247166/Downloads/elec5503-pixel-design/libManager.log.1".
 \o Opening libManager window.
 \a nrSetWindowVisibility(cdsLibManager "show")
 \o MPS service: map window
 \o Library Manager customization server connected.
 \a nrSetCurrentWindow(cdsLibManager)
-\a nrResizeWindow(cdsLibManager list(1226 1244 600 419))
-\a cdsLibManager->libListBox->value = "pixel_sim"
+\a nrResizeWindow(cdsLibManager list(229 170 600 419))
+\a nrResizeWindow(cdsLibManager list(-10 19 600 419))
+\a nrResizeWindow(cdsLibManager list(-10 19 1680 874))
+\a nrResizeWindow(cdsLibManager list(-10 19 600 419))
+\a nrResizeWindow(cdsLibManager list(-10 19 529 398))
+\a cdsLibManager->libListBox->value = "pixel"
+\a cdsLibManager->libListBox->value = "umc13mmrf"
+\a nrListItemAction(cdsLibManager->libListBox "umc13mmrf" 0)
+\a cdsLibManager->libLineEdit->value = "umc13mmrf"
+\a cdsLibManager->cellListBox->value = "N_12_HSL130E"
+\a cdsLibManager->cellListBox->value = nil
+\a nrListItemAction(cdsLibManager->cellListBox 30 0)
+\a cdsLibManager->cellListBox->value = "N_12_HSL130E"
+\o MPS request: edit design
+\a cdsLibManager->libListBox->value = nil
+\a cdsLibManager->cellListBox->value = nil
+\a cdsLibManager->libLineEdit->value = ""
+\a cdsLibManager->libListBox->value = "umc13mmrf"
+\a cdsLibManager->libLineEdit->value = "umc13mmrf"
+\a cdsLibManager->cellListBox->value = "N_12_HSL130E"
+\a cdsLibManager->cellLineEdit->value = "N_12_HSL130E"
+\a nrSetCurrentWindow(cdsLibManager)
+\a nrResizeWindow(cdsLibManager list(-10 19 529 336))
+\a nrSetCurrentWindow(cdsLibManager)
+\a cdsLibManager->libListBox->value = nil
+\a cdsLibManager->cellListBox->value = nil
+\a cdsLibManager->cellLineEdit->value = ""
+\a cdsLibManager->libLineEdit->value = ""
+\a cdsLibManager->libListBox->value = "umc13mmrf"
+\a cdsLibManager->libLineEdit->value = "umc13mmrf"
+\a cdsLibManager->cellListBox->value = "N_12_HSL130E"
+\a cdsLibManager->cellLineEdit->value = "N_12_HSL130E"
+\a nrSetCurrentWindow(cdsLibManager)
+\a cdsLibManager->libListBox->value = "pixel"
+\a cdsLibManager->cellListBox->value = nil
+\a cdsLibManager->cellLineEdit->value = ""
+\a cdsLibManager->libLineEdit->value = "pixel"
+\a cdsLibManager->cellListBox->value = "inverter"
+\a nrListItemAction(cdsLibManager->cellListBox 8 0)
+\o MPS request: edit design
+\a cdsLibManager->libListBox->value = nil
+\a cdsLibManager->cellListBox->value = nil
+\a cdsLibManager->libLineEdit->value = ""
+\a cdsLibManager->libListBox->value = "pixel"
+\a cdsLibManager->libLineEdit->value = "pixel"
+\a cdsLibManager->cellListBox->value = "inverter"
+\a cdsLibManager->cellLineEdit->value = "inverter"
+\a nrSetCurrentWindow(cdsLibManager)
+\a nrSetCurrentWindow(cdsLibManager)
+\a nrSetCurrentWindow(cdsLibManager)
+\a cdsLibManager->cellListBox->value = nil
+\a nrListItemAction(cdsLibManager->cellListBox 8 0)
+\a cdsLibManager->cellListBox->value = "inverter"
+\o MPS request: edit design
+\a cdsLibManager->libListBox->value = nil
+\a cdsLibManager->cellListBox->value = nil
+\a cdsLibManager->libLineEdit->value = ""
+\a cdsLibManager->libListBox->value = "pixel"
+\a cdsLibManager->libLineEdit->value = "pixel"
+\a cdsLibManager->cellListBox->value = "inverter"
+\a cdsLibManager->cellLineEdit->value = "inverter"
+\a nrSetCurrentWindow(cdsLibManager)
+\a nrSetCurrentWindow(cdsLibManager)
+\a nrSetCurrentWindow(cdsLibManager)
+\a cdsLibManager->cellListBox->value = "counter_full"
+\a nrListItemAction(cdsLibManager->cellListBox 5 0)
+\o MPS request: edit design
+\a cdsLibManager->libListBox->value = nil
+\a cdsLibManager->cellListBox->value = nil
+\a cdsLibManager->libLineEdit->value = ""
+\a cdsLibManager->libListBox->value = "pixel"
+\a cdsLibManager->libLineEdit->value = "pixel"
+\a cdsLibManager->cellListBox->value = "counter_full"
+\a cdsLibManager->cellLineEdit->value = "counter_full"
+\a nrSetCurrentWindow(cdsLibManager)
+\a cdsLibManager->cellListBox->value = "dff"
+\a nrListItemAction(cdsLibManager->cellListBox 7 0)
+\o MPS request: edit design
+\a cdsLibManager->libListBox->value = nil
+\a cdsLibManager->cellListBox->value = nil
+\a cdsLibManager->libLineEdit->value = ""
 \a cdsLibManager->libListBox->value = "pixel"
 \a cdsLibManager->libLineEdit->value = "pixel"
 \a cdsLibManager->cellListBox->value = "dff"
 \a cdsLibManager->cellLineEdit->value = "dff"
 \a nrSetCurrentWindow(cdsLibManager)
-\a cdsLibManager->cellListBox->value = "twophase_clock"
-\a cdsLibManager->cellListBox->value = "jkff"
-\a cdsLibManager->cellListBox->value = "twophase_clock"
-\a cdsLibManager->cellListBox->value = "inverter"
+\a nrSetCurrentWindow(cdsLibManager)
+\a cdsLibManager->cellListBox->value = nil
+\a nrListItemAction(cdsLibManager->cellListBox 7 0)
+\a cdsLibManager->cellListBox->value = "dff"
+\o MPS request: edit design
+\a cdsLibManager->libListBox->value = nil
+\a cdsLibManager->cellListBox->value = nil
+\a cdsLibManager->libLineEdit->value = ""
+\a cdsLibManager->libListBox->value = "pixel"
+\a cdsLibManager->libLineEdit->value = "pixel"
 \a cdsLibManager->cellListBox->value = "dff"
 \a cdsLibManager->cellLineEdit->value = "dff"
-\a cdsLibManager->viewListBox->value = "symbol"
-\a cdsLibManager->viewLineEdit->value = "symbol"
-\a cdsLibManager->viewListBox->value = "schematic"
-\a cdsLibManager->viewLineEdit->value = "schematic"
-\a cdsLibManager->viewListBox->value = "symbol"
-\a cdsLibManager->viewLineEdit->value = "symbol"
-\a cdsLibManager->viewListBox->value = "schematic"
-\a cdsLibManager->viewLineEdit->value = "schematic"
 \a nrSetCurrentWindow(cdsLibManager)
 \a nrSetCurrentWindow(cdsLibManager)
-\a nrResizeWindow(cdsLibManager list(1540 1252 600 419))
+\a cdsLibManager->cellListBox->value = "nand"
+\a cdsLibManager->cellListBox->value = nil
+\a cdsLibManager->cellListBox->value = "nand"
+\a cdsLibManager->cellLineEdit->value = "nand"
+\a cdsLibManager->viewListBox->value = "symbol"
+\a cdsLibManager->viewLineEdit->value = "symbol"
+\a lmgrLogShowPopup("mainListPopup2" 41 43 2 "symbol")
+\a cdsLibManager->copySimpleButton->value = t
+\a basicCopyForm->CategoryCellsEdit->value = "*"
+\a basicCopyForm->CellsSkipLibraries->value = t
+\a basicCopyForm->CellsSkipLibrariesEdit->value = "*"
+\a basicCopyForm->CellsSkipLibrariesEdit->value = "*"
+\a basicCopyForm->ViewsSkipLibraries->value = t
+\a basicCopyForm->ViewsSkipLibrariesEdit->value = "*"
+\a basicCopyForm->CopyFromLibrary->value = "analogLib"
+\a basicCopyForm->CopyToLibrary->value = "analogLib"
+\a basicCopyForm->CopyFromLibrary->value = "pixel"
+\a basicCopyForm->CopyFromCell->value = "nand"
+\a basicCopyForm->CopyFromView->value = "symbol"
+\a basicCopyForm->CopyToLibrary->value = "pixel"
+\a basicCopyForm->CopyToCell->value = "nand"
+\a basicCopyForm->CopyToView->value = "symbol"
+\a basicCopyForm->ViewsViewsToCopy->value = "symbol"
+\a basicCopyForm->CellsSkipLibrariesEdit->value = ""
+\a basicCopyForm->CellsSkipLibrariesEdit->value = "analogLib avTech basic cdsDefTechLib pixel_sim umc13mmrf"
+\a basicCopyForm->ViewsSkipLibrariesEdit->value = "analogLib avTech basic cdsDefTechLib pixel_sim umc13mmrf"
+\a nrSetWindowVisibility(basicCopyForm "show")
+\a nrSetCurrentWindow(basicCopyForm)
+\a nrResizeWindow(basicCopyForm list(32 19 444 730))
+\a basicCopyForm->CopyToView->value = "symbol_temp"
+\a nrDialogAccept(basicCopyForm)
+\a basicCopyForm->OK->value = t
+\a basicCopyForm->CopyToView->value = "symbol_temp"
+\o Beginning simple copy to library "pixel".
+\o Processing files to be copied...
+\a nrSetWindowVisibility(workingDialogForm "show")
+\a nrSetCurrentWindow(workingDialogForm)
+\a nrSetWindowVisibility(workingDialogForm "show")
+\a nrSetCurrentWindow(cdsLibManager)
+\a nrSetCurrentWindow(workingDialogForm)
+\a nrResizeWindow(workingDialogForm list(118 126 273 133))
+\a cdsLibManager->libListBox->value = nil
+\a cdsLibManager->cellListBox->value = nil
+\a cdsLibManager->viewLineEdit->value = ""
+\a cdsLibManager->viewListBox->value = nil
+\a cdsLibManager->cellLineEdit->value = ""
+\a cdsLibManager->libLineEdit->value = ""
+\a cdsLibManager->libListBox->value = "pixel"
+\a cdsLibManager->libLineEdit->value = "pixel"
+\a cdsLibManager->cellListBox->value = "nand"
+\a cdsLibManager->cellLineEdit->value = "nand"
+\a cdsLibManager->viewListBox->value = "symbol"
+\a cdsLibManager->viewLineEdit->value = "symbol"
+\a cdsLibManager->viewLineEdit->value = ""
+\a cdsLibManager->viewListBox->value = nil
+\a cdsLibManager->viewListBox->value = "symbol"
+\a cdsLibManager->viewLineEdit->value = "symbol"
+\a nrSetCurrentWindow(cdsLibManager)
+\a basicCopyForm->CellsSkipLibrariesEdit->value = "*"
+\a basicCopyForm->CellsSkipLibrariesEdit->value = "analogLib avTech basic cdsDefTechLib pixel_sim umc13mmrf"
+\a nrSetCurrentWindow(cdsLibManager)
+\a cdsLibManager->cellListBox->value = "xor_8T"
+\a cdsLibManager->viewLineEdit->value = ""
+\a cdsLibManager->viewListBox->value = nil
+\a cdsLibManager->viewListBox->value = "symbol"
+\a cdsLibManager->viewLineEdit->value = "symbol"
+\a cdsLibManager->cellLineEdit->value = "xor_8T"
+\a cdsLibManager->libListBox->value = nil
+\a cdsLibManager->cellListBox->value = nil
+\a cdsLibManager->viewLineEdit->value = ""
+\a cdsLibManager->viewListBox->value = nil
+\a cdsLibManager->cellLineEdit->value = ""
+\a cdsLibManager->libLineEdit->value = ""
+\a cdsLibManager->libListBox->value = "pixel"
+\a cdsLibManager->libLineEdit->value = "pixel"
+\a cdsLibManager->cellListBox->value = "xor_8T"
+\a cdsLibManager->cellLineEdit->value = "xor_8T"
+\a cdsLibManager->viewListBox->value = "symbol"
+\a cdsLibManager->viewLineEdit->value = "symbol"
+\a cdsLibManager->viewLineEdit->value = ""
+\a cdsLibManager->viewListBox->value = nil
+\a cdsLibManager->viewListBox->value = "symbol"
+\a cdsLibManager->viewLineEdit->value = "symbol"
+\a cdsLibManager->libListBox->value = nil
+\a cdsLibManager->cellListBox->value = nil
+\a cdsLibManager->viewLineEdit->value = ""
+\a cdsLibManager->viewListBox->value = nil
+\a cdsLibManager->cellLineEdit->value = ""
+\a cdsLibManager->libLineEdit->value = ""
+\a cdsLibManager->libListBox->value = "pixel"
+\a cdsLibManager->libLineEdit->value = "pixel"
+\a cdsLibManager->cellListBox->value = "xor_8T"
+\a cdsLibManager->cellLineEdit->value = "xor_8T"
+\a cdsLibManager->viewListBox->value = "symbol"
+\a cdsLibManager->viewLineEdit->value = "symbol"
+\a cdsLibManager->viewLineEdit->value = ""
+\a cdsLibManager->viewListBox->value = nil
+\a cdsLibManager->viewListBox->value = "symbol"
+\a cdsLibManager->viewLineEdit->value = "symbol"
+\a nrSetCurrentWindow(cdsLibManager)
+\a cdsLibManager->cellListBox->value = "linebuff"
+\a cdsLibManager->viewLineEdit->value = ""
+\a cdsLibManager->viewListBox->value = nil
+\a cdsLibManager->viewListBox->value = "symbol"
+\a cdsLibManager->viewLineEdit->value = "symbol"
+\a cdsLibManager->cellLineEdit->value = "linebuff"
+\a nrSetCurrentWindow(cdsLibManager)
+\a lmgrLogShowPopup("mainListPopup2" 42 27 2 "symbol")
+\a cdsLibManager->editDeleteButton->value = t
+\a deleteForm->deleteBothRadioButton->value = t
+\a deleteForm->deleteFilterEdit->value = "*"
+\a deleteForm->notDeleteFilterEdit->value = "*"
+\a nrSetWindowVisibility(deleteForm "show")
+\a nrSetCurrentWindow(deleteForm)
+\a nrResizeWindow(deleteForm list(-10 19 627 425))
+\a deleteForm->OK->value = t
+\o QUESTION (CLM-199): The following 1 items are marked for deletion.  Are you sure?
+\a nrSetWindowVisibility(mcMBXDLG "show")
+\a nrSetCurrentWindow(mcMBXDLG)
+\a nrResizeWindow(mcMBXDLG list(136 109 334 260))
+\a mcMBXDLG->pushButton1->value = t
+\o Deleting view "symbol" from cell "linebuff" in library "pixel".
+\a nrSetWindowVisibility(workingDialogForm "show")
+\a nrSetCurrentWindow(cdsLibManager)
+\o Deleted cellview 'pixel/linebuff/symbol'.
+\o Deletion of 1 view done.
+\a nrSetCurrentWindow(workingDialogForm)
+\a nrSetCurrentWindow(cdsLibManager)
+\a cdsLibManager->viewListBox->value = nil
+\a nrResizeWindow(workingDialogForm list(120 86 268 133))
+\a cdsLibManager->libListBox->value = nil
+\a cdsLibManager->cellListBox->value = nil
+\a cdsLibManager->cellLineEdit->value = ""
+\a cdsLibManager->libLineEdit->value = ""
+\a cdsLibManager->libListBox->value = "pixel"
+\a cdsLibManager->libLineEdit->value = "pixel"
+\a cdsLibManager->cellListBox->value = "linebuff"
+\a cdsLibManager->cellLineEdit->value = "linebuff"
+\a cdsLibManager->viewLineEdit->value = ""
+\a nrSetCurrentWindow(cdsLibManager)
+\a cdsLibManager->viewListBox->value = "symbol"
+\a cdsLibManager->viewLineEdit->value = "symbol"
+\a cdsLibManager->viewListBox->value = nil
+\a cdsLibManager->viewListBox->value = "symbol"
+\o MPS request: edit design
+\a nrListItemAction(cdsLibManager->gdmXTView 1 0)
+\a nrSetCurrentWindow(cdsLibManager)
+\a nrSetCurrentWindow(cdsLibManager)
+\a cdsLibManager->cellListBox->value = "2mux"
+\a cdsLibManager->viewLineEdit->value = ""
+\a cdsLibManager->viewListBox->value = nil
+\a cdsLibManager->viewListBox->value = "symbol"
+\a cdsLibManager->viewLineEdit->value = "symbol"
+\a cdsLibManager->cellLineEdit->value = "2mux"
+\a lmgrLogShowPopup("mainListPopup2" 45 22 2 "symbol")
+\a cdsLibManager->copySimpleButton->value = t
+\a basicCopyForm->CellsSkipLibrariesEdit->value = "*"
+\a basicCopyForm->ViewsViewsToCopy->value = ""
+\a basicCopyForm->ViewsSkipLibrariesEdit->value = "*"
+\a basicCopyForm->CopyFromCell->value = ""
+\a basicCopyForm->CopyFromView->value = ""
+\a basicCopyForm->CopyToCell->value = ""
+\a basicCopyForm->CopyToView->value = ""
+\a basicCopyForm->CopyFromLibrary->value = ""
+\a basicCopyForm->CopyToLibrary->value = ""
+\a basicCopyForm->CopyFromLibrary->value = "analogLib"
+\a basicCopyForm->CopyToLibrary->value = "analogLib"
+\a basicCopyForm->CopyFromLibrary->value = "pixel"
+\a basicCopyForm->CopyFromCell->value = "2mux"
+\a basicCopyForm->CopyFromView->value = "symbol"
+\a basicCopyForm->CopyToLibrary->value = "pixel"
+\a basicCopyForm->CopyToCell->value = "2mux"
+\a basicCopyForm->CopyToView->value = "symbol"
+\a basicCopyForm->ViewsViewsToCopy->value = "symbol"
+\a basicCopyForm->CellsSkipLibrariesEdit->value = ""
+\a basicCopyForm->CellsSkipLibrariesEdit->value = "analogLib avTech basic cdsDefTechLib pixel_sim umc13mmrf"
+\a basicCopyForm->ViewsSkipLibrariesEdit->value = "analogLib avTech basic cdsDefTechLib pixel_sim umc13mmrf"
+\a nrSetWindowVisibility(basicCopyForm "show")
+\a nrSetCurrentWindow(basicCopyForm)
+\a nrResizeWindow(basicCopyForm list(22 19 444 730))
+\a basicCopyForm->CopyToView->value = "symbol_temp"
+\a nrDialogAccept(basicCopyForm)
+\a basicCopyForm->OK->value = t
+\a basicCopyForm->CopyToView->value = "symbol_temp"
+\o Beginning simple copy to library "pixel".
+\o Processing files to be copied...
+\a nrSetWindowVisibility(workingDialogForm "show")
+\a nrSetWindowVisibility(workingDialogForm "show")
+\a nrSetCurrentWindow(cdsLibManager)
+\a nrSetCurrentWindow(workingDialogForm)
+\a cdsLibManager->libListBox->value = nil
+\a cdsLibManager->cellListBox->value = nil
+\a cdsLibManager->viewLineEdit->value = ""
+\a cdsLibManager->viewListBox->value = nil
+\a cdsLibManager->cellLineEdit->value = ""
+\a cdsLibManager->libLineEdit->value = ""
+\a cdsLibManager->libListBox->value = "pixel"
+\a cdsLibManager->libLineEdit->value = "pixel"
+\a cdsLibManager->cellListBox->value = "2mux"
+\a cdsLibManager->cellLineEdit->value = "2mux"
+\a cdsLibManager->viewListBox->value = "symbol"
+\a cdsLibManager->viewLineEdit->value = "symbol"
+\a cdsLibManager->viewLineEdit->value = ""
+\a cdsLibManager->viewListBox->value = nil
+\a cdsLibManager->viewListBox->value = "symbol"
+\a cdsLibManager->viewLineEdit->value = "symbol"
+\a nrSetCurrentWindow(cdsLibManager)
+\a basicCopyForm->CellsSkipLibrariesEdit->value = "*"
+\a basicCopyForm->CellsSkipLibrariesEdit->value = "analogLib avTech basic cdsDefTechLib pixel_sim umc13mmrf"
+\a nrResizeWindow(workingDialogForm list(110 81 273 133))
+\a nrSetCurrentWindow(cdsLibManager)
 \a cdsLibManager->libListBox->value = "pixel_sim"
 \a cdsLibManager->cellListBox->value = nil
 \a cdsLibManager->viewLineEdit->value = ""
@@ -43,19 +330,16 @@
 \a cdsLibManager->cellLineEdit->value = ""
 \a cdsLibManager->libLineEdit->value = "pixel_sim"
 \a cdsLibManager->cellListBox->value = "dff_sim"
-\a cdsLibManager->viewListBox->value = "schematic"
-\a cdsLibManager->viewLineEdit->value = "schematic"
-\a cdsLibManager->cellListBox->value = nil
-\a cdsLibManager->viewLineEdit->value = ""
-\a cdsLibManager->viewListBox->value = nil
-\a nrListItemAction(cdsLibManager->cellListBox 0 0)
-\a cdsLibManager->cellListBox->value = "dff_sim"
-\a cdsLibManager->viewListBox->value = "schematic"
-\a cdsLibManager->viewLineEdit->value = "schematic"
-\a cdsLibManager->viewLineEdit->value = ""
-\a cdsLibManager->viewListBox->value = nil
+\a nrListItemAction(cdsLibManager->cellListBox 7 0)
 \o MPS request: edit design
+\a cdsLibManager->libListBox->value = nil
+\a cdsLibManager->cellListBox->value = nil
+\a cdsLibManager->libLineEdit->value = ""
+\a cdsLibManager->libListBox->value = "pixel_sim"
+\a cdsLibManager->libLineEdit->value = "pixel_sim"
+\a cdsLibManager->cellListBox->value = "dff_sim"
 \a cdsLibManager->cellLineEdit->value = "dff_sim"
+\a nrSetCurrentWindow(cdsLibManager)
 \a nrSetCurrentWindow(cdsLibManager)
 \a cdsLibManager->libListBox->value = nil
 \a cdsLibManager->cellListBox->value = nil
@@ -65,70 +349,3 @@
 \a cdsLibManager->libLineEdit->value = "pixel_sim"
 \a cdsLibManager->cellListBox->value = "dff_sim"
 \a cdsLibManager->cellLineEdit->value = "dff_sim"
-\a cdsLibManager->viewListBox->value = "schematic"
-\a cdsLibManager->viewLineEdit->value = "schematic"
-\a cdsLibManager->viewLineEdit->value = ""
-\a cdsLibManager->viewListBox->value = nil
-\a cdsLibManager->viewListBox->value = "schematic"
-\a cdsLibManager->viewLineEdit->value = "schematic"
-\a nrSetCurrentWindow(cdsLibManager)
-\a nrResizeWindow(cdsLibManager list(653 1252 600 419))
-\a nrSetCurrentWindow(cdsLibManager)
-\a cdsLibManager->cellListBox->value = nil
-\a cdsLibManager->viewLineEdit->value = ""
-\a cdsLibManager->viewListBox->value = nil
-\a cdsLibManager->cellLineEdit->value = ""
-\a nrSetCurrentWindow(cdsLibManager)
-\a cdsLibManager->libListBox->value = "umc13mmrf"
-\a cdsLibManager->libListBox->value = "pixel_sim"
-\a cdsLibManager->libListBox->value = "pixel"
-\a cdsLibManager->libLineEdit->value = "pixel"
-\a cdsLibManager->cellListBox->value = "dff"
-\a cdsLibManager->viewListBox->value = "schematic"
-\a cdsLibManager->viewLineEdit->value = "schematic"
-\a cdsLibManager->cellListBox->value = nil
-\a cdsLibManager->viewLineEdit->value = ""
-\a cdsLibManager->viewListBox->value = nil
-\a cdsLibManager->cellListBox->value = "dff"
-\a cdsLibManager->viewListBox->value = "schematic"
-\a cdsLibManager->viewLineEdit->value = "schematic"
-\a nrListItemAction(cdsLibManager->cellListBox 0 0)
-\a cdsLibManager->viewLineEdit->value = ""
-\a cdsLibManager->viewListBox->value = nil
-\o MPS request: edit design
-\a cdsLibManager->cellLineEdit->value = "dff"
-\a nrSetCurrentWindow(cdsLibManager)
-\a cdsLibManager->viewListBox->value = "schematic"
-\a cdsLibManager->viewListBox->value = nil
-\a cdsLibManager->viewListBox->value = "schematic"
-\o MPS request: edit design
-\a nrListItemAction(cdsLibManager->gdmXTView 1 0)
-\a nrSetCurrentWindow(cdsLibManager)
-\a cdsLibManager->viewListBox->value = nil
-\a cdsLibManager->viewListBox->value = "schematic"
-\a nrSetCurrentWindow(cdsLibManager)
-\a cdsLibManager->viewListBox->value = nil
-\a cdsLibManager->viewListBox->value = "schematic"
-\o MPS request: edit design
-\a nrListItemAction(cdsLibManager->gdmXTView 1 0)
-\a nrSetCurrentWindow(cdsLibManager)
-\a nrSetCurrentWindow(cdsLibManager)
-\a cdsLibManager->viewListBox->value = nil
-\a cdsLibManager->viewListBox->value = "schematic"
-\o MPS request: edit design
-\a nrListItemAction(cdsLibManager->gdmXTView 1 1)
-\a nrSetCurrentWindow(cdsLibManager)
-\a cdsLibManager->libListBox->value = "pixel_sim"
-\a cdsLibManager->cellListBox->value = nil
-\a cdsLibManager->viewLineEdit->value = ""
-\a cdsLibManager->viewListBox->value = nil
-\a cdsLibManager->cellLineEdit->value = ""
-\a cdsLibManager->libLineEdit->value = "pixel_sim"
-\a cdsLibManager->cellListBox->value = "dff_sim"
-\a cdsLibManager->viewListBox->value = "schematic"
-\a cdsLibManager->viewLineEdit->value = "schematic"
-\a cdsLibManager->cellLineEdit->value = "dff_sim"
-\a cdsLibManager->viewListBox->value = nil
-\a cdsLibManager->viewListBox->value = "schematic"
-\o MPS request: edit design
-\a nrListItemAction(cdsLibManager->gdmXTView 1 0)
