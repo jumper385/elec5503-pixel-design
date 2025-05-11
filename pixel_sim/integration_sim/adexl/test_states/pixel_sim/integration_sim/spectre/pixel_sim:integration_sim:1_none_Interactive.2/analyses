@@ -5,7 +5,7 @@ analysis(tran fields dynParamListBox) (nil choices nil value nil)
 analysis(tran fields dynchoice) "Parameter file"
 analysis(tran fields dynparam) ""
 analysis(tran fields enable) (t)
-analysis(tran fields errpreset) "liberal"
+analysis(tran fields errpreset) ""
 analysis(tran fields noisefmax) ""
 analysis(tran fields noisefmin) ""
 analysis(tran fields noiseinst) ""

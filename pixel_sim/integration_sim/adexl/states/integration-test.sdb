@@ -1,0 +1,56 @@
+<?xml version="1.0"?>
+<setupdb version="5">integration-test
+	<active>Active Setup
+		<corners>
+			<corner enabled="1">_default</corner>
+		</corners>
+		<extensions>
+			<extension>Parasitics
+				<callback>_parSetupDBExtensionCB</callback>
+				<iconvalue></iconvalue>
+				<icontype></icontype>
+			</extension>
+		</extensions>
+		<currentmode>Single Run, Sweeps and Corners</currentmode>
+		<tests>
+			<test>pixel_sim:integration_sim:1
+				<tool>ADE</tool>
+				<tooloptions>
+					<option>cell
+						<value>integration_sim</value>
+					</option>
+					<option>lib
+						<value>pixel_sim</value>
+					</option>
+					<option>sim
+						<value>spectre</value>
+					</option>
+					<option>view
+						<value>schematic</value>
+					</option>
+					<option>path
+						<value>$AXL_SETUPDB_DIR/states/integration-test/test_states</value>
+					</option>
+					<option>state
+						<value>pixel_sim:integration_sim:1_active</value>
+					</option>
+				</tooloptions>
+				<origoptions>
+					<option>cell
+						<value>integration_sim</value>
+					</option>
+					<option>lib
+						<value>pixel_sim</value>
+					</option>
+					<option>sim
+						<value>spectre</value>
+					</option>
+					<option>view
+						<value>schematic</value>
+					</option>
+				</origoptions>
+			</test>
+		</tests>
+	</active>
+	<history>History</history>
+</setupdb>

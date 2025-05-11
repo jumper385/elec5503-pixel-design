@@ -12,7 +12,7 @@
 (envOpts enableDiagnose) nil
 (envOpts enableNoiseRefactor) t
 (envOpts enablePhaseNoiseBW) t
-(envOpts firstRun) nil
+(envOpts firstRun) t
 (envOpts lsusp) nil
 (envOpts macroModelEnable) nil
 (envOpts macroModelList) nil
