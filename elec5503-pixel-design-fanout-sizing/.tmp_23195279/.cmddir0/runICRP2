@@ -1,0 +1,7 @@
+#!/bin/sh
+cdsVncserver :80
+sleep 3
+cd /home/23195279/working-dir/elec5503-pixel-design-fanout-sizing
+virtuoso -noautostart -mpssession "virtuoso21985" -mpshost "vdi-l-cos-013" -davinciService "DaVinciService_21985_1746448822" -log '/home/23195279/working-dir/elec5503-pixel-design-fanout-sizing/logs_23195279/logs0/Job2.log'  -licenseLockFileName '/home/23195279/working-dir/elec5503-pixel-design-fanout-sizing/.tmp_23195279/.vdi-l-cos-013_21985'  -axlChildIdFlag 2 1>/dev/null  2>/dev/null 
+exit $?
+
