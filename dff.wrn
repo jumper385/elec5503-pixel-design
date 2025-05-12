@@ -1,0 +1,19 @@
+Assura Errors & Warnings Search (PLEASE CAREFULLY REVIEW THESE MESSAGES)
+================================================================================
+WARNINGS & ERRORS found in Assura NVN Run Log file
+--------------------------------------------------------------------------------
+ WARNING (AVLVSNN-10050) : capDevice - cell 'mimcaps_mml130e(GENERIC)' not found.
+ WARNING (AVLVSNN-10050) : resDevice - cell 'rnnpo_mml130e(GENERIC)' not found.
+ WARNING (AVLVSNN-10050) : resDevice - cell 'rnpd_mml130e(GENERIC)' not found.
+ WARNING (AVLVSNN-10050) : resDevice - cell 'rnppo_mml130e(GENERIC)' not found.
+ WARNING (AVLVSNN-10050) : resDevice - cell 'rnnd_mml130e(GENERIC)' not found.
+ WARNING (AVLVSNN-10050) : capDevice - cell 'VARMIS_33_RF(GENERIC)' not found.
+ WARNING (AVLVSNN-10050) : capDevice - cell 'VARMIS_12_RF(GENERIC)' not found.
+ WARNING (AVLVSNN-10050) : resDevice - cell 'rnhr1000_mml130e(GENERIC)' not found.
+ WARNING (AVLVSNN-10050) : resDevice - cell 'rsppo_mml130e(GENERIC)' not found.
+ WARNING (AVLVSNN-10050) : resDevice - cell 'rsnpo_mml130e(GENERIC)' not found.
+ WARNING (AVLVSNN-10050) : resDevice - cell 'rspd_mml130e(GENERIC)' not found.
+ WARNING (AVLVSNN-10050) : resDevice - cell 'rsnd_mml130e(GENERIC)' not found.
+ WARNING (AVLVSNN-10050) : resDevice - cell 'rsnwell_mml130e(GENERIC)' not found.
+*ERROR* Can not evaluate parameter 'Sp' on inst 'PM1' in cell 'nand schematic pixel'
+        Parameter not found in this cell
