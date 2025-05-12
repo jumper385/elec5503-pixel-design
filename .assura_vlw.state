@@ -1,0 +1,20 @@
+;----------------------------------------------------------------------------
+; @(#)$CDS: assura version av4.1:Production:dfII6.1.7-64b:IC6.1.7-64b.78 12/24/15 11:44 (sjflg007) $
+; sub-version 4.1_USR5
+;----------------------------------------------------------------------------
+
+
+;----------------------------------------------------------------------------
+; Assura VLW saved state
+;----------------------------------------------------------------------------
+
+vuiLayerListOrder  =  "Alphabetical"
+vuiLayerList  = '(
+		("DATAEXTENT" 205 "DATAEXTENT = cellBoundary(root)" 0 3 t "y0 (drawing)" t)
+		("E4A_23Fa_PO1" 2025 "E4A_23Fa_PO1 = geomAndNot( DRC_1 E4A_23Fa_PO1 /*-*/ )" 1 6 t "y1 (drawing)" t)
+		("M1_TEXTT" 186 "M1_TEXTT = textToPin( \"ME1\" type(\"drawing\") )" 0 0 t "y2 (drawing)" t)
+		("ME1_c" 426 "ME1_c = geomAndNot( T?424 IND )" 0 5 t "y3 (drawing)" t)
+		("NWELL" 236 "NWELL = geomAndNot( NWEL RNWELL )" 0 4 t "y4 (drawing)" t)
+		("m1_pin" 196 "m1_pin = pinText( \"ME1\" )" 0 2 t "y5 (drawing)" t)
+		("po_pin" 195 "po_pin = pinText( \"PO1\" )" 0 1 t "y6 (drawing)" t)
+)
