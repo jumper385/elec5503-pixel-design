@@ -1,0 +1,666 @@
+
+*** Checking layout cellview 'pixel/dff/layout' against source cellview 'pixel/dff/schematic'. - Mon May 12 14:48:30 2025 ***
+
+INFO (LX-1005): Parameter 'W' is set to '1u' on schematic instance 'I1/NM0'
+but is '280n' on layout instance 'I1|NM0'.
+INFO (LX-1005): Parameter 'W' is set to '1u' on schematic instance 'I12/NM0'
+but is '280n' on layout instance 'I12|NM0'.
+INFO (LX-1005): Parameter 'W' is set to '1u' on schematic instance 'I19/NM0'
+but is '280n' on layout instance 'I19|NM0'.
+INFO (LX-1005): Parameter 'W' is set to '1u' on schematic instance 'I2/NM0'
+but is '500n' on layout instance 'I2|NM0'.
+INFO (LX-1005): Parameter 'W' is set to '1u' on schematic instance 'I27/I0/NM0'
+but is '500n' on layout instance 'I27|I0|NM0'.
+INFO (LX-1005): Parameter 'W' is set to '1u' on schematic instance 'I27/I1/NM0'
+but is '500n' on layout instance 'I27|I1|NM0'.
+INFO (LX-1005): Parameter 'W' is set to '1u' on schematic instance 'I27/I2/NM0'
+but is '500n' on layout instance 'I27|I2|NM0'.
+INFO (LX-1005): Parameter 'W' is set to '1u' on schematic instance 'I28/I0/NM0'
+but is '500n' on layout instance 'I28|I0|NM0'.
+INFO (LX-1005): Parameter 'W' is set to '1u' on schematic instance 'I3/NM0'
+but is '500n' on layout instance 'I3|NM0'.
+INFO (LX-1005): Parameter 'W' is set to '1u' on schematic instance 'I30/I1/NM0'
+but is '500n' on layout instance 'I30|I1|NM0'.
+INFO (LX-1005): Parameter 'W' is set to '1u' on schematic instance 'I30/I3/NM0'
+but is '500n' on layout instance 'I30|I3|NM0'.
+INFO (LX-1005): Parameter 'W' is set to '1u' on schematic instance 'I4/NM0'
+but is '500n' on layout instance 'I4|NM0'.
+INFO (LX-1005): Parameter 'W' is set to '1u' on schematic instance 'I5/NM0'
+but is '500n' on layout instance 'I5|NM0'.
+INFO (LX-1005): Parameter 'W' is set to '1u' on schematic instance 'I6/NM0'
+but is '500n' on layout instance 'I6|NM0'.
+INFO (LX-1005): Parameter 'W' is set to '1u' on schematic instance 'I7/NM0'
+but is '500n' on layout instance 'I7|NM0'.
+INFO (LX-1005): Parameter 'W' is set to '1u' on schematic instance 'I8/NM0'
+but is '500n' on layout instance 'I8|NM0'.
+INFO (LX-1005): Parameter 'W' is set to '2u' on schematic instance 'I1/PM0'
+but is '560n' on layout instance 'I1|PM0'.
+INFO (LX-1005): Parameter 'W' is set to '2u' on schematic instance 'I12/PM0'
+but is '560n' on layout instance 'I12|PM0'.
+INFO (LX-1005): Parameter 'W' is set to '2u' on schematic instance 'I18/NM0'
+but is '280n' on layout instance 'I18|NM0'.
+INFO (LX-1005): Parameter 'W' is set to '2u' on schematic instance 'I18/NM1'
+but is '280n' on layout instance 'I18|NM1'.
+INFO (LX-1005): Parameter 'W' is set to '2u' on schematic instance 'I18/PM0'
+but is '560n' on layout instance 'I18|PM0'.
+INFO (LX-1005): Parameter 'W' is set to '2u' on schematic instance 'I18/PM1'
+but is '560n' on layout instance 'I18|PM1'.
+INFO (LX-1005): Parameter 'W' is set to '2u' on schematic instance 'I19/PM0'
+but is '560n' on layout instance 'I19|PM0'.
+INFO (LX-1005): Parameter 'W' is set to '2u' on schematic instance 'I2/PM0'
+but is '1u' on layout instance 'I2|PM0'.
+INFO (LX-1005): Parameter 'W' is set to '2u' on schematic instance 'I27/I0/PM0'
+but is '1u' on layout instance 'I27|I0|PM0'.
+INFO (LX-1005): Parameter 'W' is set to '2u' on schematic instance 'I27/I1/PM0'
+but is '1u' on layout instance 'I27|I1|PM0'.
+INFO (LX-1005): Parameter 'W' is set to '2u' on schematic instance 'I27/I2/PM0'
+but is '1u' on layout instance 'I27|I2|PM0'.
+INFO (LX-1005): Parameter 'W' is set to '2u' on schematic instance 'I28/I0/PM0'
+but is '1u' on layout instance 'I28|I0|PM0'.
+INFO (LX-1005): Parameter 'W' is set to '2u' on schematic instance 'I3/PM0'
+but is '1u' on layout instance 'I3|PM0'.
+INFO (LX-1005): Parameter 'W' is set to '2u' on schematic instance 'I30/I1/PM0'
+but is '1u' on layout instance 'I30|I1|PM0'.
+INFO (LX-1005): Parameter 'W' is set to '2u' on schematic instance 'I30/I3/PM0'
+but is '1u' on layout instance 'I30|I3|PM0'.
+INFO (LX-1005): Parameter 'W' is set to '2u' on schematic instance 'I4/PM0'
+but is '1u' on layout instance 'I4|PM0'.
+INFO (LX-1005): Parameter 'W' is set to '2u' on schematic instance 'I5/PM0'
+but is '1u' on layout instance 'I5|PM0'.
+INFO (LX-1005): Parameter 'W' is set to '2u' on schematic instance 'I6/PM0'
+but is '1u' on layout instance 'I6|PM0'.
+INFO (LX-1005): Parameter 'W' is set to '2u' on schematic instance 'I7/PM0'
+but is '1u' on layout instance 'I7|PM0'.
+INFO (LX-1005): Parameter 'W' is set to '2u' on schematic instance 'I8/PM0'
+but is '1u' on layout instance 'I8|PM0'.
+INFO (LX-1005): Parameter 'ad' is set to '340f' on schematic instance 'I1/NM0'
+but is '95.2f' on layout instance 'I1|NM0'.
+INFO (LX-1005): Parameter 'ad' is set to '340f' on schematic instance 'I12/NM0'
+but is '95.2f' on layout instance 'I12|NM0'.
+INFO (LX-1005): Parameter 'ad' is set to '340f' on schematic instance 'I19/NM0'
+but is '95.2f' on layout instance 'I19|NM0'.
+INFO (LX-1005): Parameter 'ad' is set to '340f' on schematic instance 'I2/NM0'
+but is '170f' on layout instance 'I2|NM0'.
+INFO (LX-1005): Parameter 'ad' is set to '340f' on schematic instance 'I26/NM0'
+but is '95.2f' on layout instance 'I26|NM0'.
+INFO (LX-1005): Parameter 'ad' is set to '340f' on schematic instance 'I26/NM1'
+but is '95.2f' on layout instance 'I26|NM1'.
+INFO (LX-1005): Parameter 'ad' is set to '340f' on schematic instance 'I26/NM2'
+but is '170f' on layout instance 'I26|NM2'.
+INFO (LX-1005): Parameter 'ad' is set to '340f' on schematic instance 'I26/NM3'
+but is '170f' on layout instance 'I26|NM3'.
+INFO (LX-1005): Parameter 'ad' is set to '340f' on schematic instance 'I26/NM4'
+but is '170f' on layout instance 'I26|NM4'.
+INFO (LX-1005): Parameter 'ad' is set to '340f' on schematic instance 'I27/I0/NM0'
+but is '170f' on layout instance 'I27|I0|NM0'.
+INFO (LX-1005): Parameter 'ad' is set to '340f' on schematic instance 'I27/I1/NM0'
+but is '170f' on layout instance 'I27|I1|NM0'.
+INFO (LX-1005): Parameter 'ad' is set to '340f' on schematic instance 'I27/I2/NM0'
+but is '170f' on layout instance 'I27|I2|NM0'.
+INFO (LX-1005): Parameter 'ad' is set to '340f' on schematic instance 'I28/I0/NM0'
+but is '170f' on layout instance 'I28|I0|NM0'.
+INFO (LX-1005): Parameter 'ad' is set to '340f' on schematic instance 'I3/NM0'
+but is '170f' on layout instance 'I3|NM0'.
+INFO (LX-1005): Parameter 'ad' is set to '340f' on schematic instance 'I30/I1/NM0'
+but is '170f' on layout instance 'I30|I1|NM0'.
+INFO (LX-1005): Parameter 'ad' is set to '340f' on schematic instance 'I30/I3/NM0'
+but is '170f' on layout instance 'I30|I3|NM0'.
+INFO (LX-1005): Parameter 'ad' is set to '340f' on schematic instance 'I4/NM0'
+but is '170f' on layout instance 'I4|NM0'.
+INFO (LX-1005): Parameter 'ad' is set to '340f' on schematic instance 'I5/NM0'
+but is '170f' on layout instance 'I5|NM0'.
+INFO (LX-1005): Parameter 'ad' is set to '340f' on schematic instance 'I6/NM0'
+but is '170f' on layout instance 'I6|NM0'.
+INFO (LX-1005): Parameter 'ad' is set to '340f' on schematic instance 'I7/NM0'
+but is '170f' on layout instance 'I7|NM0'.
+INFO (LX-1005): Parameter 'ad' is set to '340f' on schematic instance 'I8/NM0'
+but is '170f' on layout instance 'I8|NM0'.
+INFO (LX-1005): Parameter 'ad' is set to '340f' on schematic instance 'NM0'
+but is '170f' on layout instance 'NM0'.
+INFO (LX-1005): Parameter 'ad' is set to '680f' on schematic instance 'I1/PM0'
+but is '190.4f' on layout instance 'I1|PM0'.
+INFO (LX-1005): Parameter 'ad' is set to '680f' on schematic instance 'I12/PM0'
+but is '190.4f' on layout instance 'I12|PM0'.
+INFO (LX-1005): Parameter 'ad' is set to '680f' on schematic instance 'I18/NM0'
+but is '95.2f' on layout instance 'I18|NM0'.
+INFO (LX-1005): Parameter 'ad' is set to '680f' on schematic instance 'I18/NM1'
+but is '95.2f' on layout instance 'I18|NM1'.
+INFO (LX-1005): Parameter 'ad' is set to '680f' on schematic instance 'I18/PM0'
+but is '190.4f' on layout instance 'I18|PM0'.
+INFO (LX-1005): Parameter 'ad' is set to '680f' on schematic instance 'I18/PM1'
+but is '190.4f' on layout instance 'I18|PM1'.
+INFO (LX-1005): Parameter 'ad' is set to '680f' on schematic instance 'I19/PM0'
+but is '190.4f' on layout instance 'I19|PM0'.
+INFO (LX-1005): Parameter 'ad' is set to '680f' on schematic instance 'I2/PM0'
+but is '340f' on layout instance 'I2|PM0'.
+INFO (LX-1005): Parameter 'ad' is set to '680f' on schematic instance 'I26/PM0'
+but is '340f' on layout instance 'I26|PM0'.
+INFO (LX-1005): Parameter 'ad' is set to '680f' on schematic instance 'I26/PM1'
+but is '340f' on layout instance 'I26|PM1'.
+INFO (LX-1005): Parameter 'ad' is set to '680f' on schematic instance 'I26/PM2'
+but is '340f' on layout instance 'I26|PM2'.
+INFO (LX-1005): Parameter 'ad' is set to '680f' on schematic instance 'I26/PM3'
+but is '340f' on layout instance 'I26|PM3'.
+INFO (LX-1005): Parameter 'ad' is set to '680f' on schematic instance 'I26/PM4'
+but is '190.4f' on layout instance 'I26|PM4'.
+INFO (LX-1005): Parameter 'ad' is set to '680f' on schematic instance 'I27/I0/PM0'
+but is '340f' on layout instance 'I27|I0|PM0'.
+INFO (LX-1005): Parameter 'ad' is set to '680f' on schematic instance 'I27/I1/PM0'
+but is '340f' on layout instance 'I27|I1|PM0'.
+INFO (LX-1005): Parameter 'ad' is set to '680f' on schematic instance 'I27/I2/PM0'
+but is '340f' on layout instance 'I27|I2|PM0'.
+INFO (LX-1005): Parameter 'ad' is set to '680f' on schematic instance 'I28/I0/PM0'
+but is '340f' on layout instance 'I28|I0|PM0'.
+INFO (LX-1005): Parameter 'ad' is set to '680f' on schematic instance 'I3/PM0'
+but is '340f' on layout instance 'I3|PM0'.
+INFO (LX-1005): Parameter 'ad' is set to '680f' on schematic instance 'I30/I1/PM0'
+but is '340f' on layout instance 'I30|I1|PM0'.
+INFO (LX-1005): Parameter 'ad' is set to '680f' on schematic instance 'I30/I3/PM0'
+but is '340f' on layout instance 'I30|I3|PM0'.
+INFO (LX-1005): Parameter 'ad' is set to '680f' on schematic instance 'I4/PM0'
+but is '340f' on layout instance 'I4|PM0'.
+INFO (LX-1005): Parameter 'ad' is set to '680f' on schematic instance 'I5/PM0'
+but is '340f' on layout instance 'I5|PM0'.
+INFO (LX-1005): Parameter 'ad' is set to '680f' on schematic instance 'I6/PM0'
+but is '340f' on layout instance 'I6|PM0'.
+INFO (LX-1005): Parameter 'ad' is set to '680f' on schematic instance 'I7/PM0'
+but is '340f' on layout instance 'I7|PM0'.
+INFO (LX-1005): Parameter 'ad' is set to '680f' on schematic instance 'I8/PM0'
+but is '340f' on layout instance 'I8|PM0'.
+INFO (LX-1005): Parameter 'ad' is set to '680f' on schematic instance 'PM0'
+but is '340f' on layout instance 'PM0'.
+INFO (LX-1005): Parameter 'as' is set to '340f' on schematic instance 'I1/NM0'
+but is '95.2f' on layout instance 'I1|NM0'.
+INFO (LX-1005): Parameter 'as' is set to '340f' on schematic instance 'I12/NM0'
+but is '95.2f' on layout instance 'I12|NM0'.
+INFO (LX-1005): Parameter 'as' is set to '340f' on schematic instance 'I19/NM0'
+but is '95.2f' on layout instance 'I19|NM0'.
+INFO (LX-1005): Parameter 'as' is set to '340f' on schematic instance 'I2/NM0'
+but is '170f' on layout instance 'I2|NM0'.
+INFO (LX-1005): Parameter 'as' is set to '340f' on schematic instance 'I26/NM0'
+but is '95.2f' on layout instance 'I26|NM0'.
+INFO (LX-1005): Parameter 'as' is set to '340f' on schematic instance 'I26/NM1'
+but is '95.2f' on layout instance 'I26|NM1'.
+INFO (LX-1005): Parameter 'as' is set to '340f' on schematic instance 'I26/NM2'
+but is '170f' on layout instance 'I26|NM2'.
+INFO (LX-1005): Parameter 'as' is set to '340f' on schematic instance 'I26/NM3'
+but is '170f' on layout instance 'I26|NM3'.
+INFO (LX-1005): Parameter 'as' is set to '340f' on schematic instance 'I26/NM4'
+but is '170f' on layout instance 'I26|NM4'.
+INFO (LX-1005): Parameter 'as' is set to '340f' on schematic instance 'I27/I0/NM0'
+but is '170f' on layout instance 'I27|I0|NM0'.
+INFO (LX-1005): Parameter 'as' is set to '340f' on schematic instance 'I27/I1/NM0'
+but is '170f' on layout instance 'I27|I1|NM0'.
+INFO (LX-1005): Parameter 'as' is set to '340f' on schematic instance 'I27/I2/NM0'
+but is '170f' on layout instance 'I27|I2|NM0'.
+INFO (LX-1005): Parameter 'as' is set to '340f' on schematic instance 'I28/I0/NM0'
+but is '170f' on layout instance 'I28|I0|NM0'.
+INFO (LX-1005): Parameter 'as' is set to '340f' on schematic instance 'I3/NM0'
+but is '170f' on layout instance 'I3|NM0'.
+INFO (LX-1005): Parameter 'as' is set to '340f' on schematic instance 'I30/I1/NM0'
+but is '170f' on layout instance 'I30|I1|NM0'.
+INFO (LX-1005): Parameter 'as' is set to '340f' on schematic instance 'I30/I3/NM0'
+but is '170f' on layout instance 'I30|I3|NM0'.
+INFO (LX-1005): Parameter 'as' is set to '340f' on schematic instance 'I4/NM0'
+but is '170f' on layout instance 'I4|NM0'.
+INFO (LX-1005): Parameter 'as' is set to '340f' on schematic instance 'I5/NM0'
+but is '170f' on layout instance 'I5|NM0'.
+INFO (LX-1005): Parameter 'as' is set to '340f' on schematic instance 'I6/NM0'
+but is '170f' on layout instance 'I6|NM0'.
+INFO (LX-1005): Parameter 'as' is set to '340f' on schematic instance 'I7/NM0'
+but is '170f' on layout instance 'I7|NM0'.
+INFO (LX-1005): Parameter 'as' is set to '340f' on schematic instance 'I8/NM0'
+but is '170f' on layout instance 'I8|NM0'.
+INFO (LX-1005): Parameter 'as' is set to '340f' on schematic instance 'NM0'
+but is '170f' on layout instance 'NM0'.
+INFO (LX-1005): Parameter 'as' is set to '680f' on schematic instance 'I1/PM0'
+but is '190.4f' on layout instance 'I1|PM0'.
+INFO (LX-1005): Parameter 'as' is set to '680f' on schematic instance 'I12/PM0'
+but is '190.4f' on layout instance 'I12|PM0'.
+INFO (LX-1005): Parameter 'as' is set to '680f' on schematic instance 'I18/NM0'
+but is '95.2f' on layout instance 'I18|NM0'.
+INFO (LX-1005): Parameter 'as' is set to '680f' on schematic instance 'I18/NM1'
+but is '95.2f' on layout instance 'I18|NM1'.
+INFO (LX-1005): Parameter 'as' is set to '680f' on schematic instance 'I18/PM0'
+but is '190.4f' on layout instance 'I18|PM0'.
+INFO (LX-1005): Parameter 'as' is set to '680f' on schematic instance 'I18/PM1'
+but is '190.4f' on layout instance 'I18|PM1'.
+INFO (LX-1005): Parameter 'as' is set to '680f' on schematic instance 'I19/PM0'
+but is '190.4f' on layout instance 'I19|PM0'.
+INFO (LX-1005): Parameter 'as' is set to '680f' on schematic instance 'I2/PM0'
+but is '340f' on layout instance 'I2|PM0'.
+INFO (LX-1005): Parameter 'as' is set to '680f' on schematic instance 'I26/PM0'
+but is '340f' on layout instance 'I26|PM0'.
+INFO (LX-1005): Parameter 'as' is set to '680f' on schematic instance 'I26/PM1'
+but is '340f' on layout instance 'I26|PM1'.
+INFO (LX-1005): Parameter 'as' is set to '680f' on schematic instance 'I26/PM2'
+but is '340f' on layout instance 'I26|PM2'.
+INFO (LX-1005): Parameter 'as' is set to '680f' on schematic instance 'I26/PM3'
+but is '340f' on layout instance 'I26|PM3'.
+INFO (LX-1005): Parameter 'as' is set to '680f' on schematic instance 'I26/PM4'
+but is '190.4f' on layout instance 'I26|PM4'.
+INFO (LX-1005): Parameter 'as' is set to '680f' on schematic instance 'I27/I0/PM0'
+but is '340f' on layout instance 'I27|I0|PM0'.
+INFO (LX-1005): Parameter 'as' is set to '680f' on schematic instance 'I27/I1/PM0'
+but is '340f' on layout instance 'I27|I1|PM0'.
+INFO (LX-1005): Parameter 'as' is set to '680f' on schematic instance 'I27/I2/PM0'
+but is '340f' on layout instance 'I27|I2|PM0'.
+INFO (LX-1005): Parameter 'as' is set to '680f' on schematic instance 'I28/I0/PM0'
+but is '340f' on layout instance 'I28|I0|PM0'.
+INFO (LX-1005): Parameter 'as' is set to '680f' on schematic instance 'I3/PM0'
+but is '340f' on layout instance 'I3|PM0'.
+INFO (LX-1005): Parameter 'as' is set to '680f' on schematic instance 'I30/I1/PM0'
+but is '340f' on layout instance 'I30|I1|PM0'.
+INFO (LX-1005): Parameter 'as' is set to '680f' on schematic instance 'I30/I3/PM0'
+but is '340f' on layout instance 'I30|I3|PM0'.
+INFO (LX-1005): Parameter 'as' is set to '680f' on schematic instance 'I4/PM0'
+but is '340f' on layout instance 'I4|PM0'.
+INFO (LX-1005): Parameter 'as' is set to '680f' on schematic instance 'I5/PM0'
+but is '340f' on layout instance 'I5|PM0'.
+INFO (LX-1005): Parameter 'as' is set to '680f' on schematic instance 'I6/PM0'
+but is '340f' on layout instance 'I6|PM0'.
+INFO (LX-1005): Parameter 'as' is set to '680f' on schematic instance 'I7/PM0'
+but is '340f' on layout instance 'I7|PM0'.
+INFO (LX-1005): Parameter 'as' is set to '680f' on schematic instance 'I8/PM0'
+but is '340f' on layout instance 'I8|PM0'.
+INFO (LX-1005): Parameter 'as' is set to '680f' on schematic instance 'PM0'
+but is '340f' on layout instance 'PM0'.
+INFO (LX-1005): Parameter 'effW' is set to '1u' on schematic instance 'I1/NM0'
+but is '280n' on layout instance 'I1|NM0'.
+INFO (LX-1005): Parameter 'effW' is set to '1u' on schematic instance 'I12/NM0'
+but is '280n' on layout instance 'I12|NM0'.
+INFO (LX-1005): Parameter 'effW' is set to '1u' on schematic instance 'I19/NM0'
+but is '280n' on layout instance 'I19|NM0'.
+INFO (LX-1005): Parameter 'effW' is set to '1u' on schematic instance 'I2/NM0'
+but is '500n' on layout instance 'I2|NM0'.
+INFO (LX-1005): Parameter 'effW' is set to '1u' on schematic instance 'I26/NM0'
+but is '280n' on layout instance 'I26|NM0'.
+INFO (LX-1005): Parameter 'effW' is set to '1u' on schematic instance 'I26/NM1'
+but is '280n' on layout instance 'I26|NM1'.
+INFO (LX-1005): Parameter 'effW' is set to '1u' on schematic instance 'I26/NM2'
+but is '500n' on layout instance 'I26|NM2'.
+INFO (LX-1005): Parameter 'effW' is set to '1u' on schematic instance 'I26/NM3'
+but is '500n' on layout instance 'I26|NM3'.
+INFO (LX-1005): Parameter 'effW' is set to '1u' on schematic instance 'I26/NM4'
+but is '500n' on layout instance 'I26|NM4'.
+INFO (LX-1005): Parameter 'effW' is set to '1u' on schematic instance 'I27/I0/NM0'
+but is '500n' on layout instance 'I27|I0|NM0'.
+INFO (LX-1005): Parameter 'effW' is set to '1u' on schematic instance 'I27/I1/NM0'
+but is '500n' on layout instance 'I27|I1|NM0'.
+INFO (LX-1005): Parameter 'effW' is set to '1u' on schematic instance 'I27/I2/NM0'
+but is '500n' on layout instance 'I27|I2|NM0'.
+INFO (LX-1005): Parameter 'effW' is set to '1u' on schematic instance 'I28/I0/NM0'
+but is '500n' on layout instance 'I28|I0|NM0'.
+INFO (LX-1005): Parameter 'effW' is set to '1u' on schematic instance 'I3/NM0'
+but is '500n' on layout instance 'I3|NM0'.
+INFO (LX-1005): Parameter 'effW' is set to '1u' on schematic instance 'I30/I1/NM0'
+but is '500n' on layout instance 'I30|I1|NM0'.
+INFO (LX-1005): Parameter 'effW' is set to '1u' on schematic instance 'I30/I3/NM0'
+but is '500n' on layout instance 'I30|I3|NM0'.
+INFO (LX-1005): Parameter 'effW' is set to '1u' on schematic instance 'I4/NM0'
+but is '500n' on layout instance 'I4|NM0'.
+INFO (LX-1005): Parameter 'effW' is set to '1u' on schematic instance 'I5/NM0'
+but is '500n' on layout instance 'I5|NM0'.
+INFO (LX-1005): Parameter 'effW' is set to '1u' on schematic instance 'I6/NM0'
+but is '500n' on layout instance 'I6|NM0'.
+INFO (LX-1005): Parameter 'effW' is set to '1u' on schematic instance 'I7/NM0'
+but is '500n' on layout instance 'I7|NM0'.
+INFO (LX-1005): Parameter 'effW' is set to '1u' on schematic instance 'I8/NM0'
+but is '500n' on layout instance 'I8|NM0'.
+INFO (LX-1005): Parameter 'effW' is set to '1u' on schematic instance 'NM0'
+but is '500n' on layout instance 'NM0'.
+INFO (LX-1005): Parameter 'effW' is set to '2u' on schematic instance 'I1/PM0'
+but is '560n' on layout instance 'I1|PM0'.
+INFO (LX-1005): Parameter 'effW' is set to '2u' on schematic instance 'I12/PM0'
+but is '560n' on layout instance 'I12|PM0'.
+INFO (LX-1005): Parameter 'effW' is set to '2u' on schematic instance 'I18/NM0'
+but is '280n' on layout instance 'I18|NM0'.
+INFO (LX-1005): Parameter 'effW' is set to '2u' on schematic instance 'I18/NM1'
+but is '280n' on layout instance 'I18|NM1'.
+INFO (LX-1005): Parameter 'effW' is set to '2u' on schematic instance 'I18/PM0'
+but is '560n' on layout instance 'I18|PM0'.
+INFO (LX-1005): Parameter 'effW' is set to '2u' on schematic instance 'I18/PM1'
+but is '560n' on layout instance 'I18|PM1'.
+INFO (LX-1005): Parameter 'effW' is set to '2u' on schematic instance 'I19/PM0'
+but is '560n' on layout instance 'I19|PM0'.
+INFO (LX-1005): Parameter 'effW' is set to '2u' on schematic instance 'I2/PM0'
+but is '1u' on layout instance 'I2|PM0'.
+INFO (LX-1005): Parameter 'effW' is set to '2u' on schematic instance 'I26/PM0'
+but is '1u' on layout instance 'I26|PM0'.
+INFO (LX-1005): Parameter 'effW' is set to '2u' on schematic instance 'I26/PM1'
+but is '1u' on layout instance 'I26|PM1'.
+INFO (LX-1005): Parameter 'effW' is set to '2u' on schematic instance 'I26/PM2'
+but is '1u' on layout instance 'I26|PM2'.
+INFO (LX-1005): Parameter 'effW' is set to '2u' on schematic instance 'I26/PM3'
+but is '1u' on layout instance 'I26|PM3'.
+INFO (LX-1005): Parameter 'effW' is set to '2u' on schematic instance 'I26/PM4'
+but is '560n' on layout instance 'I26|PM4'.
+INFO (LX-1005): Parameter 'effW' is set to '2u' on schematic instance 'I27/I0/PM0'
+but is '1u' on layout instance 'I27|I0|PM0'.
+INFO (LX-1005): Parameter 'effW' is set to '2u' on schematic instance 'I27/I1/PM0'
+but is '1u' on layout instance 'I27|I1|PM0'.
+INFO (LX-1005): Parameter 'effW' is set to '2u' on schematic instance 'I27/I2/PM0'
+but is '1u' on layout instance 'I27|I2|PM0'.
+INFO (LX-1005): Parameter 'effW' is set to '2u' on schematic instance 'I28/I0/PM0'
+but is '1u' on layout instance 'I28|I0|PM0'.
+INFO (LX-1005): Parameter 'effW' is set to '2u' on schematic instance 'I3/PM0'
+but is '1u' on layout instance 'I3|PM0'.
+INFO (LX-1005): Parameter 'effW' is set to '2u' on schematic instance 'I30/I1/PM0'
+but is '1u' on layout instance 'I30|I1|PM0'.
+INFO (LX-1005): Parameter 'effW' is set to '2u' on schematic instance 'I30/I3/PM0'
+but is '1u' on layout instance 'I30|I3|PM0'.
+INFO (LX-1005): Parameter 'effW' is set to '2u' on schematic instance 'I4/PM0'
+but is '1u' on layout instance 'I4|PM0'.
+INFO (LX-1005): Parameter 'effW' is set to '2u' on schematic instance 'I5/PM0'
+but is '1u' on layout instance 'I5|PM0'.
+INFO (LX-1005): Parameter 'effW' is set to '2u' on schematic instance 'I6/PM0'
+but is '1u' on layout instance 'I6|PM0'.
+INFO (LX-1005): Parameter 'effW' is set to '2u' on schematic instance 'I7/PM0'
+but is '1u' on layout instance 'I7|PM0'.
+INFO (LX-1005): Parameter 'effW' is set to '2u' on schematic instance 'I8/PM0'
+but is '1u' on layout instance 'I8|PM0'.
+INFO (LX-1005): Parameter 'effW' is set to '2u' on schematic instance 'PM0'
+but is '1u' on layout instance 'PM0'.
+INFO (LX-1005): Parameter 'pd' is set to '2.68u' on schematic instance 'I1/NM0'
+but is '1.24u' on layout instance 'I1|NM0'.
+INFO (LX-1005): Parameter 'pd' is set to '2.68u' on schematic instance 'I12/NM0'
+but is '1.24u' on layout instance 'I12|NM0'.
+INFO (LX-1005): Parameter 'pd' is set to '2.68u' on schematic instance 'I19/NM0'
+but is '1.24u' on layout instance 'I19|NM0'.
+INFO (LX-1005): Parameter 'pd' is set to '2.68u' on schematic instance 'I2/NM0'
+but is '1.68u' on layout instance 'I2|NM0'.
+INFO (LX-1005): Parameter 'pd' is set to '2.68u' on schematic instance 'I26/NM0'
+but is '1.24u' on layout instance 'I26|NM0'.
+INFO (LX-1005): Parameter 'pd' is set to '2.68u' on schematic instance 'I26/NM1'
+but is '1.24u' on layout instance 'I26|NM1'.
+INFO (LX-1005): Parameter 'pd' is set to '2.68u' on schematic instance 'I26/NM2'
+but is '1.68u' on layout instance 'I26|NM2'.
+INFO (LX-1005): Parameter 'pd' is set to '2.68u' on schematic instance 'I26/NM3'
+but is '1.68u' on layout instance 'I26|NM3'.
+INFO (LX-1005): Parameter 'pd' is set to '2.68u' on schematic instance 'I26/NM4'
+but is '1.68u' on layout instance 'I26|NM4'.
+INFO (LX-1005): Parameter 'pd' is set to '2.68u' on schematic instance 'I27/I0/NM0'
+but is '1.68u' on layout instance 'I27|I0|NM0'.
+INFO (LX-1005): Parameter 'pd' is set to '2.68u' on schematic instance 'I27/I1/NM0'
+but is '1.68u' on layout instance 'I27|I1|NM0'.
+INFO (LX-1005): Parameter 'pd' is set to '2.68u' on schematic instance 'I27/I2/NM0'
+but is '1.68u' on layout instance 'I27|I2|NM0'.
+INFO (LX-1005): Parameter 'pd' is set to '2.68u' on schematic instance 'I28/I0/NM0'
+but is '1.68u' on layout instance 'I28|I0|NM0'.
+INFO (LX-1005): Parameter 'pd' is set to '2.68u' on schematic instance 'I3/NM0'
+but is '1.68u' on layout instance 'I3|NM0'.
+INFO (LX-1005): Parameter 'pd' is set to '2.68u' on schematic instance 'I30/I1/NM0'
+but is '1.68u' on layout instance 'I30|I1|NM0'.
+INFO (LX-1005): Parameter 'pd' is set to '2.68u' on schematic instance 'I30/I3/NM0'
+but is '1.68u' on layout instance 'I30|I3|NM0'.
+INFO (LX-1005): Parameter 'pd' is set to '2.68u' on schematic instance 'I4/NM0'
+but is '1.68u' on layout instance 'I4|NM0'.
+INFO (LX-1005): Parameter 'pd' is set to '2.68u' on schematic instance 'I5/NM0'
+but is '1.68u' on layout instance 'I5|NM0'.
+INFO (LX-1005): Parameter 'pd' is set to '2.68u' on schematic instance 'I6/NM0'
+but is '1.68u' on layout instance 'I6|NM0'.
+INFO (LX-1005): Parameter 'pd' is set to '2.68u' on schematic instance 'I7/NM0'
+but is '1.68u' on layout instance 'I7|NM0'.
+INFO (LX-1005): Parameter 'pd' is set to '2.68u' on schematic instance 'I8/NM0'
+but is '1.68u' on layout instance 'I8|NM0'.
+INFO (LX-1005): Parameter 'pd' is set to '2.68u' on schematic instance 'NM0'
+but is '1.68u' on layout instance 'NM0'.
+INFO (LX-1005): Parameter 'pd' is set to '4.68u' on schematic instance 'I1/PM0'
+but is '1.8u' on layout instance 'I1|PM0'.
+INFO (LX-1005): Parameter 'pd' is set to '4.68u' on schematic instance 'I12/PM0'
+but is '1.8u' on layout instance 'I12|PM0'.
+INFO (LX-1005): Parameter 'pd' is set to '4.68u' on schematic instance 'I18/NM0'
+but is '1.24u' on layout instance 'I18|NM0'.
+INFO (LX-1005): Parameter 'pd' is set to '4.68u' on schematic instance 'I18/NM1'
+but is '1.24u' on layout instance 'I18|NM1'.
+INFO (LX-1005): Parameter 'pd' is set to '4.68u' on schematic instance 'I18/PM0'
+but is '1.8u' on layout instance 'I18|PM0'.
+INFO (LX-1005): Parameter 'pd' is set to '4.68u' on schematic instance 'I18/PM1'
+but is '1.8u' on layout instance 'I18|PM1'.
+INFO (LX-1005): Parameter 'pd' is set to '4.68u' on schematic instance 'I19/PM0'
+but is '1.8u' on layout instance 'I19|PM0'.
+INFO (LX-1005): Parameter 'pd' is set to '4.68u' on schematic instance 'I2/PM0'
+but is '2.68u' on layout instance 'I2|PM0'.
+INFO (LX-1005): Parameter 'pd' is set to '4.68u' on schematic instance 'I26/PM0'
+but is '2.68u' on layout instance 'I26|PM0'.
+INFO (LX-1005): Parameter 'pd' is set to '4.68u' on schematic instance 'I26/PM1'
+but is '2.68u' on layout instance 'I26|PM1'.
+INFO (LX-1005): Parameter 'pd' is set to '4.68u' on schematic instance 'I26/PM2'
+but is '2.68u' on layout instance 'I26|PM2'.
+INFO (LX-1005): Parameter 'pd' is set to '4.68u' on schematic instance 'I26/PM3'
+but is '2.68u' on layout instance 'I26|PM3'.
+INFO (LX-1005): Parameter 'pd' is set to '4.68u' on schematic instance 'I26/PM4'
+but is '1.8u' on layout instance 'I26|PM4'.
+INFO (LX-1005): Parameter 'pd' is set to '4.68u' on schematic instance 'I27/I0/PM0'
+but is '2.68u' on layout instance 'I27|I0|PM0'.
+INFO (LX-1005): Parameter 'pd' is set to '4.68u' on schematic instance 'I27/I1/PM0'
+but is '2.68u' on layout instance 'I27|I1|PM0'.
+INFO (LX-1005): Parameter 'pd' is set to '4.68u' on schematic instance 'I27/I2/PM0'
+but is '2.68u' on layout instance 'I27|I2|PM0'.
+INFO (LX-1005): Parameter 'pd' is set to '4.68u' on schematic instance 'I28/I0/PM0'
+but is '2.68u' on layout instance 'I28|I0|PM0'.
+INFO (LX-1005): Parameter 'pd' is set to '4.68u' on schematic instance 'I3/PM0'
+but is '2.68u' on layout instance 'I3|PM0'.
+INFO (LX-1005): Parameter 'pd' is set to '4.68u' on schematic instance 'I30/I1/PM0'
+but is '2.68u' on layout instance 'I30|I1|PM0'.
+INFO (LX-1005): Parameter 'pd' is set to '4.68u' on schematic instance 'I30/I3/PM0'
+but is '2.68u' on layout instance 'I30|I3|PM0'.
+INFO (LX-1005): Parameter 'pd' is set to '4.68u' on schematic instance 'I4/PM0'
+but is '2.68u' on layout instance 'I4|PM0'.
+INFO (LX-1005): Parameter 'pd' is set to '4.68u' on schematic instance 'I5/PM0'
+but is '2.68u' on layout instance 'I5|PM0'.
+INFO (LX-1005): Parameter 'pd' is set to '4.68u' on schematic instance 'I6/PM0'
+but is '2.68u' on layout instance 'I6|PM0'.
+INFO (LX-1005): Parameter 'pd' is set to '4.68u' on schematic instance 'I7/PM0'
+but is '2.68u' on layout instance 'I7|PM0'.
+INFO (LX-1005): Parameter 'pd' is set to '4.68u' on schematic instance 'I8/PM0'
+but is '2.68u' on layout instance 'I8|PM0'.
+INFO (LX-1005): Parameter 'pd' is set to '4.68u' on schematic instance 'PM0'
+but is '2.68u' on layout instance 'PM0'.
+INFO (LX-1005): Parameter 'ps' is set to '2.68u' on schematic instance 'I1/NM0'
+but is '1.24u' on layout instance 'I1|NM0'.
+INFO (LX-1005): Parameter 'ps' is set to '2.68u' on schematic instance 'I12/NM0'
+but is '1.24u' on layout instance 'I12|NM0'.
+INFO (LX-1005): Parameter 'ps' is set to '2.68u' on schematic instance 'I19/NM0'
+but is '1.24u' on layout instance 'I19|NM0'.
+INFO (LX-1005): Parameter 'ps' is set to '2.68u' on schematic instance 'I2/NM0'
+but is '1.68u' on layout instance 'I2|NM0'.
+INFO (LX-1005): Parameter 'ps' is set to '2.68u' on schematic instance 'I26/NM0'
+but is '1.24u' on layout instance 'I26|NM0'.
+INFO (LX-1005): Parameter 'ps' is set to '2.68u' on schematic instance 'I26/NM1'
+but is '1.24u' on layout instance 'I26|NM1'.
+INFO (LX-1005): Parameter 'ps' is set to '2.68u' on schematic instance 'I26/NM2'
+but is '1.68u' on layout instance 'I26|NM2'.
+INFO (LX-1005): Parameter 'ps' is set to '2.68u' on schematic instance 'I26/NM3'
+but is '1.68u' on layout instance 'I26|NM3'.
+INFO (LX-1005): Parameter 'ps' is set to '2.68u' on schematic instance 'I26/NM4'
+but is '1.68u' on layout instance 'I26|NM4'.
+INFO (LX-1005): Parameter 'ps' is set to '2.68u' on schematic instance 'I27/I0/NM0'
+but is '1.68u' on layout instance 'I27|I0|NM0'.
+INFO (LX-1005): Parameter 'ps' is set to '2.68u' on schematic instance 'I27/I1/NM0'
+but is '1.68u' on layout instance 'I27|I1|NM0'.
+INFO (LX-1005): Parameter 'ps' is set to '2.68u' on schematic instance 'I27/I2/NM0'
+but is '1.68u' on layout instance 'I27|I2|NM0'.
+INFO (LX-1005): Parameter 'ps' is set to '2.68u' on schematic instance 'I28/I0/NM0'
+but is '1.68u' on layout instance 'I28|I0|NM0'.
+INFO (LX-1005): Parameter 'ps' is set to '2.68u' on schematic instance 'I3/NM0'
+but is '1.68u' on layout instance 'I3|NM0'.
+INFO (LX-1005): Parameter 'ps' is set to '2.68u' on schematic instance 'I30/I1/NM0'
+but is '1.68u' on layout instance 'I30|I1|NM0'.
+INFO (LX-1005): Parameter 'ps' is set to '2.68u' on schematic instance 'I30/I3/NM0'
+but is '1.68u' on layout instance 'I30|I3|NM0'.
+INFO (LX-1005): Parameter 'ps' is set to '2.68u' on schematic instance 'I4/NM0'
+but is '1.68u' on layout instance 'I4|NM0'.
+INFO (LX-1005): Parameter 'ps' is set to '2.68u' on schematic instance 'I5/NM0'
+but is '1.68u' on layout instance 'I5|NM0'.
+INFO (LX-1005): Parameter 'ps' is set to '2.68u' on schematic instance 'I6/NM0'
+but is '1.68u' on layout instance 'I6|NM0'.
+INFO (LX-1005): Parameter 'ps' is set to '2.68u' on schematic instance 'I7/NM0'
+but is '1.68u' on layout instance 'I7|NM0'.
+INFO (LX-1005): Parameter 'ps' is set to '2.68u' on schematic instance 'I8/NM0'
+but is '1.68u' on layout instance 'I8|NM0'.
+INFO (LX-1005): Parameter 'ps' is set to '2.68u' on schematic instance 'NM0'
+but is '1.68u' on layout instance 'NM0'.
+INFO (LX-1005): Parameter 'ps' is set to '4.68u' on schematic instance 'I1/PM0'
+but is '1.8u' on layout instance 'I1|PM0'.
+INFO (LX-1005): Parameter 'ps' is set to '4.68u' on schematic instance 'I12/PM0'
+but is '1.8u' on layout instance 'I12|PM0'.
+INFO (LX-1005): Parameter 'ps' is set to '4.68u' on schematic instance 'I18/NM0'
+but is '1.24u' on layout instance 'I18|NM0'.
+INFO (LX-1005): Parameter 'ps' is set to '4.68u' on schematic instance 'I18/NM1'
+but is '1.24u' on layout instance 'I18|NM1'.
+INFO (LX-1005): Parameter 'ps' is set to '4.68u' on schematic instance 'I18/PM0'
+but is '1.8u' on layout instance 'I18|PM0'.
+INFO (LX-1005): Parameter 'ps' is set to '4.68u' on schematic instance 'I18/PM1'
+but is '1.8u' on layout instance 'I18|PM1'.
+INFO (LX-1005): Parameter 'ps' is set to '4.68u' on schematic instance 'I19/PM0'
+but is '1.8u' on layout instance 'I19|PM0'.
+INFO (LX-1005): Parameter 'ps' is set to '4.68u' on schematic instance 'I2/PM0'
+but is '2.68u' on layout instance 'I2|PM0'.
+INFO (LX-1005): Parameter 'ps' is set to '4.68u' on schematic instance 'I26/PM0'
+but is '2.68u' on layout instance 'I26|PM0'.
+INFO (LX-1005): Parameter 'ps' is set to '4.68u' on schematic instance 'I26/PM1'
+but is '2.68u' on layout instance 'I26|PM1'.
+INFO (LX-1005): Parameter 'ps' is set to '4.68u' on schematic instance 'I26/PM2'
+but is '2.68u' on layout instance 'I26|PM2'.
+INFO (LX-1005): Parameter 'ps' is set to '4.68u' on schematic instance 'I26/PM3'
+but is '2.68u' on layout instance 'I26|PM3'.
+INFO (LX-1005): Parameter 'ps' is set to '4.68u' on schematic instance 'I26/PM4'
+but is '1.8u' on layout instance 'I26|PM4'.
+INFO (LX-1005): Parameter 'ps' is set to '4.68u' on schematic instance 'I27/I0/PM0'
+but is '2.68u' on layout instance 'I27|I0|PM0'.
+INFO (LX-1005): Parameter 'ps' is set to '4.68u' on schematic instance 'I27/I1/PM0'
+but is '2.68u' on layout instance 'I27|I1|PM0'.
+INFO (LX-1005): Parameter 'ps' is set to '4.68u' on schematic instance 'I27/I2/PM0'
+but is '2.68u' on layout instance 'I27|I2|PM0'.
+INFO (LX-1005): Parameter 'ps' is set to '4.68u' on schematic instance 'I28/I0/PM0'
+but is '2.68u' on layout instance 'I28|I0|PM0'.
+INFO (LX-1005): Parameter 'ps' is set to '4.68u' on schematic instance 'I3/PM0'
+but is '2.68u' on layout instance 'I3|PM0'.
+INFO (LX-1005): Parameter 'ps' is set to '4.68u' on schematic instance 'I30/I1/PM0'
+but is '2.68u' on layout instance 'I30|I1|PM0'.
+INFO (LX-1005): Parameter 'ps' is set to '4.68u' on schematic instance 'I30/I3/PM0'
+but is '2.68u' on layout instance 'I30|I3|PM0'.
+INFO (LX-1005): Parameter 'ps' is set to '4.68u' on schematic instance 'I4/PM0'
+but is '2.68u' on layout instance 'I4|PM0'.
+INFO (LX-1005): Parameter 'ps' is set to '4.68u' on schematic instance 'I5/PM0'
+but is '2.68u' on layout instance 'I5|PM0'.
+INFO (LX-1005): Parameter 'ps' is set to '4.68u' on schematic instance 'I6/PM0'
+but is '2.68u' on layout instance 'I6|PM0'.
+INFO (LX-1005): Parameter 'ps' is set to '4.68u' on schematic instance 'I7/PM0'
+but is '2.68u' on layout instance 'I7|PM0'.
+INFO (LX-1005): Parameter 'ps' is set to '4.68u' on schematic instance 'I8/PM0'
+but is '2.68u' on layout instance 'I8|PM0'.
+INFO (LX-1005): Parameter 'ps' is set to '4.68u' on schematic instance 'PM0'
+but is '2.68u' on layout instance 'PM0'.
+INFO (LX-1005): Parameter 'w' is set to '1u' on schematic instance 'I1/NM0'
+but is '280n' on layout instance 'I1|NM0'.
+INFO (LX-1005): Parameter 'w' is set to '1u' on schematic instance 'I12/NM0'
+but is '280n' on layout instance 'I12|NM0'.
+INFO (LX-1005): Parameter 'w' is set to '1u' on schematic instance 'I19/NM0'
+but is '280n' on layout instance 'I19|NM0'.
+INFO (LX-1005): Parameter 'w' is set to '1u' on schematic instance 'I2/NM0'
+but is '500n' on layout instance 'I2|NM0'.
+INFO (LX-1005): Parameter 'w' is set to '1u' on schematic instance 'I26/NM0'
+but is '280n' on layout instance 'I26|NM0'.
+INFO (LX-1005): Parameter 'w' is set to '1u' on schematic instance 'I26/NM1'
+but is '280n' on layout instance 'I26|NM1'.
+INFO (LX-1005): Parameter 'w' is set to '1u' on schematic instance 'I26/NM2'
+but is '500n' on layout instance 'I26|NM2'.
+INFO (LX-1005): Parameter 'w' is set to '1u' on schematic instance 'I26/NM3'
+but is '500n' on layout instance 'I26|NM3'.
+INFO (LX-1005): Parameter 'w' is set to '1u' on schematic instance 'I26/NM4'
+but is '500n' on layout instance 'I26|NM4'.
+INFO (LX-1005): Parameter 'w' is set to '1u' on schematic instance 'I27/I0/NM0'
+but is '500n' on layout instance 'I27|I0|NM0'.
+INFO (LX-1005): Parameter 'w' is set to '1u' on schematic instance 'I27/I1/NM0'
+but is '500n' on layout instance 'I27|I1|NM0'.
+INFO (LX-1005): Parameter 'w' is set to '1u' on schematic instance 'I27/I2/NM0'
+but is '500n' on layout instance 'I27|I2|NM0'.
+INFO (LX-1005): Parameter 'w' is set to '1u' on schematic instance 'I28/I0/NM0'
+but is '500n' on layout instance 'I28|I0|NM0'.
+INFO (LX-1005): Parameter 'w' is set to '1u' on schematic instance 'I3/NM0'
+but is '500n' on layout instance 'I3|NM0'.
+INFO (LX-1005): Parameter 'w' is set to '1u' on schematic instance 'I30/I1/NM0'
+but is '500n' on layout instance 'I30|I1|NM0'.
+INFO (LX-1005): Parameter 'w' is set to '1u' on schematic instance 'I30/I3/NM0'
+but is '500n' on layout instance 'I30|I3|NM0'.
+INFO (LX-1005): Parameter 'w' is set to '1u' on schematic instance 'I4/NM0'
+but is '500n' on layout instance 'I4|NM0'.
+INFO (LX-1005): Parameter 'w' is set to '1u' on schematic instance 'I5/NM0'
+but is '500n' on layout instance 'I5|NM0'.
+INFO (LX-1005): Parameter 'w' is set to '1u' on schematic instance 'I6/NM0'
+but is '500n' on layout instance 'I6|NM0'.
+INFO (LX-1005): Parameter 'w' is set to '1u' on schematic instance 'I7/NM0'
+but is '500n' on layout instance 'I7|NM0'.
+INFO (LX-1005): Parameter 'w' is set to '1u' on schematic instance 'I8/NM0'
+but is '500n' on layout instance 'I8|NM0'.
+INFO (LX-1005): Parameter 'w' is set to '1u' on schematic instance 'NM0'
+but is '500n' on layout instance 'NM0'.
+INFO (LX-1005): Parameter 'w' is set to '2u' on schematic instance 'I1/PM0'
+but is '560n' on layout instance 'I1|PM0'.
+INFO (LX-1005): Parameter 'w' is set to '2u' on schematic instance 'I12/PM0'
+but is '560n' on layout instance 'I12|PM0'.
+INFO (LX-1005): Parameter 'w' is set to '2u' on schematic instance 'I18/NM0'
+but is '280n' on layout instance 'I18|NM0'.
+INFO (LX-1005): Parameter 'w' is set to '2u' on schematic instance 'I18/NM1'
+but is '280n' on layout instance 'I18|NM1'.
+INFO (LX-1005): Parameter 'w' is set to '2u' on schematic instance 'I18/PM0'
+but is '560n' on layout instance 'I18|PM0'.
+INFO (LX-1005): Parameter 'w' is set to '2u' on schematic instance 'I18/PM1'
+but is '560n' on layout instance 'I18|PM1'.
+INFO (LX-1005): Parameter 'w' is set to '2u' on schematic instance 'I19/PM0'
+but is '560n' on layout instance 'I19|PM0'.
+INFO (LX-1005): Parameter 'w' is set to '2u' on schematic instance 'I2/PM0'
+but is '1u' on layout instance 'I2|PM0'.
+INFO (LX-1005): Parameter 'w' is set to '2u' on schematic instance 'I26/PM0'
+but is '1u' on layout instance 'I26|PM0'.
+INFO (LX-1005): Parameter 'w' is set to '2u' on schematic instance 'I26/PM1'
+but is '1u' on layout instance 'I26|PM1'.
+INFO (LX-1005): Parameter 'w' is set to '2u' on schematic instance 'I26/PM2'
+but is '1u' on layout instance 'I26|PM2'.
+INFO (LX-1005): Parameter 'w' is set to '2u' on schematic instance 'I26/PM3'
+but is '1u' on layout instance 'I26|PM3'.
+INFO (LX-1005): Parameter 'w' is set to '2u' on schematic instance 'I26/PM4'
+but is '560n' on layout instance 'I26|PM4'.
+INFO (LX-1005): Parameter 'w' is set to '2u' on schematic instance 'I27/I0/PM0'
+but is '1u' on layout instance 'I27|I0|PM0'.
+INFO (LX-1005): Parameter 'w' is set to '2u' on schematic instance 'I27/I1/PM0'
+but is '1u' on layout instance 'I27|I1|PM0'.
+INFO (LX-1005): Parameter 'w' is set to '2u' on schematic instance 'I27/I2/PM0'
+but is '1u' on layout instance 'I27|I2|PM0'.
+INFO (LX-1005): Parameter 'w' is set to '2u' on schematic instance 'I28/I0/PM0'
+but is '1u' on layout instance 'I28|I0|PM0'.
+INFO (LX-1005): Parameter 'w' is set to '2u' on schematic instance 'I3/PM0'
+but is '1u' on layout instance 'I3|PM0'.
+INFO (LX-1005): Parameter 'w' is set to '2u' on schematic instance 'I30/I1/PM0'
+but is '1u' on layout instance 'I30|I1|PM0'.
+INFO (LX-1005): Parameter 'w' is set to '2u' on schematic instance 'I30/I3/PM0'
+but is '1u' on layout instance 'I30|I3|PM0'.
+INFO (LX-1005): Parameter 'w' is set to '2u' on schematic instance 'I4/PM0'
+but is '1u' on layout instance 'I4|PM0'.
+INFO (LX-1005): Parameter 'w' is set to '2u' on schematic instance 'I5/PM0'
+but is '1u' on layout instance 'I5|PM0'.
+INFO (LX-1005): Parameter 'w' is set to '2u' on schematic instance 'I6/PM0'
+but is '1u' on layout instance 'I6|PM0'.
+INFO (LX-1005): Parameter 'w' is set to '2u' on schematic instance 'I7/PM0'
+but is '1u' on layout instance 'I7|PM0'.
+INFO (LX-1005): Parameter 'w' is set to '2u' on schematic instance 'I8/PM0'
+but is '1u' on layout instance 'I8|PM0'.
+INFO (LX-1005): Parameter 'w' is set to '2u' on schematic instance 'PM0'
+but is '1u' on layout instance 'PM0'.
+INFO (LX-1001): Schematic instance 'I28/I2/NM0' has no corresponding layout instance.
+INFO (LX-1001): Schematic instance 'I28/I2/PM0' has no corresponding layout instance.
+INFO (LX-1001): Schematic instance 'I28/I3/NM0' has no corresponding layout instance.
+INFO (LX-1001): Schematic instance 'I28/I3/PM0' has no corresponding layout instance.
+INFO (LX-1001): Schematic instance 'I28/I4/NM0' has no corresponding layout instance.
+INFO (LX-1001): Schematic instance 'I28/I4/PM0' has no corresponding layout instance.
+INFO (LX-1001): Layout instance 'I28|I1|NM0' has no corresponding schematic instance.
+INFO (LX-1001): Layout instance 'I28|I1|PM0' has no corresponding schematic instance.
+INFO (LX-1001): Layout instance 'I28|I5|NM0' has no corresponding schematic instance.
+INFO (LX-1001): Layout instance 'I28|I5|PM0' has no corresponding schematic instance.
+INFO (LX-1001): Layout instance 'I28|I6|NM0' has no corresponding schematic instance.
+INFO (LX-1001): Layout instance 'I28|I6|PM0' has no corresponding schematic instance.
+
+*** Check Against Source complete. ***
+
