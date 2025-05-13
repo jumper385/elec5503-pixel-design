@@ -5,7 +5,7 @@
 @(#)$CDS: aveng_64 version av4.1:Production:dfII6.1.7-64b:IC6.1.7-64b.78 12/24/2015 12:01 (sjflg007) $
 sub-version 4.1_USR5, integ signature 2015-12-24-1122
 
-run on vdi-l-cos-026 from /usr/local/cadence6/ASSURA415-001-617/tools.lnx86/assura/bin/64bit/aveng on Wed May 14 01:06:30 2025
+run on vdi-l-cos-026 from /usr/local/cadence6/ASSURA415-001-617/tools.lnx86/assura/bin/64bit/aveng on Wed May 14 01:12:17 2025
 
 Echoing run specific file...
     ;----------------------------------------------------------------------------
@@ -35,7 +35,7 @@ Echoing run specific file...
 
                   Time Summary - Database
 
-reading DFII data. . . .      0 cpu      0 elap 1471.3M virt     290 pf
+reading DFII data. . . .      0 cpu      0 elap 1471.3M virt     292 pf
 duplicate inst removal .      0 cpu      0 elap  159.6M virt       0 pf
 cell boundary layer. . .      0 cpu      0 elap  159.6M virt       0 pf
 small cell flattening. .      0 cpu      0 elap  162.0M virt       0 pf
@@ -58,7 +58,7 @@ duplicate cell removal .      0 cpu      0 elap  164.5M virt       0 pf
 create background layer.      0 cpu      0 elap  164.5M virt       0 pf
 final VDB processing . .      0 cpu      0 elap  164.5M virt       0 pf
 -----------------------------------------------------------------------
-TOTALS (secs). . . . . .      0 cpu      0 elap 1471.3M virt     290 pf
+TOTALS (secs). . . . . .      0 cpu      0 elap 1471.3M virt     292 pf
 
 
 ************************************************************************
@@ -226,7 +226,7 @@ TOTALS (secs). . . . . .      0 cpu      0 elap 1471.3M virt     290 pf
 
  ;# 41
     PO1 = geomOr( PO1 ) 
-    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 42
+    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 41
 
  ;# 42
     dataReduction( PO1 ) 
@@ -234,7 +234,7 @@ TOTALS (secs). . . . . .      0 cpu      0 elap 1471.3M virt     290 pf
 
  ;# 43
  ;  region( PO1 )
-    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 42
+    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 41
 
  ;# 44
     NWEL = geomOr( NWEL ) 
@@ -794,7 +794,7 @@ TOTALS (secs). . . . . .      0 cpu      0 elap 1471.3M virt     290 pf
 
  ;# 183
     EXPOL = geomAndNot( PO1 DIFF ) 
-    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 88
+    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 87
 
  ;# 184
     dataReduction( EXPOL ) 
@@ -802,11 +802,11 @@ TOTALS (secs). . . . . .      0 cpu      0 elap 1471.3M virt     290 pf
 
  ;# 185
  ;  region( EXPOL )
-    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 88
+    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 87
 
  ;# 186
     T?300 = geomAndNot( PO1 GATE ) 
-    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 88
+    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 87
 
  ;# 187
     dataReduction( T?300 ) 
@@ -814,7 +814,7 @@ TOTALS (secs). . . . . .      0 cpu      0 elap 1471.3M virt     290 pf
 
  ;# 188
  ;  region( T?300 )
-    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 88
+    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 87
 
  ;# 189
     EXPO_E  = geomGetEdge( T?300 outside GATE ) 
@@ -826,7 +826,7 @@ TOTALS (secs). . . . . .      0 cpu      0 elap 1471.3M virt     290 pf
 
  ;# 191
     INTPOL = geomAvoiding( EXPOL CONT ) 
-    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 83
+    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 82
 
  ;# 192
     dataReduction( INTPOL ) 
@@ -834,11 +834,11 @@ TOTALS (secs). . . . . .      0 cpu      0 elap 1471.3M virt     290 pf
 
  ;# 193
  ;  region( INTPOL )
-    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 83
+    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 82
 
  ;# 194
     T?303 = geomUnderSizePrep( PO1 -0.12 ) 
-    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 42
+    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 41
 
  ;# 195
     dataReduction( T?303 ) 
@@ -1138,7 +1138,7 @@ TOTALS (secs). . . . . .      0 cpu      0 elap 1471.3M virt     290 pf
 
  ;# 269
     T?349 = geomAndNot( PO1 SAB ) 
-    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 42
+    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 41
 
  ;# 270
     dataReduction( T?349 ) 
@@ -1146,7 +1146,7 @@ TOTALS (secs). . . . . .      0 cpu      0 elap 1471.3M virt     290 pf
 
  ;# 271
  ;  region( T?349 )
-    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 42
+    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 41
 
  ;# 272
     PO1_NOT_SAB = geomButtOnly( T?349 SAB_PO1 ) 
@@ -1474,7 +1474,7 @@ TOTALS (secs). . . . . .      0 cpu      0 elap 1471.3M virt     290 pf
 
  ;# 353
     ME1 = geomOr( ME1 ) 
-    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 41
+    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 42
 
  ;# 354
     dataReduction( ME1 ) 
@@ -1490,7 +1490,7 @@ TOTALS (secs). . . . . .      0 cpu      0 elap 1471.3M virt     290 pf
 
  ;# 357
     T?424 = geomAndNot( ME1 M1RESMK ) 
-    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 41
+    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 42
 
  ;# 358
     dataReduction( T?424 ) 
@@ -1506,7 +1506,7 @@ TOTALS (secs). . . . . .      0 cpu      0 elap 1471.3M virt     290 pf
 
  ;# 361
     ME1_c = geomAndNot( T?424 IND ) 
-    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 41
+    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 42
 
  ;# 362
     dataReduction( ME1_c ) 
@@ -1514,11 +1514,11 @@ TOTALS (secs). . . . . .      0 cpu      0 elap 1471.3M virt     290 pf
 
  ;# 363
  ;  region( ME1_c )
-    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 41
+    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 42
 
  ;# 364
     ME2 = geomOr( ME2 ) 
-    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 6
+    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 7
 
  ;# 365
     dataReduction( ME2 ) 
@@ -1534,7 +1534,7 @@ TOTALS (secs). . . . . .      0 cpu      0 elap 1471.3M virt     290 pf
 
  ;# 368
     T?429 = geomAndNot( ME2 M2RESMK ) 
-    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 6
+    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 7
 
  ;# 369
     dataReduction( T?429 ) 
@@ -1542,7 +1542,7 @@ TOTALS (secs). . . . . .      0 cpu      0 elap 1471.3M virt     290 pf
 
  ;# 370
     ME2_c = geomAndNot( T?429 IND ) 
-    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 6
+    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 7
 
  ;# 371
     dataReduction( ME2_c ) 
@@ -1550,7 +1550,7 @@ TOTALS (secs). . . . . .      0 cpu      0 elap 1471.3M virt     290 pf
 
  ;# 372
  ;  region( ME2_c )
-    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 6
+    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 7
 
  ;# 373
     ME3 = geomOr( ME3 ) 
@@ -1726,7 +1726,7 @@ TOTALS (secs). . . . . .      0 cpu      0 elap 1471.3M virt     290 pf
 
  ;# 416
     VI1 = geomOr( VI1 ) 
-    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 9
+    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 10
 
  ;# 417
     dataReduction( VI1 ) 
@@ -1742,7 +1742,7 @@ TOTALS (secs). . . . . .      0 cpu      0 elap 1471.3M virt     290 pf
 
  ;# 420
     vi1_all = geomOr( VI1 VI1BAR ) 
-    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 9
+    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 10
 
  ;# 421
     dataReduction( vi1_all ) 
@@ -1758,7 +1758,7 @@ TOTALS (secs). . . . . .      0 cpu      0 elap 1471.3M virt     290 pf
 
  ;# 424
  ;  region( vi1_all )
-    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 9
+    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 10
 
  ;# 425
     VI2 = geomOr( VI2 ) 
@@ -1886,11 +1886,11 @@ TOTALS (secs). . . . . .      0 cpu      0 elap 1471.3M virt     290 pf
 
  ;# 456
     vi5_all = geomOr( VI5 VI5BAR ) 
-    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 0
+    cpu: 0.0   elapsed: 0   virtual: 191M   task sum: 0
 
  ;# 457
     dataReduction( vi5_all ) 
-    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 0
+    cpu: 0.0   elapsed: 0   virtual: 191M   task sum: 0
 
  ;# 458
     vi5_all = groupVias(  via(vi5_all) conn1(ME6_c) conn2(ME5_c) )
@@ -1906,11 +1906,11 @@ TOTALS (secs). . . . . .      0 cpu      0 elap 1471.3M virt     290 pf
 
  ;# 461
     TMVBAR = geomOr( TMVBAR ) 
-    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 0
+    cpu: 0.0   elapsed: 0   virtual: 191M   task sum: 0
 
  ;# 462
     dataReduction( TMVBAR ) 
-    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 0
+    cpu: 0.0   elapsed: 0   virtual: 191M   task sum: 0
 
  ;# 463
     TMV_RDL_ALL = geomOr( TMV_RDL TMVBAR ) 
@@ -2098,11 +2098,11 @@ TOTALS (secs). . . . . .      0 cpu      0 elap 1471.3M virt     290 pf
 
  ;# 509
  ;  via( vi1_all ME2_c )
-    cpu: 0.0   elapsed: 0   virtual: 191M   task sum: 9
+    cpu: 0.0   elapsed: 0   virtual: 191M   task sum: 10
 
  ;# 510
  ;  via( vi1_all ME1_c )
-    cpu: 0.0   elapsed: 0   virtual: 191M   task sum: 9
+    cpu: 0.0   elapsed: 0   virtual: 191M   task sum: 10
 
  ;# 511
  ;  via( vi2_all ME3_c )
@@ -2154,11 +2154,11 @@ TOTALS (secs). . . . . .      0 cpu      0 elap 1471.3M virt     290 pf
 
  ;# 523
  ;  via( _TMV_RDL_ALL_ME6_c AL_c )
-    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 0
+    cpu: 0.0   elapsed: 0   virtual: 191M   task sum: 0
 
  ;# 524
  ;  via( _TMV_RDL_ALL_ME6_c ME6_c )
-    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 0
+    cpu: 0.0   elapsed: 0   virtual: 191M   task sum: 0
 
  ;# 525
  ;  label( 
@@ -2316,7 +2316,7 @@ TOTALS (secs). . . . . .      0 cpu      0 elap 1471.3M virt     290 pf
 
  ;# 550
     PO1_N_LOGO = geomAndNot( PO1 LOGOMK ) 
-    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 42
+    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 41
 
  ;# 551
     dataReduction( PO1_N_LOGO ) 
@@ -2404,7 +2404,7 @@ TOTALS (secs). . . . . .      0 cpu      0 elap 1471.3M virt     290 pf
 
  ;# 572
     ME1_N_LOGO = geomAndNot( ME1 LOGOMK ) 
-    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 41
+    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 42
 
  ;# 573
     dataReduction( ME1_N_LOGO ) 
@@ -2412,7 +2412,7 @@ TOTALS (secs). . . . . .      0 cpu      0 elap 1471.3M virt     290 pf
 
  ;# 574
     VI1_N_LOGO = geomAndNot( VI1 LOGOMK ) 
-    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 9
+    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 10
 
  ;# 575
     dataReduction( VI1_N_LOGO ) 
@@ -2420,7 +2420,7 @@ TOTALS (secs). . . . . .      0 cpu      0 elap 1471.3M virt     290 pf
 
  ;# 576
     ME2_N_LOGO = geomAndNot( ME2 LOGOMK ) 
-    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 6
+    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 7
 
  ;# 577
     dataReduction( ME2_N_LOGO ) 
@@ -3244,15 +3244,15 @@ TOTALS (secs). . . . . .      0 cpu      0 elap 1471.3M virt     290 pf
 
  ;# 782
     dataReduction( T?609 ) 
-    cpu: 0.0   elapsed: 0   virtual: 191M   task sum: 0
+    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 0
 
  ;# 783
  ;  region( T?609 )
-    cpu: 0.0   elapsed: 0   virtual: 191M   task sum: 0
+    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 0
 
  ;# 784
     T?610 = geomOr( T?609 ) 
-    cpu: 0.0   elapsed: 0   virtual: 191M   task sum: 0
+    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 0
 
  ;# 785
     dataReduction( T?610 ) 
@@ -7220,7 +7220,7 @@ TOTALS (secs). . . . . .      0 cpu      0 elap 1471.3M virt     290 pf
 
  ;# 1752
     T?1195 = drc( PO1 sepNotch < 0.2 withSingularPoint ) 
-    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 0
+    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 1
 
  ;# 1753
     dataReduction( T?1195 ) 
@@ -7260,7 +7260,7 @@ TOTALS (secs). . . . . .      0 cpu      0 elap 1471.3M virt     290 pf
 
  ;# 1762
     T?1203 = geomOr( T?1195 ) 
-    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 0
+    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 1
 
  ;# 1763
     dataReduction( T?1203 ) 
@@ -7269,7 +7269,7 @@ TOTALS (secs). . . . . .      0 cpu      0 elap 1471.3M virt     290 pf
  ;# 1764
     e4A_19Da1c1c21 = geomAndNot( T?1203 T?1202  )
     errorLayer( e4A_19Da1c1c21 "4A.19D.a1_4A.19D.c1_4A.19D.c2.1: Minimum poly1 spacing is 0.2um." ) 
-    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 0
+    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 1
 
  ;# 1765
     e4A_19Da2 = drc( WGATE_Woc GATE_Woc sep < 0.24 opposite "e4A_19Da2 = drc(WGATE_Woc GATE_Woc (sep < 0.24) opposite)" )
@@ -7483,7 +7483,7 @@ TOTALS (secs). . . . . .      0 cpu      0 elap 1471.3M virt     290 pf
 
  ;# 1816
     END_CAP = geomButtOrOver( INTPOL GATE keep == 1 ) 
-    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 78
+    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 76
 
  ;# 1817
     dataReduction( END_CAP ) 
@@ -7491,11 +7491,11 @@ TOTALS (secs). . . . . .      0 cpu      0 elap 1471.3M virt     290 pf
 
  ;# 1818
  ;  region( END_CAP )
-    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 78
+    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 76
 
  ;# 1819
     T?1247 = geomGetAdjacentEdge( END_CAP GATE ) 
-    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 234
+    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 228
 
  ;# 1820
     dataReduction( T?1247 ) 
@@ -11590,7 +11590,7 @@ TOTALS (secs). . . . . .      0 cpu      0 elap 1471.3M virt     290 pf
 
  ;# 2831
     E4A_23Fa_PO1 = geomAndNot( DRC_1 E4A_23Fa_PO1 /*-*/ ) 
-    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 42
+    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 41
 
  ;# 2832
     dataReduction( E4A_23Fa_PO1 ) 
@@ -11598,7 +11598,7 @@ TOTALS (secs). . . . . .      0 cpu      0 elap 1471.3M virt     290 pf
 
  ;# 2833
  ;  region( E4A_23Fa_PO1 )
-    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 42
+    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 41
 
  ;# 2834
     geomStamp( E4A_23Fa_PO1 E4A_23Fa_X ) 
@@ -12634,7 +12634,7 @@ TOTALS (secs). . . . . .      0 cpu      0 elap 1471.3M virt     290 pf
 
  ;# 3083
     T?2185 = geomContactCheck( T?2184 width == 0.16 length == 0.16 ignore) 
-    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 1
+    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 0
 
  ;# 3084
     dataReduction( T?2185 ) 
@@ -12678,7 +12678,7 @@ TOTALS (secs). . . . . .      0 cpu      0 elap 1471.3M virt     290 pf
 
  ;# 3094
     T?2189 = geomOr( T?2185 T?2188 ) 
-    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 1
+    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 0
 
  ;# 3095
     dataReduction( T?2189 ) 
@@ -12687,11 +12687,11 @@ TOTALS (secs). . . . . .      0 cpu      0 elap 1471.3M virt     290 pf
  ;# 3096
     e4A24A = geomAndNot( T?2189 T?666  )
     errorLayer( e4A24A "4A.24A: Exact CONT size is 0.16um" ) 
-    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 1
+    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 0
 
  ;# 3097
     T?2198 = drc( CONT sepNotch < 0.2 withSingularPoint ) 
-    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 4
+    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 0
 
  ;# 3098
     dataReduction( T?2198 ) 
@@ -12699,7 +12699,7 @@ TOTALS (secs). . . . . .      0 cpu      0 elap 1471.3M virt     290 pf
 
  ;# 3099
     T?2205 = geomOr( T?2198 ) 
-    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 2
+    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 0
 
  ;# 3100
     dataReduction( T?2205 ) 
@@ -12708,7 +12708,7 @@ TOTALS (secs). . . . . .      0 cpu      0 elap 1471.3M virt     290 pf
  ;# 3101
     e4A24B = geomAndNot( T?2205 T?1213  )
     errorLayer( e4A24B "4A.24B: Minimum space between two CONT regions is 0.20um" ) 
-    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 2
+    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 0
 
  ;# 3102
     T?2207 = drc( T?2479 DIFCNT sep < 0.12 with_perp ) 
@@ -12738,7 +12738,7 @@ TOTALS (secs). . . . . .      0 cpu      0 elap 1471.3M virt     290 pf
 
  ;# 3108
     T?2219 = drc( DIFF POLCNT sep < 0.16 withIntersection with_perp ) 
-    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 3
+    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 0
 
  ;# 3109
     dataReduction( T?2219 ) 
@@ -12778,7 +12778,7 @@ TOTALS (secs). . . . . .      0 cpu      0 elap 1471.3M virt     290 pf
 
  ;# 3118
     T?2226 = geomOr( T?2219 ) 
-    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 1
+    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 0
 
  ;# 3119
     dataReduction( T?2226 ) 
@@ -12787,11 +12787,11 @@ TOTALS (secs). . . . . .      0 cpu      0 elap 1471.3M virt     290 pf
  ;# 3120
     e4A24D = geomAndNot( T?2226 T?2225  )
     errorLayer( e4A24D "4A.24D:Minimum poly1 contact to diffusion spacing is 0.16um" ) 
-    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 1
+    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 0
 
  ;# 3121
     T?2229 = drc( PO1 POLCNT enc < 0.06 withSingularPoint ) 
-    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 21
+    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 23
 
  ;# 3122
     dataReduction( T?2229 ) 
@@ -14214,7 +14214,7 @@ Total cells checked = 1
 Total rules checked = 3465
 
 Run time =  0.00 seconds
-CPU time =  0.29 seconds
+CPU time =  0.26 seconds
 VM HWM   =  1471 Mbytes
 Disk HWM =     3 Mbytes
 Disk end =     3 Mbytes

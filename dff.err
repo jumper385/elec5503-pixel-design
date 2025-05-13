@@ -34,6 +34,28 @@ Shape               Environments Status & Error Marker
   14      X       15.740     -9.200     15.900     -9.040
 
 ================================================================================
+Rule No. 95 : 4A.19D.a1_4A.19D.c1_4A.19D.c2.1: Minimum poly1 spacing is 0.2um.
+
+Real Error Count : 1; Flat Error Count : 1
+================================================================================
+
+--------------------------------------------------------------------------------
+Cell Name : dff layout pixel
+
+                   Cell Errors    Real Errors   Cell Placements     Environments
+                             1              1                 1                1
+--------------------------------------------------------------------------------
+Env.  Env. Placements            X1           Y1          X2           Y2
+
+  1        1                  6.729      -13.640       7.080      -13.580
+
+Shape               Environments Status & Error Marker 
+
+          1           X1         Y1         X2         Y2
+
+   1      X        6.729    -13.640      7.080    -13.580
+
+================================================================================
 Rule No. 125 : 4A.21M: Maximum NPLUS diffusion to nearest P+ pick-up spacing is 20um
 
 Real Error Count : 8; Flat Error Count : 8
@@ -91,71 +113,4 @@ Shape               Environments Status & Error Marker
    7      X       11.200    -14.140     12.520    -13.860
    8      X       13.200    -11.540     15.420    -11.260
    9      X       15.640    -11.540     16.440    -11.260
-
-================================================================================
-Rule No. 182 : 4A.24A: Exact CONT size is 0.16um
-
-Real Error Count : 1; Flat Error Count : 1
-================================================================================
-
---------------------------------------------------------------------------------
-Cell Name : dff layout pixel
-
-                   Cell Errors    Real Errors   Cell Placements     Environments
-                             1              1                 1                1
---------------------------------------------------------------------------------
-Env.  Env. Placements            X1           Y1          X2           Y2
-
-  1        1                  6.940      -13.440       7.060      -13.320
-
-Shape               Environments Status & Error Marker 
-
-          1           X1         Y1         X2         Y2
-
-   1      X        6.940    -13.440      7.060    -13.320
-
-================================================================================
-Rule No. 183 : 4A.24B: Minimum space between two CONT regions is 0.20um
-
-Real Error Count : 2; Flat Error Count : 2
-================================================================================
-
---------------------------------------------------------------------------------
-Cell Name : dff layout pixel
-
-                   Cell Errors    Real Errors   Cell Placements     Environments
-                             2              2                 1                1
---------------------------------------------------------------------------------
-Env.  Env. Placements            X1           Y1          X2           Y2
-
-  1        1                  6.780      -13.360       7.220      -13.160
-
-Shape               Environments Status & Error Marker 
-
-          1           X1         Y1         X2         Y2
-
-   1      X        6.780    -13.360      6.980    -13.160
-   2      X        7.020    -13.360      7.220    -13.160
-
-================================================================================
-Rule No. 186 : 4A.24D:Minimum poly1 contact to diffusion spacing is 0.16um
-
-Real Error Count : 1; Flat Error Count : 1
-================================================================================
-
---------------------------------------------------------------------------------
-Cell Name : dff layout pixel
-
-                   Cell Errors    Real Errors   Cell Placements     Environments
-                             1              1                 1                1
---------------------------------------------------------------------------------
-Env.  Env. Placements            X1           Y1          X2           Y2
-
-  1        1                  6.792      -13.420       7.208      -13.260
-
-Shape               Environments Status & Error Marker 
-
-          1           X1         Y1         X2         Y2
-
-   1      X        6.792    -13.420      7.208    -13.260
 
