@@ -10,10 +10,16 @@
 
 vuiLayerListOrder  =  "Alphabetical"
 vuiLayerList  = '(
-		("DATAEXTENT" 205 "DATAEXTENT = cellBoundary(root)" 0 2 t "y0 (drawing)" t)
-		("E4A_23Fa_PO1" 2025 "E4A_23Fa_PO1 = geomAndNot( DRC_1 E4A_23Fa_PO1 /*-*/ )" 1 5 t "y1 (drawing)" t)
-		("ME1_c" 426 "ME1_c = geomAndNot( T?424 IND )" 0 4 t "y3 (drawing)" t)
-		("NWELL" 236 "NWELL = geomAndNot( NWEL RNWELL )" 0 3 t "y9 (drawing)" t)
-		("m1_pin" 196 "m1_pin = pinText( \"ME1\" )" 0 1 t "y5 (drawing)" t)
-		("po_pin" 195 "po_pin = pinText( \"PO1\" )" 0 0 t "y6 (drawing)" t)
+		("DATAEXTENT" 203 "DATAEXTENT = cellBoundary(root)" 0 4 t "y0 (drawing)" t)
+		("DIFF" 230 "DIFF = geomOr( DIFF )" 1 11 t "y1 (drawing)" t)
+		("ME1" 372 "ME1 = geomOr( ME1 )" 1 5 t "y2 (drawing)" t)
+		("ME2" 377 "ME2 = geomOr( ME2 )" 1 6 t "y3 (drawing)" t)
+		("ME3" 381 "ME3 = geomOr( ME3 )" 1 7 t "y4 (drawing)" t)
+		("ME4" 385 "ME4 = geomOr( ME4 )" 1 8 t "y5 (drawing)" t)
+		("ME5" 389 "ME5 = geomOr( ME5 )" 1 9 t "y6 (drawing)" t)
+		("ME6" 393 "ME6 = geomOr( ME6 )" 1 10 t "y7 (drawing)" t)
+		("NPLUS" 6 "NPLUS = layer( \"NPLUS\" type(\"drawing\") )" 0 1 t "y8 (drawing)" t)
+		("PPLUS" 5 "PPLUS = layer( \"PPLUS\" type(\"drawing\") )" 0 0 t "y9 (drawing)" t)
+		("m1_pin" 189 "m1_pin = pinText( \"ME1\" )" 0 3 t "y5 (drawing)" t)
+		("po_pin" 188 "po_pin = pinText( \"PO1\" )" 0 2 t "y6 (drawing)" t)
 )
