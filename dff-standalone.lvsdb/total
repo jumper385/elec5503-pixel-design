@@ -1,0 +1,5 @@
+; Assura generated file -- DO NOT EDIT --
+; Do NOT rely on the content of this file, it may change.
+;
+2 device net parameter pin rewire total
+1  5 (( ( S "dff-standalone layout pixel" )( L "dff-standalone schematic pixel" ) )(( 1 30 22 )( 4 15 0 )( 0 2 2 )( 3 0 7 )))

@@ -1,0 +1,8 @@
+; Assura generated file -- DO NOT EDIT --
+; Do NOT rely on the content of this file, it may change.
+;
+2 bind match unmatched shorts opens
+1 2 ((S "net81")(S "CLK_P")(L "avC15")(L "avC13")(L "avC14")(L "avS11")(L "avC8")(L "avS1")(L "avC9")(L "avC10"))
+1 1 ((L "avC2")((1 "n_12_hsl130e" ( "D" "S"))(1 "n_12_hsl130e" ( "G"))(1 "p_12_hsl130e" ( "D" "S"))(1 "p_12_hsl130e" ( "G")))(S "QNOT")((2 "N_12_HSL130E" ( "D" "S"))(2 "P_12_HSL130E" ( "D" "S"))))
+1 1 ((L "avC17")((12 "n_12_hsl130e" ( "B")))(S "GND")((8 "N_12_HSL130E" ( "D" "S"))(12 "N_12_HSL130E" ( "B"))))
+1 1 ((L "avC18")((12 "p_12_hsl130e" ( "B")))(S "VDD")((8 "P_12_HSL130E" ( "D" "S"))(12 "P_12_HSL130E" ( "B"))))

@@ -1,0 +1,25 @@
+; Assura generated file -- DO NOT EDIT --
+; Do NOT rely on the content of this file, it may change.
+;
+2 unmatched connect pin
+1 1 ((S "NM0" "N_12_HSL130E")(L "avD1_10" "n_12_hsl130e")(("D" "net79" "avC15")("S" "GND" "net79")))
+1 1 ((S "PM0" "P_12_HSL130E")(L "avD2_10" "p_12_hsl130e")(("D" "net81" "avC9")("S" "VDD" "avC10")))
+1 1 ((S "I12/NM0" "N_12_HSL130E")(L "avD1_11" "n_12_hsl130e")(("D" "net92" "net92")("S" "GND" "avC15")))
+1 1 ((S "I12/PM0" "P_12_HSL130E")(L "avD2_11" "p_12_hsl130e")(("D" "net92" "net92")("S" "VDD" "avC9")))
+1 1 ((S "I8/NM0" "N_12_HSL130E")(L "avD1_7" "n_12_hsl130e")(("D" "Q" "Q")("S" "GND" "avC15")))
+1 1 ((S "I8/PM0" "P_12_HSL130E")(L "avD2_7" "p_12_hsl130e")(("D" "Q" "Q")("S" "VDD" "avC9")))
+1 1 ((S "I1/NM0" "N_12_HSL130E")(L "avD1_3" "n_12_hsl130e")(("D" "net80" "net80")("S" "GND" "avC15")))
+1 1 ((S "I1/PM0" "P_12_HSL130E")(L "avD2_3" "p_12_hsl130e")(("D" "net80" "net80")("S" "VDD" "avC9")))
+1 1 ((S "I6/NM0" "N_12_HSL130E")(L "avD1_6" "n_12_hsl130e")(("D" "QNOT" "avC15")("S" "GND" "avC14")))
+1 1 ((S "I6/PM0" "P_12_HSL130E")(L "avD2_6" "p_12_hsl130e")(("D" "QNOT" "avC9")("S" "VDD" "avC14")))
+1 1 ((S "I3/NM0" "N_12_HSL130E")(L "avD1_2" "n_12_hsl130e")(("D" "net86" "avC15")("S" "GND" "net86")))
+1 1 ((S "I3/PM0" "P_12_HSL130E")(L "avD2_2" "p_12_hsl130e")(("D" "net86" "avC9")("S" "VDD" "net86")))
+1 1 ((S "I10/NM0" "N_12_HSL130E")(L "avD1_8" "n_12_hsl130e")(("D" "CLK_N" "avC15")("S" "GND" "CLK_N")))
+1 1 ((S "I10/PM0" "P_12_HSL130E")(L "avD2_8" "p_12_hsl130e")(("D" "CLK_N" "avC9")("S" "VDD" "CLK_N")))
+1 1 ((S "I9/NM0" "N_12_HSL130E")(L "avD1_4" "n_12_hsl130e")(("D" "CLK_P" "avC13")("S" "GND" "net80")))
+1 1 ((S "I9/PM0" "P_12_HSL130E")(L "avD2_5" "p_12_hsl130e")(("D" "CLK_P" "avC14")("S" "VDD" "avC13")))
+1 1 ((S "I2/PM0" "P_12_HSL130E")(L "avD2_12" "p_12_hsl130e")(("G" "CLK_N" "QNOT")))
+1 0 ((S "I5/NM0" "N_12_HSL130E")(("D" "net80")("G" "CLK_N")("S" "net81")("B" "GND")))
+1 0 ((S "I4/NM0" "N_12_HSL130E")(("D" "net86")("G" "CLK_N")("S" "net79")("B" "GND")))
+1 0 ((L "avD1_1" "n_12_hsl130e")(("D" "net86")("G" "QNOT")("S" "net79")("B" "GND")))
+1 0 ((L "avD1_5" "n_12_hsl130e")(("D" "avC14")("G" "avS11")("S" "avC13")("B" "GND")))

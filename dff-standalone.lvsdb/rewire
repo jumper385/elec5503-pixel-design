@@ -1,0 +1,21 @@
+; Assura generated file -- DO NOT EDIT --
+; Do NOT rely on the content of this file, it may change.
+;
+2 terminal shorts opens
+1 0 ( "D" "avD1_4" "avC17" "avC13" "GND")
+1 0 ( "D" "avD1_8" "avC17" "avC15" "GND")
+1 0 ( "D" "avD1_2" "avC17" "avC15" "GND")
+1 0 ( "S" "avD1_3" "avC17" "avC15" "GND")
+1 0 ( "S" "avD1_7" "avC17" "avC15" "GND")
+1 0 ( "S" "avD1_11" "avC17" "avC15" "GND")
+1 0 ( "D" "avD1_10" "avC17" "avC15" "GND")
+1 0 ( "D" "avD2_8" "avC18" "avC9" "VDD")
+1 0 ( "D" "avD2_2" "avC18" "avC9" "VDD")
+1 0 ( "S" "avD2_3" "avC18" "avC9" "VDD")
+1 0 ( "S" "avD2_7" "avC18" "avC9" "VDD")
+1 0 ( "S" "avD2_11" "avC18" "avC9" "VDD")
+1 0 ( "D" "avD2_4" "avC8" "avC13" "net81")
+1 0 ( "G" "avD2_4" "avS1" "avS11" "CLK_P")
+1 0 ( "D" "avD1_4" "avS1" "avC13" "CLK_P")
+1 2 ((L "avC13")(L "avS11")(L "avC10"))
+1 2 ((L "avC2")(L "avC8")(L "avS1"))
