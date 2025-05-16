@@ -5,7 +5,7 @@
 @(#)$CDS: aveng_64 version av4.1:Production:dfII6.1.7-64b:IC6.1.7-64b.78 12/24/2015 12:01 (sjflg007) $
 sub-version 4.1_USR5, integ signature 2015-12-24-1122
 
-run on vdi-l-cos-006 from /usr/local/cadence6/ASSURA415-001-617/tools.lnx86/assura/bin/64bit/aveng on Fri May 16 14:38:45 2025
+run on vdi-l-cos-006 from /usr/local/cadence6/ASSURA415-001-617/tools.lnx86/assura/bin/64bit/aveng on Fri May 16 14:53:32 2025
 
 Echoing run specific file...
     ;----------------------------------------------------------------------------
@@ -35,7 +35,7 @@ Echoing run specific file...
 
                   Time Summary - Database
 
-reading DFII data. . . .      0 cpu      0 elap 1662.4M virt     262 pf
+reading DFII data. . . .      0 cpu      0 elap 1692.1M virt     264 pf
 duplicate inst removal .      0 cpu      0 elap  159.6M virt       0 pf
 cell boundary layer. . .      0 cpu      0 elap  159.6M virt       0 pf
 small cell flattening. .      0 cpu      0 elap  159.6M virt       0 pf
@@ -43,8 +43,8 @@ small cell flattening. .      0 cpu      0 elap  159.6M virt       0 pf
 duplicate inst removal .      0 cpu      0 elap  159.6M virt       0 pf
 cluster overlapped insts      0 cpu      0 elap  159.6M virt       0 pf
 expand thin cells. . . .      0 cpu      0 elap  159.6M virt       0 pf
-array analysis . . . . .      0 cpu      0 elap  159.6M virt       0 pf
-extended dup inst remove      0 cpu      0 elap  159.6M virt       0 pf
+array analysis . . . . .      0 cpu      0 elap  162.0M virt       0 pf
+extended dup inst remove      0 cpu      0 elap  162.0M virt       0 pf
 cell repetition analysis      0 cpu      0 elap  159.6M virt       0 pf
 enclosing polygon proc .      0 cpu      0 elap  159.6M virt       0 pf
 building avGrids . . . .      0 cpu      0 elap  159.6M virt       0 pf
@@ -58,7 +58,7 @@ duplicate cell removal .      0 cpu      0 elap  162.0M virt       0 pf
 create background layer.      0 cpu      0 elap  162.0M virt       0 pf
 final VDB processing . .      0 cpu      0 elap  162.0M virt       0 pf
 -----------------------------------------------------------------------
-TOTALS (secs). . . . . .      0 cpu      0 elap 1662.4M virt     262 pf
+TOTALS (secs). . . . . .      0 cpu      0 elap 1692.1M virt     264 pf
 
 
 ************************************************************************
@@ -214,7 +214,7 @@ TOTALS (secs). . . . . .      0 cpu      0 elap 1662.4M virt     262 pf
 
  ;# 38
     DIFF = geomOr( DIFF ) 
-    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 31
+    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 27
 
  ;# 39
     dataReduction( DIFF ) 
@@ -222,11 +222,11 @@ TOTALS (secs). . . . . .      0 cpu      0 elap 1662.4M virt     262 pf
 
  ;# 40
  ;  region( DIFF )
-    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 31
+    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 27
 
  ;# 41
     PO1 = geomOr( PO1 ) 
-    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 44
+    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 40
 
  ;# 42
     dataReduction( PO1 ) 
@@ -234,11 +234,11 @@ TOTALS (secs). . . . . .      0 cpu      0 elap 1662.4M virt     262 pf
 
  ;# 43
  ;  region( PO1 )
-    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 44
+    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 40
 
  ;# 44
     NWEL = geomOr( NWEL ) 
-    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 12
+    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 10
 
  ;# 45
     dataReduction( NWEL ) 
@@ -246,7 +246,7 @@ TOTALS (secs). . . . . .      0 cpu      0 elap 1662.4M virt     262 pf
 
  ;# 46
  ;  region( NWEL )
-    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 12
+    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 10
 
  ;# 47
     NWR = geomOr( NWR ) 
@@ -274,7 +274,7 @@ TOTALS (secs). . . . . .      0 cpu      0 elap 1662.4M virt     262 pf
 
  ;# 53
     NWELL = geomAndNot( NWEL RNWELL ) 
-    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 12
+    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 10
 
  ;# 54
     dataReduction( NWELL ) 
@@ -282,11 +282,11 @@ TOTALS (secs). . . . . .      0 cpu      0 elap 1662.4M virt     262 pf
 
  ;# 55
  ;  region( NWELL )
-    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 12
+    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 10
 
  ;# 56
     DIFF_PS = geomOutside( DIFF NWEL ) 
-    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 15
+    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 13
 
  ;# 57
     dataReduction( DIFF_PS ) 
@@ -294,7 +294,7 @@ TOTALS (secs). . . . . .      0 cpu      0 elap 1662.4M virt     262 pf
 
  ;# 58
     DIFF_NW = geomAndNot( DIFF DIFF_PS ) 
-    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 16
+    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 14
 
  ;# 59
     dataReduction( DIFF_NW ) 
@@ -302,7 +302,7 @@ TOTALS (secs). . . . . .      0 cpu      0 elap 1662.4M virt     262 pf
 
  ;# 60
  ;  region( DIFF_NW )
-    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 16
+    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 14
 
  ;# 61
     TWEL = geomOr( TWEL ) 
@@ -318,7 +318,7 @@ TOTALS (secs). . . . . .      0 cpu      0 elap 1662.4M virt     262 pf
 
  ;# 64
     DIFF_NT = geomOutside( DIFF_NW TWEL ) 
-    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 16
+    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 14
 
  ;# 65
     dataReduction( DIFF_NT ) 
@@ -334,7 +334,7 @@ TOTALS (secs). . . . . .      0 cpu      0 elap 1662.4M virt     262 pf
 
  ;# 68
     PPLUS = geomOr( PPLUS ) 
-    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 12
+    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 10
 
  ;# 69
     dataReduction( PPLUS ) 
@@ -342,11 +342,11 @@ TOTALS (secs). . . . . .      0 cpu      0 elap 1662.4M virt     262 pf
 
  ;# 70
  ;  region( PPLUS )
-    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 12
+    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 10
 
  ;# 71
     T?245 = geomAndNot( DIFF_PS PPLUS ) 
-    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 15
+    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 13
 
  ;# 72
     dataReduction( T?245 ) 
@@ -362,7 +362,7 @@ TOTALS (secs). . . . . .      0 cpu      0 elap 1662.4M virt     262 pf
 
  ;# 75
     NDIF = geomCat( T?245 T?246 ) 
-    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 15
+    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 13
 
  ;# 76
     dataReduction( NDIF ) 
@@ -370,7 +370,7 @@ TOTALS (secs). . . . . .      0 cpu      0 elap 1662.4M virt     262 pf
 
  ;# 77
  ;  region( NDIF )
-    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 15
+    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 13
 
  ;# 78
     T?248 = geomAnd( DIFF_PS PPLUS ) 
@@ -414,7 +414,7 @@ TOTALS (secs). . . . . .      0 cpu      0 elap 1662.4M virt     262 pf
 
  ;# 88
     PDIF = geomAnd( DIFF_NT PPLUS ) 
-    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 16
+    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 14
 
  ;# 89
     dataReduction( PDIF ) 
@@ -422,11 +422,11 @@ TOTALS (secs). . . . . .      0 cpu      0 elap 1662.4M virt     262 pf
 
  ;# 90
  ;  region( PDIF )
-    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 16
+    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 14
 
  ;# 91
     PSD = geomAndNot( PDIF PO1 ) 
-    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 39
+    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 37
 
  ;# 92
     dataReduction( PSD ) 
@@ -434,11 +434,11 @@ TOTALS (secs). . . . . .      0 cpu      0 elap 1662.4M virt     262 pf
 
  ;# 93
  ;  region( PSD )
-    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 39
+    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 37
 
  ;# 94
     T?254 = geomOr( NDIF ) 
-    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 15
+    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 13
 
  ;# 95
     dataReduction( T?254 ) 
@@ -446,7 +446,7 @@ TOTALS (secs). . . . . .      0 cpu      0 elap 1662.4M virt     262 pf
 
  ;# 96
     NSD = geomAndNot( T?254 PO1 ) 
-    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 38
+    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 36
 
  ;# 97
     dataReduction( NSD ) 
@@ -454,7 +454,7 @@ TOTALS (secs). . . . . .      0 cpu      0 elap 1662.4M virt     262 pf
 
  ;# 98
  ;  region( NSD )
-    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 38
+    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 36
 
  ;# 99
     TG = geomOr( TG ) 
@@ -482,7 +482,7 @@ TOTALS (secs). . . . . .      0 cpu      0 elap 1662.4M virt     262 pf
 
  ;# 105
     PDIF1 = geomAndNot( PDIF PDIF3 ) 
-    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 16
+    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 14
 
  ;# 106
     dataReduction( PDIF1 ) 
@@ -490,7 +490,7 @@ TOTALS (secs). . . . . .      0 cpu      0 elap 1662.4M virt     262 pf
 
  ;# 107
  ;  region( PDIF1 )
-    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 16
+    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 14
 
  ;# 108
     T?261 = geomOr( SRAM ) 
@@ -502,7 +502,7 @@ TOTALS (secs). . . . . .      0 cpu      0 elap 1662.4M virt     262 pf
 
  ;# 110
     PDIF1_P = geomAndNot( PDIF1 T?261 ) 
-    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 16
+    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 14
 
  ;# 111
     dataReduction( PDIF1_P ) 
@@ -522,7 +522,7 @@ TOTALS (secs). . . . . .      0 cpu      0 elap 1662.4M virt     262 pf
 
  ;# 115
     NDIF1 = geomAndNot( T?254 NDIF3 ) 
-    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 15
+    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 13
 
  ;# 116
     dataReduction( NDIF1 ) 
@@ -530,11 +530,11 @@ TOTALS (secs). . . . . .      0 cpu      0 elap 1662.4M virt     262 pf
 
  ;# 117
  ;  region( NDIF1 )
-    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 15
+    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 13
 
  ;# 118
     NDIF1_P = geomAndNot( NDIF1 T?261 ) 
-    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 15
+    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 13
 
  ;# 119
     dataReduction( NDIF1_P ) 
@@ -542,7 +542,7 @@ TOTALS (secs). . . . . .      0 cpu      0 elap 1662.4M virt     262 pf
 
  ;# 120
     T?270 = geomAnd( PPLUS DIFF ) 
-    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 16
+    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 14
 
  ;# 121
     dataReduction( T?270 ) 
@@ -550,7 +550,7 @@ TOTALS (secs). . . . . .      0 cpu      0 elap 1662.4M virt     262 pf
 
  ;# 122
  ;  region( T?270 )
-    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 16
+    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 14
 
  ;# 123
     BUT_PPLUS  = geomGetEdge( T?270 inside DIFF ) 
@@ -610,7 +610,7 @@ TOTALS (secs). . . . . .      0 cpu      0 elap 1662.4M virt     262 pf
 
  ;# 137
     CONT = geomOr( CONT ) 
-    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 80
+    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 75
 
  ;# 138
     dataReduction( CONT ) 
@@ -618,7 +618,7 @@ TOTALS (secs). . . . . .      0 cpu      0 elap 1662.4M virt     262 pf
 
  ;# 139
  ;  region( CONT )
-    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 80
+    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 75
 
  ;# 140
     POLCNT = geomOutside( CONT DIFF ) 
@@ -630,7 +630,7 @@ TOTALS (secs). . . . . .      0 cpu      0 elap 1662.4M virt     262 pf
 
  ;# 142
     DIFCNT = geomAndNot( CONT POLCNT ) 
-    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 80
+    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 75
 
  ;# 143
     dataReduction( DIFCNT ) 
@@ -638,11 +638,11 @@ TOTALS (secs). . . . . .      0 cpu      0 elap 1662.4M virt     262 pf
 
  ;# 144
  ;  region( DIFCNT )
-    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 80
+    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 75
 
  ;# 145
     T?279 = geomEnclose( PSD DIFCNT ) 
-    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 39
+    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 37
 
  ;# 146
     dataReduction( T?279 ) 
@@ -678,7 +678,7 @@ TOTALS (secs). . . . . .      0 cpu      0 elap 1662.4M virt     262 pf
 
  ;# 154
     CO_PSD = geomOr( T?279 T?282 ) 
-    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 39
+    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 37
 
  ;# 155
     dataReduction( CO_PSD ) 
@@ -686,7 +686,7 @@ TOTALS (secs). . . . . .      0 cpu      0 elap 1662.4M virt     262 pf
 
  ;# 156
     T?284 = geomEnclose( NSD DIFCNT ) 
-    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 38
+    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 35
 
  ;# 157
     dataReduction( T?284 ) 
@@ -694,7 +694,7 @@ TOTALS (secs). . . . . .      0 cpu      0 elap 1662.4M virt     262 pf
 
  ;# 158
     CO_NSD = geomOr( T?284 T?282 ) 
-    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 38
+    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 35
 
  ;# 159
     dataReduction( CO_NSD ) 
@@ -702,7 +702,7 @@ TOTALS (secs). . . . . .      0 cpu      0 elap 1662.4M virt     262 pf
 
  ;# 160
     CO_SD = geomOr( CO_PSD CO_NSD ) 
-    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 77
+    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 72
 
  ;# 161
     dataReduction( CO_SD ) 
@@ -794,7 +794,7 @@ TOTALS (secs). . . . . .      0 cpu      0 elap 1662.4M virt     262 pf
 
  ;# 183
     EXPOL = geomAndNot( PO1 DIFF ) 
-    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 90
+    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 86
 
  ;# 184
     dataReduction( EXPOL ) 
@@ -802,11 +802,11 @@ TOTALS (secs). . . . . .      0 cpu      0 elap 1662.4M virt     262 pf
 
  ;# 185
  ;  region( EXPOL )
-    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 90
+    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 86
 
  ;# 186
     T?300 = geomAndNot( PO1 GATE ) 
-    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 90
+    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 86
 
  ;# 187
     dataReduction( T?300 ) 
@@ -814,11 +814,11 @@ TOTALS (secs). . . . . .      0 cpu      0 elap 1662.4M virt     262 pf
 
  ;# 188
  ;  region( T?300 )
-    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 90
+    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 86
 
  ;# 189
     EXPO_E  = geomGetEdge( T?300 outside GATE ) 
-    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 274
+    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 270
 
  ;# 190
     dataReduction( EXPO_E ) 
@@ -826,7 +826,7 @@ TOTALS (secs). . . . . .      0 cpu      0 elap 1662.4M virt     262 pf
 
  ;# 191
     INTPOL = geomAvoiding( EXPOL CONT ) 
-    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 90
+    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 86
 
  ;# 192
     dataReduction( INTPOL ) 
@@ -834,11 +834,11 @@ TOTALS (secs). . . . . .      0 cpu      0 elap 1662.4M virt     262 pf
 
  ;# 193
  ;  region( INTPOL )
-    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 90
+    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 86
 
  ;# 194
     T?303 = geomUnderSizePrep( PO1 -0.12 ) 
-    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 44
+    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 40
 
  ;# 195
     dataReduction( T?303 ) 
@@ -890,7 +890,7 @@ TOTALS (secs). . . . . .      0 cpu      0 elap 1662.4M virt     262 pf
 
  ;# 207
     GATE_Wc = drc( T?2474 CO_SD sep == 0 opposite edgea ) 
-    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 92
+    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 90
 
  ;# 208
     dataReduction( GATE_Wc ) 
@@ -898,7 +898,7 @@ TOTALS (secs). . . . . .      0 cpu      0 elap 1662.4M virt     262 pf
 
  ;# 209
     GATE_Woc = geomAndNot( T?2474 GATE_Wc ) 
-    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 0
+    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 2
 
  ;# 210
     dataReduction( GATE_Woc ) 
@@ -1086,7 +1086,7 @@ TOTALS (secs). . . . . .      0 cpu      0 elap 1662.4M virt     262 pf
 
  ;# 256
     NPLUS = geomOr( NPLUS ) 
-    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 12
+    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 10
 
  ;# 257
     dataReduction( NPLUS ) 
@@ -1094,7 +1094,7 @@ TOTALS (secs). . . . . .      0 cpu      0 elap 1662.4M virt     262 pf
 
  ;# 258
  ;  region( NPLUS )
-    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 12
+    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 10
 
  ;# 259
     SAB_PO1_CUT_N = geomStraddle( SAB_ACROSS_PO1 NPLUS ) 
@@ -1138,7 +1138,7 @@ TOTALS (secs). . . . . .      0 cpu      0 elap 1662.4M virt     262 pf
 
  ;# 269
     T?349 = geomAndNot( PO1 SAB ) 
-    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 44
+    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 40
 
  ;# 270
     dataReduction( T?349 ) 
@@ -1146,7 +1146,7 @@ TOTALS (secs). . . . . .      0 cpu      0 elap 1662.4M virt     262 pf
 
  ;# 271
  ;  region( T?349 )
-    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 44
+    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 40
 
  ;# 272
     PO1_NOT_SAB = geomButtOnly( T?349 SAB_PO1 ) 
@@ -1374,7 +1374,7 @@ TOTALS (secs). . . . . .      0 cpu      0 elap 1662.4M virt     262 pf
 
  ;# 328
     T?375 = geomAndNot( DIFF SAB ) 
-    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 31
+    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 27
 
  ;# 329
     dataReduction( T?375 ) 
@@ -1382,7 +1382,7 @@ TOTALS (secs). . . . . .      0 cpu      0 elap 1662.4M virt     262 pf
 
  ;# 330
  ;  region( T?375 )
-    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 31
+    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 27
 
  ;# 331
     DIFF_NOT_SAB = geomButtOnly( T?375 SAB_DIFF ) 
@@ -1474,7 +1474,7 @@ TOTALS (secs). . . . . .      0 cpu      0 elap 1662.4M virt     262 pf
 
  ;# 353
     ME1 = geomOr( ME1 ) 
-    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 80
+    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 75
 
  ;# 354
     dataReduction( ME1 ) 
@@ -1490,7 +1490,7 @@ TOTALS (secs). . . . . .      0 cpu      0 elap 1662.4M virt     262 pf
 
  ;# 357
     T?424 = geomAndNot( ME1 M1RESMK ) 
-    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 80
+    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 75
 
  ;# 358
     dataReduction( T?424 ) 
@@ -1506,7 +1506,7 @@ TOTALS (secs). . . . . .      0 cpu      0 elap 1662.4M virt     262 pf
 
  ;# 361
     ME1_c = geomAndNot( T?424 IND ) 
-    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 80
+    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 75
 
  ;# 362
     dataReduction( ME1_c ) 
@@ -1514,7 +1514,7 @@ TOTALS (secs). . . . . .      0 cpu      0 elap 1662.4M virt     262 pf
 
  ;# 363
  ;  region( ME1_c )
-    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 80
+    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 75
 
  ;# 364
     ME2 = geomOr( ME2 ) 
@@ -1942,7 +1942,7 @@ TOTALS (secs). . . . . .      0 cpu      0 elap 1662.4M virt     262 pf
 
  ;# 470
     PTAP_con = geomAnd( T?280 CONT ) 
-    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 0
+    cpu: 0.0   elapsed: 0   virtual: 191M   task sum: 0
 
  ;# 471
     dataReduction( PTAP_con ) 
@@ -1970,15 +1970,15 @@ TOTALS (secs). . . . . .      0 cpu      0 elap 1662.4M virt     262 pf
 
  ;# 477
     T?472 = geomOverlap( NWELL T?471 ) 
-    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 0
+    cpu: 0.0   elapsed: 0   virtual: 191M   task sum: 0
 
  ;# 478
     dataReduction( T?472 ) 
-    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 0
+    cpu: 0.0   elapsed: 0   virtual: 191M   task sum: 0
 
  ;# 479
     HNWELL = geomOr( T?470 T?472 ) 
-    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 0
+    cpu: 0.0   elapsed: 0   virtual: 191M   task sum: 0
 
  ;# 480
     dataReduction( HNWELL ) 
@@ -2030,15 +2030,15 @@ TOTALS (secs). . . . . .      0 cpu      0 elap 1662.4M virt     262 pf
 
  ;# 492
  ;  region( _TMV_RDL_ALL_MMCTP )
-    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 0
+    cpu: 0.0   elapsed: 0   virtual: 191M   task sum: 0
 
  ;# 493
     _TMV_RDL_ALL_NOT_MMCTP = geomAndNot( TMV_RDL_ALL _TMV_RDL_ALL_MMCTP ) 
-    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 0
+    cpu: 0.0   elapsed: 0   virtual: 191M   task sum: 0
 
  ;# 494
     dataReduction( _TMV_RDL_ALL_NOT_MMCTP ) 
-    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 0
+    cpu: 0.0   elapsed: 0   virtual: 191M   task sum: 0
 
  ;# 495
     _TMV_RDL_ALL_MMCBP = geomAnd( _TMV_RDL_ALL_NOT_MMCTP MMCBP ) 
@@ -2046,7 +2046,7 @@ TOTALS (secs). . . . . .      0 cpu      0 elap 1662.4M virt     262 pf
 
  ;# 496
     dataReduction( _TMV_RDL_ALL_MMCBP ) 
-    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 0
+    cpu: 0.0   elapsed: 0   virtual: 191M   task sum: 0
 
  ;# 497
     _TMV_RDL_ALL_MMCBP = groupVias(  via(_TMV_RDL_ALL_MMCBP) conn1(AL_c) conn2(MMCBP) )
@@ -2256,7 +2256,7 @@ TOTALS (secs). . . . . .      0 cpu      0 elap 1662.4M virt     262 pf
 
  ;# 535
     DIFF_N_LOGO = geomAndNot( DIFF LOGOMK ) 
-    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 31
+    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 27
 
  ;# 536
     dataReduction( DIFF_N_LOGO ) 
@@ -2276,7 +2276,7 @@ TOTALS (secs). . . . . .      0 cpu      0 elap 1662.4M virt     262 pf
 
  ;# 540
     NWEL_N_LOGO = geomAndNot( NWEL LOGOMK ) 
-    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 12
+    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 10
 
  ;# 541
     dataReduction( NWEL_N_LOGO ) 
@@ -2316,7 +2316,7 @@ TOTALS (secs). . . . . .      0 cpu      0 elap 1662.4M virt     262 pf
 
  ;# 550
     PO1_N_LOGO = geomAndNot( PO1 LOGOMK ) 
-    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 44
+    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 40
 
  ;# 551
     dataReduction( PO1_N_LOGO ) 
@@ -2336,7 +2336,7 @@ TOTALS (secs). . . . . .      0 cpu      0 elap 1662.4M virt     262 pf
 
  ;# 555
     NPLUS_N_LOGO = geomAndNot( NPLUS LOGOMK ) 
-    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 12
+    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 10
 
  ;# 556
     dataReduction( NPLUS_N_LOGO ) 
@@ -2356,7 +2356,7 @@ TOTALS (secs). . . . . .      0 cpu      0 elap 1662.4M virt     262 pf
 
  ;# 560
     PPLUS_N_LOGO = geomAndNot( PPLUS LOGOMK ) 
-    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 12
+    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 10
 
  ;# 561
     dataReduction( PPLUS_N_LOGO ) 
@@ -2396,7 +2396,7 @@ TOTALS (secs). . . . . .      0 cpu      0 elap 1662.4M virt     262 pf
 
  ;# 570
     CONT_N_LOGO = geomAndNot( CONT LOGOMK ) 
-    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 80
+    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 75
 
  ;# 571
     dataReduction( CONT_N_LOGO ) 
@@ -2404,7 +2404,7 @@ TOTALS (secs). . . . . .      0 cpu      0 elap 1662.4M virt     262 pf
 
  ;# 572
     ME1_N_LOGO = geomAndNot( ME1 LOGOMK ) 
-    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 80
+    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 75
 
  ;# 573
     dataReduction( ME1_N_LOGO ) 
@@ -2620,11 +2620,11 @@ TOTALS (secs). . . . . .      0 cpu      0 elap 1662.4M virt     262 pf
 
  ;# 626
     eSkewEdge_17 = geomGetAngledEdge( ME5_N_LOGO 0 < keep < 45  mode4) 
-    cpu: 0.0   elapsed: 0   virtual: 191M   task sum: 0
+    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 0
 
  ;# 627
     dataReduction( eSkewEdge_17 ) 
-    cpu: 0.0   elapsed: 0   virtual: 191M   task sum: 0
+    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 0
 
  ;# 628
     eSkewEdge_18 = geomGetAngledEdge( VI5_N_LOGO 0 < keep < 45  mode4) 
@@ -3244,403 +3244,403 @@ TOTALS (secs). . . . . .      0 cpu      0 elap 1662.4M virt     262 pf
 
  ;# 782
     dataReduction( T?609 ) 
-    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 0
+    cpu: 0.0   elapsed: 0   virtual: 191M   task sum: 0
 
  ;# 783
  ;  region( T?609 )
-    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 0
+    cpu: 0.0   elapsed: 0   virtual: 191M   task sum: 0
 
  ;# 784
     T?610 = geomOr( T?609 ) 
-    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 0
+    cpu: 0.0   elapsed: 0   virtual: 191M   task sum: 0
 
  ;# 785
     dataReduction( T?610 ) 
-    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 0
+    cpu: 0.0   elapsed: 0   virtual: 191M   task sum: 0
 
  ;# 786
     T?611 = geomCat( eSkewEdge_23 T?610 ) 
-    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 0
+    cpu: 0.0   elapsed: 0   virtual: 191M   task sum: 0
 
  ;# 787
     dataReduction( T?611 ) 
-    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 0
+    cpu: 0.0   elapsed: 0   virtual: 191M   task sum: 0
 
  ;# 788
  ;  region( T?611 )
-    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 0
+    cpu: 0.0   elapsed: 0   virtual: 191M   task sum: 0
 
  ;# 789
     T?612 = geomOr( T?611 ) 
-    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 0
+    cpu: 0.0   elapsed: 0   virtual: 191M   task sum: 0
 
  ;# 790
     dataReduction( T?612 ) 
-    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 0
+    cpu: 0.0   elapsed: 0   virtual: 191M   task sum: 0
 
  ;# 791
     T?613 = geomCat( eSkewEdge_24 T?612 ) 
-    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 0
+    cpu: 0.0   elapsed: 0   virtual: 191M   task sum: 0
 
  ;# 792
     dataReduction( T?613 ) 
-    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 0
+    cpu: 0.0   elapsed: 0   virtual: 191M   task sum: 0
 
  ;# 793
  ;  region( T?613 )
-    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 0
+    cpu: 0.0   elapsed: 0   virtual: 191M   task sum: 0
 
  ;# 794
     T?614 = geomOr( T?613 ) 
-    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 0
+    cpu: 0.0   elapsed: 0   virtual: 191M   task sum: 0
 
  ;# 795
     dataReduction( T?614 ) 
-    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 0
+    cpu: 0.0   elapsed: 0   virtual: 191M   task sum: 0
 
  ;# 796
     T?615 = geomCat( eSkewEdge_25 T?614 ) 
-    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 0
+    cpu: 0.0   elapsed: 0   virtual: 191M   task sum: 0
 
  ;# 797
     dataReduction( T?615 ) 
-    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 0
+    cpu: 0.0   elapsed: 0   virtual: 191M   task sum: 0
 
  ;# 798
  ;  region( T?615 )
-    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 0
+    cpu: 0.0   elapsed: 0   virtual: 191M   task sum: 0
 
  ;# 799
     T?616 = geomOr( T?615 ) 
-    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 0
+    cpu: 0.0   elapsed: 0   virtual: 191M   task sum: 0
 
  ;# 800
     dataReduction( T?616 ) 
-    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 0
+    cpu: 0.0   elapsed: 0   virtual: 191M   task sum: 0
 
  ;# 801
     T?617 = geomCat( eSkewEdge_26 T?616 ) 
-    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 0
+    cpu: 0.0   elapsed: 0   virtual: 191M   task sum: 0
 
  ;# 802
     dataReduction( T?617 ) 
-    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 0
+    cpu: 0.0   elapsed: 0   virtual: 191M   task sum: 0
 
  ;# 803
  ;  region( T?617 )
-    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 0
+    cpu: 0.0   elapsed: 0   virtual: 191M   task sum: 0
 
  ;# 804
     T?618 = geomOr( T?617 ) 
-    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 0
+    cpu: 0.0   elapsed: 0   virtual: 191M   task sum: 0
 
  ;# 805
     dataReduction( T?618 ) 
-    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 0
+    cpu: 0.0   elapsed: 0   virtual: 191M   task sum: 0
 
  ;# 806
     T?619 = geomCat( eSkewEdge_27 T?618 ) 
-    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 0
+    cpu: 0.0   elapsed: 0   virtual: 191M   task sum: 0
 
  ;# 807
     dataReduction( T?619 ) 
-    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 0
+    cpu: 0.0   elapsed: 0   virtual: 191M   task sum: 0
 
  ;# 808
  ;  region( T?619 )
-    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 0
+    cpu: 0.0   elapsed: 0   virtual: 191M   task sum: 0
 
  ;# 809
     T?620 = geomOr( T?619 ) 
-    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 0
+    cpu: 0.0   elapsed: 0   virtual: 191M   task sum: 0
 
  ;# 810
     dataReduction( T?620 ) 
-    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 0
+    cpu: 0.0   elapsed: 0   virtual: 191M   task sum: 0
 
  ;# 811
     T?621 = geomCat( eSkewEdge_28 T?620 ) 
-    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 0
+    cpu: 0.0   elapsed: 0   virtual: 191M   task sum: 0
 
  ;# 812
     dataReduction( T?621 ) 
-    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 0
+    cpu: 0.0   elapsed: 0   virtual: 191M   task sum: 0
 
  ;# 813
  ;  region( T?621 )
-    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 0
+    cpu: 0.0   elapsed: 0   virtual: 191M   task sum: 0
 
  ;# 814
     T?622 = geomOr( T?621 ) 
-    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 0
+    cpu: 0.0   elapsed: 0   virtual: 191M   task sum: 0
 
  ;# 815
     dataReduction( T?622 ) 
-    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 0
+    cpu: 0.0   elapsed: 0   virtual: 191M   task sum: 0
 
  ;# 816
     T?623 = geomCat( eSkewEdge_29 T?622 ) 
-    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 0
+    cpu: 0.0   elapsed: 0   virtual: 191M   task sum: 0
 
  ;# 817
     dataReduction( T?623 ) 
-    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 0
+    cpu: 0.0   elapsed: 0   virtual: 191M   task sum: 0
 
  ;# 818
  ;  region( T?623 )
-    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 0
+    cpu: 0.0   elapsed: 0   virtual: 191M   task sum: 0
 
  ;# 819
     T?624 = geomOr( T?623 ) 
-    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 0
+    cpu: 0.0   elapsed: 0   virtual: 191M   task sum: 0
 
  ;# 820
     dataReduction( T?624 ) 
-    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 0
+    cpu: 0.0   elapsed: 0   virtual: 191M   task sum: 0
 
  ;# 821
     T?625 = geomCat( eSkewEdge_30 T?624 ) 
-    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 0
+    cpu: 0.0   elapsed: 0   virtual: 191M   task sum: 0
 
  ;# 822
     dataReduction( T?625 ) 
-    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 0
+    cpu: 0.0   elapsed: 0   virtual: 191M   task sum: 0
 
  ;# 823
  ;  region( T?625 )
-    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 0
+    cpu: 0.0   elapsed: 0   virtual: 191M   task sum: 0
 
  ;# 824
     T?626 = geomOr( T?625 ) 
-    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 0
+    cpu: 0.0   elapsed: 0   virtual: 191M   task sum: 0
 
  ;# 825
     dataReduction( T?626 ) 
-    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 0
+    cpu: 0.0   elapsed: 0   virtual: 191M   task sum: 0
 
  ;# 826
     T?627 = geomCat( eSkewEdge_31 T?626 ) 
-    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 0
+    cpu: 0.0   elapsed: 0   virtual: 191M   task sum: 0
 
  ;# 827
     dataReduction( T?627 ) 
-    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 0
+    cpu: 0.0   elapsed: 0   virtual: 191M   task sum: 0
 
  ;# 828
  ;  region( T?627 )
-    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 0
+    cpu: 0.0   elapsed: 0   virtual: 191M   task sum: 0
 
  ;# 829
     T?628 = geomOr( T?627 ) 
-    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 0
+    cpu: 0.0   elapsed: 0   virtual: 191M   task sum: 0
 
  ;# 830
     dataReduction( T?628 ) 
-    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 0
+    cpu: 0.0   elapsed: 0   virtual: 191M   task sum: 0
 
  ;# 831
     T?629 = geomCat( eSkewEdge_32 T?628 ) 
-    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 0
+    cpu: 0.0   elapsed: 0   virtual: 191M   task sum: 0
 
  ;# 832
     dataReduction( T?629 ) 
-    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 0
+    cpu: 0.0   elapsed: 0   virtual: 191M   task sum: 0
 
  ;# 833
  ;  region( T?629 )
-    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 0
+    cpu: 0.0   elapsed: 0   virtual: 191M   task sum: 0
 
  ;# 834
     T?630 = geomOr( T?629 ) 
-    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 0
+    cpu: 0.0   elapsed: 0   virtual: 191M   task sum: 0
 
  ;# 835
     dataReduction( T?630 ) 
-    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 0
+    cpu: 0.0   elapsed: 0   virtual: 191M   task sum: 0
 
  ;# 836
     T?631 = geomCat( eSkewEdge_33 T?630 ) 
-    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 0
+    cpu: 0.0   elapsed: 0   virtual: 191M   task sum: 0
 
  ;# 837
     dataReduction( T?631 ) 
-    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 0
+    cpu: 0.0   elapsed: 0   virtual: 191M   task sum: 0
 
  ;# 838
  ;  region( T?631 )
-    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 0
+    cpu: 0.0   elapsed: 0   virtual: 191M   task sum: 0
 
  ;# 839
     T?632 = geomOr( T?631 ) 
-    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 0
+    cpu: 0.0   elapsed: 0   virtual: 191M   task sum: 0
 
  ;# 840
     dataReduction( T?632 ) 
-    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 0
+    cpu: 0.0   elapsed: 0   virtual: 191M   task sum: 0
 
  ;# 841
     T?633 = geomCat( eSkewEdge_34 T?632 ) 
-    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 0
+    cpu: 0.0   elapsed: 0   virtual: 191M   task sum: 0
 
  ;# 842
     dataReduction( T?633 ) 
-    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 0
+    cpu: 0.0   elapsed: 0   virtual: 191M   task sum: 0
 
  ;# 843
  ;  region( T?633 )
-    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 0
+    cpu: 0.0   elapsed: 0   virtual: 191M   task sum: 0
 
  ;# 844
     T?634 = geomOr( T?633 ) 
-    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 0
+    cpu: 0.0   elapsed: 0   virtual: 191M   task sum: 0
 
  ;# 845
     dataReduction( T?634 ) 
-    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 0
+    cpu: 0.0   elapsed: 0   virtual: 191M   task sum: 0
 
  ;# 846
     T?635 = geomCat( eSkewEdge_35 T?634 ) 
-    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 0
+    cpu: 0.0   elapsed: 0   virtual: 191M   task sum: 0
 
  ;# 847
     dataReduction( T?635 ) 
-    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 0
+    cpu: 0.0   elapsed: 0   virtual: 191M   task sum: 0
 
  ;# 848
  ;  region( T?635 )
-    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 0
+    cpu: 0.0   elapsed: 0   virtual: 191M   task sum: 0
 
  ;# 849
     T?636 = geomOr( T?635 ) 
-    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 0
+    cpu: 0.0   elapsed: 0   virtual: 191M   task sum: 0
 
  ;# 850
     dataReduction( T?636 ) 
-    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 0
+    cpu: 0.0   elapsed: 0   virtual: 191M   task sum: 0
 
  ;# 851
     T?637 = geomCat( eSkewEdge_36 T?636 ) 
-    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 0
+    cpu: 0.0   elapsed: 0   virtual: 191M   task sum: 0
 
  ;# 852
     dataReduction( T?637 ) 
-    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 0
+    cpu: 0.0   elapsed: 0   virtual: 191M   task sum: 0
 
  ;# 853
  ;  region( T?637 )
-    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 0
+    cpu: 0.0   elapsed: 0   virtual: 191M   task sum: 0
 
  ;# 854
     T?638 = geomOr( T?637 ) 
-    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 0
+    cpu: 0.0   elapsed: 0   virtual: 191M   task sum: 0
 
  ;# 855
     dataReduction( T?638 ) 
-    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 0
+    cpu: 0.0   elapsed: 0   virtual: 191M   task sum: 0
 
  ;# 856
     T?639 = geomCat( eSkewEdge_37 T?638 ) 
-    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 0
+    cpu: 0.0   elapsed: 0   virtual: 191M   task sum: 0
 
  ;# 857
     dataReduction( T?639 ) 
-    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 0
+    cpu: 0.0   elapsed: 0   virtual: 191M   task sum: 0
 
  ;# 858
  ;  region( T?639 )
-    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 0
+    cpu: 0.0   elapsed: 0   virtual: 191M   task sum: 0
 
  ;# 859
     T?640 = geomOr( T?639 ) 
-    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 0
+    cpu: 0.0   elapsed: 0   virtual: 191M   task sum: 0
 
  ;# 860
     dataReduction( T?640 ) 
-    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 0
+    cpu: 0.0   elapsed: 0   virtual: 191M   task sum: 0
 
  ;# 861
     T?641 = geomCat( eSkewEdge_38 T?640 ) 
-    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 0
+    cpu: 0.0   elapsed: 0   virtual: 191M   task sum: 0
 
  ;# 862
     dataReduction( T?641 ) 
-    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 0
+    cpu: 0.0   elapsed: 0   virtual: 191M   task sum: 0
 
  ;# 863
  ;  region( T?641 )
-    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 0
+    cpu: 0.0   elapsed: 0   virtual: 191M   task sum: 0
 
  ;# 864
     T?642 = geomOr( T?641 ) 
-    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 0
+    cpu: 0.0   elapsed: 0   virtual: 191M   task sum: 0
 
  ;# 865
     dataReduction( T?642 ) 
-    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 0
+    cpu: 0.0   elapsed: 0   virtual: 191M   task sum: 0
 
  ;# 866
     T?643 = geomCat( eSkewEdge_39 T?642 ) 
-    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 0
+    cpu: 0.0   elapsed: 0   virtual: 191M   task sum: 0
 
  ;# 867
     dataReduction( T?643 ) 
-    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 0
+    cpu: 0.0   elapsed: 0   virtual: 191M   task sum: 0
 
  ;# 868
  ;  region( T?643 )
-    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 0
+    cpu: 0.0   elapsed: 0   virtual: 191M   task sum: 0
 
  ;# 869
     T?644 = geomOr( T?643 ) 
-    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 0
+    cpu: 0.0   elapsed: 0   virtual: 191M   task sum: 0
 
  ;# 870
     dataReduction( T?644 ) 
-    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 0
+    cpu: 0.0   elapsed: 0   virtual: 191M   task sum: 0
 
  ;# 871
     T?645 = geomCat( eSkewEdge_40 T?644 ) 
-    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 0
+    cpu: 0.0   elapsed: 0   virtual: 191M   task sum: 0
 
  ;# 872
     dataReduction( T?645 ) 
-    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 0
+    cpu: 0.0   elapsed: 0   virtual: 191M   task sum: 0
 
  ;# 873
  ;  region( T?645 )
-    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 0
+    cpu: 0.0   elapsed: 0   virtual: 191M   task sum: 0
 
  ;# 874
     T?646 = geomOr( T?645 ) 
-    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 0
+    cpu: 0.0   elapsed: 0   virtual: 191M   task sum: 0
 
  ;# 875
     dataReduction( T?646 ) 
-    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 0
+    cpu: 0.0   elapsed: 0   virtual: 191M   task sum: 0
 
  ;# 876
     T?647 = geomCat( eSkewEdge_41 T?646 ) 
-    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 0
+    cpu: 0.0   elapsed: 0   virtual: 191M   task sum: 0
 
  ;# 877
     dataReduction( T?647 ) 
-    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 0
+    cpu: 0.0   elapsed: 0   virtual: 191M   task sum: 0
 
  ;# 878
  ;  region( T?647 )
-    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 0
+    cpu: 0.0   elapsed: 0   virtual: 191M   task sum: 0
 
  ;# 879
     T?648 = geomOr( T?647 ) 
-    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 0
+    cpu: 0.0   elapsed: 0   virtual: 191M   task sum: 0
 
  ;# 880
     dataReduction( T?648 ) 
-    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 0
+    cpu: 0.0   elapsed: 0   virtual: 191M   task sum: 0
 
  ;# 881
     T?649 = geomCat( eSkewEdge_42 T?648 ) 
-    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 0
+    cpu: 0.0   elapsed: 0   virtual: 191M   task sum: 0
 
  ;# 882
     dataReduction( T?649 ) 
@@ -3843,7 +3843,7 @@ TOTALS (secs). . . . . .      0 cpu      0 elap 1662.4M virt     262 pf
 
  ;# 931
     T?681 = geomStraddle( DIFF PO1 ) 
-    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 31
+    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 27
 
  ;# 932
     dataReduction( T?681 ) 
@@ -3851,7 +3851,7 @@ TOTALS (secs). . . . . .      0 cpu      0 elap 1662.4M virt     262 pf
 
  ;# 933
     T?682 = geomAndNot( T?681 PO1 ) 
-    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 77
+    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 73
 
  ;# 934
     dataReduction( T?682 ) 
@@ -3859,7 +3859,7 @@ TOTALS (secs). . . . . .      0 cpu      0 elap 1662.4M virt     262 pf
 
  ;# 935
  ;  region( T?682 )
-    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 77
+    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 73
 
  ;# 936
     HV_DIFF2 = geomAvoiding( T?682 GATE12 ) 
@@ -4020,7 +4020,7 @@ TOTALS (secs). . . . . .      0 cpu      0 elap 1662.4M virt     262 pf
 
  ;# 974
     T?722 = geomOr( T?699 DIFF ) 
-    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 31
+    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 27
 
  ;# 975
     dataReduction( T?722 ) 
@@ -7483,7 +7483,7 @@ TOTALS (secs). . . . . .      0 cpu      0 elap 1662.4M virt     262 pf
 
  ;# 1816
     END_CAP = geomButtOrOver( INTPOL GATE keep == 1 ) 
-    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 89
+    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 81
 
  ;# 1817
     dataReduction( END_CAP ) 
@@ -7491,11 +7491,11 @@ TOTALS (secs). . . . . .      0 cpu      0 elap 1662.4M virt     262 pf
 
  ;# 1818
  ;  region( END_CAP )
-    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 89
+    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 81
 
  ;# 1819
     T?1247 = geomGetAdjacentEdge( END_CAP GATE ) 
-    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 267
+    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 243
 
  ;# 1820
     dataReduction( T?1247 ) 
@@ -8202,7 +8202,7 @@ TOTALS (secs). . . . . .      0 cpu      0 elap 1662.4M virt     262 pf
 
  ;# 1990
     e4A21M_1 = geomAndNot( NWELL TWEL ) 
-    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 12
+    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 10
 
  ;# 1991
     dataReduction( e4A21M_1 ) 
@@ -9658,7 +9658,7 @@ TOTALS (secs). . . . . .      0 cpu      0 elap 1662.4M virt     262 pf
 
  ;# 2354
     T?1669 = geomButtOrOver( NDIF PO1 ) 
-    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 15
+    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 13
 
  ;# 2355
     dataReduction( T?1669 ) 
@@ -9666,7 +9666,7 @@ TOTALS (secs). . . . . .      0 cpu      0 elap 1662.4M virt     262 pf
 
  ;# 2356
     T?1670 = geomAndNot( T?1669 EXP_PTAP ) 
-    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 15
+    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 13
 
  ;# 2357
     dataReduction( T?1670 ) 
@@ -9674,7 +9674,7 @@ TOTALS (secs). . . . . .      0 cpu      0 elap 1662.4M virt     262 pf
 
  ;# 2358
     T?1672 = geomAndNot( T?1670 T?261 ) 
-    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 15
+    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 13
 
  ;# 2359
     dataReduction( T?1672 ) 
@@ -9682,7 +9682,7 @@ TOTALS (secs). . . . . .      0 cpu      0 elap 1662.4M virt     262 pf
 
  ;# 2360
     T?1673 = geomAndNot( T?1672 ROM_ID ) 
-    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 15
+    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 13
 
  ;# 2361
     dataReduction( T?1673 ) 
@@ -9699,7 +9699,7 @@ TOTALS (secs). . . . . .      0 cpu      0 elap 1662.4M virt     262 pf
  ;# 2364
     e4A21M = geomAndNot( T?1673 IOID  )
     errorLayer( e4A21M "4A.21M: Maximum NPLUS diffusion to nearest P+ pick-up spacing is 20um" ) 
-    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 15
+    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 13
 
  ;# 2365
     T?1676 = drc( PPLUS width < 0.24 ) 
@@ -10137,7 +10137,7 @@ TOTALS (secs). . . . . .      0 cpu      0 elap 1662.4M virt     262 pf
 
  ;# 2470
     T?1748 = geomAndNot( NWELL T?1747 ) 
-    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 12
+    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 10
 
  ;# 2471
     dataReduction( T?1748 ) 
@@ -10237,7 +10237,7 @@ TOTALS (secs). . . . . .      0 cpu      0 elap 1662.4M virt     262 pf
 
  ;# 2495
     T?1768 = geomAndNot( T?1748 T?1767 ) 
-    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 12
+    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 10
 
  ;# 2496
     dataReduction( T?1768 ) 
@@ -10393,7 +10393,7 @@ TOTALS (secs). . . . . .      0 cpu      0 elap 1662.4M virt     262 pf
 
  ;# 2534
     T?1800 = geomAndNot( T?1768 T?1799 ) 
-    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 12
+    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 10
 
  ;# 2535
     dataReduction( T?1800 ) 
@@ -10689,7 +10689,7 @@ TOTALS (secs). . . . . .      0 cpu      0 elap 1662.4M virt     262 pf
 
  ;# 2608
     T?1862 = geomAndNot( T?1800 T?1861 ) 
-    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 12
+    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 10
 
  ;# 2609
     dataReduction( T?1862 ) 
@@ -11265,7 +11265,7 @@ TOTALS (secs). . . . . .      0 cpu      0 elap 1662.4M virt     262 pf
 
  ;# 2752
     T?1985 = geomOverlap( PDIF PO1 ) 
-    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 16
+    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 14
 
  ;# 2753
     dataReduction( T?1985 ) 
@@ -11273,7 +11273,7 @@ TOTALS (secs). . . . . .      0 cpu      0 elap 1662.4M virt     262 pf
 
  ;# 2754
     T?1986 = geomAndNot( T?1985 EXP_NTAP ) 
-    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 16
+    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 14
 
  ;# 2755
     dataReduction( T?1986 ) 
@@ -11281,7 +11281,7 @@ TOTALS (secs). . . . . .      0 cpu      0 elap 1662.4M virt     262 pf
 
  ;# 2756
     T?1988 = geomAndNot( T?1986 T?261 ) 
-    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 16
+    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 14
 
  ;# 2757
     dataReduction( T?1988 ) 
@@ -11289,7 +11289,7 @@ TOTALS (secs). . . . . .      0 cpu      0 elap 1662.4M virt     262 pf
 
  ;# 2758
     T?1989 = geomAndNot( T?1988 ROM_ID ) 
-    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 16
+    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 14
 
  ;# 2759
     dataReduction( T?1989 ) 
@@ -11298,7 +11298,7 @@ TOTALS (secs). . . . . .      0 cpu      0 elap 1662.4M virt     262 pf
  ;# 2760
     e4A22M = geomAndNot( T?1989 IOID  )
     errorLayer( e4A22M "4A.22M: Maximum P+ DIFF to nearest N+ pick-up spacing is 20um" ) 
-    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 16
+    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 14
 
  ;# 2761
     e4A22N = drc( PPLUS area < 0.1764 "e4A22N = drc(PPLUS (area < 0.1764))" )
@@ -11547,7 +11547,7 @@ TOTALS (secs). . . . . .      0 cpu      0 elap 1662.4M virt     262 pf
 
  ;# 2821
     E4A_23Fa_PO1 /*-*/ = geomAndNot( E4A_23Fa_Y /*-*/ PO1 ) 
-    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 9
+    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 11
 
  ;# 2822
     dataReduction( E4A_23Fa_PO1 /*-*/ ) 
@@ -11586,11 +11586,11 @@ TOTALS (secs). . . . . .      0 cpu      0 elap 1662.4M virt     262 pf
     geomConnect(
         overlap( E4A_23Fa_X E4A_23Fa_Y )
     ) 
-    cpu: 0.0   elapsed: 1   virtual: 223M   task sum: 0
+    cpu: 0.0   elapsed: 0   virtual: 223M   task sum: 0
 
  ;# 2831
     E4A_23Fa_PO1 = geomAndNot( DRC_1 E4A_23Fa_PO1 /*-*/ ) 
-    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 44
+    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 40
 
  ;# 2832
     dataReduction( E4A_23Fa_PO1 ) 
@@ -11598,7 +11598,7 @@ TOTALS (secs). . . . . .      0 cpu      0 elap 1662.4M virt     262 pf
 
  ;# 2833
  ;  region( E4A_23Fa_PO1 )
-    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 44
+    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 40
 
  ;# 2834
     geomStamp( E4A_23Fa_PO1 E4A_23Fa_X ) 
@@ -12622,7 +12622,7 @@ TOTALS (secs). . . . . .      0 cpu      0 elap 1662.4M virt     262 pf
 
  ;# 3080
     T?2184 = geomOr( CONT ) 
-    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 80
+    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 75
 
  ;# 3081
     dataReduction( T?2184 ) 
@@ -12630,7 +12630,7 @@ TOTALS (secs). . . . . .      0 cpu      0 elap 1662.4M virt     262 pf
 
  ;# 3082
  ;  region( T?2184 )
-    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 80
+    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 75
 
  ;# 3083
     T?2185 = geomContactCheck( T?2184 width == 0.16 length == 0.16 ignore) 
@@ -12799,7 +12799,7 @@ TOTALS (secs). . . . . .      0 cpu      0 elap 1662.4M virt     262 pf
 
  ;# 3123
     T?2230 = geomAndNot( CONT PO1 ) 
-    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 80
+    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 75
 
  ;# 3124
     dataReduction( T?2230 ) 
@@ -12908,7 +12908,7 @@ TOTALS (secs). . . . . .      0 cpu      0 elap 1662.4M virt     262 pf
 
  ;# 3150
     DIFCNT_N_SRAM = geomAndNot( DIFCNT T?261 ) 
-    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 80
+    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 75
 
  ;# 3151
     dataReduction( DIFCNT_N_SRAM ) 
@@ -14213,9 +14213,9 @@ TOTALS (secs). . . . . .      0 cpu      0 elap 1662.4M virt     262 pf
 Total cells checked = 1
 Total rules checked = 3465
 
-Run time =  1.00 seconds
+Run time =  0.00 seconds
 CPU time =  0.28 seconds
-VM HWM   =  1662 Mbytes
+VM HWM   =  1692 Mbytes
 Disk HWM =     3 Mbytes
 Disk end =     3 Mbytes
 Eman HWM =     0 Mbytes
