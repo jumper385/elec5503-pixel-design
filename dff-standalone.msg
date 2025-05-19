@@ -1,276 +1,222 @@
 0 0 dataAuditErrors
-1268 0 PWBLK_StampErrorFloat
-1269 0 PWBLK_StampErrorMult
-1270 0 PWBLK_StampErrorConnect
-1276 0 PSUB_StampErrorFloat
-1277 0 PSUB_StampErrorMult
-1278 0 PSUB_StampErrorConnect
-1283 0 wel_StampErrorFloat
-1284 0 wel_StampErrorMult
-1285 0 wel_StampErrorConnect
-1290 0 TWEL_StampErrorFloat
-1291 0 TWEL_StampErrorMult
-1292 0 TWEL_StampErrorConnect
-1298 0 PSUB_P_StampErrorFloat
-1299 0 PSUB_P_StampErrorMult
-1300 0 PSUB_P_StampErrorConnect
-1305 0 B_DNW_StampErrorFloat
-1306 0 B_DNW_StampErrorMult
-1307 0 B_DNW_StampErrorConnect
-1311 0  nsd/ptap butting issue: nsd/ptap need to be connected by metal and contact
-1312 0  psd/ntap butting issue: psd/ntap need to be connected by metal and contact
-1317 0 ptap is wrongly connected to POWER ! 
-1323 0 ntap is wrongly connected to GROUND ! 
-4588 0 malformed device NG_HS
-4589 0 malformed device PG_HS
-4590 0 malformed device MNGATE_C
-4591 0 malformed device MPGATE_C
-4592 0 malformed device NTGATE
-4593 0 malformed device PTGATE
-4594 0 malformed device NSGATE
-4595 0 malformed device TGNSGATE
-4596 0 malformed device NLGATE
-4597 0 malformed device PLGATE
-4598 0 malformed device NHLGATE
-4599 0 malformed device PHLGATE
-4600 0 malformed device NLGAT
-4601 0 malformed device NHLGAT
-4602 0 malformed device NLTWGATE
-4603 0 malformed device NLTGTWGATE
-4604 0 malformed device NG_LL
-4605 0 malformed device PG_LL
-4606 0 malformed device welres
-4607 0 malformed device snyres_mm
-4608 0 malformed device spyres_mm
-4609 0 malformed device snpyr_mm
-4610 0 malformed device sppyr_mm
-4611 0 malformed device nshrpyr_wel
-4612 0 malformed device nshrpyr_psub
-4613 0 malformed device nsndres_mm
-4614 0 malformed device nsppyr_wel
-4615 0 malformed device nsppyr_psub
-4616 0 malformed device dndiod_mm
-4617 0 malformed device dpdiod_mm
-4618 0 malformed device dnwdiod_mm
-4619 0 malformed device CMMC
-4620 0 malformed device bjt_v5_mm
-4621 0 malformed device bjt_v10_mm
-4622 0 malformed device bjt_v15_mm
-4623 0 malformed device MNGATE_RF
-4624 0 malformed device MPGATE_RF
-4625 0 malformed device NTGATE_RF
-4626 0 malformed device PTGATE_RF
-4627 0 malformed device NSGATE_RF
-4628 0 malformed device TGNSGATE_RF
-4629 0 malformed device nshrpyr_rf
-4630 0 malformed device nsppyr_rf
-4631 0 malformed device nsnpyr_rf
-4632 0 malformed device npn5x5_s_rf
-4633 0 malformed device npn2_s_rf
-4634 0 malformed device npn5x5_n_rf
-4635 0 malformed device npn2_n_rf
-4636 0 malformed device pnp5x5_n_rf
-4637 0 malformed device pnp2_n_rf
-4638 0 malformed device nsdtw_rf
-4639 0 malformed device dpesd_rf
-4640 0 malformed device varmis_rf12
-4641 0 malformed device varmis_rf33
-4642 0 malformed device vard_rf
-4643 0 malformed device CMMC_RF
-4645 0 malformed device MOMVP1_MM
-4646 0 malformed device MOMVP1_RF
-4648 0 malformed device MOMVP2_MM
-4649 0 malformed device MOMVP2_RF
-4650 0 malformed device MOM_MESH_SY_WEL
-4651 0 malformed device MOM_MESH_SY_PSUB
-4652 0 malformed device MOM_MESH_ASY_WEL
-4653 0 malformed device MOM_MESH_ASY_PSUB
-4654 0 malformed device p_rf_pad
-4655 0 malformed device N_IND_CR_0
-4656 0 malformed device N_IND_CR
-4657 0 malformed device N_IND_CR_P
-4658 0 malformed device N_IND_SY
-4659 0 malformed device N_IND_SY_P
-4660 0 malformed device N_IND_SYC
-4661 0 malformed device N_IND_SYC_P
-4662 0 malformed device N_IND_SQ_0
-4663 0 malformed device N_IND_SQ
-4664 0 malformed device N_IND_SQ_P
-4665 0 malformed device MOM_ARRAY_VP3_RFVCL_1
-4666 0 malformed device MOM_ARRAY_VP3_RFVCL_2
-4667 0 malformed device MOM_ARRAY_VP3_RFVCL_3
-4668 0 malformed device MOM_ARRAY_VP3_RFVCL_4
-4669 0 malformed device MOM_ARRAY_VP4_RFVCL_1
-4670 0 malformed device MOM_ARRAY_VP4_RFVCL_2
-4671 0 malformed device MOM_ARRAY_VP4_RFVCL_3
-4672 0 malformed device MOM_ARRAY_VP4_RFVCL_4
-5303 0 unstable device for MOM_ARRAY_VP4_RFVCL_4_Device_85
-5304 0 unpreserved device MOM_ARRAY_VP4_RFVCL_4_Device_85
-5305 0 unstable device for MOM_ARRAY_VP4_RFVCL_3_Device_84
-5306 0 unpreserved device MOM_ARRAY_VP4_RFVCL_3_Device_84
-5307 0 unstable device for MOM_ARRAY_VP4_RFVCL_2_Device_83
-5308 0 unpreserved device MOM_ARRAY_VP4_RFVCL_2_Device_83
-5309 0 unstable device for MOM_ARRAY_VP4_RFVCL_1_Device_82
-5310 0 unpreserved device MOM_ARRAY_VP4_RFVCL_1_Device_82
-5311 0 unstable device for MOM_ARRAY_VP3_RFVCL_4_Device_81
-5312 0 unpreserved device MOM_ARRAY_VP3_RFVCL_4_Device_81
-5313 0 unstable device for MOM_ARRAY_VP3_RFVCL_3_Device_80
-5314 0 unpreserved device MOM_ARRAY_VP3_RFVCL_3_Device_80
-5315 0 unstable device for MOM_ARRAY_VP3_RFVCL_2_Device_79
-5316 0 unpreserved device MOM_ARRAY_VP3_RFVCL_2_Device_79
-5317 0 unstable device for MOM_ARRAY_VP3_RFVCL_1_Device_78
-5318 0 unpreserved device MOM_ARRAY_VP3_RFVCL_1_Device_78
-5319 0 unstable device for N_IND_SQ_P_Device_77
-5320 0 unpreserved device N_IND_SQ_P_Device_77
-5321 0 unstable device for N_IND_SQ_Device_76
-5322 0 unpreserved device N_IND_SQ_Device_76
-5323 0 unstable device for N_IND_SQ_0_Device_75
-5324 0 unpreserved device N_IND_SQ_0_Device_75
-5325 0 unstable device for N_IND_SYC_P_Device_74
-5326 0 unpreserved device N_IND_SYC_P_Device_74
-5327 0 unstable device for N_IND_SYC_Device_73
-5328 0 unpreserved device N_IND_SYC_Device_73
-5329 0 unstable device for N_IND_SY_P_Device_72
-5330 0 unpreserved device N_IND_SY_P_Device_72
-5331 0 unstable device for N_IND_SY_Device_71
-5332 0 unpreserved device N_IND_SY_Device_71
-5333 0 unstable device for N_IND_CR_P_Device_70
-5334 0 unpreserved device N_IND_CR_P_Device_70
-5335 0 unstable device for N_IND_CR_Device_69
-5336 0 unpreserved device N_IND_CR_Device_69
-5337 0 unstable device for N_IND_CR_0_Device_68
-5338 0 unpreserved device N_IND_CR_0_Device_68
-5339 0 unstable device for p_rf_pad_Device_67
-5340 0 unpreserved device p_rf_pad_Device_67
-5341 0 unstable device for MOM_MESH_ASY_PSUB_Device_66
-5342 0 unpreserved device MOM_MESH_ASY_PSUB_Device_66
-5343 0 unstable device for MOM_MESH_ASY_WEL_Device_65
-5344 0 unpreserved device MOM_MESH_ASY_WEL_Device_65
-5345 0 unstable device for MOM_MESH_SY_PSUB_Device_64
-5346 0 unpreserved device MOM_MESH_SY_PSUB_Device_64
-5347 0 unstable device for MOM_MESH_SY_WEL_Device_63
-5348 0 unpreserved device MOM_MESH_SY_WEL_Device_63
-5349 0 unstable device for MOMVP2_RF_Device_62
-5350 0 unpreserved device MOMVP2_RF_Device_62
-5351 0 unstable device for MOMVP2_MM_Device_60
-5352 0 unpreserved device MOMVP2_MM_Device_60
-5353 0 unstable device for MOMVP2_MM_Device_61
-5354 0 unpreserved device MOMVP2_MM_Device_61
-5355 0 unstable device for MOMVP1_RF_Device_59
-5356 0 unpreserved device MOMVP1_RF_Device_59
-5357 0 unstable device for MOMVP1_MM_Device_57
-5358 0 unpreserved device MOMVP1_MM_Device_57
-5359 0 unstable device for MOMVP1_MM_Device_58
-5360 0 unpreserved device MOMVP1_MM_Device_58
-5361 0 unstable device for CMMC_RF_Device_56
-5362 0 unpreserved device CMMC_RF_Device_56
-5363 0 unstable device for vard_rf_Device_55
-5364 0 unpreserved device vard_rf_Device_55
-5365 0 unstable device for varmis_rf33_Device_54
-5366 0 unpreserved device varmis_rf33_Device_54
-5367 0 unstable device for varmis_rf12_Device_53
-5368 0 unpreserved device varmis_rf12_Device_53
-5369 0 unstable device for dpesd_rf_Device_52
-5370 0 unpreserved device dpesd_rf_Device_52
-5371 0 unstable device for nsdtw_rf_Device_51
-5372 0 unpreserved device nsdtw_rf_Device_51
-5373 0 unstable device for pnp2_n_rf_Device_50
-5374 0 unpreserved device pnp2_n_rf_Device_50
-5375 0 unstable device for pnp5x5_n_rf_Device_49
-5376 0 unpreserved device pnp5x5_n_rf_Device_49
-5377 0 unstable device for npn2_n_rf_Device_48
-5378 0 unpreserved device npn2_n_rf_Device_48
-5379 0 unstable device for npn5x5_n_rf_Device_47
-5380 0 unpreserved device npn5x5_n_rf_Device_47
-5381 0 unstable device for npn2_s_rf_Device_46
-5382 0 unpreserved device npn2_s_rf_Device_46
-5383 0 unstable device for npn5x5_s_rf_Device_45
-5384 0 unpreserved device npn5x5_s_rf_Device_45
-5385 0 unstable device for nsnpyr_rf_Device_44
-5386 0 unpreserved device nsnpyr_rf_Device_44
-5387 0 unstable device for nsppyr_rf_Device_43
-5388 0 unpreserved device nsppyr_rf_Device_43
-5389 0 unstable device for nshrpyr_rf_Device_42
-5390 0 unpreserved device nshrpyr_rf_Device_42
-5391 0 unstable device for TGNSGATE_RF_Device_41
-5392 0 unpreserved device TGNSGATE_RF_Device_41
-5393 0 unstable device for NSGATE_RF_Device_40
-5394 0 unpreserved device NSGATE_RF_Device_40
-5395 0 unstable device for PTGATE_RF_Device_39
-5396 0 unpreserved device PTGATE_RF_Device_39
-5397 0 unstable device for NTGATE_RF_Device_38
-5398 0 unpreserved device NTGATE_RF_Device_38
-5399 0 unstable device for MPGATE_RF_Device_37
-5400 0 unpreserved device MPGATE_RF_Device_37
-5401 0 unstable device for MNGATE_RF_Device_36
-5402 0 unpreserved device MNGATE_RF_Device_36
-5403 0 unstable device for bjt_v15_mm_BJT_35
-5404 0 unpreserved device bjt_v15_mm_BJT_35
-5405 0 unstable device for bjt_v10_mm_BJT_34
-5406 0 unpreserved device bjt_v10_mm_BJT_34
-5407 0 unstable device for bjt_v5_mm_BJT_33
-5408 0 unpreserved device bjt_v5_mm_BJT_33
-5409 0 unstable device for CMMC_Device_32
-5410 0 unpreserved device CMMC_Device_32
-5411 0 unstable device for dnwdiod_mm_DIODE_31
-5412 0 unpreserved device dnwdiod_mm_DIODE_31
-5413 0 unstable device for dpdiod_mm_DIODE_30
-5414 0 unpreserved device dpdiod_mm_DIODE_30
-5415 0 unstable device for dndiod_mm_DIODE_29
-5416 0 unpreserved device dndiod_mm_DIODE_29
-5417 0 unstable device for nsppyr_psub_Device_28
-5418 0 unpreserved device nsppyr_psub_Device_28
-5419 0 unstable device for nsppyr_wel_Device_27
-5420 0 unpreserved device nsppyr_wel_Device_27
-5421 0 unstable device for nsndres_mm_Device_26
-5422 0 unpreserved device nsndres_mm_Device_26
-5423 0 unstable device for nshrpyr_psub_Device_25
-5424 0 unpreserved device nshrpyr_psub_Device_25
-5425 0 unstable device for nshrpyr_wel_Device_24
-5426 0 unpreserved device nshrpyr_wel_Device_24
-5427 0 unstable device for sppyr_mm_Device_23
-5428 0 unpreserved device sppyr_mm_Device_23
-5429 0 unstable device for snpyr_mm_Device_22
-5430 0 unpreserved device snpyr_mm_Device_22
-5431 0 unstable device for spyres_mm_Device_21
-5432 0 unpreserved device spyres_mm_Device_21
-5433 0 unstable device for snyres_mm_Device_20
-5434 0 unpreserved device snyres_mm_Device_20
-5435 0 unstable device for welres_RES_19
-5436 0 unpreserved device welres_RES_19
-5437 0 unstable device for PG_LL_MOS_18
-5438 0 unpreserved device PG_LL_MOS_18
-5439 0 unstable device for NG_LL_MOS_17
-5440 0 unpreserved device NG_LL_MOS_17
-5441 0 unstable device for NLTGTWGATE_MOS_16
-5442 0 unpreserved device NLTGTWGATE_MOS_16
-5443 0 unstable device for NLTWGATE_MOS_15
-5444 0 unpreserved device NLTWGATE_MOS_15
-5445 0 unstable device for NHLGAT_MOS_14
-5446 0 unpreserved device NHLGAT_MOS_14
-5447 0 unstable device for NLGAT_MOS_13
-5448 0 unpreserved device NLGAT_MOS_13
-5449 0 unstable device for PHLGATE_MOS_12
-5450 0 unpreserved device PHLGATE_MOS_12
-5451 0 unstable device for NHLGATE_MOS_11
-5452 0 unpreserved device NHLGATE_MOS_11
-5453 0 unstable device for PLGATE_MOS_10
-5454 0 unpreserved device PLGATE_MOS_10
-5455 0 unstable device for NLGATE_MOS_9
-5456 0 unpreserved device NLGATE_MOS_9
-5457 0 unstable device for TGNSGATE_MOS_8
-5458 0 unpreserved device TGNSGATE_MOS_8
-5459 0 unstable device for NSGATE_MOS_7
-5460 0 unpreserved device NSGATE_MOS_7
-5461 0 unstable device for PTGATE_MOS_6
-5462 0 unpreserved device PTGATE_MOS_6
-5463 0 unstable device for NTGATE_MOS_5
-5464 0 unpreserved device NTGATE_MOS_5
-5465 0 unstable device for MPGATE_C_MOS_4
-5466 0 unpreserved device MPGATE_C_MOS_4
-5467 0 unstable device for MNGATE_C_MOS_3
-5468 0 unpreserved device MNGATE_C_MOS_3
-5469 0 unstable device for PG_HS_MOS_2
-5470 0 unpreserved device PG_HS_MOS_2
-5471 0 unstable device for NG_HS_MOS_1
-5472 0 unpreserved device NG_HS_MOS_1
+650 0 SkewEdge: 
+668 0 4A.1AB: Minimum DIFFUSION width is 0.16um
+678 0 4A.1C.a1_b1:Minimum DIFFUSION to DIFFUSION spacing is 0.20um
+688 0 4A.1C.a2_b2: Minimum DIFFUSION to DIFFUSION spacing for 3.3V is 0.22um
+701 0 4A.1D.a:Minimum N_WELL to N+ DIFFUSION (1.2V) spacing is 0.3um
+702 0 4A.1D.b:Minimum N_WELL to N+ DIFFUSION (3.3V) spacing is 0.5um
+710 0 4A.1E:Minimum N_WELL enclosure of N+ DIFFUSION is 0.16um
+711 0 4A.1F:Minimum N_WELL to P+ DIFFUSION spacing is 0.16um
+724 0 4A.1G.a:Minimum N_WELL enclosure of P+ DIFFUSION (1.2V) is 0.3um
+729 0 4A.1G.b:Minimum N_WELL enclosure of P+ DIFFUSION (3.3V) is 0.5um
+730 0 4A.1I:Minimum DIFFUSION/isolation area 0.1024 sq.um
+738 0 4A.2A.a:Minimum width of an N-Well region is 0.63um
+739 0 4A.2A.b:Minimum dimension of an N-Well resistor region is 1.5um
+787 0 4A.2A.c:Maximum N-Well width for resistor is 20 um
+789 0 4A.2B.a:Minimum N-Well to N-Well spacing is 0.63um
+791 0 4A.2B.b1:Minium N-Well to non-potential(1.2V device) N-Well spacing is 1.0um
+793 0 4A.2B.b2:Minimum N-Well to non-potential(3.3V device) N-Well spacing is 1.5um
+794 0 4A.2B.c_d:Minimum spacing from N-well resistor to other N-Well regions is 2.2um
+806 0 4A.2C/D: The resistor marker layer edges must either be entirely coincident with N-well edge or at least partially butted to N+ Tap (terminal).
+813 0 4A.4A:Minimum T_WELL width is 0.63um
+815 0 4A.4B.a:Minimum T_WELL to T_WELL spacing is 0.63um
+817 0 4A.4B.b1:Minimum T_WELL to T_WELL spacing (1.2V) for non-equal-potential is 1.0um
+819 0 4A.4B.b2: Minimum T_WELL to T_WELL spacing (3.3V) for non-equal-potential is 1.5um
+824 0 4A.4C:Minimum N_WELL enclosure of T_WELL is 1.5um
+831 0 4A.4D.a:Minimum T_WELL to P+ DIFFUSION (1.2V) spacing is 0.3um
+832 0 4A.4D.b:Minimum T_WELL to P+ DIFFUSION (3.3V) spacing is 0.5um
+838 0 4A.4E:Minimum T_WELL enclosure of P+ DIFFUSION is 0.16um
+839 0 4A.4F:Minimum T_WELL to N+ DIFFUSION is 0.16um
+857 0 4A.4G.a:Minimum T_WELL enclosure of N+ DIFFUSION (1.2V) is 0.3um
+862 0 4A.4G.b:Minimum T_WELL enclosure of N+ DIFFUSION (3.3V) is 0.5um
+867 0 4A.7A:Minimum width of VTN_SP region is 0.40um
+872 0 4A.7B:Minimum space between two VTN_SP regions is 0.40um
+884 0 4A.7C:Minimum VTN_SP extension over Poly gate is 0.16um
+895 0 4A.7D:Minimum VTN_SP to unrelated Poly gate spacing is 0.28um
+900 0 4A.8A: Minimum width of VTP_SP region is 0.40um
+905 0 4A.8B: Minimum space between two VTP_SP regions is 0.40um
+917 0 4A.8C: Minimum VTP_SP extension over Poly gate is 0.16um
+928 0 4A.8D: Minimum VTP_SP to unrelated Poly gate spacing is 0.28um
+933 0 4A.9A: Minimum width of VTNH region is 0.40um
+938 0 4A.9B: Minimum space between two VTNH regions is 0.40um
+950 0 4A.9C: Minimum VTNH extension over Poly gate is 0.16um
+963 0 4A.9D: Minimum VTNH to unrelated Poly gate spacing is 0.28um
+968 0 4A.10A: Minimum width of VTPH region is 0.40um
+973 0 4A.10B: Minimum space between two VTPH regions is 0.40um
+985 0 4A.10C: Minimum VTPH extension over Poly gate is 0.16um
+998 0 4A.10D: Minimum VTPH to unrelated Poly gate spacing is 0.28um
+1004 0 4A.11A:Minimum width of poly(1.2V low Vt NMOS) region is 0.12um
+1005 0 4A.11B:Minimum width of VTNL region is 0.40um
+1007 0 4A.11C:Minimum space between two VTNL regions is 0.40um
+1010 0 4A.11D:Minimum VTNL overlap Diffusion is 0.3um
+1011 0 4A.11E:Minimum VTNL to unrelated Diffusion spacing is 0.3um
+1019 0 4A.11F:Minimum VTNL extension over poly on diffusion of related device is 0.4um
+1026 0 4A.11G:Minimum VTNL to unrelated PO1 spacing is 0.4um
+1031 0 4A.12A:Minimum width of poly(1.2V low Vt PMOS) region is 0.12um
+1032 0 4A.12B:Minimum width of VTPL region is 0.40um
+1034 0 4A.12C:Minimum space between two VTPL regions is 0.40um
+1037 0 4A.12D:Minimum VTPL overlap Diffusion of related device is 0.3um
+1038 0 4A.12E:Minimum VTPL to unrelated Diffusion spacing is 0.3um
+1046 0 4A.12F:Minimum VTPL extension over poly on diffusion of related device is 0.4um
+1056 0 4A.12G:Minimum VTPL to unrelated PO1 spacing is 0.4um
+1064 0 4A.13A:Minimum width of poly(3.3V low Vt NMOS) region is 0.34um
+1065 0 4A.13B:Minimum width of VTNHL region is 0.40um
+1067 0 4A.13C:Minimum space between two VTNHL regions is 0.40um
+1070 0 4A.13D:Minimum VTNHL overlap Diffusion is 0.3um
+1071 0 4A.13E:Minimum VTNHL to unrelated Diffusion spacing is 0.3um
+1078 0 4A.13F:Minimum VTNHL extension over poly on diffusion of related device is 0.4um
+1088 0 4A.13G:Minimum VTPL to unrelated PO1 spacing is 0.4um
+1097 0 4A.14A:Minimum width of poly(3.3V low Vt PMOS) region is 0.34um
+1098 0 4A.14B:Minimum width of VTPHL region is 0.40um
+1100 0 4A.14C:Minimum space between two VTPHL regions is 0.40um
+1103 0 4A.14D:Minimum VTPHL overlap Diffusion of related device is 0.3um
+1104 0 4A.14E:Minimum VTPHL to unrelated Diffusion spacing is 0.3um
+1111 0 4A.14F:Minimum VTPHL extension over poly on diffusion of related device is 0.4um
+1121 0 4A.14G:Minimum VTPHL to unrelated PO1 spacing is 0.4um
+1124 0 4A.15A.a: Minimum width of poly(1.2V NMOS) region is 1.2um
+1126 0 4A.15A.b: Minimum width of poly(3.3V NMOS) region is 1.8um
+1132 0 4A.15B: Minimum NATIVE width is 1.60um
+1134 0 4A.15C: Minimum NATIVE spacing is 0.63um
+1146 0 4A.15D: Exact NATIVE enclosure of DIFFUSION is 0.3um
+1147 0 4A.15E: Minimum NATIVE to unrelated Diffusion spacing is 0.25um
+1151 0 4A.15F: Minimum NATIVE to N-WELL spacing is 0.9um
+1152 0 4A.15J: NATIVE shapes must be orthogonal
+1153 0 4A.15K: NATIVE must be within N+
+1154 0 4A.Note.1: Two or more device in one Native region is not allowed
+1160 0 4A.18A: Minimum width of TG region is 0.45um
+1162 0 4A.18B: Minimum space between two TG regions is 0.45um
+1164 0 4A.18C: Minimum TG overlap DIFF of 3.3V device is 0.3um
+1165 0 4A.18D: Minimum TG to unrelated DIFF spacing is 0.3um
+1170 0 4A.18E: Minimum TG extension over PO1 gate of 3.3V device is 0.4um
+1173 0 4A.18F: Minimum TG to unrelated PO1 gate spacing is 0.4um
+1189 0 4A.19AaBaC: Minimum poly1 width is 0.12um.
+1191 0 4A.19Ab: Minimum poly1 width for 3.3V NMOS is 0.34um
+1193 0 4A.19Bb: Minimum poly1 width for 3.3V PMOS is 0.30um
+1204 0 4A.19D.a1_4A.19D.c1_4A.19D.c2.1: Minimum poly1 spacing is 0.2um.
+1205 0 4A.19D.a2: Minimum poly1 spacing on DIFF regions without contact (as poly width >= 0.24um) is 0.24um.
+1215 0 4A.19D.b1: Minimum poly1 spacing on DIFF regions with contacts is 0.26um
+1216 0 4A.19D.b2: Minimum poly1 spacing on DIFF regions with contacts is 0.3um when PO1 width>0.24um.
+1219 0 4A.19D.c2.2: Minimum space between two poly1 regions on field area is 0.24um when PO1 width>0.24um and common run length >1um
+1231 0 4A.19E: Minimum overlap of a poly1 region extended into field oxide is 0.18um
+1245 0 4A.19F: Minimum separation from an DIFF region to poly1 on field oxide is 0.10um
+1257 0 4A.19G: Minimum poly1 endcap to RELATED DIFF spacing is 0.10um
+1269 0 4A.19H.a__4A.19O: Minimum poly1 gate to field edge spacing is 0.20um
+1288 0 4A.19H.b: Minimum poly1 gate (width > 0.24) to field edge spacing is 0.24 um
+1294 0 4A.19I.a: Minimum poly1 gate width for 45 degree(1.2V) is 0.14um
+1299 0 4A.19I.b: Minimum poly1 gate width for 45 degree(3.3V) is 0.38um
+1313 0 4A.19J: 90 degree bent gate is not allowed.
+1314 0 4A.19K: Maximum area of poly1 overlap of DIFF region is 80um x 80um.
+1323 0 4A.19N:Minimum PO1 bent gate on field region to DIff spacing is 0.1um
+1333 0 4A.19Q: POLY1 may only intersection DIFFUSION at 90 degrees , extra check POLY1 butting edge DIFFUSION
+1346 0 4A.20A: Minimum HR width is 0.6um
+1348 0 4A.20B: Minimum space between two HR regions is 0.6um
+1349 0 4A.20C: Minimum HR poly1 width is 0.5um
+1350 0 4A.20D: Minimum SAB width for HR PO1 resistor is 1.0um(define HR POLY length)
+1355 0 4A.20E: Minimum HR enclosure of HR poly1 resistor
+1356 0 4A.20F: Minimum HR to unrelated poly1 spacing is 2um
+1360 0 4A.20G: Minimum HR poly to N+ spacing is 1.5um
+1361 0 4A.20H: Minimum HR to PPLUS spacing is 0.5um
+1366 0 4A.20I :Minimum SAB overlap HR poly1 resistor is 0.24um , extra check POLY1 inside HR region does not interact SAB
+1367 0 4A.20J: Minimum HR poly1 contact to SAB spacing is 0.5um
+1371 0 4A.20K: Minimum HR to diffusion spacing is 0.5um
+1376 0 4A.20L: Minimum NWELL overlap HR poly1 resistor is 1.5um
+1383 0 4A.20M: Min PPLUS overlap SAB is 0.2 um
+1386 0 4A.20N: Minimum spacing from P+ implant to unrelated poly resistor is 0.4um
+1675 0 4A.21M: Maximum NPLUS diffusion to nearest P+ pick-up spacing is 20um
+1681 0 4A.22A: Minimum width of a PPLUS region is 0.24um
+1686 0 4A.22B: Minimum space between two PPLUS regions is 0.24um
+1692 0 4A.22C.a: Minimum PPLUS overlap P+ DIFF(inside N-Well) is 0.16um
+1694 0 4A.22C.b: Minimum PPLUS overlap P+ DIFF(inside P-Well) is 0.06um
+1703 0 4A.22D.a: Minimum PPLUS to N+ DIFF spacing(inside P-Well) is 0.16um
+1709 0 4A.22D.b: Minimum PPLUS to N+ DIFF spacing(inside N-Well) is 0.06um
+1711 0 4A.22E: Minimum P+ diffusion to N+ diffusion is 0um
+1712 0 4A.22F(4A.21G): Minimum PPLUS overlap DIFF to form P+ region is 0.16um
+1714 0 4A.22G(4A.21F): Minimum DIFF extension over PPLUS to form N+ region is 0.16um
+1715 0 4A.22H(4A.21I): Minimum PPLUS to PO1 spacing to form N+ S/D region is 0.24um
+1720 0 4A.22I(4A.21H): Minimum PPLUS extension over PO1 to form P+ s/d is 0.24um
+1722 0 4A.22J(4A.21K): Minimum PPLUS overlap CONT region is 0.10um, no butted contact.
+1723 0 4A.22K(4A.21J): Minimum PPLUS to N+ CONT spacing is 0.10um
+1733 0 4A.22L: Soft Contacts are prohibited
+1990 0 4A.22M: Maximum P+ DIFF to nearest N+ pick-up spacing is 20um
+1991 0 4A.22N: Minimun PPLUS area is 0.1764 sq.um
+2012 0 4A.23A: Minimum SAB width is 0.40um
+2014 0 4A.23B: Minimum SAB space is 0.40um
+2015 0 4A.23C: Contact over SAB is not allowed.
+2017 0 4A.23E: Minimum SAB extention over DIFF region is 0.2um
+2034 0 4A.23Fa: Minimum SAB to PO1 spacing is 0.24um
+2037 0 4A.23Fb: Minimum SAB to PO1 spacing is 0.2um
+2038 0 4A.23G:Minimum SAB to unrelated DIFF spacing is 0.20um
+2039 0 4A.23H.b: Minimum SAB to PO1 Contact spacing is 0.24um.
+2041 0 4A.23J: Minimum SAB extension over DIFF resistor is 0.2um
+2043 0 4A.23K: Minimum SAB extension over PO1 resistor is 0.2um
+2047 0 4A.23L: Minimum SAB to contact spacing is 0.24um
+2049 0 4A.23M: Minimum PPLUS overlap P+ poly1 resistor is 0.24um
+2053 0 4A.23N: Minimum PPLUS to N+ (SAB) poly1 resistor spacing is 0.24um
+2055 0 4A.23O: Minimum N-Well overlap P+ poly1 non-salicider resistor is 0.24um
+2056 0 4A.23P: Minimum N-Well to N+ non-saliceder resistor spacing is 0.24um
+2061 0 4A.23Q: Minimum N+ overlap N+ poly1 resistor is 0.24um
+2065 0 4A.23R: Minimum N+ to P+ (SAB) poly1 resistor spacing is 0.24um
+2066 0 4A.23S: Minimun SAB area is 0.37 sq.um
+2075 0 4A.23T: Minimun SAB length for resistor is 1.0um
+2078 0 4A.23U: Minimun poly1 width for non-salicide resistor is 0.5um
+2081 0 4A.23V: Minimun diffusion width for non-salicide resistor is 0.5um
+2082 0 4A.23Wa: Minimun TG to (SAB and PO1) of non-salicide resistor is 0.24um
+2083 0 4A.23Wb: Minimun TG to (SAB and DIFF) of non-salicide resistor is 0.24um
+2085 0 4A.23Xa: Minimun TG overlap (SAB and PO1) of non-salicide resistor is 0.24um
+2087 0 4A.23Xb: Minimun TG overlap (SAB and DIFF) of non-salicide resistor is 0.24um
+2098 0 4A.23Ya : N+ DIFFUSION non-salicide resistor should be drawn outside N_WELL
+2099 0 4A.23Yb : P+ DIFFUSION non-salicide resistor should be drawn within N_WELL
+2100 0 Recommend_4A.23Yc:TG over N+DIFFUSION and P+DIFFUSION non-salicide resistor are not recommended
+2101 0 Recommend_4A.23Yd:TG over N+POLY1 and P+POLY1 non-salicide resistor are not recommended
+2106 0 4A.23Za:Minimum N+POLY1 non-salicide resistor to P+ implant layer spacing is 0.24um
+2107 0 4A.23Zb:Minimum N+ implant layer to  P+POLY1 non-salicide resistor spacing is 0.24um
+2109 0 4A.23Zc:Minimum N_WELL layer extension to N+POLY1 non-salicide resistor is 0.24um
+2120 0 4A.23Zd.a: Minimum N+ implant enclosure of (N+ POLY1 OVER SAB) is 0.20 um,  (POLY1 endcap is excepted from this rule)
+2132 0 4A.23Zd.b: If SAB lies across POLY1,(POLY1 OVER SAB) partially covered,  by N+ and partially not covered by N+ is not allowed
+2143 0 4A.23Ze.a: Minimum P+ implant enclosure of ((P+ POLY1 OVER SAB) NOT HR) is 0.20 um,  (POLY1 endcap is excepted from this rule)
+2155 0 4A.23Ze.b: If SAB lies across POLY1,((POLY1 OVER SAB) NOT HR) partially covered,  by P+ and partially not covered by P+ is not allowed
+2162 0 4A.23Zf.a: Minimum N+ implant enclosure of (N+ DIFFUSION OVER SAB) is 0.20 um,  (DIFFUSION endcap is excepted from this rule)
+2169 0 4A.23Zf.b: (DIFFUSION OVER SAB) partially covered by N+ and partially not covered by N+ is not allowed
+2176 0 4A.23Zg.a: Minimum P+ implant enclosure of (P+ DIFFUSION OVER SAB) is 0.20 um,  (DIFFUSION endcap is excepted from this rule)
+2183 0 4A.23Zg.b: (DIFFUSION OVER SAB) partially covered by P+ and partially not covered by P+ is not allowed
+2196 0 4A.24A: Exact CONT size is 0.16um
+2206 0 4A.24B: Minimum space between two CONT regions is 0.20um
+2217 0 4A.24C.a:Minimum DIFF CONT to poly1 gate spacing is 0.12um.
+2218 0 4A.24C.b:Minimum DIFF CONT to poly1(3.3V) gate spacing is 0.14um.
+2227 0 4A.24D:Minimum poly1 contact to diffusion spacing is 0.16um
+2244 0 4A.24E: Minimum PO1 overlap CONT is 0.06um, no floating contact
+2261 0 4A.24FG: Minimum extension of a diffusion region beyond a CONT region is 0.06um
+2267 0 4A.24I: Poly contact on diffusion is not allowed.
+2274 0 4A.25A: Minimum width of PESD region is 0.60um
+2276 0 4A.25B: Minimum space between two PESD regions is 0.60um
+2280 0 4A.26A: Minimum width of P_WELL_BLOCK region is 0.63um
+2284 0 4A.26B: Minimum space between two P_WELL_BLOCK regions is 0.63um
+2290 0 4A.26C: Minimum P_WELL_BLOCK to NATIVE spacing or notch is 0.63 um
+2296 0 4A.26D: Minimum P_WELL_BLOCK to N_WELL spacing or notch is 0.90 um
+2302 0 4A.26E: Minimum P_WELL_BLOCK to IND spacing or notch is 0.63 um
+2305 0 4A.26F: Minimum P_WELL_BLOCK to DIFFUSION spacing is 0.25 um
+2312 0 4A.26G: Minimum P_WELL_BLOCK enclosure of DIFFUSION is 0.30 um
+2314 0 4A.26H: P_WELL_BLOCK overlap GATE is not allowed
+2316 0 4A.26I: P_WELL_BLOCK overlap NWEL is not allowed
+2318 0 4A.26J: P_WELL_BLOCK overlap IND is not allowed
+2320 0 4A.26K: P_WELL_BLOCK overlap NATIVE is not allowed
+2326 0 4A.26L: Minimum IND to NATIVE spacing is 0.63 um
+2329 0 4A.26M: Minimum IND to N_WELL spacing is 0.90 um
+2335 0 LOGO_5.1A_5.1C_suggested: Minimum width of DIFF region is 0.3um
+2338 0 LOGO_5.1B: Minimum space between DIFF regions is 0.4um
+2344 0 LOGO_5.2A_5.2C_suggested: Minimum width of NW region is 1.2um
+2347 0 LOGO_5.2B: Minimum space between NW regions is 2um
+2353 0 LOGO_5.3A_5.3C_suggested: Minimum width of TG region is 0.6um
+2356 0 LOGO_5.3B: Minimum space between TG regions is 0.6um
+2362 0 LOGO_5.4A_5.4C_suggested: Minimum width of PO1 region is 0.24um
+2365 0 LOGO_5.4B: Minimum space between PO1 regions is 0.32um
+2371 0 LOGO_5.5A_5.5C_suggested: Minimum width of NPLUS region is 0.42um
+2374 0 LOGO_5.5B: Minimum space between NPLUS regions is 0.42um
+2380 0 LOGO_5.6A_5.6C_suggested: Minimum width of PPLUS region is 0.42um
+2383 0 LOGO_5.6B: Minimum space between PPLUS regions is 0.42um
+2389 0 LOGO_5.7A_5.7C_suggested: Minimum width of SAB region is 0.6um
+2392 0 LOGO_5.7B: Minimum space between SAB regions is 0.6um
+2398 0 LOGO_5.8A_5.8C_suggested: Minimum width of CONT region is 0.32um
+2401 0 LOGO_5.8B: Minimum space between CONT regions is 0.4um
+2414 0 LOGO_5.8Da: Minimum PO1 enclosure of CONT is 0.14,
+2432 0 LOGO_5.8Db: Minimum DIFFUSION enclosure of CONT is 0.14, floating CONT is not allowed

@@ -2,7 +2,15 @@
 ; Do NOT rely on the content of this file, it may change.
 ;
 2 bind match unmatched shorts opens
-1 2 ((S "net81")(S "CLK_P")(L "avC15")(L "avC13")(L "avC14")(L "avS11")(L "avC8")(L "avS1")(L "avC9")(L "avC10"))
-1 1 ((L "avC2")((1 "n_12_hsl130e" ( "D" "S"))(1 "n_12_hsl130e" ( "G"))(1 "p_12_hsl130e" ( "D" "S"))(1 "p_12_hsl130e" ( "G")))(S "QNOT")((2 "N_12_HSL130E" ( "D" "S"))(2 "P_12_HSL130E" ( "D" "S"))))
-1 1 ((L "avC17")((12 "n_12_hsl130e" ( "B")))(S "GND")((8 "N_12_HSL130E" ( "D" "S"))(12 "N_12_HSL130E" ( "B"))))
-1 1 ((L "avC18")((12 "p_12_hsl130e" ( "B")))(S "VDD")((8 "P_12_HSL130E" ( "D" "S"))(12 "P_12_HSL130E" ( "B"))))
+1 2 ((L "avC22")(L "avS15")(L "avC16")(L "avS16")(L "avS2")(L "avC3")(L "avC5")(L "avS3")(L "avS5")(L "avC18")(L "avC2")(L "avS7")(L "avC8")(L "avS13")(L "avC6"))
+1 1 ((L "avC10")((1 "n_12_hsl130e" ( "D" "S"))(1 "p_12_hsl130e" ( "D" "S"))(1 "n_12_hsl130e:SerMos2#1" ( "OUT" "OUT2"))(1 "p_12_hsl130e:SerMos2#1" ( "OUT" "OUT2")))(S "LATCH3")((2 "N_12_HSL130E" ( "D" "S"))(1 "N_12_HSL130E" ( "G"))(3 "P_12_HSL130E" ( "D" "S"))(1 "P_12_HSL130E" ( "G"))))
+1 1 ((L "avS9")((1 "n_12_hsl130e" ( "G")))(S "net92")((1 "N_12_HSL130E" ( "D" "S"))(1 "P_12_HSL130E" ( "D" "S"))(1 "P_12_HSL130E" ( "G"))))
+1 1 ((L "avC9")((2 "n_12_hsl130e" ( "D" "S"))(2 "p_12_hsl130e" ( "D" "S")))(S "LATCH2")((2 "N_12_HSL130E" ( "D" "S"))(1 "N_12_HSL130E" ( "G"))(2 "P_12_HSL130E" ( "D" "S"))(1 "P_12_HSL130E" ( "G"))))
+1 1 ((L "avS10")((1 "n_12_hsl130e:SerMos2#1" ( "IN1" "IN2"))(1 "p_12_hsl130e:SerMos2#1" ( "IN1" "IN2")))(S "CLK_N")((1 "N_12_HSL130E" ( "D" "S"))(2 "N_12_HSL130E" ( "G"))(1 "P_12_HSL130E" ( "D" "S"))(2 "P_12_HSL130E" ( "G"))))
+1 1 ((L "avS8")((1 "p_12_hsl130e" ( "G")))(S "CLK_P")((1 "N_12_HSL130E" ( "D" "S"))(3 "N_12_HSL130E" ( "G"))(1 "P_12_HSL130E" ( "D" "S"))(3 "P_12_HSL130E" ( "G"))))
+1 1 ((L "avS6")((1 "p_12_hsl130e" ( "G")))(S "LATCH1")((3 "N_12_HSL130E" ( "D" "S"))(1 "N_12_HSL130E" ( "G"))(2 "P_12_HSL130E" ( "D" "S"))(1 "P_12_HSL130E" ( "G"))))
+1 1 ((L "avS11")((1 "n_12_hsl130e:SerMos2#1" ( "IN1" "IN2"))(1 "p_12_hsl130e:SerMos2#1" ( "IN1" "IN2")))(S "QNOT")((2 "N_12_HSL130E" ( "D" "S"))(2 "P_12_HSL130E" ( "D" "S"))))
+1 1 ((L "avC12")((1 "n_12_hsl130e" ( "D" "S"))(1 "p_12_hsl130e" ( "D" "S"))(1 "n_12_hsl130e:SerMos2#1" ( "OUT" "OUT2"))(1 "p_12_hsl130e:SerMos2#1" ( "OUT" "OUT2")))(S "D")((1 "N_12_HSL130E" ( "D" "S"))(1 "P_12_HSL130E" ( "D" "S"))))
+1 1 ((L "avS12")((1 "n_12_hsl130e" ( "G")))(S "Q")((1 "N_12_HSL130E" ( "D" "S"))(1 "N_12_HSL130E" ( "G"))(1 "P_12_HSL130E" ( "D" "S"))(1 "P_12_HSL130E" ( "G"))))
+1 1 ((L "avC14")((1 "n_12_hsl130e" ( "D" "S"))(1 "p_12_hsl130e" ( "D" "S"))(1 "n_12_hsl130e:SerMos2#1" ( "OUT" "OUT2"))(1 "p_12_hsl130e:SerMos2#1" ( "OUT" "OUT2")))(S "RST")((2 "N_12_HSL130E" ( "G"))(1 "P_12_HSL130E" ( "G"))))
+1 1 ((L "avC23")((4 "p_12_hsl130e" ( "B"))(4 "p_12_hsl130e:SerMos2#1" ( "TERM4")))(S "VDD")((8 "P_12_HSL130E" ( "D" "S"))(12 "P_12_HSL130E" ( "B"))))

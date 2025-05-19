@@ -38,7 +38,7 @@ vuiLVSFormTable = '(
 	useVerilogTopCell  nil
 	layLibrary  "pixel"
 	layCell  "dff-standalone"
-	layView  "layout"
+	layView  "layout_compact"
 	layUseExistingNL  nil
 	extractButton  nil
 	compareButton  nil

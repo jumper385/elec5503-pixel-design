@@ -1,7 +1,7 @@
 vuiLVSdebugRunInfo = list( nil
    'layoutLibrary "pixel"
    'layoutCell "dff-standalone"
-   'layoutView "layout"
+   'layoutView "layout_compact"
    'schematicLibrary "pixel"
    'schematicCell "dff-standalone"
    'schematicView "schematic"

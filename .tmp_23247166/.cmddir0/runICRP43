@@ -1,0 +1,7 @@
+#!/bin/sh
+cdsVncserver :80
+sleep 3
+cd /home/23247166/Downloads/elec5503-pixel-design
+virtuoso -noautostart -mpssession "virtuoso5670" -mpshost "vdi-l-cos-018" -davinciService "DaVinciService_5670_1747627111" -log '/home/23247166/Downloads/elec5503-pixel-design/logs_23247166/logs0/Job43.log'  -licenseLockFileName '/home/23247166/Downloads/elec5503-pixel-design/.tmp_23247166/.vdi-l-cos-018_5670'  -axlChildIdFlag 43 1>/dev/null  2>/dev/null 
+exit $?
+

@@ -1,10 +1,10 @@
 @(#)$CDS: nvn_64 version av4.1:Production:dfII6.1.7-64b:IC6.1.7-64b.78 12/24/2015 12:05 (sjflg007) $
 sub-version 4.1_USR5, integ signature 2015-12-24-1122
-run on vdi-l-cos-009 at Sat May 17 01:56:49 2025
+run on vdi-l-cos-018 at Mon May 19 13:24:01 2025
 
-Schematic                        | Layout                        | Status
+Schematic                     | Layout                             | Status
 -------------------------------------------------------------------------------
-dff-standalone schematic pixel   | dff-standalone layout pixel   | errors    *
+dff-standalone schematic pixel| dff-standalone layout_compact pixel| errors  *
 
 Mismatch between Schematic and Layout
    1 cell with errors
@@ -17,7 +17,7 @@ Schematic:
 Layout:
   Library:pixel
   Cell   :dff-standalone
-  View   :layout
+  View   :layout_compact
 
 
 
@@ -29,8 +29,8 @@ Extraction  Information
 
 Mismatch  Information
 --------------------
-     1 cells have 4 Net mismatches
-     1 cells have 21 Device mismatches
-     1 cells have 1 Pin mismatches
+     1 cells have 12 Net mismatches
+     1 cells have 36 Device mismatches
+     1 cells have 2 Pin mismatches
      0 cells have 0 Parameter mismatches
 

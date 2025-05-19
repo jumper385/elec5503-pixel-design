@@ -1,3 +1,3 @@
 #!/bin/sh -f
-/usr/local/cadence6/ASSURA415-001-617/tools.lnx86/assura/bin/assura /home/22703907/Downloads/elec5503-pixel-design/dff-standalone.rsf -cdslib /home/22703907/Downloads/elec5503-pixel-design/cds.lib -gui
+/usr/local/cadence6/ASSURA415-001-617/tools.lnx86/assura/bin/assura /home/23247166/Downloads/elec5503-pixel-design/dff-standalone.rsf -cdslib /home/23247166/Downloads/elec5503-pixel-design/cds.lib -gui
 exit $?
