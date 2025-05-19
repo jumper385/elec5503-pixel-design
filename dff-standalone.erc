@@ -1,7 +1,11 @@
 
 ***** Begin Label Report *****
 
- Label in cell 'dff-standalone layout_compact pixel':
+ Label in cell 'dff-standalone layout pixel':
+  info: Assign pin label "CLK" at (-1.000, -14.000) to layer `ME1_c'.
+  info: Assign pin label "QNOT" at (5.680, -14.000) to layer `ME1_c'.
+  info: Assign pin label "Q" at (6.660, -14.000) to layer `ME1_c'.
+  info: Floating label discarded:  "D" at (2.450, -14.150).
 
 ***** End of Label Report *****
 

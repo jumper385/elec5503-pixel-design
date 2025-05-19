@@ -12,7 +12,7 @@
 avParameters(
   ?inputLayout ( "df2" "pixel" )
   ?cellName "dff-standalone"
-  ?viewName "layout_compact"
+  ?viewName "layout"
   ?technology "Assura_DRC_FEOL"
   ?techLib "./assura_tech.lib"
   ?techRuleSet "DRC_2.5p1"

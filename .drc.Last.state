@@ -31,7 +31,7 @@ vuiDRCFormTable = '(
 	limitDRCswitcher  nil
 	library  "pixel"
 	cell  "dff-standalone"
-	view  "layout_compact"
+	view  "layout"
 	saveExtracted  nil
 	extractedView  "drc_extracted"
 	areaButton  "Full"
