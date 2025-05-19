@@ -1675,3 +1675,109 @@
 \a cdsLibManager->viewListBox->value = nil
 \a cdsLibManager->viewListBox->value = "layout"
 \a cdsLibManager->viewLineEdit->value = "layout"
+\a nrSetCurrentWindow(cdsLibManager)
+\a nrResizeWindow(cdsLibManager list(330 1133 600 419))
+\a nrResizeWindow(cdsLibManager list(330 1133 1162 757))
+\a cdsLibManager->cellListBox->value = "xor"
+\a cdsLibManager->viewLineEdit->value = ""
+\a cdsLibManager->viewListBox->value = nil
+\a cdsLibManager->cellListBox->value = "xor_2fork"
+\a cdsLibManager->cellListBox->value = "xor_8T"
+\a lmgrLogShowPopup("mainListPopup1" 72 351 2 "xor_8T")
+\a cdsLibManager->cellLineEdit->value = "xor_8T"
+\a cdsLibManager->copySimpleButton->value = t
+\a basicCopyForm->CellsSkipLibrariesEdit->value = "*"
+\a basicCopyForm->ViewsViewsToCopy->value = ""
+\a basicCopyForm->ViewsSkipLibrariesEdit->value = "*"
+\a basicCopyForm->CopyFromCell->value = ""
+\a basicCopyForm->CopyFromView->value = ""
+\a basicCopyForm->CopyToCell->value = ""
+\a basicCopyForm->CopyToView->value = ""
+\a basicCopyForm->CopyFromLibrary->value = ""
+\a basicCopyForm->CopyToLibrary->value = ""
+\a basicCopyForm->CopyFromLibrary->value = "analogLib"
+\a basicCopyForm->CopyToLibrary->value = "analogLib"
+\a basicCopyForm->CopyFromLibrary->value = "pixel"
+\a basicCopyForm->CopyFromCell->value = "xor_8T"
+\a basicCopyForm->CopyToLibrary->value = "pixel"
+\a basicCopyForm->CopyToCell->value = "xor_8T"
+\a basicCopyForm->CellsViewsToCopy->value = "schematic symbol symbol_temp"
+\a basicCopyForm->CellsSkipLibrariesEdit->value = ""
+\a basicCopyForm->CellsSkipLibrariesEdit->value = "analogLib avTech basic cdsDefTechLib pixel_sim umc13mmrf"
+\a basicCopyForm->ViewsSkipLibrariesEdit->value = "analogLib avTech basic cdsDefTechLib pixel_sim umc13mmrf"
+\a nrSetWindowVisibility(basicCopyForm "show")
+\a nrSetCurrentWindow(basicCopyForm)
+\a nrResizeWindow(basicCopyForm list(177 1135 444 730))
+\a basicCopyForm->CopyToCell->value = "xor_PT"
+\a nrDialogAccept(basicCopyForm)
+\a basicCopyForm->OK->value = t
+\a basicCopyForm->CopyToCell->value = "xor_PT"
+\o Beginning simple copy to library "pixel".
+\o Processing files to be copied...
+\a nrSetWindowVisibility(workingDialogForm "show")
+\a nrSetWindowVisibility(workingDialogForm "show")
+\a nrSetCurrentWindow(cdsLibManager)
+\a nrSetCurrentWindow(workingDialogForm)
+\a nrResizeWindow(workingDialogForm list(773 1442 273 133))
+\a cdsLibManager->libListBox->value = nil
+\a cdsLibManager->cellListBox->value = nil
+\a cdsLibManager->cellLineEdit->value = ""
+\a cdsLibManager->libLineEdit->value = ""
+\a cdsLibManager->libListBox->value = "pixel"
+\a cdsLibManager->libLineEdit->value = "pixel"
+\a cdsLibManager->cellListBox->value = "xor_8T"
+\a cdsLibManager->cellLineEdit->value = "xor_8T"
+\a basicCopyForm->CellsSkipLibrariesEdit->value = "*"
+\a basicCopyForm->CellsSkipLibrariesEdit->value = "analogLib avTech basic cdsDefTechLib pixel_sim umc13mmrf"
+\a nrSetCurrentWindow(cdsLibManager)
+\a cdsLibManager->cellListBox->value = "xor_PT"
+\a cdsLibManager->cellLineEdit->value = "xor_PT"
+\a cdsLibManager->viewListBox->value = "schematic"
+\a cdsLibManager->viewLineEdit->value = "schematic"
+\o MPS request: edit design
+\a nrListItemAction(cdsLibManager->gdmXTView 0 0)
+\a nrSetCurrentWindow(cdsLibManager)
+\a nrResizeWindow(cdsLibManager list(511 1336 1162 757))
+\a nrSetCurrentWindow(cdsLibManager)
+\a cdsLibManager->cellListBox->value = "dff"
+\a cdsLibManager->viewLineEdit->value = ""
+\a cdsLibManager->viewListBox->value = nil
+\a cdsLibManager->viewListBox->value = "schematic"
+\a cdsLibManager->viewLineEdit->value = "schematic"
+\a cdsLibManager->cellListBox->value = nil
+\a cdsLibManager->viewLineEdit->value = ""
+\a cdsLibManager->viewListBox->value = nil
+\a nrListItemAction(cdsLibManager->cellListBox 7 0)
+\a cdsLibManager->cellListBox->value = "dff"
+\a cdsLibManager->viewListBox->value = "schematic"
+\a cdsLibManager->viewLineEdit->value = "schematic"
+\a cdsLibManager->viewLineEdit->value = ""
+\a cdsLibManager->viewListBox->value = nil
+\o MPS request: edit design
+\a cdsLibManager->cellLineEdit->value = "dff"
+\a nrSetCurrentWindow(cdsLibManager)
+\a nrSetCurrentWindow(cdsLibManager)
+\a lmgrLogShowPopup("mainListPopup1" 77 131 2 "dff")
+\a cdsLibManager->editRenameButton->value = t
+\a basicRenameForm->basicRenameFromEdit->value = "dff"
+\a nrSetWindowVisibility(basicRenameForm "show")
+\a basicRenameForm->basicRenameToEdit->value = "dff"
+\a nrSetCurrentWindow(basicRenameForm)
+\a nrResizeWindow(basicRenameForm list(921 1527 343 182))
+\a basicRenameForm->basicRenameToEdit->value = "dff_PT"
+\a nrDialogAccept(basicRenameForm)
+\a basicRenameForm->OK->value = t
+\o View file /home/23247166/Downloads/elec5503-pixel-design/pixel/dff/schematic/sch.oa is locked by 23247166 at host vdi-l-cos-018.uniwa.uwa.edu.au
+\o View file /home/23247166/Downloads/elec5503-pixel-design/pixel/dff/constraint/hierDesign.oa is locked by 23247166 at host vdi-l-cos-018.uniwa.uwa.edu.au
+\o View file /home/23247166/Downloads/elec5503-pixel-design/pixel/dff/constraint/prop.cfg is locked by 23247166 at host vdi-l-cos-018.uniwa.uwa.edu.au
+\a basicRenameForm->basicRenameToEdit->value = "dff_PT"
+\o ERROR (CLM-223): Cell pixel/dff has files that are locked or are checked out.\nCheck the "Messages" window for a list of which files are causing problem\nRename failed.
+\a nrSetWindowVisibility(errorDialog "show")
+\a nrSetCurrentWindow(cdsLibManager)
+\a nrSetCurrentWindow(errorDialog)
+\a nrResizeWindow(errorDialog list(867 1655 450 134))
+\a errorDialog->errorOkButton->value = t
+\a nrSetCurrentWindow(cdsLibManager)
+\a nrSetCurrentWindow(cdsLibManager)
+\a nrResizeWindow(cdsLibManager list(517 1336 1162 757))
+\a _lmgrCloseIconify("cdsLibManager" 1)
