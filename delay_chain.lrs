@@ -1,0 +1,37 @@
+@(#)$CDS: nvn_64 version av4.1:Production:dfII6.1.7-64b:IC6.1.7-64b.78 12/24/2015 12:05 (sjflg007) $
+sub-version 4.1_USR5, integ signature 2015-12-24-1122
+run on vdi-l-cos-023 at Thu May 15 17:09:50 2025
+
+Schematic                      | Layout                       | Status
+-------------------------------------------------------------------------------
+DCinv schematic pixel          | DCinv layout pixel           | matched     
+DCinv_pair schematic pixel     | DCinv_pair layout pixel      | matched     
+delay_chain schematic pixel    | delay_chain layout pixel     | matched     
+
+Schematic and Layout Match
+
+Schematic:
+  Library:pixel
+  Cell   :delay_chain
+  View   :schematic
+
+Layout:
+  Library:pixel
+  Cell   :delay_chain
+  View   :layout
+
+
+
+Extraction  Information
+--------------------
+     0 cells have 0 mal-formed device problems
+     0 cells have 0 label short problems
+     0 cells have 0 label open problems
+
+Mismatch  Information
+--------------------
+     0 cells have 0 Net mismatches
+     0 cells have 0 Device mismatches
+     0 cells have 0 Pin mismatches
+     0 cells have 0 Parameter mismatches
+

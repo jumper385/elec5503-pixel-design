@@ -5,7 +5,7 @@
 @(#)$CDS: aveng_64 version av4.1:Production:dfII6.1.7-64b:IC6.1.7-64b.78 12/24/2015 12:01 (sjflg007) $
 sub-version 4.1_USR5, integ signature 2015-12-24-1122
 
-run on vdi-l-cos-007 from /usr/local/cadence6/ASSURA415-001-617/tools.lnx86/assura/bin/64bit/aveng on Sun May 11 17:03:12 2025
+run on vdi-l-cos-023 from /usr/local/cadence6/ASSURA415-001-617/tools.lnx86/assura/bin/64bit/aveng on Thu May 15 14:59:53 2025
 
 Echoing run specific file...
     ;----------------------------------------------------------------------------
@@ -26,7 +26,7 @@ Echoing run specific file...
       ?technology "Assura_DRC_BEOL"
       ?techLib "./assura_tech.lib"
       ?techRuleSet "DRC_2.3p3"
-      ?set ("Skip_VASS_RF_PAD_Die_Corner_Checks" "Select_Check_20KA" "Select_Check_low-K_dielectric_process" "Select_ONLY_MANHATTAN_CHECK" "Skip_BOAC_PAD_Die_Corner_Checks" "Skip_Check_PAD_Inline_50" "Skip_Check_PAD_Staggered_35" "Skip_DFM_Checks" "Skip_LOGO_    Check" "Skip_Metal_Density_Checks" "Skip_Seal_Ring_Checks" "Skip_Soft-Connect_Checks")
+      ?set ("Select_Check_20KA" "Select_Check_low-K_dielectric_process" "Select_ONLY_MANHATTAN_CHECK" "Skip_BOAC_PAD_Die_Corner_Checks" "Skip_Check_PAD_Inline_50" "Skip_Check_PAD_Staggered_35" "Skip_DFM_Checks" "Skip_LOGO_Check" "Skip_Metal_Density_Checks" "S    kip_Seal_Ring_Checks" "Skip_Soft-Connect_Checks" "Skip_VASS_RF_PAD_Die_Corner_Checks")
       ?avrpt t
     )
 
@@ -35,7 +35,7 @@ Echoing run specific file...
 
                   Time Summary - Database
 
-reading DFII data. . . .      0 cpu      0 elap 3624.3M virt     404 pf
+reading DFII data. . . .      0 cpu      0 elap 1619.7M virt     290 pf
 duplicate inst removal .      0 cpu      0 elap  162.0M virt       0 pf
 cell boundary layer. . .      0 cpu      0 elap  162.0M virt       0 pf
 small cell flattening. .      0 cpu      0 elap  162.0M virt       0 pf
@@ -58,7 +58,7 @@ duplicate cell removal .      0 cpu      0 elap  164.5M virt       0 pf
 create background layer.      0 cpu      0 elap  164.5M virt       0 pf
 final VDB processing . .      0 cpu      0 elap  164.5M virt       0 pf
 -----------------------------------------------------------------------
-TOTALS (secs). . . . . .      0 cpu      0 elap 3624.3M virt     404 pf
+TOTALS (secs). . . . . .      0 cpu      0 elap 1619.7M virt     290 pf
 
 
 ************************************************************************
@@ -15130,8 +15130,8 @@ Total cells checked = 1
 Total rules checked = 3675
 
 Run time =  0.00 seconds
-CPU time =  0.27 seconds
-VM HWM   =  3624 Mbytes
+CPU time =  0.30 seconds
+VM HWM   =  1620 Mbytes
 Disk HWM =     3 Mbytes
 Disk end =     3 Mbytes
 Eman HWM =     0 Mbytes
