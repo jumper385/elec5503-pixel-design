@@ -1,0 +1,6 @@
+Schematic                        | Layout                        | Status
+-------------------------------------------------------------------------------
+dff-standalone schematic pixel   | dff-standalone layout pixel   | errors    *
+
+Mismatch between Schematic and Layout
+   1 cell with errors
