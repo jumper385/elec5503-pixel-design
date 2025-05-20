@@ -1,5 +1,3 @@
-# File Created by Peter Tanner at Mon May 12 13:55:36 2025
-# assisted by CdsLibEditor
 # File Created by Henry Chen at Sat Apr  5 22:41:31 2025
 # assisted by CdsLibEditor
 DEFINE cdsDefTechLib $CDSHOME/tools/dfII/etc/cdsDefTechLib
@@ -10,5 +8,5 @@ DEFINE umc13mmrf /usr/local/cadence6/G-9FD-MIXED_MODE_RFCMOS13-1P8M-MMC_FSG_L130
 
 DEFINE avTech $ASSURAHOME/tools.lnx86/assura/etc/avtech/avTech
 #Removed by ddDeleteObj: DEFINE pixel#2dlibrary /home/22703907/Downloads/elec5503-pixel-design/pixel#2dlibrary
-DEFINE pixel ~/working-dir/elec5503-pixel-design/pixel
-DEFINE pixel_sim ~/working-dir/elec5503-pixel-design/pixel_sim
+DEFINE pixel ~/Downloads/elec5503-pixel-design/pixel
+DEFINE pixel_sim ~/Downloads/elec5503-pixel-design/pixel_sim
