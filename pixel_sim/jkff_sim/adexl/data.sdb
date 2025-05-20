@@ -61,7 +61,7 @@
 				<value>no</value>
 			</plottingoption>
 			<plottingoption>waveformtemplate
-				<value></value>
+				<value>                            </value>
 			</plottingoption>
 		</plottingoptions>
 	</active>
@@ -128,12 +128,13 @@
 						<value>no</value>
 					</plottingoption>
 					<plottingoption>waveformtemplate
-						<value></value>
+						<value>                            </value>
 					</plottingoption>
 				</plottingoptions>
 				<sortVariableValues>0</sortVariableValues>
 			</checkpoint>
-			<timestamp>Sat Apr 5 22:14:36 2025</timestamp>
+			<timestamp>Sat Apr  5 22:14:36 2025
+</timestamp>
 			<resultsname>/home/22703907/Downloads/elec5503-pixel-design/pixel_sim/jkff_sim/adexl/results/data/Interactive.0.rdb</resultsname>
 			<simresults>$AXL_SETUPDB_DIR/results/data/Interactive.0.rdb</simresults>
 			<rawdatadelstrategy>SaveAll</rawdatadelstrategy>
