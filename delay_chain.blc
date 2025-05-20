@@ -1,0 +1,6 @@
+"p_12_hsl130e(MOS)" "P_12_HSL130E(MOS)"
+"n_12_hsl130e(MOS)" "N_12_HSL130E(MOS)"
+"DCinv_pair layout pixel" "DCinv_pair schematic pixel" "p_12_hsl130e(MOS)" "n_12_hsl130e(MOS)"
+"DCinv layout pixel" "DCinv schematic pixel" "p_12_hsl130e(MOS)" "n_12_hsl130e(MOS)"
+"delay_chain layout pixel" "delay_chain schematic pixel"
+Devices filtered from layout

@@ -1,0 +1,44 @@
+================================================================================
+Rule No. 125 : 4A.21M: Maximum NPLUS diffusion to nearest P+ pick-up spacing is 20um
+
+Real Error Count : 1; Flat Error Count : 1
+================================================================================
+
+--------------------------------------------------------------------------------
+Cell Name : DCinv_pair layout pixel
+
+                   Cell Errors    Real Errors   Cell Placements     Environments
+                             1              1                 1                1
+--------------------------------------------------------------------------------
+Env.  Env. Placements            X1           Y1          X2           Y2
+
+  1        1                  0.320        0.400       1.820        0.680
+
+Shape               Environments Status & Error Marker 
+
+          1           X1         Y1         X2         Y2
+
+   1      X        0.320      0.400      1.820      0.680
+
+================================================================================
+Rule No. 140 : 4A.22M: Maximum P+ DIFF to nearest N+ pick-up spacing is 20um
+
+Real Error Count : 1; Flat Error Count : 1
+================================================================================
+
+--------------------------------------------------------------------------------
+Cell Name : DCinv_pair layout pixel
+
+                   Cell Errors    Real Errors   Cell Placements     Environments
+                             1              1                 1                1
+--------------------------------------------------------------------------------
+Env.  Env. Placements            X1           Y1          X2           Y2
+
+  1        1                  0.320        1.320       1.820        1.600
+
+Shape               Environments Status & Error Marker 
+
+          1           X1         Y1         X2         Y2
+
+   1      X        0.320      1.320      1.820      1.600
+
