@@ -1,0 +1,22 @@
+
+***** Begin Label Report *****
+
+ Label in cell 'dff_PT_even layout pixel':
+  info: Assign pin label "OUT" at (0.240, -0.960) to layer `ME1_c'.
+  info: Assign pin label "D" at (0.240, -0.640) to layer `ME1_c'.
+  info: Assign pin label "GSEL" at (0.560, -0.960) to layer `ME1_c'.
+  info: Assign pin label "Q" at (0.560, -0.640) to layer `ME1_c'.
+  info: Assign pin label "GAFT" at (0.880, -0.960) to layer `ME1_c'.
+  info: Assign pin label "QNOT" at (0.880, -0.640) to layer `ME1_c'.
+  info: Assign pin label "!QPREV" at (1.200, -0.960) to layer `ME1_c'.
+  info: Assign pin label "CLK" at (1.200, -0.640) to layer `ME1_c'.
+  info: Assign pin label "!CONT_IN" at (1.520, -0.960) to layer `ME1_c'.
+  info: Assign pin label "VDD" at (1.520, -0.640) to layer `ME1_c'.
+  info: Assign pin label "GND" at (1.840, -0.640) to layer `ME1_c'.
+  info: Assign pin label "RST" at (2.160, -0.640) to layer `ME1_c'.
+  info: Assign pin label "QPREV" at (2.480, -0.640) to layer `ME1_c'.
+  info: Assign pin label "CONT_OUT" at (2.800, -0.640) to layer `ME1_c'.
+  info: Assign pin label "GOUT" at (3.120, -0.640) to layer `ME1_c'.
+
+***** End of Label Report *****
+
