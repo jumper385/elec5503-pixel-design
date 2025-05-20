@@ -1,0 +1,11 @@
+
+***** Begin Label Report *****
+
+ Label in cell 'delay_chain layout pixel':
+  info: Assign pin label "GND" at (0.455, -0.830) to layer `ME1_c'.
+  info: Assign pin label "clk" at (-0.090, 0.155) to layer `ME1_c'.
+  info: Assign pin label "VDD" at (0.460, 1.135) to layer `ME1_c'.
+  info: Assign pin label "clkout" at (20.315, 0.135) to layer `ME1_c'.
+
+***** End of Label Report *****
+

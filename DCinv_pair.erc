@@ -1,0 +1,11 @@
+
+***** Begin Label Report *****
+
+ Label in cell 'DCinv_pair layout pixel':
+  info: Assign pin label "GND" at (1.080, 0.550) to layer `ME1_c'.
+  info: Assign pin label "IN" at (0.630, 1.030) to layer `ME1_c'.
+  info: Assign pin label "VDD" at (1.060, 1.465) to layer `ME1_c'.
+  info: Assign pin label "OUT" at (1.680, 1.010) to layer `ME1_c'.
+
+***** End of Label Report *****
+

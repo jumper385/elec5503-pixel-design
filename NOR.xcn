@@ -1,0 +1,14 @@
+connect null ME1
+stamp WM1_176 by ME1
+connect null ME2
+stamp WM2_200 by ME2
+connect null ME3
+stamp WM3_200 by ME3
+connect null ME4
+stamp WM4_200 by ME4
+connect null ME5
+stamp WM5_200 by ME5
+connect null ME6
+stamp WM6_200 by ME6
+connect null AL_RDL
+stamp W_AL_35 by AL_RDL
