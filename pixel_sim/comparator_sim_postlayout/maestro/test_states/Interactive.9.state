@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<statedb ICVersion="IC6.1.7-64b.500.1" modifiedTime="05/21/2025 04:15:59" version="5">active
+<statedb ICVersion="IC6.1.7-64b.500.1" modifiedTime="05/21/2025 04:15:59" version="5">Interactive.9
 	<Test Name="pixel_sim:comparator_sim:TG00">
 		<component Name="adeInfo" Type="skillTable">adeinfo
 			<field Name="designInfo" Type="list">("pixel_sim" "comparator_sim" "config" "spectre")</field>
