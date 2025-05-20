@@ -1,0 +1,123 @@
+================================================================================
+Rule No. 10 : 4A.1G.a:Minimum N_WELL enclosure of P+ DIFFUSION (1.2V) is 0.3um
+
+Real Error Count : 2; Flat Error Count : 2
+================================================================================
+
+--------------------------------------------------------------------------------
+Cell Name : dff-standalone_PT layout pixel
+
+                   Cell Errors    Real Errors   Cell Placements     Environments
+                             2              2                 1                1
+--------------------------------------------------------------------------------
+Env.  Env. Placements            X1           Y1          X2           Y2
+
+  1        1                  8.677       -2.300      10.433       -1.670
+
+Shape               Environments Status & Error Marker 
+
+          1           X1         Y1         X2         Y2
+
+   1      X        8.677     -1.970     10.433     -1.670
+   2      X        8.860     -2.300     10.250     -2.000
+
+================================================================================
+Rule No. 125 : 4A.21M: Maximum NPLUS diffusion to nearest P+ pick-up spacing is 20um
+
+Real Error Count : 7; Flat Error Count : 7
+================================================================================
+
+--------------------------------------------------------------------------------
+Cell Name : dff-standalone_PT layout pixel
+
+                   Cell Errors    Real Errors   Cell Placements     Environments
+                             7              7                 1                1
+--------------------------------------------------------------------------------
+Env.  Env. Placements            X1           Y1          X2           Y2
+
+  1        1                  5.240       -3.400      12.870       -2.600
+
+Shape               Environments Status & Error Marker 
+
+          1           X1         Y1         X2         Y2
+
+   1      X        5.240     -3.240      6.040     -2.960
+   2      X        6.240     -3.240      7.560     -2.960
+   3      X        7.760     -3.240      8.560     -2.960
+   4      X        9.160     -3.400      9.440     -2.600
+   5      X        9.670     -3.400      9.950     -2.600
+   6      X       10.550     -3.240     11.350     -2.960
+   7      X       11.550     -3.240     12.870     -2.960
+
+================================================================================
+Rule No. 127 : 4A.22B: Minimum space between two PPLUS regions is 0.24um
+
+Real Error Count : 2; Flat Error Count : 2
+================================================================================
+
+--------------------------------------------------------------------------------
+Cell Name : dff-standalone_PT layout pixel
+
+                   Cell Errors    Real Errors   Cell Placements     Environments
+                             2              2                 1                1
+--------------------------------------------------------------------------------
+Env.  Env. Placements            X1           Y1          X2           Y2
+
+  1        1                  8.720       -2.455      10.390       -2.230
+
+Shape               Environments Status & Error Marker 
+
+          1           X1         Y1         X2         Y2
+
+   1      X        8.720     -2.455      8.815     -2.230
+   2      X       10.295     -2.455     10.390     -2.230
+
+================================================================================
+Rule No. 128 : 4A.22C.a: Minimum PPLUS overlap P+ DIFF(inside N-Well) is 0.16um
+
+Real Error Count : 2; Flat Error Count : 2
+================================================================================
+
+--------------------------------------------------------------------------------
+Cell Name : dff-standalone_PT layout pixel
+
+                   Cell Errors    Real Errors   Cell Placements     Environments
+                             2              2                 1                1
+--------------------------------------------------------------------------------
+Env.  Env. Placements            X1           Y1          X2           Y2
+
+  1        1                  8.725       -2.235      10.385       -1.835
+
+Shape               Environments Status & Error Marker 
+
+          1           X1         Y1         X2         Y2
+
+   1      X        8.725     -2.235     10.385     -2.082
+   2      X        8.725     -1.988     10.385     -1.835
+
+================================================================================
+Rule No. 140 : 4A.22M: Maximum P+ DIFF to nearest N+ pick-up spacing is 20um
+
+Real Error Count : 5; Flat Error Count : 5
+================================================================================
+
+--------------------------------------------------------------------------------
+Cell Name : dff-standalone_PT layout pixel
+
+                   Cell Errors    Real Errors   Cell Placements     Environments
+                             5              5                 1                1
+--------------------------------------------------------------------------------
+Env.  Env. Placements            X1           Y1          X2           Y2
+
+  1        1                  5.240       -2.360      12.870       -2.080
+
+Shape               Environments Status & Error Marker 
+
+          1           X1         Y1         X2         Y2
+
+   1      X        5.240     -2.360      6.040     -2.080
+   2      X        6.240     -2.360      7.560     -2.080
+   3      X        7.760     -2.360      8.560     -2.080
+   4      X       10.550     -2.360     11.350     -2.080
+   5      X       11.550     -2.360     12.870     -2.080
+
