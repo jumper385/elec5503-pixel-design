@@ -32,13 +32,13 @@ vuiLVSFormTable = '(
 	avCompareView  nil
 	additionalFunctionsButton  nil
 	schLibrary  "pixel"
-	schCell  "dff-standalone"
+	schCell  "dff_PT_odd"
 	schView  "schematic"
 	existingSchNetlist  nil
 	useVerilogTopCell  nil
 	layLibrary  "pixel"
-	layCell  "dff-standalone"
-	layView  "layout_compact"
+	layCell  "dff_PT_odd"
+	layView  "layout"
 	layUseExistingNL  nil
 	extractButton  nil
 	compareButton  nil

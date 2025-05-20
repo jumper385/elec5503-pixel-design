@@ -1,0 +1,6 @@
+Schematic                        | Layout                         | Status
+-------------------------------------------------------------------------------
+dff-standalone_PT schematic pixel| dff-standalone_PT layout pixel | matched 
+dff_PT_odd schematic pixel       | dff_PT_odd layout pixel        | matched 
+
+Schematic and Layout Match

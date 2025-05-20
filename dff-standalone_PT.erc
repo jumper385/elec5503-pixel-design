@@ -2,6 +2,41 @@
 ***** Begin Label Report *****
 
  Label in cell 'dff-standalone_PT layout pixel':
+  info: Assign pin label "GND" at (4.920, 0.360) to layer `ME6'.
+  info: Assign pin label "VDD" at (4.940, 2.030) to layer `ME6'.
+  info: Assign pin label "Q" at (6.950, 0.160) to layer `ME2'.
+  info: Assign pin label "D" at (0.700, 0.960) to layer `ME1'.
+  info: Assign pin label "CLK" at (1.200, 2.120) to layer `ME1'.
+  info: Assign pin label "QNOT" at (7.960, 1.190) to layer `ME1'.
+  info: Assign pin label "RST" at (4.420, 1.020) to layer `ply'.
+
+***** End of Label Report *****
+
+
+***** Begin Label Report *****
+
+ Label in cell 'dff-standalone_PT layout pixel':
+  info: Assign pin label "GND" at (4.920, 0.360) to layer `ME6'.
+  info: Assign pin label "VDD" at (4.940, 2.030) to layer `ME6'.
+  info: Assign pin label "Q" at (6.950, 0.160) to layer `ME2'.
+  info: Assign pin label "D" at (0.700, 0.960) to layer `ME1'.
+  info: Assign pin label "CLK" at (1.200, 2.120) to layer `ME1'.
+  info: Assign pin label "QNOT" at (7.960, 1.190) to layer `ME1'.
+  info: Assign pin label "RST" at (4.420, 1.020) to layer `ply'.
+
+***** End of Label Report *****
+
+
+***** Begin Label Report *****
+
+ Label in cell 'dff-standalone_PT layout pixel':
+  info: Assign pin label "GND" at (4.920, 0.360) to layer `ME6'.
+  info: Assign pin label "VDD" at (4.940, 2.030) to layer `ME6'.
+  info: Assign pin label "Q" at (6.950, 0.160) to layer `ME2'.
+  info: Assign pin label "D" at (0.700, 0.960) to layer `ME1'.
+  info: Assign pin label "CLK" at (1.200, 2.120) to layer `ME1'.
+  info: Assign pin label "QNOT" at (7.960, 1.190) to layer `ME1'.
+  info: Assign pin label "RST" at (4.420, 1.020) to layer `ply'.
 
 ***** End of Label Report *****
 
