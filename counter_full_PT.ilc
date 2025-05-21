@@ -15,7 +15,9 @@ umc13mmrf P_12_HSL130E layout 274
 pixel dff-standalone_PT layout 34507
 pixel 2mux layout 14306
 umc13mmrf N_12_HSL130E layout 276
+umc13mmrf N_12_HSL130E layout 276
+umc13mmrf N_12_HSL130E layout 276
 umc13mmrf P_12_HSL130E layout 274
 pixel dff_PT_even layout 20413
 pixel dff_PT_odd layout 34770
-pixel counter_full_PT layout 77187
+pixel counter_full_PT layout 81965
