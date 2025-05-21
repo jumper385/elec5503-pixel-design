@@ -166,370 +166,6 @@
 		</checksasserts>
 	</active>
 	<history>History
-		<historyentry assemblerOrExplorer="adexl" roOrView="view">Interactive.22
-			<checkpoint>
-				<corners>
-					<corner enabled="1">_default</corner>
-				</corners>
-				<extensions>
-					<extension>Parasitics
-						<callback>_parSetupDBExtensionCB</callback>
-						<iconvalue></iconvalue>
-						<icontype></icontype>
-						<active>
-							<mode>No Parasitics/LDE</mode>
-							<parameters>
-								<device>
-									<enabled>0</enabled>
-								</device>
-								<parasitic>
-									<enabled>0</enabled>
-								</parasitic>
-							</parameters>
-						</active>
-						<modes>
-							<mode>No Parasitics/LDE
-								<schematic>
-									<lib>pixel_sim</lib>
-									<cell>counter_full_sim</cell>
-									<view>schematic</view>
-								</schematic>
-							</mode>
-							<mode>Schematic Estimates (Parasitics)
-								<schematic>
-									<lib>pixel_sim</lib>
-									<cell>counter_full_sim</cell>
-									<view>schematic</view>
-								</schematic>
-								<parasitic>
-									<lib>pixel_sim</lib>
-									<cell>counter_full_sim</cell>
-									<view>estimated</view>
-								</parasitic>
-							</mode>
-							<mode>Layout (Parasitics/LDE)
-								<schematic>
-									<lib>pixel_sim</lib>
-									<cell>counter_full_sim</cell>
-									<view>schematic</view>
-								</schematic>
-								<parasitic>
-									<lib>pixel_sim</lib>
-									<cell>counter_full_sim</cell>
-									<view>netlist_layout</view>
-								</parasitic>
-							</mode>
-							<mode>Extracted (Parasitics/LDE)
-								<schematic>
-									<lib>pixel_sim</lib>
-									<cell>counter_full_sim</cell>
-									<view>schematic</view>
-								</schematic>
-								<parasitic>
-									<lib>pixel_sim</lib>
-									<cell>counter_full_sim</cell>
-									<view>&lt;None&gt;</view>
-								</parasitic>
-							</mode>
-						</modes>
-					</extension>
-				</extensions>
-				<currentmode>Single Run, Sweeps and Corners</currentmode>
-				<overwritehistory>0</overwritehistory>
-				<tests>
-					<test enabled="1">pixel_sim:counter_full_sim:1
-						<tool>ADE</tool>
-						<tooloptions>
-							<option>cell
-								<value>counter_full_sim</value>
-							</option>
-							<option>lib
-								<value>pixel_sim</value>
-							</option>
-							<option>sim
-								<value>spectre</value>
-							</option>
-							<option>view
-								<value>schematic</value>
-							</option>
-							<option>path
-								<value>$AXL_SETUPDB_DIR/test_states</value>
-							</option>
-							<option>state
-								<value>pixel_sim:counter_full_sim:1_none_Interactive.22</value>
-							</option>
-						</tooloptions>
-						<origoptions>
-							<option>cell
-								<value>counter_full_sim</value>
-							</option>
-							<option>lib
-								<value>pixel_sim</value>
-							</option>
-							<option>sim
-								<value>spectre</value>
-							</option>
-							<option>view
-								<value>schematic</value>
-							</option>
-						</origoptions>
-					</test>
-					<test>pixel_sim:counter_full_sim:2
-						<tool>ADE</tool>
-						<tooloptions>
-							<option>cell
-								<value>counter_full_sim</value>
-							</option>
-							<option>lib
-								<value>pixel_sim</value>
-							</option>
-							<option>sim
-								<value>spectre</value>
-							</option>
-							<option>view
-								<value>schematic_PT</value>
-							</option>
-							<option>path
-								<value>$AXL_SETUPDB_DIR/test_states</value>
-							</option>
-							<option>state
-								<value>pixel_sim:counter_full_sim:2_none_Interactive.22</value>
-							</option>
-						</tooloptions>
-						<origoptions>
-							<option>cell
-								<value>counter_full_sim</value>
-							</option>
-							<option>lib
-								<value>pixel_sim</value>
-							</option>
-							<option>sim
-								<value>spectre</value>
-							</option>
-							<option>view
-								<value>schematic_PT</value>
-							</option>
-						</origoptions>
-					</test>
-				</tests>
-				<overwritehistoryname>Interactive.0</overwritehistoryname>
-				<plottingoptions>
-					<plottingoption>plottype
-						<value>None</value>
-					</plottingoption>
-					<plottingoption>usewaveformtemplate
-						<value>no</value>
-					</plottingoption>
-					<plottingoption>waveformtemplate
-						<value></value>
-					</plottingoption>
-				</plottingoptions>
-				<disabledtests>
-					<test>pixel_sim:counter_full_sim:1</test>
-				</disabledtests>
-				<checksasserts netlist="0">
-					<test netlist="1" netlistscope="all">pixel_sim:counter_full_sim:1</test>
-					<test netlist="1" netlistscope="all">pixel_sim:counter_full_sim:2</test>
-				</checksasserts>
-				<sortVariableValues>0</sortVariableValues>
-			</checkpoint>
-			<timestamp>Wed May 21 01:07:51 2025</timestamp>
-			<resultsname>/home/22703907/Downloads/elec5503-pixel-design/pixel_sim/counter_full_sim/adexl/results/data/Interactive.22.rdb</resultsname>
-			<simresults>$AXL_SETUPDB_DIR/results/data/Interactive.22.rdb</simresults>
-			<rawdatadelstrategy>SaveAll</rawdatadelstrategy>
-			<netlistdelstrategy>SaveAll</netlistdelstrategy>
-			<uselocalpsfdir>false</uselocalpsfdir>
-			<localpsfdir>/tmp/vdi-l-cos-057_22703907_010752113</localpsfdir>
-			<psfdir>/home/22703907/simulation/pixel_sim/counter_full_sim/adexl/results/data/Interactive.22</psfdir>
-			<simdir>$AXL_PROJECT_DIR/pixel_sim/counter_full_sim/adexl/results/data/Interactive.22</simdir>
-			<gendatasheetplotsonsimulation>1</gendatasheetplotsonsimulation>
-			<runlog>/home/22703907/Downloads/elec5503-pixel-design/pixel_sim/counter_full_sim/adexl/results/data/Interactive.22.log</runlog>
-			<runlogfile>$AXL_SETUPDB_DIR/results/data/Interactive.22.log</runlogfile>
-			<schematicpoint></schematicpoint>
-			<test>all</test>
-		</historyentry>
-		<historyentry assemblerOrExplorer="adexl" roOrView="view">Interactive.23
-			<checkpoint>
-				<corners>
-					<corner enabled="1">_default</corner>
-				</corners>
-				<extensions>
-					<extension>Parasitics
-						<callback>_parSetupDBExtensionCB</callback>
-						<iconvalue></iconvalue>
-						<icontype></icontype>
-						<active>
-							<mode>No Parasitics/LDE</mode>
-							<parameters>
-								<device>
-									<enabled>0</enabled>
-								</device>
-								<parasitic>
-									<enabled>0</enabled>
-								</parasitic>
-							</parameters>
-						</active>
-						<modes>
-							<mode>No Parasitics/LDE
-								<schematic>
-									<lib>pixel_sim</lib>
-									<cell>counter_full_sim</cell>
-									<view>schematic</view>
-								</schematic>
-							</mode>
-							<mode>Schematic Estimates (Parasitics)
-								<schematic>
-									<lib>pixel_sim</lib>
-									<cell>counter_full_sim</cell>
-									<view>schematic</view>
-								</schematic>
-								<parasitic>
-									<lib>pixel_sim</lib>
-									<cell>counter_full_sim</cell>
-									<view>estimated</view>
-								</parasitic>
-							</mode>
-							<mode>Layout (Parasitics/LDE)
-								<schematic>
-									<lib>pixel_sim</lib>
-									<cell>counter_full_sim</cell>
-									<view>schematic</view>
-								</schematic>
-								<parasitic>
-									<lib>pixel_sim</lib>
-									<cell>counter_full_sim</cell>
-									<view>netlist_layout</view>
-								</parasitic>
-							</mode>
-							<mode>Extracted (Parasitics/LDE)
-								<schematic>
-									<lib>pixel_sim</lib>
-									<cell>counter_full_sim</cell>
-									<view>schematic</view>
-								</schematic>
-								<parasitic>
-									<lib>pixel_sim</lib>
-									<cell>counter_full_sim</cell>
-									<view>&lt;None&gt;</view>
-								</parasitic>
-							</mode>
-						</modes>
-					</extension>
-				</extensions>
-				<currentmode>Single Run, Sweeps and Corners</currentmode>
-				<overwritehistory>0</overwritehistory>
-				<tests>
-					<test enabled="1">pixel_sim:counter_full_sim:1
-						<tool>ADE</tool>
-						<tooloptions>
-							<option>cell
-								<value>counter_full_sim</value>
-							</option>
-							<option>lib
-								<value>pixel_sim</value>
-							</option>
-							<option>sim
-								<value>spectre</value>
-							</option>
-							<option>view
-								<value>schematic</value>
-							</option>
-							<option>path
-								<value>$AXL_SETUPDB_DIR/test_states</value>
-							</option>
-							<option>state
-								<value>pixel_sim:counter_full_sim:1_none_Interactive.23</value>
-							</option>
-						</tooloptions>
-						<origoptions>
-							<option>cell
-								<value>counter_full_sim</value>
-							</option>
-							<option>lib
-								<value>pixel_sim</value>
-							</option>
-							<option>sim
-								<value>spectre</value>
-							</option>
-							<option>view
-								<value>schematic</value>
-							</option>
-						</origoptions>
-					</test>
-					<test>pixel_sim:counter_full_sim:2
-						<tool>ADE</tool>
-						<tooloptions>
-							<option>cell
-								<value>counter_full_sim</value>
-							</option>
-							<option>lib
-								<value>pixel_sim</value>
-							</option>
-							<option>sim
-								<value>spectre</value>
-							</option>
-							<option>view
-								<value>schematic_PT</value>
-							</option>
-							<option>path
-								<value>$AXL_SETUPDB_DIR/test_states</value>
-							</option>
-							<option>state
-								<value>pixel_sim:counter_full_sim:2_none_Interactive.23</value>
-							</option>
-						</tooloptions>
-						<origoptions>
-							<option>cell
-								<value>counter_full_sim</value>
-							</option>
-							<option>lib
-								<value>pixel_sim</value>
-							</option>
-							<option>sim
-								<value>spectre</value>
-							</option>
-							<option>view
-								<value>schematic_PT</value>
-							</option>
-						</origoptions>
-					</test>
-				</tests>
-				<overwritehistoryname>Interactive.0</overwritehistoryname>
-				<plottingoptions>
-					<plottingoption>plottype
-						<value>None</value>
-					</plottingoption>
-					<plottingoption>usewaveformtemplate
-						<value>no</value>
-					</plottingoption>
-					<plottingoption>waveformtemplate
-						<value></value>
-					</plottingoption>
-				</plottingoptions>
-				<disabledtests>
-					<test>pixel_sim:counter_full_sim:1</test>
-				</disabledtests>
-				<checksasserts netlist="0">
-					<test netlist="1" netlistscope="all">pixel_sim:counter_full_sim:1</test>
-					<test netlist="1" netlistscope="all">pixel_sim:counter_full_sim:2</test>
-				</checksasserts>
-				<sortVariableValues>0</sortVariableValues>
-			</checkpoint>
-			<timestamp>Wed May 21 01:09:22 2025</timestamp>
-			<resultsname>/home/22703907/Downloads/elec5503-pixel-design/pixel_sim/counter_full_sim/adexl/results/data/Interactive.23.rdb</resultsname>
-			<simresults>$AXL_SETUPDB_DIR/results/data/Interactive.23.rdb</simresults>
-			<rawdatadelstrategy>SaveAll</rawdatadelstrategy>
-			<netlistdelstrategy>SaveAll</netlistdelstrategy>
-			<uselocalpsfdir>false</uselocalpsfdir>
-			<localpsfdir>/tmp/vdi-l-cos-057_22703907_010922900</localpsfdir>
-			<psfdir>/home/22703907/simulation/pixel_sim/counter_full_sim/adexl/results/data/Interactive.23</psfdir>
-			<simdir>$AXL_PROJECT_DIR/pixel_sim/counter_full_sim/adexl/results/data/Interactive.23</simdir>
-			<gendatasheetplotsonsimulation>1</gendatasheetplotsonsimulation>
-			<runlog>/home/22703907/Downloads/elec5503-pixel-design/pixel_sim/counter_full_sim/adexl/results/data/Interactive.23.log</runlog>
-			<runlogfile>$AXL_SETUPDB_DIR/results/data/Interactive.23.log</runlogfile>
-			<schematicpoint></schematicpoint>
-			<test>all</test>
-		</historyentry>
 		<historyentry assemblerOrExplorer="adexl" roOrView="view">Interactive.24
 			<checkpoint>
 				<corners>
@@ -1243,8 +879,7 @@
 				</checksasserts>
 				<sortVariableValues>0</sortVariableValues>
 			</checkpoint>
-			<timestamp>Wed May 21 02:05:38 2025
-</timestamp>
+			<timestamp>Wed May 21 02:05:38 2025</timestamp>
 			<resultsname>/home/22703907/Downloads/elec5503-pixel-design/pixel_sim/counter_full_sim/adexl/results/data/Interactive.27.rdb</resultsname>
 			<simresults>$AXL_SETUPDB_DIR/results/data/Interactive.27.rdb</simresults>
 			<rawdatadelstrategy>SaveAll</rawdatadelstrategy>
@@ -1426,8 +1061,7 @@
 				</checksasserts>
 				<sortVariableValues>0</sortVariableValues>
 			</checkpoint>
-			<timestamp>Wed May 21 02:07:21 2025
-</timestamp>
+			<timestamp>Wed May 21 02:07:21 2025</timestamp>
 			<resultsname>/home/22703907/Downloads/elec5503-pixel-design/pixel_sim/counter_full_sim/adexl/results/data/Interactive.28.rdb</resultsname>
 			<simresults>$AXL_SETUPDB_DIR/results/data/Interactive.28.rdb</simresults>
 			<rawdatadelstrategy>SaveAll</rawdatadelstrategy>
@@ -1609,8 +1243,7 @@
 				</checksasserts>
 				<sortVariableValues>0</sortVariableValues>
 			</checkpoint>
-			<timestamp>Wed May 21 02:08:44 2025
-</timestamp>
+			<timestamp>Wed May 21 02:08:44 2025</timestamp>
 			<resultsname>/home/22703907/Downloads/elec5503-pixel-design/pixel_sim/counter_full_sim/adexl/results/data/Interactive.29.rdb</resultsname>
 			<simresults>$AXL_SETUPDB_DIR/results/data/Interactive.29.rdb</simresults>
 			<rawdatadelstrategy>SaveAll</rawdatadelstrategy>
@@ -1792,8 +1425,7 @@
 				</checksasserts>
 				<sortVariableValues>0</sortVariableValues>
 			</checkpoint>
-			<timestamp>Wed May 21 02:10:06 2025
-</timestamp>
+			<timestamp>Wed May 21 02:10:06 2025</timestamp>
 			<resultsname>/home/22703907/Downloads/elec5503-pixel-design/pixel_sim/counter_full_sim/adexl/results/data/Interactive.30.rdb</resultsname>
 			<simresults>$AXL_SETUPDB_DIR/results/data/Interactive.30.rdb</simresults>
 			<rawdatadelstrategy>SaveAll</rawdatadelstrategy>
@@ -1975,8 +1607,7 @@
 				</checksasserts>
 				<sortVariableValues>0</sortVariableValues>
 			</checkpoint>
-			<timestamp>Wed May 21 02:11:13 2025
-</timestamp>
+			<timestamp>Wed May 21 02:11:13 2025</timestamp>
 			<resultsname>/home/22703907/Downloads/elec5503-pixel-design/pixel_sim/counter_full_sim/adexl/results/data/Interactive.31.rdb</resultsname>
 			<simresults>$AXL_SETUPDB_DIR/results/data/Interactive.31.rdb</simresults>
 			<rawdatadelstrategy>SaveAll</rawdatadelstrategy>
@@ -1988,6 +1619,372 @@
 			<gendatasheetplotsonsimulation>1</gendatasheetplotsonsimulation>
 			<runlog>/home/22703907/Downloads/elec5503-pixel-design/pixel_sim/counter_full_sim/adexl/results/data/Interactive.31.log</runlog>
 			<runlogfile>$AXL_SETUPDB_DIR/results/data/Interactive.31.log</runlogfile>
+			<schematicpoint></schematicpoint>
+			<test>all</test>
+		</historyentry>
+		<historyentry assemblerOrExplorer="adexl" roOrView="view">Interactive.32
+			<checkpoint>
+				<corners>
+					<corner enabled="1">_default</corner>
+				</corners>
+				<extensions>
+					<extension>Parasitics
+						<callback>_parSetupDBExtensionCB</callback>
+						<iconvalue></iconvalue>
+						<icontype></icontype>
+						<active>
+							<mode>No Parasitics/LDE</mode>
+							<parameters>
+								<device>
+									<enabled>0</enabled>
+								</device>
+								<parasitic>
+									<enabled>0</enabled>
+								</parasitic>
+							</parameters>
+						</active>
+						<modes>
+							<mode>No Parasitics/LDE
+								<schematic>
+									<lib>pixel_sim</lib>
+									<cell>counter_full_sim</cell>
+									<view>schematic</view>
+								</schematic>
+							</mode>
+							<mode>Schematic Estimates (Parasitics)
+								<schematic>
+									<lib>pixel_sim</lib>
+									<cell>counter_full_sim</cell>
+									<view>schematic</view>
+								</schematic>
+								<parasitic>
+									<lib>pixel_sim</lib>
+									<cell>counter_full_sim</cell>
+									<view>estimated</view>
+								</parasitic>
+							</mode>
+							<mode>Layout (Parasitics/LDE)
+								<schematic>
+									<lib>pixel_sim</lib>
+									<cell>counter_full_sim</cell>
+									<view>schematic</view>
+								</schematic>
+								<parasitic>
+									<lib>pixel_sim</lib>
+									<cell>counter_full_sim</cell>
+									<view>netlist_layout</view>
+								</parasitic>
+							</mode>
+							<mode>Extracted (Parasitics/LDE)
+								<schematic>
+									<lib>pixel_sim</lib>
+									<cell>counter_full_sim</cell>
+									<view>schematic</view>
+								</schematic>
+								<parasitic>
+									<lib>pixel_sim</lib>
+									<cell>counter_full_sim</cell>
+									<view>&lt;None&gt;</view>
+								</parasitic>
+							</mode>
+						</modes>
+					</extension>
+				</extensions>
+				<currentmode>Single Run, Sweeps and Corners</currentmode>
+				<overwritehistory>0</overwritehistory>
+				<tests>
+					<test enabled="1">pixel_sim:counter_full_sim:1
+						<tool>ADE</tool>
+						<tooloptions>
+							<option>cell
+								<value>counter_full_sim</value>
+							</option>
+							<option>lib
+								<value>pixel_sim</value>
+							</option>
+							<option>sim
+								<value>spectre</value>
+							</option>
+							<option>view
+								<value>schematic</value>
+							</option>
+							<option>path
+								<value>$AXL_SETUPDB_DIR/test_states</value>
+							</option>
+							<option>state
+								<value>pixel_sim:counter_full_sim:1_none_Interactive.32</value>
+							</option>
+						</tooloptions>
+						<origoptions>
+							<option>cell
+								<value>counter_full_sim</value>
+							</option>
+							<option>lib
+								<value>pixel_sim</value>
+							</option>
+							<option>sim
+								<value>spectre</value>
+							</option>
+							<option>view
+								<value>schematic</value>
+							</option>
+						</origoptions>
+					</test>
+					<test>pixel_sim:counter_full_sim:2
+						<tool>ADE</tool>
+						<tooloptions>
+							<option>cell
+								<value>counter_full_sim</value>
+							</option>
+							<option>lib
+								<value>pixel_sim</value>
+							</option>
+							<option>sim
+								<value>spectre</value>
+							</option>
+							<option>view
+								<value>schematic_PT</value>
+							</option>
+							<option>path
+								<value>$AXL_SETUPDB_DIR/test_states</value>
+							</option>
+							<option>state
+								<value>pixel_sim:counter_full_sim:2_none_Interactive.32</value>
+							</option>
+						</tooloptions>
+						<origoptions>
+							<option>cell
+								<value>counter_full_sim</value>
+							</option>
+							<option>lib
+								<value>pixel_sim</value>
+							</option>
+							<option>sim
+								<value>spectre</value>
+							</option>
+							<option>view
+								<value>schematic_PT</value>
+							</option>
+						</origoptions>
+					</test>
+				</tests>
+				<overwritehistoryname>Interactive.0</overwritehistoryname>
+				<plottingoptions>
+					<plottingoption>plottype
+						<value>None</value>
+					</plottingoption>
+					<plottingoption>usewaveformtemplate
+						<value>no</value>
+					</plottingoption>
+					<plottingoption>waveformtemplate
+						<value></value>
+					</plottingoption>
+				</plottingoptions>
+				<disabledtests>
+					<test>pixel_sim:counter_full_sim:1</test>
+				</disabledtests>
+				<checksasserts netlist="0">
+					<test netlist="1" netlistscope="all">pixel_sim:counter_full_sim:1</test>
+					<test netlist="1" netlistscope="all">pixel_sim:counter_full_sim:2</test>
+				</checksasserts>
+				<sortVariableValues>0</sortVariableValues>
+			</checkpoint>
+			<timestamp>Wed May 21 13:42:03 2025
+</timestamp>
+			<resultsname>/home/23247166/Downloads/elec5503-pixel-design/pixel_sim/counter_full_sim/adexl/results/data/Interactive.32.rdb</resultsname>
+			<simresults>$AXL_SETUPDB_DIR/results/data/Interactive.32.rdb</simresults>
+			<rawdatadelstrategy>SaveAll</rawdatadelstrategy>
+			<netlistdelstrategy>SaveAll</netlistdelstrategy>
+			<uselocalpsfdir>false</uselocalpsfdir>
+			<localpsfdir>/tmp/vdi-l-cos-009_23247166_134203521</localpsfdir>
+			<psfdir>/home/23247166/simulation/pixel_sim/counter_full_sim/adexl/results/data/Interactive.32</psfdir>
+			<simdir>$AXL_PROJECT_DIR/pixel_sim/counter_full_sim/adexl/results/data/Interactive.32</simdir>
+			<gendatasheetplotsonsimulation>1</gendatasheetplotsonsimulation>
+			<runlog>/home/23247166/Downloads/elec5503-pixel-design/pixel_sim/counter_full_sim/adexl/results/data/Interactive.32.log</runlog>
+			<runlogfile>$AXL_SETUPDB_DIR/results/data/Interactive.32.log</runlogfile>
+			<schematicpoint></schematicpoint>
+			<test>all</test>
+		</historyentry>
+		<historyentry assemblerOrExplorer="adexl" roOrView="view">Interactive.33
+			<checkpoint>
+				<corners>
+					<corner enabled="1">_default</corner>
+				</corners>
+				<extensions>
+					<extension>Parasitics
+						<callback>_parSetupDBExtensionCB</callback>
+						<iconvalue></iconvalue>
+						<icontype></icontype>
+						<active>
+							<mode>No Parasitics/LDE</mode>
+							<parameters>
+								<device>
+									<enabled>0</enabled>
+								</device>
+								<parasitic>
+									<enabled>0</enabled>
+								</parasitic>
+							</parameters>
+						</active>
+						<modes>
+							<mode>No Parasitics/LDE
+								<schematic>
+									<lib>pixel_sim</lib>
+									<cell>counter_full_sim</cell>
+									<view>schematic</view>
+								</schematic>
+							</mode>
+							<mode>Schematic Estimates (Parasitics)
+								<schematic>
+									<lib>pixel_sim</lib>
+									<cell>counter_full_sim</cell>
+									<view>schematic</view>
+								</schematic>
+								<parasitic>
+									<lib>pixel_sim</lib>
+									<cell>counter_full_sim</cell>
+									<view>estimated</view>
+								</parasitic>
+							</mode>
+							<mode>Layout (Parasitics/LDE)
+								<schematic>
+									<lib>pixel_sim</lib>
+									<cell>counter_full_sim</cell>
+									<view>schematic</view>
+								</schematic>
+								<parasitic>
+									<lib>pixel_sim</lib>
+									<cell>counter_full_sim</cell>
+									<view>netlist_layout</view>
+								</parasitic>
+							</mode>
+							<mode>Extracted (Parasitics/LDE)
+								<schematic>
+									<lib>pixel_sim</lib>
+									<cell>counter_full_sim</cell>
+									<view>schematic</view>
+								</schematic>
+								<parasitic>
+									<lib>pixel_sim</lib>
+									<cell>counter_full_sim</cell>
+									<view>&lt;None&gt;</view>
+								</parasitic>
+							</mode>
+						</modes>
+					</extension>
+				</extensions>
+				<currentmode>Single Run, Sweeps and Corners</currentmode>
+				<overwritehistory>0</overwritehistory>
+				<tests>
+					<test enabled="1">pixel_sim:counter_full_sim:1
+						<tool>ADE</tool>
+						<tooloptions>
+							<option>cell
+								<value>counter_full_sim</value>
+							</option>
+							<option>lib
+								<value>pixel_sim</value>
+							</option>
+							<option>sim
+								<value>spectre</value>
+							</option>
+							<option>view
+								<value>schematic</value>
+							</option>
+							<option>path
+								<value>$AXL_SETUPDB_DIR/test_states</value>
+							</option>
+							<option>state
+								<value>pixel_sim:counter_full_sim:1_none_Interactive.33</value>
+							</option>
+						</tooloptions>
+						<origoptions>
+							<option>cell
+								<value>counter_full_sim</value>
+							</option>
+							<option>lib
+								<value>pixel_sim</value>
+							</option>
+							<option>sim
+								<value>spectre</value>
+							</option>
+							<option>view
+								<value>schematic</value>
+							</option>
+						</origoptions>
+					</test>
+					<test>pixel_sim:counter_full_sim:2
+						<tool>ADE</tool>
+						<tooloptions>
+							<option>cell
+								<value>counter_full_sim</value>
+							</option>
+							<option>lib
+								<value>pixel_sim</value>
+							</option>
+							<option>sim
+								<value>spectre</value>
+							</option>
+							<option>view
+								<value>schematic_PT</value>
+							</option>
+							<option>path
+								<value>$AXL_SETUPDB_DIR/test_states</value>
+							</option>
+							<option>state
+								<value>pixel_sim:counter_full_sim:2_none_Interactive.33</value>
+							</option>
+						</tooloptions>
+						<origoptions>
+							<option>cell
+								<value>counter_full_sim</value>
+							</option>
+							<option>lib
+								<value>pixel_sim</value>
+							</option>
+							<option>sim
+								<value>spectre</value>
+							</option>
+							<option>view
+								<value>schematic_PT</value>
+							</option>
+						</origoptions>
+					</test>
+				</tests>
+				<overwritehistoryname>Interactive.0</overwritehistoryname>
+				<plottingoptions>
+					<plottingoption>plottype
+						<value>None</value>
+					</plottingoption>
+					<plottingoption>usewaveformtemplate
+						<value>no</value>
+					</plottingoption>
+					<plottingoption>waveformtemplate
+						<value></value>
+					</plottingoption>
+				</plottingoptions>
+				<disabledtests>
+					<test>pixel_sim:counter_full_sim:1</test>
+				</disabledtests>
+				<checksasserts netlist="0">
+					<test netlist="1" netlistscope="all">pixel_sim:counter_full_sim:1</test>
+					<test netlist="1" netlistscope="all">pixel_sim:counter_full_sim:2</test>
+				</checksasserts>
+				<sortVariableValues>0</sortVariableValues>
+			</checkpoint>
+			<timestamp>Wed May 21 13:46:15 2025
+</timestamp>
+			<resultsname>/home/23247166/Downloads/elec5503-pixel-design/pixel_sim/counter_full_sim/adexl/results/data/Interactive.33.rdb</resultsname>
+			<simresults>$AXL_SETUPDB_DIR/results/data/Interactive.33.rdb</simresults>
+			<rawdatadelstrategy>SaveAll</rawdatadelstrategy>
+			<netlistdelstrategy>SaveAll</netlistdelstrategy>
+			<uselocalpsfdir>false</uselocalpsfdir>
+			<localpsfdir>/tmp/vdi-l-cos-009_23247166_134615317</localpsfdir>
+			<psfdir>/home/23247166/simulation/pixel_sim/counter_full_sim/adexl/results/data/Interactive.33</psfdir>
+			<simdir>$AXL_PROJECT_DIR/pixel_sim/counter_full_sim/adexl/results/data/Interactive.33</simdir>
+			<gendatasheetplotsonsimulation>1</gendatasheetplotsonsimulation>
+			<runlog>/home/23247166/Downloads/elec5503-pixel-design/pixel_sim/counter_full_sim/adexl/results/data/Interactive.33.log</runlog>
+			<runlogfile>$AXL_SETUPDB_DIR/results/data/Interactive.33.log</runlogfile>
 			<schematicpoint></schematicpoint>
 			<test>all</test>
 		</historyentry>
