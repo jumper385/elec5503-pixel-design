@@ -1,0 +1,46 @@
+sub wel PSUB
+alrdl alrdl
+me7 me7
+me8 me8
+dif np_rpsd p_rpsd np_rnsd p_rnsd
+ME6 np_rME6 p_rME6
+ME5 np_rME5 p_rME5
+ME4 np_rME4 p_rME4
+ME3 np_rME3 p_rME3
+ME2 np_rME2 p_rME2
+ME1 np_rME1 p_rME1
+ply np_rply p_rply
+nsd np_rnsd p_rnsd
+psd np_rpsd p_rpsd
+PSUB np_rPSUB p_rPSUB
+wel wel.df2
+CRTERM2_ME4_ovia CRTERM2_ME4_ovia
+CRTERM2 np_rCRTERM2 p_rCRTERM2
+CRTERM2_CRTERM2_ME4_butt_ovia CRTERM2_CRTERM2_ME4_butt_ovia
+CRTERM2_ME4_butt np_rCRTERM2_ME4_butt p_rCRTERM2_ME4_butt
+ME4_CRTERM2_ME4_butt_ovia ME4_CRTERM2_ME4_butt_ovia
+CRTERM1_ME6_ovia CRTERM1_ME6_ovia
+CRTERM1 np_rCRTERM1 p_rCRTERM1
+CRTERM1_CRTERM1_ME6_butt_ovia CRTERM1_CRTERM1_ME6_butt_ovia
+CRTERM1_ME6_butt np_rCRTERM1_ME6_butt p_rCRTERM1_ME6_butt
+ME6_CRTERM1_ME6_butt_ovia ME6_CRTERM1_ME6_butt_ovia
+polycon np_rpolycon p_rpolycon
+nsdcon nsdcon
+psdcon psdcon
+pwCon pwCon
+ptap np_rptap p_rptap
+pwCon_all pwCon_all
+ptap_all np_rptap_all p_rptap_all
+nwCon nwCon
+ntap np_rntap p_rntap
+VI1 np_rVI1 p_rVI1
+VI2 np_rVI2 p_rVI2
+VI3 np_rVI3 p_rVI3
+VI4 np_rVI4 p_rVI4
+VI5 np_rVI5 p_rVI5
+PSUB_ptap_ovia PSUB_ptap_ovia
+wel_ntap_ovia wel_ntap_ovia
+PSUB_P_ptap_all_ovia PSUB_P_ptap_all_ovia
+PSUB_P np_rPSUB_P p_rPSUB_P
+PWELL_PSUB_ovia PWELL_PSUB_ovia
+PWELL np_rPWELL p_rPWELL
