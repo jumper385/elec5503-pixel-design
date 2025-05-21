@@ -1,8 +1,0 @@
-; Assura generated file -- DO NOT EDIT --
-; Do NOT rely on the content of this file, it may change.
-;
-2 bind match unmatched shorts opens
-1 1 ((L "avC3")((2 "p_12_hsl130e:SerMos2#1" ( "OUT" "OUT2")))(S "GR")((1 "P_12_HSL130E:ParMos2#1" ( "IN1" "IN2"))))
-1 1 ((L "avC1")((1 "p_12_hsl130e:SerMos2#1" ( "IN1" "IN2")))(S "ASR")((1 "P_12_HSL130E:ParMos2#1" ( "IN1" "IN2"))))
-1 1 ((L "avC7")((1 "p_12_hsl130e:SerMos2#1" ( "TERM4")))(S "VDD")((1 "P_12_HSL130E:ParMos2#1" ( "OUT" "OUT2"))(1 "P_12_HSL130E:ParMos2#1" ( "TERM4"))))
-1 1 ((L "avC2")((1 "p_12_hsl130e:SerMos2#1" ( "IN1" "IN2")))(S "VN")((1 "P_12_HSL130E:ParMos2#1" ( "OUT" "OUT2"))))
