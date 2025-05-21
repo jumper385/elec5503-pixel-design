@@ -3,4 +3,4 @@
 ;
 2 device net parameter pin rewire total
 5  5 (( ( S "2mux layout pixel" )( L "2mux schematic pixel" ) )(( 3 1 0 )( 1 9 8 )( 4 6 0 )))
-1  5 (( ( S "counter_full_PT layout pixel" )( L "counter_full_PT schematic pixel" ) )(( 3 0 19 )( 1 97 22 )( 4 9 0 )( 0 11 9 )))
+1  5 (( ( S "counter_full_PT layout pixel" )( L "counter_full_PT schematic pixel" ) )(( 3 0 5 )( 1 77 18 )( 0 11 9 )))

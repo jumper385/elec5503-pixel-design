@@ -1,6 +1,2 @@
-!<alc> v1 30
-0   12    0 dff-standalone_PT layout pixel
-0   15    0 dff_PT_odd layout pixel
-0   14    0 dff_PT_even layout pixel
-0   13    0 2mux layout pixel
-0   16    0 counter_full_PT layout pixel
+!<alc> v1 28
+0   25    0 counter_full_PT layout pixel

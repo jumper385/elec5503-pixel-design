@@ -1,177 +1,21 @@
 
 ***** Begin Label Report *****
 
- Label in cell 'dff-standalone_PT layout pixel':
-  info: Assign pin label "GND" at (4.920, -2.970) to layer `ME6'.
-  info: Assign pin label "VDD" at (5.090, -1.300) to layer `ME6'.
-  info: Assign pin label "Q" at (6.950, -3.170) to layer `ME2'.
-  info: Assign pin label "D" at (0.870, -2.560) to layer `ME1'.
-  info: Assign pin label "CLK" at (1.800, -1.200) to layer `ME1'.
-  info: Assign pin label "QNOT" at (7.960, -2.140) to layer `ME1'.
-  info: Assign pin label "RST" at (4.420, -2.310) to layer `ply'.
-
- Label in cell 'dff_PT_odd layout pixel':
-  info: Assign pin label "GND" at (13.180, -20.890) to layer `ME6'.
-  info: Assign pin label "VDD" at (14.200, -19.200) to layer `ME6'.
-  info: Assign pin label "!CONT_OUT" at (10.345, -20.310) to layer `ME2'.
-  info: Assign pin label "Q" at (11.140, -18.970) to layer `ME2'.
-  info: Assign pin label "D" at (0.830, -20.460) to layer `ME1'.
-  info: Assign pin label "CLK" at (1.855, -19.100) to layer `ME1'.
-  info: Assign pin label "QNOT" at (7.950, -19.900) to layer `ME1'.
-  info: Assign pin label "QPREV" at (8.820, -20.700) to layer `ME1'.
-  info: Assign pin label "CONT_IN" at (9.480, -20.710) to layer `ME1'.
-  info: Assign pin label "!QPREV" at (8.820, -19.630) to layer `ME1'.
-  info: Assign pin label "GAFT" at (11.855, -20.500) to layer `ME1'.
-  info: Assign pin label "GOUT" at (11.410, -19.870) to layer `ME1'.
-  info: Assign pin label "OUT" at (13.960, -20.180) to layer `ME1'.
-  info: Assign pin label "GSEL" at (12.120, -20.130) to layer `ply'.
-  info: Floating label discarded:  "RST" at (4.375, -19.030).
-
- Label in cell 'dff_PT_even layout pixel':
-  info: Assign pin label "GND" at (13.485, 0.405) to layer `ME6'.
-  info: Assign pin label "VDD" at (14.760, 2.300) to layer `ME6'.
-  info: Assign pin label "CLK" at (1.265, 0.410) to layer `ME5'.
-  info: Assign pin label "D" at (0.960, 0.970) to layer `ME5'.
-  info: Assign pin label "!QPREV" at (8.980, 1.820) to layer `ME5'.
-  info: Assign pin label "GSEL" at (12.455, 0.435) to layer `ME5'.
-  info: Assign pin label "Q" at (8.480, 0.440) to layer `ME2'.
-  info: Assign pin label "RST" at (4.460, 1.920) to layer `ME1'.
-  info: Assign pin label "QPREV" at (9.020, 0.750) to layer `ME1'.
-  info: Assign pin label "QNOT" at (8.535, 1.525) to layer `ME1'.
-  info: Assign pin label "CONT_OUT" at (9.960, 0.950) to layer `ME1'.
-  info: Assign pin label "CONT_OUT" at (9.960, 1.910) to layer `ME1'.
-  info: Assign pin label "GAFT" at (12.000, 0.900) to layer `ME1'.
-  info: Assign pin label "GOUT" at (11.555, 1.390) to layer `ME1'.
-  info: Assign pin label "OUT" at (14.060, 1.400) to layer `ME1'.
-
- Label in cell '2mux layout pixel':
-  info: Assign pin label "GND" at (4.250, -4.860) to layer `ME1'.
-  info: Assign pin label "A" at (5.105, -4.920) to layer `ME1'.
-  info: Assign pin label "OUT" at (6.015, -5.455) to layer `ME1'.
-  info: Assign pin label "B" at (6.020, -4.915) to layer `ME1'.
-  info: Assign pin label "VDD" at (6.865, -4.880) to layer `ME1'.
-  info: Assign pin label "SEL" at (4.505, -5.190) to layer `ply'.
-
  Label in cell 'counter_full_PT layout pixel':
-  info: Assign pin label "GSEL" at (12.690, -24.000) to layer `ply'.
-
-***** End of Label Report *****
-
-
-***** Begin Label Report *****
-
- Label in cell 'dff-standalone_PT layout pixel':
-  info: Assign pin label "GND" at (4.920, -2.970) to layer `ME6'.
-  info: Assign pin label "VDD" at (5.090, -1.300) to layer `ME6'.
-  info: Assign pin label "Q" at (6.950, -3.170) to layer `ME2'.
-  info: Assign pin label "D" at (0.870, -2.560) to layer `ME1'.
-  info: Assign pin label "CLK" at (1.800, -1.200) to layer `ME1'.
-  info: Assign pin label "QNOT" at (7.960, -2.140) to layer `ME1'.
-  info: Assign pin label "RST" at (4.420, -2.310) to layer `ply'.
-
- Label in cell 'dff_PT_odd layout pixel':
-  info: Assign pin label "GND" at (13.180, -20.890) to layer `ME6'.
-  info: Assign pin label "VDD" at (14.200, -19.200) to layer `ME6'.
-  info: Assign pin label "!CONT_OUT" at (10.345, -20.310) to layer `ME2'.
-  info: Assign pin label "Q" at (11.140, -18.970) to layer `ME2'.
-  info: Assign pin label "D" at (0.830, -20.460) to layer `ME1'.
-  info: Assign pin label "CLK" at (1.855, -19.100) to layer `ME1'.
-  info: Assign pin label "QNOT" at (7.950, -19.900) to layer `ME1'.
-  info: Assign pin label "QPREV" at (8.820, -20.700) to layer `ME1'.
-  info: Assign pin label "CONT_IN" at (9.480, -20.710) to layer `ME1'.
-  info: Assign pin label "!QPREV" at (8.820, -19.630) to layer `ME1'.
-  info: Assign pin label "GAFT" at (11.855, -20.500) to layer `ME1'.
-  info: Assign pin label "GOUT" at (11.410, -19.870) to layer `ME1'.
-  info: Assign pin label "OUT" at (13.960, -20.180) to layer `ME1'.
-  info: Assign pin label "GSEL" at (12.120, -20.130) to layer `ply'.
-  info: Floating label discarded:  "RST" at (4.375, -19.030).
-
- Label in cell 'dff_PT_even layout pixel':
-  info: Assign pin label "GND" at (13.485, 0.405) to layer `ME6'.
-  info: Assign pin label "VDD" at (14.760, 2.300) to layer `ME6'.
-  info: Assign pin label "CLK" at (1.265, 0.410) to layer `ME5'.
-  info: Assign pin label "D" at (0.960, 0.970) to layer `ME5'.
-  info: Assign pin label "!QPREV" at (8.980, 1.820) to layer `ME5'.
-  info: Assign pin label "GSEL" at (12.455, 0.435) to layer `ME5'.
-  info: Assign pin label "Q" at (8.480, 0.440) to layer `ME2'.
-  info: Assign pin label "RST" at (4.460, 1.920) to layer `ME1'.
-  info: Assign pin label "QPREV" at (9.020, 0.750) to layer `ME1'.
-  info: Assign pin label "QNOT" at (8.535, 1.525) to layer `ME1'.
-  info: Assign pin label "CONT_OUT" at (9.960, 0.950) to layer `ME1'.
-  info: Assign pin label "CONT_OUT" at (9.960, 1.910) to layer `ME1'.
-  info: Assign pin label "GAFT" at (12.000, 0.900) to layer `ME1'.
-  info: Assign pin label "GOUT" at (11.555, 1.390) to layer `ME1'.
-  info: Assign pin label "OUT" at (14.060, 1.400) to layer `ME1'.
-
- Label in cell '2mux layout pixel':
-  info: Assign pin label "GND" at (4.250, -4.860) to layer `ME1'.
-  info: Assign pin label "A" at (5.105, -4.920) to layer `ME1'.
-  info: Assign pin label "OUT" at (6.015, -5.455) to layer `ME1'.
-  info: Assign pin label "B" at (6.020, -4.915) to layer `ME1'.
-  info: Assign pin label "VDD" at (6.865, -4.880) to layer `ME1'.
-  info: Assign pin label "SEL" at (4.505, -5.190) to layer `ply'.
-
- Label in cell 'counter_full_PT layout pixel':
-  info: Assign pin label "GSEL" at (12.690, -24.000) to layer `ply'.
-
-***** End of Label Report *****
-
-
-***** Begin Label Report *****
-
- Label in cell 'dff-standalone_PT layout pixel':
-  info: Assign pin label "GND" at (4.920, -2.970) to layer `ME6'.
-  info: Assign pin label "VDD" at (5.090, -1.300) to layer `ME6'.
-  info: Assign pin label "Q" at (6.950, -3.170) to layer `ME2'.
-  info: Assign pin label "D" at (0.870, -2.560) to layer `ME1'.
-  info: Assign pin label "CLK" at (1.800, -1.200) to layer `ME1'.
-  info: Assign pin label "QNOT" at (7.960, -2.140) to layer `ME1'.
-  info: Assign pin label "RST" at (4.420, -2.310) to layer `ply'.
-
- Label in cell 'dff_PT_odd layout pixel':
-  info: Assign pin label "GND" at (13.180, -20.890) to layer `ME6'.
-  info: Assign pin label "VDD" at (14.200, -19.200) to layer `ME6'.
-  info: Assign pin label "!CONT_OUT" at (10.345, -20.310) to layer `ME2'.
-  info: Assign pin label "Q" at (11.140, -18.970) to layer `ME2'.
-  info: Assign pin label "D" at (0.830, -20.460) to layer `ME1'.
-  info: Assign pin label "CLK" at (1.855, -19.100) to layer `ME1'.
-  info: Assign pin label "QNOT" at (7.950, -19.900) to layer `ME1'.
-  info: Assign pin label "QPREV" at (8.820, -20.700) to layer `ME1'.
-  info: Assign pin label "CONT_IN" at (9.480, -20.710) to layer `ME1'.
-  info: Assign pin label "!QPREV" at (8.820, -19.630) to layer `ME1'.
-  info: Assign pin label "GAFT" at (11.855, -20.500) to layer `ME1'.
-  info: Assign pin label "GOUT" at (11.410, -19.870) to layer `ME1'.
-  info: Assign pin label "OUT" at (13.960, -20.180) to layer `ME1'.
-  info: Assign pin label "GSEL" at (12.120, -20.130) to layer `ply'.
-  info: Floating label discarded:  "RST" at (4.375, -19.030).
-
- Label in cell 'dff_PT_even layout pixel':
-  info: Assign pin label "GND" at (13.485, 0.405) to layer `ME6'.
-  info: Assign pin label "VDD" at (14.760, 2.300) to layer `ME6'.
-  info: Assign pin label "CLK" at (1.265, 0.410) to layer `ME5'.
-  info: Assign pin label "D" at (0.960, 0.970) to layer `ME5'.
-  info: Assign pin label "!QPREV" at (8.980, 1.820) to layer `ME5'.
-  info: Assign pin label "GSEL" at (12.455, 0.435) to layer `ME5'.
-  info: Assign pin label "Q" at (8.480, 0.440) to layer `ME2'.
-  info: Assign pin label "RST" at (4.460, 1.920) to layer `ME1'.
-  info: Assign pin label "QPREV" at (9.020, 0.750) to layer `ME1'.
-  info: Assign pin label "QNOT" at (8.535, 1.525) to layer `ME1'.
-  info: Assign pin label "CONT_OUT" at (9.960, 0.950) to layer `ME1'.
-  info: Assign pin label "CONT_OUT" at (9.960, 1.910) to layer `ME1'.
-  info: Assign pin label "GAFT" at (12.000, 0.900) to layer `ME1'.
-  info: Assign pin label "GOUT" at (11.555, 1.390) to layer `ME1'.
-  info: Assign pin label "OUT" at (14.060, 1.400) to layer `ME1'.
-
- Label in cell '2mux layout pixel':
-  info: Assign pin label "GND" at (4.250, -4.860) to layer `ME1'.
-  info: Assign pin label "A" at (5.105, -4.920) to layer `ME1'.
-  info: Assign pin label "OUT" at (6.015, -5.455) to layer `ME1'.
-  info: Assign pin label "B" at (6.020, -4.915) to layer `ME1'.
-  info: Assign pin label "VDD" at (6.865, -4.880) to layer `ME1'.
-  info: Assign pin label "SEL" at (4.505, -5.190) to layer `ply'.
-
- Label in cell 'counter_full_PT layout pixel':
-  info: Assign pin label "GSEL" at (12.690, -24.000) to layer `ply'.
+  info: Assign pin label "RST" at (5.010, -24.340) to layer `ME5_c'.
+  info: Assign pin label "GSEL" at (13.260, -21.770) to layer `ME4_c'.
+  info: Assign pin label "B0" at (14.530, -23.170) to layer `ME1_c'.
+  info: Assign pin label "B1" at (14.550, -20.830) to layer `ME1_c'.
+  info: Assign pin label "B2" at (14.510, -18.540) to layer `ME1_c'.
+  info: Assign pin label "B3" at (14.530, -16.240) to layer `ME1_c'.
+  info: Assign pin label "B4" at (14.510, -13.980) to layer `ME1_c'.
+  info: Assign pin label "B5" at (14.530, -11.680) to layer `ME1_c'.
+  info: Assign pin label "B6" at (14.510, -9.420) to layer `ME1_c'.
+  info: Assign pin label "B7" at (14.530, -7.110) to layer `ME1_c'.
+  info: Assign pin label "B8" at (14.510, -4.860) to layer `ME1_c'.
+  info: Assign pin label "B9" at (14.530, -2.530) to layer `ME1_c'.
+  info: Assign pin label "B10" at (14.480, -0.250) to layer `ME1_c'.
+  info: Assign pin label "B11" at (14.570, 1.980) to layer `ME1_c'.
 
 ***** End of Label Report *****
 

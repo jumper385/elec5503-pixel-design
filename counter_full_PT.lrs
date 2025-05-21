@@ -1,6 +1,6 @@
 @(#)$CDS: nvn_64 version av4.1:Production:dfII6.1.7-64b:IC6.1.7-64b.78 12/24/2015 12:05 (sjflg007) $
 sub-version 4.1_USR5, integ signature 2015-12-24-1122
-run on vdi-l-cos-009 at Wed May 21 21:27:39 2025
+run on vdi-l-cos-009 at Wed May 21 21:49:06 2025
 
 Schematic                        | Layout                         | Status
 -------------------------------------------------------------------------------
@@ -34,8 +34,8 @@ Extraction  Information
 
 Mismatch  Information
 --------------------
-     2 cells have 19 Net mismatches
-     2 cells have 31 Device mismatches
+     2 cells have 13 Net mismatches
+     2 cells have 27 Device mismatches
      2 cells have 5 Pin mismatches
      0 cells have 0 Parameter mismatches
 
