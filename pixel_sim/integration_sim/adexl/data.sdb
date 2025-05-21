@@ -64,9 +64,17 @@
 				<value></value>
 			</plottingoption>
 		</plottingoptions>
+		<vars>
+			<var enabled="0">V
+				<value></value>
+				<dependentTests>
+					<dependentTest enabled="1" omitted="0">pixel_sim:integration_sim:1</dependentTest>
+				</dependentTests>
+			</var>
+		</vars>
 	</active>
 	<history>History
-		<historyentry assemblerOrExplorer="adexl" roOrView="view">Interactive.10
+		<historyentry assemblerOrExplorer="adexl" roOrView="view">Interactive.32
 			<checkpoint>
 				<corners>
 					<corner enabled="1">_default</corner>
@@ -100,7 +108,7 @@
 								<value>$AXL_SETUPDB_DIR/test_states</value>
 							</option>
 							<option>state
-								<value>pixel_sim:integration_sim:1_none_Interactive.10</value>
+								<value>pixel_sim:integration_sim:1_none_Interactive.32</value>
 							</option>
 						</tooloptions>
 						<origoptions>
@@ -133,22 +141,22 @@
 				</plottingoptions>
 				<sortVariableValues>0</sortVariableValues>
 			</checkpoint>
-			<timestamp>Fri May 16 23:00:20 2025</timestamp>
-			<resultsname>/home/22703907/Downloads/elec5503-pixel-design/pixel_sim/integration_sim/adexl/results/data/Interactive.10.rdb</resultsname>
-			<simresults>$AXL_SETUPDB_DIR/results/data/Interactive.10.rdb</simresults>
+			<timestamp>Wed May 21 01:32:54 2025</timestamp>
+			<resultsname>/home/22703907/Downloads/elec5503-pixel-design/pixel_sim/integration_sim/adexl/results/data/Interactive.32.rdb</resultsname>
+			<simresults>$AXL_SETUPDB_DIR/results/data/Interactive.32.rdb</simresults>
 			<rawdatadelstrategy>SaveAll</rawdatadelstrategy>
 			<netlistdelstrategy>SaveAll</netlistdelstrategy>
 			<uselocalpsfdir>false</uselocalpsfdir>
-			<localpsfdir>/tmp/vdi-l-cos-009_22703907_230020852</localpsfdir>
-			<psfdir>/home/22703907/simulation/pixel_sim/integration_sim/adexl/results/data/Interactive.10</psfdir>
-			<simdir>$AXL_PROJECT_DIR/pixel_sim/integration_sim/adexl/results/data/Interactive.10</simdir>
+			<localpsfdir>/tmp/vdi-l-cos-057_22703907_013254932</localpsfdir>
+			<psfdir>/home/22703907/simulation/pixel_sim/integration_sim/adexl/results/data/Interactive.32</psfdir>
+			<simdir>$AXL_PROJECT_DIR/pixel_sim/integration_sim/adexl/results/data/Interactive.32</simdir>
 			<gendatasheetplotsonsimulation>1</gendatasheetplotsonsimulation>
-			<runlog>/home/22703907/Downloads/elec5503-pixel-design/pixel_sim/integration_sim/adexl/results/data/Interactive.10.log</runlog>
-			<runlogfile>$AXL_SETUPDB_DIR/results/data/Interactive.10.log</runlogfile>
+			<runlog>/home/22703907/Downloads/elec5503-pixel-design/pixel_sim/integration_sim/adexl/results/data/Interactive.32.log</runlog>
+			<runlogfile>$AXL_SETUPDB_DIR/results/data/Interactive.32.log</runlogfile>
 			<schematicpoint></schematicpoint>
 			<test>all</test>
 		</historyentry>
-		<historyentry assemblerOrExplorer="adexl" roOrView="view">Interactive.11
+		<historyentry assemblerOrExplorer="adexl" roOrView="view">Interactive.33
 			<checkpoint>
 				<corners>
 					<corner enabled="1">_default</corner>
@@ -182,7 +190,7 @@
 								<value>$AXL_SETUPDB_DIR/test_states</value>
 							</option>
 							<option>state
-								<value>pixel_sim:integration_sim:1_none_Interactive.11</value>
+								<value>pixel_sim:integration_sim:1_none_Interactive.33</value>
 							</option>
 						</tooloptions>
 						<origoptions>
@@ -215,22 +223,22 @@
 				</plottingoptions>
 				<sortVariableValues>0</sortVariableValues>
 			</checkpoint>
-			<timestamp>Fri May 16 23:07:56 2025</timestamp>
-			<resultsname>/home/22703907/Downloads/elec5503-pixel-design/pixel_sim/integration_sim/adexl/results/data/Interactive.11.rdb</resultsname>
-			<simresults>$AXL_SETUPDB_DIR/results/data/Interactive.11.rdb</simresults>
+			<timestamp>Wed May 21 01:33:39 2025</timestamp>
+			<resultsname>/home/22703907/Downloads/elec5503-pixel-design/pixel_sim/integration_sim/adexl/results/data/Interactive.33.rdb</resultsname>
+			<simresults>$AXL_SETUPDB_DIR/results/data/Interactive.33.rdb</simresults>
 			<rawdatadelstrategy>SaveAll</rawdatadelstrategy>
 			<netlistdelstrategy>SaveAll</netlistdelstrategy>
 			<uselocalpsfdir>false</uselocalpsfdir>
-			<localpsfdir>/tmp/vdi-l-cos-009_22703907_230756890</localpsfdir>
-			<psfdir>/home/22703907/simulation/pixel_sim/integration_sim/adexl/results/data/Interactive.11</psfdir>
-			<simdir>$AXL_PROJECT_DIR/pixel_sim/integration_sim/adexl/results/data/Interactive.11</simdir>
+			<localpsfdir>/tmp/vdi-l-cos-057_22703907_013339887</localpsfdir>
+			<psfdir>/home/22703907/simulation/pixel_sim/integration_sim/adexl/results/data/Interactive.33</psfdir>
+			<simdir>$AXL_PROJECT_DIR/pixel_sim/integration_sim/adexl/results/data/Interactive.33</simdir>
 			<gendatasheetplotsonsimulation>1</gendatasheetplotsonsimulation>
-			<runlog>/home/22703907/Downloads/elec5503-pixel-design/pixel_sim/integration_sim/adexl/results/data/Interactive.11.log</runlog>
-			<runlogfile>$AXL_SETUPDB_DIR/results/data/Interactive.11.log</runlogfile>
+			<runlog>/home/22703907/Downloads/elec5503-pixel-design/pixel_sim/integration_sim/adexl/results/data/Interactive.33.log</runlog>
+			<runlogfile>$AXL_SETUPDB_DIR/results/data/Interactive.33.log</runlogfile>
 			<schematicpoint></schematicpoint>
 			<test>all</test>
 		</historyentry>
-		<historyentry assemblerOrExplorer="adexl" roOrView="view">Interactive.12
+		<historyentry assemblerOrExplorer="adexl" roOrView="view">Interactive.34
 			<checkpoint>
 				<corners>
 					<corner enabled="1">_default</corner>
@@ -264,7 +272,7 @@
 								<value>$AXL_SETUPDB_DIR/test_states</value>
 							</option>
 							<option>state
-								<value>pixel_sim:integration_sim:1_none_Interactive.12</value>
+								<value>pixel_sim:integration_sim:1_none_Interactive.34</value>
 							</option>
 						</tooloptions>
 						<origoptions>
@@ -297,22 +305,22 @@
 				</plottingoptions>
 				<sortVariableValues>0</sortVariableValues>
 			</checkpoint>
-			<timestamp>Fri May 16 23:09:27 2025</timestamp>
-			<resultsname>/home/22703907/Downloads/elec5503-pixel-design/pixel_sim/integration_sim/adexl/results/data/Interactive.12.rdb</resultsname>
-			<simresults>$AXL_SETUPDB_DIR/results/data/Interactive.12.rdb</simresults>
+			<timestamp>Wed May 21 01:37:09 2025</timestamp>
+			<resultsname>/home/22703907/Downloads/elec5503-pixel-design/pixel_sim/integration_sim/adexl/results/data/Interactive.34.rdb</resultsname>
+			<simresults>$AXL_SETUPDB_DIR/results/data/Interactive.34.rdb</simresults>
 			<rawdatadelstrategy>SaveAll</rawdatadelstrategy>
 			<netlistdelstrategy>SaveAll</netlistdelstrategy>
 			<uselocalpsfdir>false</uselocalpsfdir>
-			<localpsfdir>/tmp/vdi-l-cos-009_22703907_230927197</localpsfdir>
-			<psfdir>/home/22703907/simulation/pixel_sim/integration_sim/adexl/results/data/Interactive.12</psfdir>
-			<simdir>$AXL_PROJECT_DIR/pixel_sim/integration_sim/adexl/results/data/Interactive.12</simdir>
+			<localpsfdir>/tmp/vdi-l-cos-057_22703907_013709317</localpsfdir>
+			<psfdir>/home/22703907/simulation/pixel_sim/integration_sim/adexl/results/data/Interactive.34</psfdir>
+			<simdir>$AXL_PROJECT_DIR/pixel_sim/integration_sim/adexl/results/data/Interactive.34</simdir>
 			<gendatasheetplotsonsimulation>1</gendatasheetplotsonsimulation>
-			<runlog>/home/22703907/Downloads/elec5503-pixel-design/pixel_sim/integration_sim/adexl/results/data/Interactive.12.log</runlog>
-			<runlogfile>$AXL_SETUPDB_DIR/results/data/Interactive.12.log</runlogfile>
+			<runlog>/home/22703907/Downloads/elec5503-pixel-design/pixel_sim/integration_sim/adexl/results/data/Interactive.34.log</runlog>
+			<runlogfile>$AXL_SETUPDB_DIR/results/data/Interactive.34.log</runlogfile>
 			<schematicpoint></schematicpoint>
 			<test>all</test>
 		</historyentry>
-		<historyentry assemblerOrExplorer="adexl" roOrView="view">Interactive.13
+		<historyentry assemblerOrExplorer="adexl" roOrView="view">Interactive.35
 			<checkpoint>
 				<corners>
 					<corner enabled="1">_default</corner>
@@ -346,7 +354,7 @@
 								<value>$AXL_SETUPDB_DIR/test_states</value>
 							</option>
 							<option>state
-								<value>pixel_sim:integration_sim:1_none_Interactive.13</value>
+								<value>pixel_sim:integration_sim:1_none_Interactive.35</value>
 							</option>
 						</tooloptions>
 						<origoptions>
@@ -379,22 +387,22 @@
 				</plottingoptions>
 				<sortVariableValues>0</sortVariableValues>
 			</checkpoint>
-			<timestamp>Mon May 19 12:00:26 2025</timestamp>
-			<resultsname>/home/23247166/Downloads/elec5503-pixel-design/pixel_sim/integration_sim/adexl/results/data/Interactive.13.rdb</resultsname>
-			<simresults>$AXL_SETUPDB_DIR/results/data/Interactive.13.rdb</simresults>
+			<timestamp>Wed May 21 01:42:22 2025</timestamp>
+			<resultsname>/home/22703907/Downloads/elec5503-pixel-design/pixel_sim/integration_sim/adexl/results/data/Interactive.35.rdb</resultsname>
+			<simresults>$AXL_SETUPDB_DIR/results/data/Interactive.35.rdb</simresults>
 			<rawdatadelstrategy>SaveAll</rawdatadelstrategy>
 			<netlistdelstrategy>SaveAll</netlistdelstrategy>
 			<uselocalpsfdir>false</uselocalpsfdir>
-			<localpsfdir>/tmp/vdi-l-cos-018_23247166_120026584</localpsfdir>
-			<psfdir>/home/23247166/simulation/pixel_sim/integration_sim/adexl/results/data/Interactive.13</psfdir>
-			<simdir>$AXL_PROJECT_DIR/pixel_sim/integration_sim/adexl/results/data/Interactive.13</simdir>
+			<localpsfdir>/tmp/vdi-l-cos-057_22703907_014222524</localpsfdir>
+			<psfdir>/home/22703907/simulation/pixel_sim/integration_sim/adexl/results/data/Interactive.35</psfdir>
+			<simdir>$AXL_PROJECT_DIR/pixel_sim/integration_sim/adexl/results/data/Interactive.35</simdir>
 			<gendatasheetplotsonsimulation>1</gendatasheetplotsonsimulation>
-			<runlog>/home/23247166/Downloads/elec5503-pixel-design/pixel_sim/integration_sim/adexl/results/data/Interactive.13.log</runlog>
-			<runlogfile>$AXL_SETUPDB_DIR/results/data/Interactive.13.log</runlogfile>
+			<runlog>/home/22703907/Downloads/elec5503-pixel-design/pixel_sim/integration_sim/adexl/results/data/Interactive.35.log</runlog>
+			<runlogfile>$AXL_SETUPDB_DIR/results/data/Interactive.35.log</runlogfile>
 			<schematicpoint></schematicpoint>
 			<test>all</test>
 		</historyentry>
-		<historyentry assemblerOrExplorer="adexl" roOrView="view">Interactive.14
+		<historyentry assemblerOrExplorer="adexl" roOrView="view">Interactive.36
 			<checkpoint>
 				<corners>
 					<corner enabled="1">_default</corner>
@@ -428,7 +436,7 @@
 								<value>$AXL_SETUPDB_DIR/test_states</value>
 							</option>
 							<option>state
-								<value>pixel_sim:integration_sim:1_none_Interactive.14</value>
+								<value>pixel_sim:integration_sim:1_none_Interactive.36</value>
 							</option>
 						</tooloptions>
 						<origoptions>
@@ -461,22 +469,22 @@
 				</plottingoptions>
 				<sortVariableValues>0</sortVariableValues>
 			</checkpoint>
-			<timestamp>Mon May 19 12:03:16 2025</timestamp>
-			<resultsname>/home/23247166/Downloads/elec5503-pixel-design/pixel_sim/integration_sim/adexl/results/data/Interactive.14.rdb</resultsname>
-			<simresults>$AXL_SETUPDB_DIR/results/data/Interactive.14.rdb</simresults>
+			<timestamp>Wed May 21 01:59:23 2025</timestamp>
+			<resultsname>/home/22703907/Downloads/elec5503-pixel-design/pixel_sim/integration_sim/adexl/results/data/Interactive.36.rdb</resultsname>
+			<simresults>$AXL_SETUPDB_DIR/results/data/Interactive.36.rdb</simresults>
 			<rawdatadelstrategy>SaveAll</rawdatadelstrategy>
 			<netlistdelstrategy>SaveAll</netlistdelstrategy>
 			<uselocalpsfdir>false</uselocalpsfdir>
-			<localpsfdir>/tmp/vdi-l-cos-018_23247166_120316923</localpsfdir>
-			<psfdir>/home/23247166/simulation/pixel_sim/integration_sim/adexl/results/data/Interactive.14</psfdir>
-			<simdir>$AXL_PROJECT_DIR/pixel_sim/integration_sim/adexl/results/data/Interactive.14</simdir>
+			<localpsfdir>/tmp/vdi-l-cos-057_22703907_015923369</localpsfdir>
+			<psfdir>/home/22703907/simulation/pixel_sim/integration_sim/adexl/results/data/Interactive.36</psfdir>
+			<simdir>$AXL_PROJECT_DIR/pixel_sim/integration_sim/adexl/results/data/Interactive.36</simdir>
 			<gendatasheetplotsonsimulation>1</gendatasheetplotsonsimulation>
-			<runlog>/home/23247166/Downloads/elec5503-pixel-design/pixel_sim/integration_sim/adexl/results/data/Interactive.14.log</runlog>
-			<runlogfile>$AXL_SETUPDB_DIR/results/data/Interactive.14.log</runlogfile>
+			<runlog>/home/22703907/Downloads/elec5503-pixel-design/pixel_sim/integration_sim/adexl/results/data/Interactive.36.log</runlog>
+			<runlogfile>$AXL_SETUPDB_DIR/results/data/Interactive.36.log</runlogfile>
 			<schematicpoint></schematicpoint>
 			<test>all</test>
 		</historyentry>
-		<historyentry assemblerOrExplorer="adexl" roOrView="view">Interactive.15
+		<historyentry assemblerOrExplorer="adexl" roOrView="view">Interactive.37
 			<checkpoint>
 				<corners>
 					<corner enabled="1">_default</corner>
@@ -510,7 +518,7 @@
 								<value>$AXL_SETUPDB_DIR/test_states</value>
 							</option>
 							<option>state
-								<value>pixel_sim:integration_sim:1_none_Interactive.15</value>
+								<value>pixel_sim:integration_sim:1_none_Interactive.37</value>
 							</option>
 						</tooloptions>
 						<origoptions>
@@ -543,22 +551,22 @@
 				</plottingoptions>
 				<sortVariableValues>0</sortVariableValues>
 			</checkpoint>
-			<timestamp>Mon May 19 12:35:00 2025</timestamp>
-			<resultsname>/home/23247166/Downloads/elec5503-pixel-design/pixel_sim/integration_sim/adexl/results/data/Interactive.15.rdb</resultsname>
-			<simresults>$AXL_SETUPDB_DIR/results/data/Interactive.15.rdb</simresults>
+			<timestamp>Wed May 21 02:03:48 2025</timestamp>
+			<resultsname>/home/22703907/Downloads/elec5503-pixel-design/pixel_sim/integration_sim/adexl/results/data/Interactive.37.rdb</resultsname>
+			<simresults>$AXL_SETUPDB_DIR/results/data/Interactive.37.rdb</simresults>
 			<rawdatadelstrategy>SaveAll</rawdatadelstrategy>
 			<netlistdelstrategy>SaveAll</netlistdelstrategy>
 			<uselocalpsfdir>false</uselocalpsfdir>
-			<localpsfdir>/tmp/vdi-l-cos-018_23247166_123500100</localpsfdir>
-			<psfdir>/home/23247166/simulation/pixel_sim/integration_sim/adexl/results/data/Interactive.15</psfdir>
-			<simdir>$AXL_PROJECT_DIR/pixel_sim/integration_sim/adexl/results/data/Interactive.15</simdir>
+			<localpsfdir>/tmp/vdi-l-cos-057_22703907_020348824</localpsfdir>
+			<psfdir>/home/22703907/simulation/pixel_sim/integration_sim/adexl/results/data/Interactive.37</psfdir>
+			<simdir>$AXL_PROJECT_DIR/pixel_sim/integration_sim/adexl/results/data/Interactive.37</simdir>
 			<gendatasheetplotsonsimulation>1</gendatasheetplotsonsimulation>
-			<runlog>/home/23247166/Downloads/elec5503-pixel-design/pixel_sim/integration_sim/adexl/results/data/Interactive.15.log</runlog>
-			<runlogfile>$AXL_SETUPDB_DIR/results/data/Interactive.15.log</runlogfile>
+			<runlog>/home/22703907/Downloads/elec5503-pixel-design/pixel_sim/integration_sim/adexl/results/data/Interactive.37.log</runlog>
+			<runlogfile>$AXL_SETUPDB_DIR/results/data/Interactive.37.log</runlogfile>
 			<schematicpoint></schematicpoint>
 			<test>all</test>
 		</historyentry>
-		<historyentry assemblerOrExplorer="adexl" roOrView="view">Interactive.16
+		<historyentry assemblerOrExplorer="adexl" roOrView="view">Interactive.38
 			<checkpoint>
 				<corners>
 					<corner enabled="1">_default</corner>
@@ -592,7 +600,7 @@
 								<value>$AXL_SETUPDB_DIR/test_states</value>
 							</option>
 							<option>state
-								<value>pixel_sim:integration_sim:1_none_Interactive.16</value>
+								<value>pixel_sim:integration_sim:1_none_Interactive.38</value>
 							</option>
 						</tooloptions>
 						<origoptions>
@@ -625,22 +633,22 @@
 				</plottingoptions>
 				<sortVariableValues>0</sortVariableValues>
 			</checkpoint>
-			<timestamp>Mon May 19 12:37:51 2025</timestamp>
-			<resultsname>/home/23247166/Downloads/elec5503-pixel-design/pixel_sim/integration_sim/adexl/results/data/Interactive.16.rdb</resultsname>
-			<simresults>$AXL_SETUPDB_DIR/results/data/Interactive.16.rdb</simresults>
+			<timestamp>Wed May 21 02:12:58 2025</timestamp>
+			<resultsname>/home/22703907/Downloads/elec5503-pixel-design/pixel_sim/integration_sim/adexl/results/data/Interactive.38.rdb</resultsname>
+			<simresults>$AXL_SETUPDB_DIR/results/data/Interactive.38.rdb</simresults>
 			<rawdatadelstrategy>SaveAll</rawdatadelstrategy>
 			<netlistdelstrategy>SaveAll</netlistdelstrategy>
 			<uselocalpsfdir>false</uselocalpsfdir>
-			<localpsfdir>/tmp/vdi-l-cos-018_23247166_123751305</localpsfdir>
-			<psfdir>/home/23247166/simulation/pixel_sim/integration_sim/adexl/results/data/Interactive.16</psfdir>
-			<simdir>$AXL_PROJECT_DIR/pixel_sim/integration_sim/adexl/results/data/Interactive.16</simdir>
+			<localpsfdir>/tmp/vdi-l-cos-057_22703907_021258180</localpsfdir>
+			<psfdir>/home/22703907/simulation/pixel_sim/integration_sim/adexl/results/data/Interactive.38</psfdir>
+			<simdir>$AXL_PROJECT_DIR/pixel_sim/integration_sim/adexl/results/data/Interactive.38</simdir>
 			<gendatasheetplotsonsimulation>1</gendatasheetplotsonsimulation>
-			<runlog>/home/23247166/Downloads/elec5503-pixel-design/pixel_sim/integration_sim/adexl/results/data/Interactive.16.log</runlog>
-			<runlogfile>$AXL_SETUPDB_DIR/results/data/Interactive.16.log</runlogfile>
+			<runlog>/home/22703907/Downloads/elec5503-pixel-design/pixel_sim/integration_sim/adexl/results/data/Interactive.38.log</runlog>
+			<runlogfile>$AXL_SETUPDB_DIR/results/data/Interactive.38.log</runlogfile>
 			<schematicpoint></schematicpoint>
 			<test>all</test>
 		</historyentry>
-		<historyentry assemblerOrExplorer="adexl" roOrView="view">Interactive.17
+		<historyentry assemblerOrExplorer="adexl" roOrView="view">Interactive.39
 			<checkpoint>
 				<corners>
 					<corner enabled="1">_default</corner>
@@ -674,7 +682,7 @@
 								<value>$AXL_SETUPDB_DIR/test_states</value>
 							</option>
 							<option>state
-								<value>pixel_sim:integration_sim:1_none_Interactive.17</value>
+								<value>pixel_sim:integration_sim:1_none_Interactive.39</value>
 							</option>
 						</tooloptions>
 						<origoptions>
@@ -707,22 +715,22 @@
 				</plottingoptions>
 				<sortVariableValues>0</sortVariableValues>
 			</checkpoint>
-			<timestamp>Mon May 19 12:42:39 2025</timestamp>
-			<resultsname>/home/23247166/Downloads/elec5503-pixel-design/pixel_sim/integration_sim/adexl/results/data/Interactive.17.rdb</resultsname>
-			<simresults>$AXL_SETUPDB_DIR/results/data/Interactive.17.rdb</simresults>
+			<timestamp>Wed May 21 02:13:57 2025</timestamp>
+			<resultsname>/home/22703907/Downloads/elec5503-pixel-design/pixel_sim/integration_sim/adexl/results/data/Interactive.39.rdb</resultsname>
+			<simresults>$AXL_SETUPDB_DIR/results/data/Interactive.39.rdb</simresults>
 			<rawdatadelstrategy>SaveAll</rawdatadelstrategy>
 			<netlistdelstrategy>SaveAll</netlistdelstrategy>
 			<uselocalpsfdir>false</uselocalpsfdir>
-			<localpsfdir>/tmp/vdi-l-cos-018_23247166_124239468</localpsfdir>
-			<psfdir>/home/23247166/simulation/pixel_sim/integration_sim/adexl/results/data/Interactive.17</psfdir>
-			<simdir>$AXL_PROJECT_DIR/pixel_sim/integration_sim/adexl/results/data/Interactive.17</simdir>
+			<localpsfdir>/tmp/vdi-l-cos-057_22703907_021357896</localpsfdir>
+			<psfdir>/home/22703907/simulation/pixel_sim/integration_sim/adexl/results/data/Interactive.39</psfdir>
+			<simdir>$AXL_PROJECT_DIR/pixel_sim/integration_sim/adexl/results/data/Interactive.39</simdir>
 			<gendatasheetplotsonsimulation>1</gendatasheetplotsonsimulation>
-			<runlog>/home/23247166/Downloads/elec5503-pixel-design/pixel_sim/integration_sim/adexl/results/data/Interactive.17.log</runlog>
-			<runlogfile>$AXL_SETUPDB_DIR/results/data/Interactive.17.log</runlogfile>
+			<runlog>/home/22703907/Downloads/elec5503-pixel-design/pixel_sim/integration_sim/adexl/results/data/Interactive.39.log</runlog>
+			<runlogfile>$AXL_SETUPDB_DIR/results/data/Interactive.39.log</runlogfile>
 			<schematicpoint></schematicpoint>
 			<test>all</test>
 		</historyentry>
-		<historyentry assemblerOrExplorer="adexl" roOrView="view">Interactive.18
+		<historyentry assemblerOrExplorer="adexl" roOrView="view">Interactive.40
 			<checkpoint>
 				<corners>
 					<corner enabled="1">_default</corner>
@@ -756,7 +764,7 @@
 								<value>$AXL_SETUPDB_DIR/test_states</value>
 							</option>
 							<option>state
-								<value>pixel_sim:integration_sim:1_none_Interactive.18</value>
+								<value>pixel_sim:integration_sim:1_none_Interactive.40</value>
 							</option>
 						</tooloptions>
 						<origoptions>
@@ -789,22 +797,22 @@
 				</plottingoptions>
 				<sortVariableValues>0</sortVariableValues>
 			</checkpoint>
-			<timestamp>Mon May 19 14:21:11 2025</timestamp>
-			<resultsname>/home/23247166/Downloads/elec5503-pixel-design/pixel_sim/integration_sim/adexl/results/data/Interactive.18.rdb</resultsname>
-			<simresults>$AXL_SETUPDB_DIR/results/data/Interactive.18.rdb</simresults>
+			<timestamp>Wed May 21 10:20:14 2025</timestamp>
+			<resultsname>/home/23247166/Downloads/elec5503-pixel-design/pixel_sim/integration_sim/adexl/results/data/Interactive.40.rdb</resultsname>
+			<simresults>$AXL_SETUPDB_DIR/results/data/Interactive.40.rdb</simresults>
 			<rawdatadelstrategy>SaveAll</rawdatadelstrategy>
 			<netlistdelstrategy>SaveAll</netlistdelstrategy>
 			<uselocalpsfdir>false</uselocalpsfdir>
-			<localpsfdir>/tmp/vdi-l-cos-018_23247166_142111061</localpsfdir>
-			<psfdir>/home/23247166/simulation/pixel_sim/integration_sim/adexl/results/data/Interactive.18</psfdir>
-			<simdir>$AXL_PROJECT_DIR/pixel_sim/integration_sim/adexl/results/data/Interactive.18</simdir>
+			<localpsfdir>/tmp/vdi-l-cos-009_23247166_102014502</localpsfdir>
+			<psfdir>/home/23247166/simulation/pixel_sim/integration_sim/adexl/results/data/Interactive.40</psfdir>
+			<simdir>$AXL_PROJECT_DIR/pixel_sim/integration_sim/adexl/results/data/Interactive.40</simdir>
 			<gendatasheetplotsonsimulation>1</gendatasheetplotsonsimulation>
-			<runlog>/home/23247166/Downloads/elec5503-pixel-design/pixel_sim/integration_sim/adexl/results/data/Interactive.18.log</runlog>
-			<runlogfile>$AXL_SETUPDB_DIR/results/data/Interactive.18.log</runlogfile>
+			<runlog>/home/23247166/Downloads/elec5503-pixel-design/pixel_sim/integration_sim/adexl/results/data/Interactive.40.log</runlog>
+			<runlogfile>$AXL_SETUPDB_DIR/results/data/Interactive.40.log</runlogfile>
 			<schematicpoint></schematicpoint>
 			<test>all</test>
 		</historyentry>
-		<historyentry assemblerOrExplorer="adexl" roOrView="view">Interactive.19
+		<historyentry assemblerOrExplorer="adexl" roOrView="view">Interactive.41
 			<checkpoint>
 				<corners>
 					<corner enabled="1">_default</corner>
@@ -838,7 +846,7 @@
 								<value>$AXL_SETUPDB_DIR/test_states</value>
 							</option>
 							<option>state
-								<value>pixel_sim:integration_sim:1_none_Interactive.19</value>
+								<value>pixel_sim:integration_sim:1_none_Interactive.41</value>
 							</option>
 						</tooloptions>
 						<origoptions>
@@ -869,21 +877,29 @@
 						<value></value>
 					</plottingoption>
 				</plottingoptions>
+				<vars>
+					<var enabled="0">V
+						<value></value>
+						<dependentTests>
+							<dependentTest enabled="1" omitted="0">pixel_sim:integration_sim:1</dependentTest>
+						</dependentTests>
+					</var>
+				</vars>
 				<sortVariableValues>0</sortVariableValues>
 			</checkpoint>
-			<timestamp>Tue May 20 19:56:23 2025
+			<timestamp>Wed May 21 10:23:46 2025
 </timestamp>
-			<resultsname>/home/23247166/Downloads/elec5503-pixel-design/pixel_sim/integration_sim/adexl/results/data/Interactive.19.rdb</resultsname>
-			<simresults>$AXL_SETUPDB_DIR/results/data/Interactive.19.rdb</simresults>
+			<resultsname>/home/23247166/Downloads/elec5503-pixel-design/pixel_sim/integration_sim/adexl/results/data/Interactive.41.rdb</resultsname>
+			<simresults>$AXL_SETUPDB_DIR/results/data/Interactive.41.rdb</simresults>
 			<rawdatadelstrategy>SaveAll</rawdatadelstrategy>
 			<netlistdelstrategy>SaveAll</netlistdelstrategy>
 			<uselocalpsfdir>false</uselocalpsfdir>
-			<localpsfdir>/tmp/vdi-l-cos-009_23247166_195623917</localpsfdir>
-			<psfdir>/home/23247166/simulation/pixel_sim/integration_sim/adexl/results/data/Interactive.19</psfdir>
-			<simdir>$AXL_PROJECT_DIR/pixel_sim/integration_sim/adexl/results/data/Interactive.19</simdir>
+			<localpsfdir>/tmp/vdi-l-cos-009_23247166_102346781</localpsfdir>
+			<psfdir>/home/23247166/simulation/pixel_sim/integration_sim/adexl/results/data/Interactive.41</psfdir>
+			<simdir>$AXL_PROJECT_DIR/pixel_sim/integration_sim/adexl/results/data/Interactive.41</simdir>
 			<gendatasheetplotsonsimulation>1</gendatasheetplotsonsimulation>
-			<runlog>/home/23247166/Downloads/elec5503-pixel-design/pixel_sim/integration_sim/adexl/results/data/Interactive.19.log</runlog>
-			<runlogfile>$AXL_SETUPDB_DIR/results/data/Interactive.19.log</runlogfile>
+			<runlog>/home/23247166/Downloads/elec5503-pixel-design/pixel_sim/integration_sim/adexl/results/data/Interactive.41.log</runlog>
+			<runlogfile>$AXL_SETUPDB_DIR/results/data/Interactive.41.log</runlogfile>
 			<schematicpoint></schematicpoint>
 			<test>all</test>
 		</historyentry>

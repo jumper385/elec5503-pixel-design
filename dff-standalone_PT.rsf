@@ -13,9 +13,2057 @@ avParameters(
   ?inputLayout ( "df2" "pixel" )
   ?cellName "dff-standalone_PT"
   ?viewName "layout"
-  ?technology "Assura_DRC_FEOL"
+  ?technology "Assura_LVS"
   ?techLib "./assura_tech.lib"
-  ?techRuleSet "DRC_2.5p1"
-  ?set ("Skip_NPLUS_checks" "Skip_Poly_Density_Check" "Skip_Soft-Connect_Checks" "skip_DIFF_density_check")
+  ?techRuleSet "LVS_2.3_p9"
+  ?set ("Device_Option--MM_RF_LL" "Metal_Option--1P6M")
   ?avrpt t
 )
+
+
+
+
+;----------------------------------------------------------------------------
+; avCompareRules Section from Rules Files
+; Specified in the Assura UI
+;----------------------------------------------------------------------------
+
+PWR1 = "*VDD*"
+PWR2 = "*VCC*"
+GND1 = "*GND*"
+GND2 = "*VSS*"
+
+
+
+  ;;;;;;;;;;;; Compare diode properties
+; DIODE area, pj
+
+  diodeAREA_Tol = 3.0
+  diodePJ_Tol   = 3.0 
+
+  procedure( compareDIO( layPlist, schPlist )
+    prog( (missingLay missingSch)
+
+; Remap schematic AREA -> area and PJ -> pj
+
+      when( schPlist->AREA schPlist->area = schPlist->AREA )
+      when( schPlist->PJ   schPlist->pj   = schPlist->PJ )
+      when( schPlist->M    schPlist->m    = schPlist->M )
+
+; If m is missing, set it to 1
+
+      when( !layPlist->m  layPlist->m = 1 )
+      when( !schPlist->m  schPlist->m = 1 )
+
+; If "area" is missing generate a parameter mismatch
+
+      foreach( prop '( area pj )
+        unless( get( layPlist prop )
+          missingLay = cons( prop missingLay )
+        ) ;unless
+        unless( get( schPlist prop )
+          missingSch = cons( prop missingSch )
+        ) ;unless
+      ) ;foreach
+
+; Report all missing parameters
+
+      when( ( missingLay || missingSch )
+
+        when( missingSch
+          sprintf( msg1 "Sch DIODE missing params: %s"
+            buildString( missingSch ",") )
+        ) ;when
+        when( !missingSch
+          sprintf( msg1 "Sch DIODE area %g pj %g m %g"
+            float(schPlist->area) float(schPlist->pj) float(schPlist->m)
+          )
+        ) ;when
+
+        when( missingLay
+          sprintf( msg2 "Lay DIODE missing params: %s"
+            buildString( missingLay ",") )
+        ) ;when
+        when( !missingLay
+          sprintf( msg2 "Lay DIODE area %g pj %g m %g"
+            float(layPlist->area) float(layPlist->pj) float(layPlist->m)
+          )
+        ) ;when
+
+        sprintf( msg "Err: %s ; %s" msg1 msg2 )
+        return( msg )
+      )
+
+; now we know that area and m are defined for both plists
+; correct for m here
+
+      layM = float( layPlist->m )
+      layA = float( layM * layPlist->area )
+      layP = float( layM * layPlist->pj )
+
+      schM = float( schPlist->m )
+      schA = float( schM * schPlist->area )
+      schP = float( schM * schPlist->pj )
+
+      diffA = 100 * ( abs( layA - schA ) / schA )
+      diffP = 100 * ( abs( layP - schP ) / schP )
+
+      areaErr = nil
+      pjErr   = nil
+
+      when( diffA > diodeAREA_Tol areaErr = t )
+      when( diffP > diodePJ_Tol pjErr = t )
+
+; if no errors return nil
+
+      when( !areaErr && !pjErr return(nil) )
+
+; now we know there is a parameter error
+
+      sprintf( msg
+		"Err: DIODE Sch area/pj/m  %g %g %g; Lay area/pj/m %g %g %g"
+                schA schP schM layA layP layM 
+      )
+      return( msg )
+
+   ) ; end prog
+  ) ; end compareDIO
+; *****************************************************************
+; combine parallel diodes
+
+procedure( parallelDIO( dio1 dio2 )
+  prog( ( parDio missing1 missing2 )
+
+; set the output plist to nil
+    parDio = ncons(nil)
+
+; Remap AREA -> area and PJ -> pj
+
+    when( dio1->AREA dio1->area = dio1->AREA )
+    when( dio1->PJ   dio1->pj   = dio1->PJ )
+    when( dio2->AREA dio2->area = dio2->AREA )
+    when( dio2->PJ   dio2->pj   = dio2->PJ )
+
+; If m (m factor) is missing, set it to 1
+
+    when( !dio1->m  dio1->m = 1 )
+    when( !dio2->m  dio2->m = 1 )
+
+; If area is missing, do not combine
+
+    foreach( prop '( area pj )
+      unless( get( dio1 prop )
+        missing1 = cons( prop missing1 )
+        ) ;unless
+      unless( get( dio2 prop )
+        missing2 = cons( prop missing2 )
+        ) ;unless
+      ) ;foreach
+
+; Report all missing parameters
+
+    when( ( missing1 || missing2 )
+
+      printf( "\n" )
+      printf( 
+        "** Parallel DIODE with missing parameters not combined:\n" )
+
+      when( missing1
+        printf(
+          "   1st device: Diode missing parameters: %s \n"
+          buildString( missing1 ",") )
+        ) ;when
+      when( !missing1
+        printf(
+          "   1st device: Diode with all parameters \n" )
+        ) ;when
+
+      when( missing2
+        printf(
+          "   2nd device: Diode missing parameters: %s \n"
+          buildString( missing2 ",") )
+        ) ;when
+      when( !missing2
+        printf(
+          "   2nd device: Diode with all parameters \n" )
+        ) ;when
+
+      return( "doNotCombine" )
+      )
+
+; now we know that area and m are defined for both plists
+
+; set variables to make typing easier and code simpler
+
+    area1 = float( dio1->area )
+    area2 = float( dio2->area )
+    pj1   = float( dio1->pj )
+    pj2   = float( dio2->pj )
+    M1    = float( dio1->m )
+    M2    = float( dio2->m )
+
+; Now combine parameters; set new m = 1
+
+    newarea = float( area1*M1 + area2*M2 )
+    newpj   = float( pj1*M1 + pj2*M2 )
+
+    parDio->area = newarea
+    parDio->pj   = newpj
+    parDio->m    = float(1)
+
+;    printf( "\n" )
+;    printf( "** Parallel Diode combined: \n" )
+;
+;    printf( "   1st device: area = %g pj = %g m = %g \n" area1 pj1 M1 )
+;    printf( "   2nd device: area = %g pj = %g m = %g \n" area2 pj2 M2 )
+
+;    printf( "   Resulting: area = %g pj = %g m = 1 \n" newarea newpj )
+
+    return( parDio )
+
+    ) ;prog
+  ) ;parallelDIO 
+
+; *****************************************************************
+;;;;;;;;;;;; Compare DIO_RF properties
+; DIODE w, l
+
+  diodew_Tol   = 3.0 
+  diodel_Tol   = 3.0 
+
+  procedure( compareDIO_RF( layPlist, schPlist )
+    prog( (missingLay missingSch)
+
+; Remap schematic W -> w and L -> l 
+
+      when( schPlist->W   schPlist->w   = schPlist->W )
+      when( schPlist->L   schPlist->l   = schPlist->L )
+
+; Remap layout W -> w and L -> l 
+
+      when( layPlist->W   layPlist->w   = layPlist->W )
+      when( layPlist->L   layPlist->l   = layPlist->L )
+
+; If m is missing, set it to 1
+
+      when( !layPlist->m  layPlist->m = 1 )
+      when( !schPlist->m  schPlist->m = 1 )
+
+; If "area" is missing generate a parameter mismatch
+
+      foreach( prop '(  w l )
+        unless( get( layPlist prop )
+          missingLay = cons( prop missingLay )
+        ) ;unless
+        unless( get( schPlist prop )
+          missingSch = cons( prop missingSch )
+        ) ;unless
+      ) ;foreach
+
+; Report all missing parameters
+
+      when( ( missingLay || missingSch )
+
+        when( missingSch
+          sprintf( msg1 "Sch DIO_RF missing params: %s"
+            buildString( missingSch ",") )
+        ) ;when
+        when( !missingSch
+          sprintf( msg1 "Sch DIO_RF  w %g l %g m %g"
+             float(schPlist->w) float(schPlist->l) float(schPlist->m)
+          )
+        ) ;when
+
+        when( missingLay
+          sprintf( msg2 "Lay DIO_RF missing params: %s"
+            buildString( missingLay ",") )
+        ) ;when
+        when( !missingLay
+          sprintf( msg1 "Sch DIO_RF  w %g l %g m %g"
+             float(schPlist->w) float(schPlist->l) float(schPlist->m)
+          )
+        ) ;when
+
+        sprintf( msg "Err: %s ; %s" msg1 msg2 )
+        return( msg )
+      )
+
+; now we know that area and m are defined for both plists
+; correct for m here
+
+      layM = float( layPlist->m )
+      layw = float( layM * layPlist->w )
+      layl = float( layM * layPlist->l )
+
+      schM = float( schPlist->m )
+      schw = float( schM * schPlist->w )
+      schl = float( schM * schPlist->l )
+
+      diffw = 100 * ( abs( layw - schw ) / schw )
+      diffl = 100 * ( abs( layl - schl ) / schl )
+
+      wErr   = nil
+      lErr   = nil
+
+      when( diffw > diodew_Tol wErr = t )
+      when( diffl > diodel_Tol lErr = t )
+
+; if no errors return nil
+
+      when(  !wErr && !lErr return(nil) )
+
+; now we know there is a parameter error
+
+      sprintf( msg
+		"Err: DIODE Sch w/l/m  %g %g %g; Lay w/l/m %g  %g %g"
+                 schw schl schM  layw layl layM 
+      )
+      return( msg )
+
+   ) ; end prog
+  ) ; end compareDIO_RF
+
+; *****************************************************************
+; combine parallel DIODE_RF
+
+procedure( parallelDIO_RF( dio1 dio2 )
+  prog( ( parDio missing1 missing2 )
+
+; Remap W -> w and L -> l 
+
+      when( dio1->W   dio1->w   = dio1->W )
+      when( dio1->L   dio1->l   = dio1->L )
+
+      when( dio2->W   dio2->w   = dio2->W )
+      when( dio2->L   dio2->l   = dio2->L )
+
+
+; set the output plist to nil
+    parDio = ncons(nil)
+
+; If m (m factor) is missing, set it to 1
+
+    when( !dio1->m  dio1->m = 1 )
+    when( !dio1->M  dio1->M = 1 )
+    when( !dio2->m  dio2->m = 1 )
+    when( !dio2->M  dio2->M = 1 )
+
+; If area is missing, do not combine
+
+    foreach( prop '( w l )
+      unless( get( dio1 prop )
+        missing1 = cons( prop missing1 )
+        ) ;unless
+      unless( get( dio2 prop )
+        missing2 = cons( prop missing2 )
+        ) ;unless
+      ) ;foreach
+
+; Report all missing parameters
+
+    when( ( missing1 || missing2 )
+
+      printf( "\n" )
+      printf( 
+        "** Parallel DIODE with missing parameters not combined:\n" )
+
+      when( missing1
+        printf(
+          "   1st device: DIODE missing parameters: %s \n"
+          buildString( missing1 ",") )
+        ) ;when
+      when( !missing1
+        printf(
+          "   1st device: DIODE with all parameters \n" )
+        ) ;when
+
+      when( missing2
+        printf(
+          "   2nd device: DIODE missing parameters: %s \n"
+          buildString( missing2 ",") )
+        ) ;when
+      when( !missing2
+        printf(
+          "   2nd device: DIODE with all parameters \n" )
+        ) ;when
+
+      return( "doNotCombine" )
+      )
+
+; now we know that area and m are defined for both plists
+
+; set variables to make typing easier and code simpler
+
+    w1   = float( dio1->w )
+    w2   = float( dio2->w )
+    l1   = float( dio1->l )
+    l2   = float( dio2->l )
+    M1    = float(float( dio1->m ) + float( dio1->M ) - 1 ) 
+    M2    = float(float( dio2->m ) + float( dio2->M ) - 1 )
+
+    when( w1 != w2 return( "doNotCombine" ) )
+    when( l1 != l2 return( "doNotCombine" ) )
+
+; Now combine parameters; set new m = 1
+
+    neww = float( w1 )
+    newl = float( l1 )
+    newm = float( M1 + M2 )
+
+    parDio->w   = neww
+    parDio->l   = newl
+    parDio->m   = M1 + M2
+
+;    printf( "\n" )
+;    printf( "** Parallel DIODE combined: \n" )
+
+
+;    printf( "   1st device: w = %g l = %g m = %g \n"  w1 l1 M1 )
+;    printf( "   2nd device: w = %g l = %g m = %g \n"  w2 l2 M2 )
+
+;    printf( "   Resulting: w = %g l = %g m = %g \n"  neww newl newm )
+    return( parDio )
+
+    ) ;prog
+  ) ;parallelDIODE_RF 
+
+; *****************************************************************
+;;;;;;;;;;;; Compare BJT properties
+; BJT area, w, l
+
+  bjtea_Tol   = 3.0
+  bjtwe_Tol   = 3.0 
+  bjtle_Tol   = 3.0 
+
+  procedure( compareBJT( layPlist, schPlist )
+    prog( (missingLay missingSch)
+
+; Remap schematic WE -> we and Le -> le EA -> ea
+
+      when( schPlist->EA   schPlist->ea   = schPlist->EA )
+      when( schPlist->WE   schPlist->we   = schPlist->WE )
+      when( schPlist->LE   schPlist->le   = schPlist->LE )
+
+; Remap layout WE -> we and Le -> le EA -> ea
+
+      when( layPlist->EA   layPlist->ea   = layPlist->EA )
+      when( layPlist->WE   layPlist->we   = layPlist->WE )
+      when( layPlist->LE   layPlist->le   = layPlist->LE )
+
+; If m is missing, set it to 1
+
+      when( !layPlist->m  layPlist->m = 1 )
+      when( !schPlist->m  schPlist->m = 1 )
+
+; If "area" is missing generate a parameter mismatch
+
+      foreach( prop '( ea we le )
+        unless( get( layPlist prop )
+          missingLay = cons( prop missingLay )
+        ) ;unless
+        unless( get( schPlist prop )
+          missingSch = cons( prop missingSch )
+        ) ;unless
+      ) ;foreach
+
+; Report all missing parameters
+
+      when( ( missingLay || missingSch )
+
+        when( missingSch
+          sprintf( msg1 "Sch BJT missing params: %s"
+            buildString( missingSch ",") )
+        ) ;when
+        when( !missingSch
+          sprintf( msg1 "Sch BJT ea %g we %g le %g m %g"
+            float(schPlist->ea) float(schPlist->we) float(schPlist->le) float(schPlist->m)
+          )
+        ) ;when
+
+        when( missingLay
+          sprintf( msg2 "Lay BJT missing params: %s"
+            buildString( missingLay ",") )
+        ) ;when
+        when( !missingLay
+          sprintf( msg1 "Sch BJT ea %g we %g le %g m %g"
+            float(schPlist->ea) float(schPlist->we) float(schPlist->le) float(schPlist->m)
+          )
+        ) ;when
+
+        sprintf( msg "Err: %s ; %s" msg1 msg2 )
+        return( msg )
+      )
+
+; now we know that area and m are defined for both plists
+; correct for m here
+
+      layM  = float( layPlist->m )
+      layea = float( layM * layPlist->ea )
+      laywe = float( layM * layPlist->we )
+      layle = float( layM * layPlist->le )
+
+      schM  = float( schPlist->m )
+      schea = float( schM * schPlist->ea )
+      schwe = float( schM * schPlist->we )
+      schle = float( schM * schPlist->le )
+
+      diffea = 100 * ( abs( layea - schea ) / schea )
+      diffwe = 100 * ( abs( laywe - schwe ) / schwe )
+      diffle = 100 * ( abs( layle - schle ) / schle )
+
+      eaErr   = nil
+      weErr   = nil
+      leErr   = nil
+
+      when( diffea > bjtea_Tol eaErr = t )
+      when( diffwe > bjtwe_Tol weErr = t )
+      when( diffle > bjtle_Tol leErr = t )
+
+; if no errors return nil
+
+      when( !eaErr && !weErr && !leErr return(nil) )
+
+; now we know there is a parameter error
+
+      sprintf( msg
+		"Err: BJT Sch ea/we/le/m  %g %g %g %g; Lay ea/we/le/m %g %g %g %g"
+                schea schwe schle schM layea laywe layle layM 
+      )
+      return( msg )
+
+   ) ; end prog
+  ) ; end compareBJT
+
+; *****************************************************************
+; combine parallel BJT
+
+procedure( parallelBJT( bjt1 bjt2 )
+  prog( ( parBjt missing1 missing2 )
+
+; Remap WE -> we and Le -> le EA -> ea
+
+      when( bjt1->EA   bjt1->ea   = bjt1->EA )
+      when( bjt1->WE   bjt1->we   = bjt1->WE )
+      when( bjt1->LE   bjt1->le   = bjt1->LE )
+
+      when( bjt2->EA   bjt2->ea   = bjt2->EA )
+      when( bjt2->WE   bjt2->we   = bjt2->WE )
+      when( bjt2->LE   bjt2->le   = bjt2->LE )
+
+
+; set the output plist to nil
+    parBjt = ncons(nil)
+
+; If m (m factor) is missing, set it to 1
+
+    when( !bjt1->m  bjt1->m = 1 )
+    when( !bjt1->M  bjt1->M = 1 )
+    when( !bjt2->m  bjt2->m = 1 )
+    when( !bjt2->M  bjt2->M = 1 )
+
+; If area is missing, do not combine
+
+    foreach( prop '( ea we le )
+      unless( get( bjt1 prop )
+        missing1 = cons( prop missing1 )
+        ) ;unless
+      unless( get( bjt2 prop )
+        missing2 = cons( prop missing2 )
+        ) ;unless
+      ) ;foreach
+
+; Report all missing parameters
+
+    when( ( missing1 || missing2 )
+
+      printf( "\n" )
+      printf( 
+        "** Parallel BJT with missing parameters not combined:\n" )
+
+      when( missing1
+        printf(
+          "   1st device: BJT missing parameters: %s \n"
+          buildString( missing1 ",") )
+        ) ;when
+      when( !missing1
+        printf(
+          "   1st device: BJT with all parameters \n" )
+        ) ;when
+
+      when( missing2
+        printf(
+          "   2nd device: BJT missing parameters: %s \n"
+          buildString( missing2 ",") )
+        ) ;when
+      when( !missing2
+        printf(
+          "   2nd device: BJT with all parameters \n" )
+        ) ;when
+
+      return( "doNotCombine" )
+      )
+
+; now we know that area and m are defined for both plists
+
+; set variables to make typing easier and code simpler
+
+    ea1   = float( bjt1->ea )
+    ea2   = float( bjt2->ea )
+    we1   = float( bjt1->we )
+    we2   = float( bjt2->we )
+    le1   = float( bjt1->le )
+    le2   = float( bjt2->le )
+    M1    = float(float( bjt1->m ) + float( bjt1->M ) - 1 ) 
+    M2    = float(float( bjt2->m ) + float( bjt2->M ) - 1 )
+
+    when( ea1 != ea2 return( "doNotCombine" ) )
+    when( we1 != we2 return( "doNotCombine" ) )
+    when( le1 != le2 return( "doNotCombine" ) )
+
+; Now combine parameters
+
+    newea = float( ea1 )
+    newwe = float( we1 )
+    newle = float( le1 )
+    newm = float( M1 + M2 )
+
+    parBjt->ea   = newea
+    parBjt->we   = newwe
+    parBjt->le   = newle
+    parBjt->m    = newm
+
+;    printf( "\n" )
+;    printf( "** Parallel BJT combined: \n" )
+
+
+;    printf( "   1st device: ea = %g we = %g le = %g m = %g \n" ea1 we1 le1 M1 )
+;    printf( "   2nd device: ea = %g we = %g le = %g m = %g \n" ea2 we2 le2 M2 )
+
+;    printf( "   Resulting: ea = %g  we = %g le = %g m = %g \n" newea newwe newle newm )
+    return( parBjt )
+
+    ) ;prog
+  ) ;parallelBJT 
+
+; *****************************************************************
+;;;;;;;;;;; combine parallel momcaps 
+
+  momcapNF_Tol = 3.0
+  momcapL_Tol = 3.0
+  momcapNM_Tol = 3.0
+
+procedure( parallelMOM( mom1 mom2 )
+  prog( ( parMom missing1 missing2 )
+
+; set the output plist to nil
+    parMom = ncons(nil)
+
+; Remap NF -> nf , L -> l , NM -> nm
+
+      when(  mom1->NF  mom1->nf  = mom1->NF )
+      when(  mom1->L   mom1->l   = mom1->L )
+      when(  mom1->NM  mom1->nm  = mom1->NM )
+
+      when(  mom2->NF  mom2->nf  = mom2->NF )
+      when(  mom2->L   mom2->l   = mom2->L )
+      when(  mom2->NM  mom2->nm  = mom2->NM )
+
+; If m (m factor) is missing, set it to 1
+
+    when( !mom1->m  mom1->m = 1 )
+    when( !mom2->m  mom2->m = 1 )
+
+; If nf  is missing, do not combine
+
+    foreach( prop '( nf l nm )
+      unless( get( mom1 prop )
+        missing1 = cons( prop missing1 )
+        ) ;unless
+      unless( get( mom2 prop )
+        missing2 = cons( prop missing2 )
+        ) ;unless
+      ) ;foreach
+
+; Report all missing parameters
+
+    when( ( missing1 || missing2 )
+
+      printf( "\n" )
+      printf( 
+        "** Parallel MOMCAP with missing parameters not combined:\n" )
+
+      when( missing1
+        printf(
+          "   1st device: MOMCAP missing parameters: %s \n"
+          buildString( missing1 ",") )
+        ) ;when
+      when( !missing1
+        printf(
+          "   1st device:  MOMCAP with all parameters \n" )
+        ) ;when
+
+      when( missing2
+        printf(
+          "   2nd device:  MOMCAP missing parameters: %s \n"
+          buildString( missing2 ",") )
+        ) ;when
+      when( !missing2
+        printf(
+          "   2nd device:  MOMCAP with all parameters \n" )
+        ) ;when
+
+      return( "doNotCombine" )
+      )
+
+; now we know that nf and m are defined for both plists
+
+; set variables to make typing easier and code simpler
+
+    nf1  = float( mom1->nf )
+    nf2  = float( mom2->nf )
+    l1   = float( mom1->l )
+    l2   = float( mom2->l )
+    NM1   = float( mom1->nm )
+    NM2   = float( mom2->nm )
+    M1   = float( mom1->m )
+    M2   = float( mom2->m )
+
+; Now combine parameters; set new m = 1
+
+      when( nf1 != nf2 return( "doNotCombine" ) )
+      when( l1 != l2 return( "doNotCombine" ) )
+      when( NM1 != NM2 return( "doNotCombine" ) )
+
+
+  
+    newnf = float( nf1 )
+    newl   = float( l1 )
+    newnm   = float( NM1 )
+    newm   = float( M1 + M2 )
+
+    parMom->nf = newnf
+    parMom->l   = newl
+    parMom->nm   = newnm
+    parMom->m    = newm
+
+;    printf( "\n" )
+;    printf( "** Parallel MOMCAPS combined: \n" )
+
+;    printf( "   1st device: nf= %g l = %g nm = %g m = %g \n" nf1 l1 NM1 M1)
+;    printf( "   2nd device: nf= %g l = %g nm = %g m = %g \n" nf2 l2 NM2 M2)
+
+;    printf( "   Resulting: nf= %g l = %g nm = %g m = %g  \n"  newnf newl newnm newm)
+
+    return( parMom )
+
+    ) ;prog
+  ) ;parallelMOM   
+; *****************************************************************
+; Compare non-mesh MOMCAPS properties
+
+  procedure( compareMOM( layPlist, schPlist )
+    prog( (missingLay missingSch)
+
+; Remap schematic properties 
+
+      when(  schPlist->NF  schPlist->nf  = schPlist->NF )
+      when(  schPlist->L   schPlist->l   = schPlist->L )
+      when(  schPlist->NM  schPlist->nm  = schPlist->NM )
+      when(  schPlist->M   schPlist->m   = schPlist->M )
+
+; If m (m factor) is missing, set it to 1
+
+      when( !layPlist->m  layPlist->m = 1 )
+      when( !schPlist->m  schPlist->m  = 1 )
+
+
+; If nf, l and nm is missing generate a parameter mismatch
+
+      foreach( prop '( nf l nm )
+        unless( get( layPlist prop )
+          missingLay = cons( prop missingLay )
+        ) ;unless
+        unless( get( schPlist prop )
+          missingSch = cons( prop missingSch )
+        ) ;unless
+      ) ;foreach
+
+; Report all missing parameters
+
+      when( ( missingLay || missingSch )
+
+        when( missingSch
+          sprintf( msg1 "Sch MOMCAPS missing params: %s"
+            buildString( missingSch ",") )
+        ) ;when
+        when( !missingSch
+          sprintf( msg1 "Sch MOMCAPS nf/l/nm %g %g %g"
+            float(schPlist->nf) float(schPlist->l) float(schPlist->nm)
+          )
+        ) ;when
+
+        when( missingLay
+          sprintf( msg2 "Lay MOMCAPS missing params: %s"
+            buildString( missingLay ",") )
+        ) ;when
+        when( !missingLay
+          sprintf( msg2 "Lay MOMCAPS nf/l/nm %g %g %g"
+            float(layPlist->nf) float(layPlist->l) float(layPlist->nm)
+          )
+        ) ;when
+
+        sprintf( msg "Err: %s ; %s" msg1 msg2 )
+        return( msg )
+      )
+
+      layM = layPlist->m
+      layNF = float( layM * layPlist->nf )
+      layL  = float( layM * layPlist->l )
+      layNM = float( layPlist->nm )
+
+      schM = schPlist->m
+      schNF = float( schM * schPlist->nf )
+      schL  = float( schM * schPlist->l )
+      schNM = float( schPlist->nm )
+
+      diffNF = 100 * ( abs( layNF - schNF ) / schNF )
+      diffL  = 100 * ( abs( layL - schL ) / schL )
+      diffNM = 100 * ( abs( layNM - schNM ) / schNM )
+
+      NFerr = nil
+      Lerr = nil
+      NMerr = nil
+
+      when( diffNF > momcapNF_Tol NFerr = t )
+      when( diffL > momcapL_Tol Lerr = t )
+      when( diffNM > momcapNM_Tol NMerr = t ) 
+
+; if no errors return nil
+
+      when( !NFerr && !Lerr && !NMerr return(nil) )
+
+; now we know there is a parameter error
+
+      sprintf(
+        msg
+        "Err: MOMCAPS Sch NF/L/NM  %g %g %g; Lay NF/L/NM %g %g %g"
+        schNF schL schNM layNF layL layNM
+      )
+      return( msg )
+
+   ) ; end prog
+  ) ; end compareMOM
+;************************************************************
+;;;;;;;;;;; combine parallel MESH momcaps 
+
+  ;momcapNF_Tol = 3.0
+  ;momcapL_Tol = 3.0
+  ;momcapNM_Tol = 3.0
+  momcapMH_Tol = 3.0
+
+procedure( parallelMESH( mom1 mom2 )
+  prog( ( parMom missing1 missing2 )
+
+; set the output plist to nil
+    parMom = ncons(nil)
+
+; Remap NF -> nf , L -> l , NM -> nm , MH -> mh 
+
+      when(  mom1->NF  mom1->nf = mom1->NF )
+      when(  mom1->L   mom1->l  = mom1->L )
+      when(  mom1->NM  mom1->nm = mom1->NM )
+      when(  mom1->MH  mom1->mh = mom1->MH )
+      when(  mom2->NF  mom2->nf = mom2->NF )
+      when(  mom2->L   mom2->l  = mom2->L )
+      when(  mom2->NM  mom2->nm = mom2->NM )
+      when(  mom2->MH  mom2->mh = mom2->MH )
+
+; If m (m factor) is missing, set it to 1
+
+    when( !mom1->m  mom1->m = 1 )
+    when( !mom2->m  mom2->m = 1 )
+
+; If nf  is missing, do not combine
+
+    foreach( prop '( nf l nm mh )
+      unless( get( mom1 prop )
+        missing1 = cons( prop missing1 )
+        ) ;unless
+      unless( get( mom2 prop )
+        missing2 = cons( prop missing2 )
+        ) ;unless
+      ) ;foreach
+
+; Report all missing parameters
+
+    when( ( missing1 || missing2 )
+
+      printf( "\n" )
+      printf( 
+        "** Parallel MESH MOMCAP with missing parameters not combined:\n" )
+
+      when( missing1
+        printf(
+          "   1st device: MESH MOMCAP missing parameters: %s \n"
+          buildString( missing1 ",") )
+        ) ;when
+      when( !missing1
+        printf(
+          "   1st device: MESH MOMCAP with all parameters \n" )
+        ) ;when
+
+      when( missing2
+        printf(
+          "   2nd device: MSEH MOMCAP missing parameters: %s \n"
+          buildString( missing2 ",") )
+        ) ;when
+      when( !missing2
+        printf(
+          "   2nd device: MESH MOMCAP with all parameters \n" )
+        ) ;when
+
+      return( "doNotCombine" )
+      )
+
+; now we know that nf and m are defined for both plists
+
+; set variables to make typing easier and code simpler
+
+    nf1  = float( mom1->nf )
+    nf2  = float( mom2->nf )
+    l1   = float( mom1->l )
+    l2   = float( mom2->l )
+    NM1   = float( mom1->nm )
+    NM2   = float( mom2->nm )
+    M1   = float( mom1->m )
+    M2   = float( mom2->m )
+    MH1   = float( mom1->mh )
+    MH2   = float( mom2->mh )
+
+; Now combine parameters; set new m = 1
+
+      when( nf1 != nf2 return( "doNotCombine" ) )
+      when( l1 != l2 return( "doNotCombine" ) )
+      when( NM1 != NM2 return( "doNotCombine" ) )
+      when( MH1 != MH2 return( "doNotCombine" ) )
+
+  
+    newnf = float( nf1 )
+    newl   = float( l1 )
+    newnm   = float( NM1 )
+    newm   = float( M1 + M2 )
+    newmh   = float( MH1)
+
+    parMom->nf   = newnf
+    parMom->l    = newl
+    parMom->nm   = newnm
+    parMom->m    = newm
+    parMom->mh   = newmh
+
+;    printf( "\n" )
+;    printf( "** Parallel MOMCAPS combined: \n" )
+
+;    printf( "   1st device: nf= %g l = %g nm = %g mh = %g m = %g \n" nf1 l1 NM1 MH1 M1)
+;    printf( "   2nd device: nf= %g l = %g nm = %g mh = %g m = %g \n" nf2 l2 NM2 MH2 M2)
+
+;    printf( "   Resulting: nf= %g l = %g nm = %g mh = %g m = %g  \n"  newnf newl newnm newmh newm)
+
+    return( parMom )
+
+    ) ;prog
+  ) ;parallelMESH  
+; ***********************************************************
+; Compare MESH MOMCAPS properties
+
+  procedure( compareMESH( layPlist, schPlist )
+    prog( (missingLay missingSch)
+
+; Remap schematic properties
+
+      when(  schPlist->NF  schPlist->nf = schPlist->NF )
+      when(  schPlist->L   schPlist->l  = schPlist->L )
+      when(  schPlist->NM  schPlist->nm = schPlist->NM )
+      when(  schPlist->MH  schPlist->mh = schPlist->MH )
+
+
+; If m (m factor) is missing, set it to 1
+
+      when( !layPlist->m  layPlist->m = 1 )
+      when( !schPlist->m  schPlist->m = 1 )
+
+
+; If nf, l , nm and mh is missing generate a parameter mismatch
+
+      foreach( prop '( nf l nm mh )
+        unless( get( layPlist prop )
+          missingLay = cons( prop missingLay )
+        ) ;unless
+        unless( get( schPlist prop )
+          missingSch = cons( prop missingSch )
+        ) ;unless
+      ) ;foreach
+
+; Report all missing parameters
+
+      when( ( missingLay || missingSch )
+
+        when( missingSch
+          sprintf( msg1 "Sch MESH MOMCAPS missing params: %s"
+            buildString( missingSch ",") )
+        ) ;when
+        when( !missingSch
+          sprintf( msg1 "Sch MESH MOMCAPS nf/l/mh/nm %g %g %g"
+            float(schPlist->nf) float(schPlist->l) float(schPlist->mh) float(schPlist->nm)
+          )
+        ) ;when
+
+        when( missingLay
+          sprintf( msg2 "Lay MESH MOMCAPS missing params: %s"
+            buildString( missingLay ",") )
+        ) ;when
+        when( !missingLay
+          sprintf( msg2 "Lay MESH MOMCAPS nf/l/mh/nm %g %g %g"
+            float(layPlist->nf) float(layPlist->l) float(layPlist->mh) float(layPlist->nm)
+          )
+        ) ;when
+
+        sprintf( msg "Err: %s ; %s" msg1 msg2 )
+        return( msg )
+      )
+
+      layM = layPlist->m
+      layNF = float( layM * layPlist->nf )
+      layL  = float( layM * layPlist->l )
+      layNM = float( layPlist->nm )
+      layMH = float( layM * layPlist->mh )
+
+      schM = schPlist->m
+      schNF = float( schM * schPlist->nf )
+      schL  = float( schM * schPlist->l )
+      schNM = float( schPlist->nm )
+      schMH = float( schM * schPlist->mh )
+
+      diffNF = 100 * ( abs( layNF - schNF ) / schNF )
+      diffL  = 100 * ( abs( layL - schL ) / schL )
+      diffNM = 100 * ( abs( layNM - schNM ) / schNM )
+      diffMH = 100 * ( abs( layMH - schMH ) / schMH )
+
+      NFerr = nil
+      Lerr = nil
+      NMerr = nil
+      MHerr = nil
+
+      when( diffNF > momcapNF_Tol NFerr = t )
+      when( diffL >  momcapL_Tol  Lerr = t )
+      when( diffNM > momcapNM_Tol NMerr = t ) 
+      when( diffMH > momcapMH_Tol MHerr = t ) 
+
+; if no errors return nil
+
+      when( !NFerr && !Lerr && !NMerr && !MHerr return(nil) )
+
+; now we know there is a parameter error
+
+      sprintf(
+        msg
+        "Err: MOMCAPS Sch NF/L/MH/NM  %g %g %g; Lay NF/L/MH/NM %g %g %g"
+        schNF schL schMH schNM layNF layL layMH layNM
+      )
+      return( msg )
+
+   ) ; end prog
+  ) ; end compareMOM
+;************************************************************
+
+;;;;;;;;;;; combine parallel MOMCAPS Array 
+mom_arrayNF_Tol = 0.0
+  mom_arrayLF_Tol = 3.0
+  mom_arrayBM_Tol = 0.0
+  mom_arrayNS_Tol = 0.0
+  mom_arrayARRAY_Tol = 0.0
+
+procedure( parallelMOMArray( mom1 mom2 )
+  prog( ( parMom missing1 missing2 )
+
+; set the output plist to nil
+    parMom = ncons(nil)
+
+; Remap schematic NF -> nf and LF -> lf BM -> bm NS -> ns ARRAY -> array
+
+      when( mom1->NF mom1->nf = mom1->NF )
+      when( mom1->LF mom1->lf = mom1->LF )
+      when( mom1->BM mom1->bm = mom1->BM )
+      when( mom1->NS mom1->ns = mom1->NS )
+      when( mom1->ARRAY mom1->array = mom1->ARRAY )
+      when( mom2->NF mom2->nf = mom2->NF )
+      when( mom2->LF mom2->lf = mom2->LF )
+      when( mom2->BM mom2->bm = mom2->BM )
+      when( mom2->NS mom2->ns = mom2->NS )
+      when( mom2->ARRAY mom2->array = mom2->ARRAY )
+
+; If m (m factor) is missing, set it to 1
+
+    when( !mom1->m  mom1->M = mom1->m )
+    when( !mom1->m  mom1->m = 1 )
+    when( !mom2->m  mom2->M = mom2->m )
+    when( !mom2->m  mom2->m = 1 )
+
+; If nf,mh,nm is missing, do not combine
+
+    foreach( prop '( nf lf bm ns array )
+      unless( get( mom1 prop )
+        missing1 = cons( prop missing1 )
+        ) ;unless
+      unless( get( mom2 prop )
+        missing2 = cons( prop missing2 )
+        ) ;unless
+      ) ;foreach
+
+; Report all missing parameters
+
+    when( ( missing1 || missing2 )
+
+      printf( "\n" )
+      printf( 
+        "** Parallel MOMCAP Array with missing parameters not combined:\n" )
+
+      when( missing1
+        printf(
+          "   1st device: MOMCAP Array missing parameters: %s \n"
+          buildString( missing1 ",") )
+        ) ;when
+      when( !missing1
+        printf(
+          "   1st device:  MOMCAP Array with all parameters \n" )
+        ) ;when
+
+      when( missing2
+        printf(
+          "   2nd device:  MOMCAP Array missing parameters: %s \n"
+          buildString( missing2 ",") )
+        ) ;when
+      when( !missing2
+        printf(
+          "   2nd device:  MOMCAP Array with all parameters \n" )
+        ) ;when
+
+      return( "doNotCombine" )
+      )
+
+; now we know that nf,lf,bm,ns,array are defined for both plists
+
+; set variables to make typing easier and code simpler
+
+    NF1  = float( mom1->nf )
+    NF2  = float( mom2->nf )
+    LF1  = float( mom1->lf )
+    LF2  = float( mom2->lf )
+    BM1  = float( mom1->bm )
+    BM2  = float( mom2->bm )
+    NS1   = float( mom1->ns )
+    NS2   = float( mom2->ns )
+    ARRAY1   = float( mom1->array )
+    ARRAY2   = float( mom2->array )
+    M1   = float( mom1->m )
+    M2   = float( mom2->m )
+
+; Now combine parameters;
+
+      when( NF1 != NF2 return( "doNotCombine" ) )
+      when( LF1 != LF2 return( "doNotCombine" ) )
+      when( BM1 != BM2 return( "doNotCombine" ) )
+      when( NS1 != NS2 return( "doNotCombine" ) )
+      when( ARRAY1 != ARRAY2 return( "doNotCombine" ) )
+
+
+  
+    newnf = float( NF1 )
+    newlf = float( LF1 )
+    newbm = float( BM1 )
+    newns = float( NS1 )
+    newarray = float( ARRAY1 )
+    newm  = float( M1 + M2 )
+
+    parMom->nf  = newnf
+    parMom->lf  = newlf
+    parMom->bm  = newbm
+    parMom->ns  = newns
+    parMom->array  = newarray
+    parMom->m   = newm
+
+;    printf( "\n" )
+;    printf( "** Parallel MOMCAPS Array combined: \n" )
+
+;    printf( "   1st device: nf= %g lf= %g bm = %g ns = %g array = %g m = %g \n" NF1 LF1 BM1 NS1 ARRAY1 M1)
+;    printf( "   2nd device: nf= %g lf= %g bm = %g ns = %g array = %g m = %g \n" NF2 LF2 BM2 NS2 ARRAY2 M2)
+
+;    printf( "   Resulting: nf= %g lf = %g bm = %g ns = %g array = %g m = %g \n" newnf newlf newbm newns newarray newm)
+
+    return( parMom )
+
+    ) ;prog
+  ) ;parallelMOMArray
+
+; *****************************************************************
+
+; Compare MOMCAPS Array VP3 & VP4 properties
+
+  procedure( compareMOMArray( layPlist, schPlist )
+    prog( (missingLay missingSch)
+
+; Remap schematic NF -> nf and LF -> lf BM -> bm NS -> ns ARRAY -> array
+
+      when( schPlist->NF schPlist->nf = schPlist->NF )
+      when( schPlist->LF schPlist->lf = schPlist->LF )
+      when( schPlist->BM schPlist->bm = schPlist->BM )
+      when( schPlist->NS schPlist->ns = schPlist->NS )
+      when( schPlist->ARRAY schPlist->array = schPlist->ARRAY )
+
+; If m (m factor) is missing, set it to 1
+
+      when( !layPlist->m  layPlist->m = layPlist->M )
+      when( !layPlist->m  layPlist->m = 1 )
+      when( !schPlist->m  schPlist->m = schPlist->M )
+      when( !schPlist->m  schPlist->m = 1 )
+
+
+; If nf, mh and nm is missing generate a parameter mismatch
+
+      foreach( prop '( nf lf bm ns array )
+        unless( get( layPlist prop )
+          missingLay = cons( prop missingLay )
+        ) ;unless
+        unless( get( schPlist prop )
+          missingSch = cons( prop missingSch )
+        ) ;unless
+      ) ;foreach
+
+; Report all missing parameters
+
+      when( ( missingLay || missingSch )
+
+        when( missingSch
+          sprintf( msg1 "Sch MOMCAPS Array missing params: %s"
+            buildString( missingSch ",") )
+        ) ;when
+        when( !missingSch
+          sprintf( msg1 "Sch MOMCAPS Array nf/lf/bm/ns/array %g %g %g %g %g"
+            float(schPlist->nf) float(schPlist->lf) float(schPlist->bm) float(schPlist->bs) float(schPlist->array)
+          )
+        ) ;when
+
+        when( missingLay
+          sprintf( msg2 "Lay MOMCAPS Array missing params: %s"
+            buildString( missingLay ",") )
+        ) ;when
+        when( !missingLay
+          sprintf( msg2 "Lay MOMCAPS Array nf/lf/bm/ns/array %g %g %g %g %g"
+            float(layPlist->nf) float(layPlist->lf) float(layPlist->bm) float(layPlist->bs) float(layPlist->array)
+          )
+        ) ;when
+
+        sprintf( msg "Err: %s ; %s" msg1 msg2 )
+        return( msg )
+      )
+
+      layM = layPlist->m
+      layNF = float( layPlist->nf )
+      layLF = float( layPlist->lf )
+      layBM = float( layPlist->bm )
+      layNS = float( layPlist->ns )
+;     layARRAY = float( layPlist->array )
+      layARRAY = float( layPlist->array ) * layM
+
+      schM = schPlist->m
+      schNF = float( schPlist->nf )
+      schLF = float( schPlist->lf )
+      schBM = float( schPlist->bm )
+      schNS = float( schPlist->ns )
+     ;schARRAY = float( schPlist->array )
+      schARRAY = float( schPlist->array ) * schM
+
+      diffNF = 100 * ( abs( layNF - schNF ) / schNF )
+      diffLF = 100 * ( abs( layLF - schLF ) / schLF )
+      diffBM = 100 * ( abs( layBM - schBM ) / schBM )
+      diffNS = 100 * ( abs( layNS - schNS ) / schNS )
+      diffARRAY = 100 * ( abs( layARRAY - schARRAY ) / schARRAY )
+
+      NFerr = nil
+      LFerr = nil
+      BMerr = nil
+      NSerr = nil
+      ARRAYerr = nil
+
+      when( diffNF > mom_arrayNF_Tol NFerr = t )
+      when( diffLF > mom_arrayLF_Tol LFerr = t )
+      when( diffBM > mom_arrayBM_Tol BMerr = t ) 
+      when( diffNS > mom_arrayNS_Tol NSerr = t ) 
+      when( diffARRAY > mom_arrayARRAY_Tol ARRAYerr = t ) 
+
+; if no errors return nil
+
+      when( !NFerr && !LFerr && !BMerr && !NSerr && !ARRAYerr return(nil) )
+
+; now we know there is a parameter error
+
+      sprintf(
+        msg
+        "Err: MOMCAPS Array Sch NF/LF/BM/NS/ARRAY %g %g %g %g %g; Lay NF/LF/BM/NS/ARRAY %g %g %g %g %g"
+        schNF schLF schBM schNS schARRAY layNF layLF layBM layNS layARRAY
+      )
+      return( msg )
+
+   ) ; end prog
+  ) ; end compareMOMArray
+; *****************************************************************
+
+;;;;;;;;;;; combine parallel RF resistor 
+resR_Tol = 3.0
+  resW_Tol = 3.0
+  resL_Tol = 3.0
+  resD_Tol = 3.0
+
+procedure( parallelRES_RF( res1 res2 )
+  prog( ( parRes missing1 missing2 )
+
+; set the output plist to nil
+    parRes = ncons(nil)
+
+; Remap schematic R -> r and W -> w and L -> l
+
+      when( res1->R res1->r = res1->R )
+      when( res1->W res1->w = res1->W )
+      when( res1->L res1->l = res1->L )
+      when( res1->D res1->d = res1->D )
+      when( res2->R res2->r = res2->R )
+      when( res2->W res2->w = res2->W )
+      when( res2->L res2->l = res2->L )
+      when( res2->D res2->d = res2->D )
+
+; If m (m factor) is missing, set it to 1
+
+    when( !res1->m  res1->m = 1 )
+    when( !res1->M  res1->M = 1 )
+    when( !res2->m  res2->m = 1 )
+    when( !res2->M  res2->M = 1 )
+
+; If r,w,l is missing, do not combine
+
+    foreach( prop '( r w l d )
+      unless( get( res1 prop )
+        missing1 = cons( prop missing1 )
+        ) ;unless
+      unless( get( res2 prop )
+        missing2 = cons( prop missing2 )
+        ) ;unless
+      ) ;foreach
+
+; Report all missing parameters
+
+    when( ( missing1 || missing2 )
+
+      printf( "\n" )
+      printf( 
+        "** Parallel RES with missing parameters not combined:\n" )
+
+      when( missing1
+        printf(
+          "   1st device: RES missing parameters: %s \n"
+          buildString( missing1 ",") )
+        ) ;when
+      when( !missing1
+        printf(
+          "   1st device:  RES with all parameters \n" )
+        ) ;when
+
+      when( missing2
+        printf(
+          "   2nd device:  RES missing parameters: %s \n"
+          buildString( missing2 ",") )
+        ) ;when
+      when( !missing2
+        printf(
+          "   2nd device:  RES with all parameters \n" )
+        ) ;when
+
+      return( "doNotCombine" )
+      )
+
+; now we know that r,w,l are defined for both plists
+
+; set variables to make typing easier and code simpler
+
+    R1  = float( res1->r )
+    R2  = float( res2->r )
+    W1  = float( res1->w )
+    W2  = float( res2->w )
+    L1  = float( res1->l )
+    L2  = float( res2->l )
+    D1  = float( res1->d )
+    D2  = float( res2->d )
+    M1  = float( float( res1->m ) + float( res1->M ) - 1 )
+    M2  = float( float( res2->m ) + float( res2->M ) - 1 )
+
+; Now combine parameters;
+
+      when( R1 != R2 return( "doNotCombine" ) )
+      when( W1 != W2 return( "doNotCombine" ) )
+      when( L1 != L2 return( "doNotCombine" ) )
+      when( D1 != D2 return( "doNotCombine" ) )
+ 
+ 
+    newR = float( R1 )
+    newW = float( W1 )
+    newL = float( L1 )
+    newD = float( D1 )
+    newM = float( M1 + M2 )
+
+    parRes->r  = newR
+    parRes->w  = newW
+    parRes->l  = newL
+    parRes->d  = newD
+    parRes->m  = newM
+
+;    printf( "\n" )
+;    printf( "** Parallel RES combined: \n" )
+
+;    printf( "   1st device: r= %g w= %g l = %g \n" R1 W1 L1 D1 M1 )
+;    printf( "   2nd device: r= %g w= %g l = %g \n" R2 W2 L2 D2 M2 )
+
+;    printf( "   Resulting: r= %g w = %g l = %g d = %g m = %g \n" newR newW newL newD newM )
+
+    return( parRes )
+
+    ) ;prog
+  ) ;parallelRES_RF
+; *****************************************************************
+; Compare RES properties
+
+  procedure( compareRES_RF( layPlist, schPlist )
+    prog( (missingLay missingSch)
+
+; Remap schematic R -> r and W -> w and L -> l
+
+      when( schPlist->R schPlist->r = schPlist->R )
+      when( schPlist->W schPlist->w = schPlist->W )
+      when( schPlist->L schPlist->l = schPlist->L )
+      when( schPlist->D schPlist->d = schPlist->D )
+
+; If m (m factor) is missing, set it to 1
+
+      when( !layPlist->m  layPlist->m = 1 )
+      when( !layPlist->M  layPlist->M = 1 )
+      when( !schPlist->m  schPlist->m = 1 )
+      when( !schPlist->M  schPlist->M = 1 )
+
+
+; If r, w and l is missing generate a parameter mismatch
+
+      foreach( prop '( r w l d )
+        unless( get( layPlist prop )
+          missingLay = cons( prop missingLay )
+        ) ;unless
+        unless( get( schPlist prop )
+          missingSch = cons( prop missingSch )
+        ) ;unless
+      ) ;foreach
+
+; Report all missing parameters
+
+      when( ( missingLay || missingSch )
+
+        when( missingSch
+          sprintf( msg1 "Sch RES missing params: %s"
+            buildString( missingSch ",") )
+        ) ;when
+        when( !missingSch
+          sprintf( msg1 "Sch RES r/w/l/d %g %g %g %g"
+            float(schPlist->r) float(schPlist->w) float(schPlist->l) float(schPlist->d)
+          )
+        ) ;when
+
+        when( missingLay
+          sprintf( msg2 "Lay RES missing params: %s"
+            buildString( missingLay ",") )
+        ) ;when
+        when( !missingLay
+          sprintf( msg2 "Lay RES r/w/l/d %g %g %g %g"
+            float(layPlist->r) float(layPlist->w) float(layPlist->l) float(layPlist->d) 
+          )
+        ) ;when
+
+        sprintf( msg "Err: %s ; %s" msg1 msg2 )
+        return( msg )
+      )
+
+      layM = float( layPlist->m ) + float( layPlist->M ) - 1
+      layR = float( layPlist->r ) 
+      layW = float( layPlist->w )
+      layL = float( layPlist->l )
+      layD = float( layPlist->d )
+
+      schM = float( schPlist->m ) + float( schPlist->M ) - 1
+      schR = float( schPlist->r ) 
+      schW = float( schPlist->w )
+      schL = float( schPlist->l )
+      schD = float( schPlist->d )
+
+      diffR = 100 * ( abs( ( layR / layM ) - ( schR / schM ) ) / ( schR / schM ) )
+      diffW = 100 * ( abs( layW - schW ) / schW )
+      diffL = 100 * ( abs( layL - schL ) / schL )
+      diffD = 100 * ( abs( layD - schD ) / schD )
+
+      Rerr = nil
+      Werr = nil
+      Lerr = nil
+      Derr = nil
+
+      when( diffR > resR_Tol Rerr = t )
+      when( diffW > resW_Tol Werr = t )
+      when( diffL > resL_Tol Lerr = t ) 
+      when( diffD > resD_Tol Derr = t ) 
+
+; if no errors return nil
+
+      when( !Rerr && !Werr && !Lerr && !Derr return(nil) )
+
+; now we know there is a parameter error
+
+      sprintf(
+        msg
+        "Err: RES Sch R/W/L/D/M %g %g %g %g %g; Lay R/W/L/D/M %g %g %g %g %g"
+        schR schW schL schD schM layR layW layL layD layM
+      )
+      return( msg )
+
+   ) ; end prog
+  ) ; end compareRES_RF
+
+
+; *****************************************************************
+
+
+
+
+
+avCompareRules(
+
+    compareParameter( CAP percent( "C" 3 ) )
+    compareParameter( "n_12_rf" percent( "wf" 3 "lf" 3 "nf" 3 ) )
+    compareParameter( "n_33_rf" percent( "wf" 3 "lf" 3 "nf" 3 ) )
+    compareParameter( "p_12_rf" percent( "wf" 3 "lf" 3 "nf" 3 ) )
+    compareParameter( "p_33_rf" percent( "wf" 3 "lf" 3 "nf" 3 ) )
+    compareParameter( "n_bpw_12_rf" percent( "wf" 3 "lf" 3 "nf" 3 ) )
+    compareParameter( "n_bpw_33_rf" percent( "wf" 3 "lf" 3 "nf" 3 ) )
+    compareParameter( "varmis_12_rf" percent( "w" 3 "l" 3 "nf" 3 "c" 3 ) )
+    compareParameter( "varmis_33_rf" percent( "w" 3 "l" 3 "nf" 3 "c" 3 ) )
+    compareParameter( "vardiop_rf" percent( "wp" 3 "l" 3 "nf" 3 "c" 3 ) )
+    compareParameter( "rnppo_rf" compareRES_RF )
+    compareParameter( "rnnpo_rf" compareRES_RF )
+    compareParameter( "rnhr_rf" compareRES_RF )
+;;
+    compareParameter( "N_12_RF" percent( "wf" 3 "lf" 3 "nf" 3 ) )
+    compareParameter( "N_33_RF" percent( "wf" 3 "lf" 3 "nf" 3 ) )
+    compareParameter( "P_12_RF" percent( "wf" 3 "lf" 3 "nf" 3 ) )
+    compareParameter( "P_33_RF" percent( "wf" 3 "lf" 3 "nf" 3 ) )
+    compareParameter( "N_BPW_12_RF" percent( "wf" 3 "lf" 3 "nf" 3 ) )
+    compareParameter( "N_BPW_33_RF" percent( "wf" 3 "lf" 3 "nf" 3 ) )
+    compareParameter( "VARMIS_12_RF" percent( "w" 3 "l" 3 "nf" 3 "c" 3 ) )
+    compareParameter( "VARMIS_33_RF" percent( "w" 3 "l" 3 "nf" 3 "c" 3 ) )
+    compareParameter( "VARDIOP_RF" percent( "wp" 3 "l" 3 "nf" 3 "c" 3 ) )
+    compareParameter( "RNPPO_RF" compareRES_RF )
+    compareParameter( "RNNPO_RF" compareRES_RF )
+    compareParameter( "RNHR_RF" compareRES_RF )
+;;
+    compareParameter( "pnp_nvl20_rf"   compareBJT )
+    compareParameter( "PNP_NVL20_RF"   compareBJT )
+    compareParameter( "pnp_nv50x50_rf" compareBJT )
+    compareParameter( "PNP_NV50X50_RF" compareBJT )
+    compareParameter( "npn_nvl20_rf"   compareBJT )
+    compareParameter( "NPN_NVL20_RF"   compareBJT )
+    compareParameter( "npn_nv50x50_rf" compareBJT )
+    compareParameter( "NPN_NV50X50_RF" compareBJT )
+    compareParameter( "npn_svl20_rf"   compareBJT )
+    compareParameter( "NPN_SVL20_RF"   compareBJT )
+    compareParameter( "npn_sv50x50_rf" compareBJT )
+    compareParameter( "NPN_SV50X50_RF" compareBJT )
+;;
+    compareParameter( "RSND_MML130E" percent( "w" 3 "l" 3  "r" 3 ) )
+    compareParameter( "RSPD_MML130E" percent( "w" 3 "l" 3  "r" 3 ) )
+    compareParameter( "RSNPO_MML130E" percent( "w" 3 "l" 3  "r" 3 ) )
+    compareParameter( "RSPPO_MML130E" percent( "w" 3 "l" 3  "r" 3 ) )
+    compareParameter( "RNND_MML130E" percent( "w" 3 "l" 3  "r" 3 ) )
+    compareParameter( "RNPD_MML130E" percent( "w" 3 "l" 3  "r" 3 ) )
+    compareParameter( "RNNPO_MML130E" percent( "w" 3 "l" 3  "r" 3 ) )
+    compareParameter( "RNPPO_MML130E" percent( "w" 3 "l" 3  "r" 3 ) )
+    compareParameter( "RNHR1000_MML130E" percent( "w" 3 "l" 3  "r" 3 ) )
+    compareParameter( "rsnd_mml130e" percent( "w" 3 "l" 3  "r" 3 ) )
+    compareParameter( "rspd_mml130e" percent( "w" 3 "l" 3  "r" 3 ) )
+    compareParameter( "rsnpo_mml130e" percent( "w" 3 "l" 3  "r" 3 ) )
+    compareParameter( "rsppo_mml130e" percent( "w" 3 "l" 3  "r" 3 ) )
+    compareParameter( "rnnd_mml130e" percent( "w" 3 "l" 3  "r" 3 ) )
+    compareParameter( "rnpd_mml130e" percent( "w" 3 "l" 3  "r" 3 ) )
+    compareParameter( "rnnpo_mml130e" percent( "w" 3 "l" 3  "r" 3 ) )
+    compareParameter( "rnppo_mml130e" percent( "w" 3 "l" 3  "r" 3 ) )
+    compareParameter( "rnhr1000_mml130e" percent( "w" 3 "l" 3  "r" 3 ) )
+;;
+
+  if( (avSwitch  "MIM15F") then 
+    compareParameter( "MIMCAPS_15F_RF" percent( "w" 3 "l" 3 "c" 3 ) )
+    compareParameter( "mimcaps_15f_rf" percent( "w" 3 "l" 3 "c" 3 ) )
+	else
+  if( (avSwitch  "MIM20F") then 
+    compareParameter( "MIMCAPS_20F_RF" percent( "w" 3 "l" 3 "c" 3 ) )
+    compareParameter( "mimcaps_20f_rf" percent( "w" 3 "l" 3 "c" 3 ) )
+	else
+    compareParameter( "MIMCAPS_RF" percent( "w" 3 "l" 3 "c" 3 ) )
+    compareParameter( "mimcaps_rf" percent( "w" 3 "l" 3 "c" 3 ) )
+  )
+  )
+    compareParameter( "MOMCAPS_SY_MM" compareMOM )
+    compareParameter( "MOMCAPS_RF" compareMOM )
+    compareParameter( "MOMCAPS_SYMESH_MM" compareMESH )
+    compareParameter( "MOMCAPS_ASY_MM" compareMOM )
+    compareParameter( "MOMCAPS_ASY_RF" compareMOM )
+    compareParameter( "MOMCAPS_ASMESH_MM" compareMESH )
+    compareParameter( "momcaps_sy_mm" compareMOM )
+    compareParameter( "momcaps_rf" compareMOM )
+    compareParameter( "momcaps_symesh_mm" compareMESH )
+    compareParameter( "momcaps_asy_mm" compareMOM )
+    compareParameter( "momcaps_asy_rf" compareMOM )
+    compareParameter( "momcaps_asmesh_mm" compareMESH )
+    compareParameter( "MOMCAPS_Array_VP3_RF" compareMOMArray )
+    compareParameter( "MOMCAPS_Array_VP4_RF" compareMOMArray )
+    compareParameter( "momcaps_array_vp3_rf" compareMOMArray )
+    compareParameter( "momcaps_array_vp4_rf" compareMOMArray )
+
+    compareParameter( "PAD_RF" percent( "w" 3 "l" 3 "index" 3 ) )
+    compareParameter( "L_CR20K_RF" percent( "w" 3 "s" 3 "nt" 3 "do" 3 "tm" 0 "l" 3 "d" 3 ) )
+    compareParameter( "L_SQSK_RF" percent( "w" 3 "s" 3 "ns" 3 "nt" 3 "do" 3 "bm" 3 "l" 3 "d" 3 ) )
+    compareParameter( "L_NWCR20K_RFVIL" percent( "w" 3 "s" 3 "nt" 0 "od" 3 ) )
+    compareParameter( "L_CR20K_RFVIL" percent( "w" 3 "s" 3 "nt" 0 "od" 3 ) )
+    compareParameter( "L_NWSQSK_RFVIL" percent( "w" 3 "s" 3 "nt" 0 "od" 3 "ns" 3 "bm" 0 ) )
+    compareParameter( "L_SQSK_RFVIL" percent( "w" 3 "s" 3 "nt" 0 "od" 3 "ns" 3 "bm" 0 ) )
+    compareParameter( "L_NWSY20K_RFVIL" percent( "w" 3 "s" 3 "nt" 0 "od" 3 ) )
+    compareParameter( "L_SY20K_RFVIL" percent( "w" 3 "s" 3 "nt" 0 "od" 3 ) )
+    compareParameter( "L_NWSY20KCT_RFVIL" percent( "w" 3 "s" 3 "nt" 0 "od" 3 ) )
+    compareParameter( "L_SY20KCT_RFVIL" percent( "w" 3 "s" 3 "nt" 0 "od" 3 ) )
+    compareParameter( "pad_rf" percent( "w" 3 "l" 3 "index" 3 ) )
+    compareParameter( "l_cr20k_rf" percent( "w" 3 "s" 3 "nt" 3 "do" 3 "tm" 0 "l" 3 "d" 3 ) )
+    compareParameter( "l_sqsk_rf" percent( "w" 3 "s" 3 "ns" 3 "nt" 3 "do" 3 "bm" 3 "l" 3 "d" 3 ) )
+    compareParameter( "l_nwcr20k_rfvil" percent( "w" 3 "s" 3 "nt" 0 "od" 3 ) )
+    compareParameter( "l_cr20k_rfvil" percent( "w" 3 "s" 3 "nt" 0 "od" 3 ) )
+    compareParameter( "l_nwsqsk_rfvil" percent( "w" 3 "s" 3 "nt" 0 "od" 3 "ns" 3 "bm" 0 ) )
+    compareParameter( "l_sqsk_rfvil" percent( "w" 3 "s" 3 "nt" 0 "od" 3 "ns" 3 "bm" 0 ) )
+    compareParameter( "l_nwsy20k_rfvil" percent( "w" 3 "s" 3 "nt" 0 "od" 3 ) )
+    compareParameter( "l_sy20k_rfvil" percent( "w" 3 "s" 3 "nt" 0 "od" 3 ) )
+    compareParameter( "l_nwsy20kct_rfvil" percent( "w" 3 "s" 3 "nt" 0 "od" 3 ) )
+    compareParameter( "l_sy20kct_rfvil" percent( "w" 3 "s" 3 "nt" 0 "od" 3 ) )
+    compareParameter( "diop_esd_rf"  compareDIO_RF )
+    compareParameter( "DIOP_ESD_RF"  compareDIO_RF )
+    compareParameter( "diodn_esd_rf" compareDIO_RF )
+    compareParameter( "DIODN_ESD_RF" compareDIO_RF )
+    
+  if( (avSwitch  "VST_LIB") then 
+    compareParameter( "N_PG466_HSSPL130E" percent( "w" 22 "l" 22 ) )
+    compareParameter( "N_PD466_HSSPL130E" percent( "w" 3 "l" 3 ) )
+    compareParameter( "P_L466_HSSPL130E" percent( "w" 3 "l" 3 ) )
+    compareParameter( "N_12_HSL130E" percent( "w" 3 "l" 3 ) )
+    compareParameter( "P_12_HSL130E" percent( "w" 3 "l" 3 ) )
+    compareParameter( "N_12_LLL130E" percent( "w" 3 "l" 3 ) )
+    compareParameter( "P_12_LLL130E" percent( "w" 3 "l" 3 ) )
+    compareParameter( "DIOP_L130E" percent( "pj" 359 ) )
+    compareParameter( "DION_L130E" percent( "area" 3 "pj" 3) )
+    compareParameter( "RNPPO_L130E" percent( "r" 25 ) )
+    compareParameter( "n_pg466_hsspl130e" percent( "w" 22 "l" 22 ) )
+    compareParameter( "n_pd466_hsspl130e" percent( "w" 3 "l" 3 ) )
+    compareParameter( "p_l466_hsspl130e" percent( "w" 3 "l" 3 ) )
+    compareParameter( "n_12_hsl130e" percent( "w" 3 "l" 3 ) )
+    compareParameter( "p_12_hsl130e" percent( "w" 3 "l" 3 ) )
+    compareParameter( "n_12_lll130e" percent( "w" 3 "l" 3 ) )
+    compareParameter( "p_12_lll130e" percent( "w" 3 "l" 3 ) )
+    compareParameter( "diop_l130e" percent( "pj" 359 ) )
+    compareParameter( "dion_l130e" percent( "area" 3 "pj" 3) )
+    compareParameter( "rnppo_l130e" percent( "r" 25 ) )
+   else
+   if( (avSwitch  "VIRAGE_LIB") then 
+    compareParameter( "N_12_HSL130E" percent( "w" 3 "l" 3 ) )
+    compareParameter( "P_12_HSL130E" percent( "w" 15 "l" 3 ) )
+    compareParameter( "N_12_LLL130E" percent( "w" 3 "l" 3 ) )
+    compareParameter( "P_12_LLL130E" percent( "w" 3 "l" 3 ) )
+    compareParameter( "DION_L130E" percent( "area" 460 "pj" 605 ) )
+    compareParameter( "DIOP_L130E" percent( "area" 72 "pj" 49 ) )
+    compareParameter( "n_12_hsl130e" percent( "w" 3 "l" 3 ) )
+    compareParameter( "p_12_hsl130e" percent( "w" 15 "l" 3 ) )
+    compareParameter( "n_12_lll130e" percent( "w" 3 "l" 3 ) )
+    compareParameter( "p_12_lll130e" percent( "w" 3 "l" 3 ) )
+    compareParameter( "dion_l130e" percent( "area" 460 "pj" 605 ) )
+    compareParameter( "diop_l130e" percent( "area" 72 "pj" 49 ) )
+   else
+    compareParameter( MOS percent( "w" 3 "l" 3 ) )
+    compareParameter( DIO compareDIO )
+    compareParameter( RES percent( "r" 3 ) )
+    compareParameter( BJT percent( "area" 3 ) )
+ 
+    )
+    )
+    autoPinSwap( t 2000 ) 
+    expandOnError( ( reduce t ) ( swap t ) )
+    
+       
+ ;    nameBinding( ( pin nil ) )
+  if( avSwitch("FTC_LIB") || avSwitch("VST_LIB") then 
+    verifyTopSchPins(nil)
+    verifyTopLayPins(nil)
+  else   
+    verifyTopSchPins(t)
+    verifyTopLayPins(t)
+  )
+  ;  mergeSplitGate( sameOrder )
+  mergeSplitGate( mergeAll )
+mergeParallel(DIO merge parallelDIO)
+
+      mergeParallel( "PAD_RF" noMerge )
+      mergeParallel( "pad_rf" noMerge )
+      mergeParallel( "L_CR20K_RF" noMerge )
+      mergeParallel( "l_cr20k_rf" noMerge )
+      mergeParallel( "L_SQSK_RF" noMerge )
+      mergeParallel( "l_sqsk_rf" noMerge )
+      mergeParallel( "L_NWCR20K_RFVIL" noMerge )
+      mergeParallel( "l_nwcr20k_rfvil" noMerge )
+      mergeParallel( "L_CR20K_RFVIL" noMerge )
+      mergeParallel( "l_cr20k_rfvil" noMerge )  
+      mergeParallel( "L_NWSQSK_RFVIL" noMerge )
+      mergeParallel( "l_nwsqsk_rfvil" noMerge )      
+      mergeParallel( "L_SQSK_RFVIL" noMerge )
+      mergeParallel( "l_sqsk_rfvil" noMerge )      
+      mergeParallel( "L_NWSY20K_RFVIL" noMerge )
+      mergeParallel( "l_nwsy20k_rfvil" noMerge )
+      mergeParallel( "L_SY20K_RFVIL" noMerge )
+      mergeParallel( "l_sy20k_rfvil" noMerge )
+      mergeParallel( "L_NWSY20KCT_RFVIL" noMerge )
+      mergeParallel( "l_nwsy20kct_rfvil" noMerge )    
+      mergeParallel( "L_SY20KCT_RFVIL" noMerge )
+      mergeParallel( "l_sy20kct_rfvil" noMerge )      
+      mergeParallel( "momcaps_rf" merge parallelMOM)  
+      mergeParallel( "momcaps_sy_mm" merge parallelMOM)  
+      mergeParallel( "momcaps_symesh_mm" merge parallelMESH)  
+      mergeParallel( "MOMCAPS_RF" merge parallelMOM)  
+      mergeParallel( "MOMCAPS_SY_MM" merge parallelMOM)  
+      mergeParallel( "MOMCAPS_SYMESH_MM" merge parallelMESH)  
+      mergeParallel( "momcaps_asy_rf" merge parallelMOM)  
+      mergeParallel( "momcaps_asy_mm" merge parallelMOM)  
+      mergeParallel( "momcaps_asmesh_mm" merge parallelMESH)  
+      mergeParallel( "MOMCAPS_ASY_RF" merge parallelMOM)  
+      mergeParallel( "MOMCAPS_ASY_MM" merge parallelMOM)  
+      mergeParallel( "MOMCAPS_ASMESH_MM" merge parallelMESH)
+      mergeParallel( "MOMCAPS_Array_VP3_RF" merge parallelMOMArray)  
+      mergeParallel( "MOMCAPS_Array_VP4_RF" merge parallelMOMArray)   
+      mergeParallel( "momcaps_array_vp3_rf" merge parallelMOMArray)  
+      mergeParallel( "momcaps_array_vp4_rf" merge parallelMOMArray)   
+
+      mergeParallel( "pnp_nvl20_rf"   merge parallelBJT)  
+      mergeParallel( "PNP_NVL20_RF"   merge parallelBJT)  
+      mergeParallel( "pnp_nv50x50_rf" merge parallelBJT)  
+      mergeParallel( "PNP_NV50X50_RF" merge parallelBJT)  
+      mergeParallel( "npn_nvl20_rf"   merge parallelBJT)  
+      mergeParallel( "NPN_NVL20_RF"   merge parallelBJT)  
+      mergeParallel( "npn_nv50x50_rf" merge parallelBJT)  
+      mergeParallel( "NPN_NV50X50_RF" merge parallelBJT)  
+      mergeParallel( "npn_svl20_rf"   merge parallelBJT)  
+      mergeParallel( "NPN_SVL20_RF"   merge parallelBJT)  
+      mergeParallel( "npn_sv50x50_rf" merge parallelBJT)  
+      mergeParallel( "NPN_SV50X50_RF" merge parallelBJT)  
+      mergeParallel( "diop_esd_rf"    merge parallelDIO_RF)  
+      mergeParallel( "DIOP_ESD_RF"    merge parallelDIO_RF)  
+      mergeParallel( "diodn_esd_rf"   merge parallelDIO_RF)  
+      mergeParallel( "DIODN_ESD_RF"   merge parallelDIO_RF)  
+
+      mergeParallel( "rnhr_rf"   merge parallelRES_RF)  
+      mergeParallel( "RNHR_RF"   merge parallelRES_RF)  
+      mergeParallel( "rnnpo_rf"   merge parallelRES_RF)  
+      mergeParallel( "RNNPO_RF"   merge parallelRES_RF)  
+      mergeParallel( "rnppo_rf"   merge parallelRES_RF)  
+      mergeParallel( "RNPPO_RF"   merge parallelRES_RF)  
+
+;;     filter( "X" )
+
+    schematic( 
+      setPower( all PWR1 )
+      setPower( all PWR2 )
+      setGround( all GND1 )
+      setGround( all GND2 )
+      genericDevice("N_12_RF")
+      genericDevice("P_12_RF")
+      genericDevice("N_33_RF")
+      genericDevice("P_33_RF")
+      genericDevice("N_BPW_12_RF")
+      genericDevice("N_BPW_33_RF")
+      genericDevice("RNHR_RF")
+      genericDevice("RNNPO_RF")
+      genericDevice("RNPPO_RF")
+      genericDevice("PNP_NV50X50_RF")
+      genericDevice("PNP_NVL20_RF")
+      genericDevice("NPN_NV50X50_RF")
+      genericDevice("NPN_NVL20_RF")
+      genericDevice("NPN_SV50X50_RF")
+      genericDevice("NPN_SVL20_RF")
+      genericDevice("PAD_RF")
+      genericDevice("VARMIS_12_RF")
+      genericDevice("VARMIS_33_RF")
+      genericDevice("VARDIOP_RF")
+      genericDevice("n_12_rf")
+      genericDevice("p_12_rf")
+      genericDevice("n_33_rf")
+      genericDevice("p_33_rf")
+      genericDevice("n_bpw_12_rf")
+      genericDevice("n_bpw_33_rf")
+      genericDevice("rnhr_rf")
+      genericDevice("rnppo_rf")
+      genericDevice("rnppo_rf")
+      genericDevice("pnp_nv50X50_rf")
+      genericDevice("pnp_nvL20_rf")
+      genericDevice("npn_nv50X50_rf")
+      genericDevice("npn_nvL20_rf")
+      genericDevice("npn_sv50X50_rf")
+      genericDevice("npn_svL20_rf")
+      genericDevice("pad_rf")
+      genericDevice("varmis_12_rf")
+      genericDevice("varmis_33_rf")
+      genericDevice("vardiop_rf")
+     genericDevice("RSND_MML130E")
+     genericDevice("RSPD_MML130E")
+     genericDevice("RSNPO_MML130E")
+     genericDevice("RSPPO_MML130E")
+     genericDevice("RNND_MML130E")
+     genericDevice("RNPD_MML130E")
+     genericDevice("RNNPO_MML130E")
+     genericDevice("RNPPO_MML130E")
+     genericDevice("RNHR1000_MML130E")
+     genericDevice("rsnd_mml130e")
+     genericDevice("rspd_mml130e")
+     genericDevice("rsnpo_mml130e")
+     genericDevice("rsppo_mml130e")
+     genericDevice("rnnd_mml130e")
+     genericDevice("rnpd_mml130e")
+     genericDevice("rnnpo_mml130e")
+     genericDevice("rnppo_mml130e")
+     genericDevice("rnhr1000_mml130e")
+     genericDevice("MOMCAPS_SYMESH_MM")
+     genericDevice("momcaps_symesh_mm")
+     genericDevice("MOMCAPS_ASMESH_MM")
+     genericDevice("momcaps_asmesh_mm")
+     genericDevice("MOMCAPS_Array_VP3_RF")
+     genericDevice("MOMCAPS_Array_VP4_RF")
+     genericDevice("momcaps_array_vp3_rf")
+     genericDevice("momcaps_array_vp4_rf")
+      genericDevice("MOMCAPS_SY_MM")
+      genericDevice("MOMCAPS_RF")
+      genericDevice("MOMCAPS_ASY_MM")
+      genericDevice("MOMCAPS_ASY_RF")
+
+     
+  if( (avSwitch  "MIM15F") then 
+      genericDevice("MIMCAPS_15F_RF")
+      genericDevice("mimcaps_15f_rf")
+	else
+  if( (avSwitch  "MIM20F") then 
+      genericDevice("MIMCAPS_20F_RF")
+      genericDevice("mimcaps_20f_rf")
+	else
+      genericDevice("MIMCAPS_RF")
+      genericDevice("mimcaps_rf")
+   )
+   )
+      genericDevice("DIOP_ESD_RF")
+      genericDevice("DIODN_ESD_RF")
+      genericDevice("L_CR20K_RF")
+      genericDevice("L_SQSK_RF")
+      genericDevice("L_NWCR20K_RFVIL")
+      genericDevice("L_CR20K_RFVIL")
+      genericDevice("L_NWSQSK_RFVIL")
+      genericDevice("L_SQSK_RFVIL")
+      genericDevice("L_NWSY20K_RFVIL")
+      genericDevice("L_SY20K_RFVIL")
+      genericDevice("L_NWSY20KCT_RFVIL")
+      genericDevice("L_SY20KCT_RFVIL")
+      genericDevice("momcaps_sy_mm")
+      genericDevice("momcaps_rf")
+      genericDevice("momcaps_asy_mm")
+      genericDevice("momcaps_asy_rf")
+      genericDevice("diop_esd_rf")
+      genericDevice("diodn_esd_rf")
+      genericDevice("l_cr20k_rf")
+      genericDevice("l_sqsk_rf")
+      genericDevice("l_nwcr20k_rfvil")
+      genericDevice("l_cr20k_rfvil")
+      genericDevice("l_nwsqsk_rfvil")
+      genericDevice("l_sqsk_rfvil")
+      genericDevice("l_nwsy20k_rfvil")
+      genericDevice("l_sy20k_rfvil")
+      genericDevice("l_nwsy20kct_rfvil")
+      genericDevice("l_sy20kct_rfvil")
+      swapPins( "MOMCAPS_SY_MM" " ( p PLUS MINUS ) " )
+      swapPins( "MOMCAPS_ASY_MM" nil )
+      swapPins( "MOMCAPS_RF" " ( p PLUS MINUS ) " )
+      swapPins( "MOMCAPS_ASY_RF" nil )
+      swapPins( "RNHR_RF" " ( p PLUS MINUS ) " )
+      swapPins( "RNNPO_RF" " ( p PLUS MINUS ) " )
+      swapPins( "RNPPO_RF" " ( p PLUS MINUS ) " )
+      swapPins( "RNNPO_MML130E" " ( p PLUS MINUS ) " )
+      swapPins( "RNPPO_MML130E" " ( p PLUS MINUS ) " )
+      swapPins( "RNND_MML130E" " ( p PLUS MINUS ) " )
+      swapPins( "RNPD_MML130E" " ( p PLUS MINUS ) " )
+      swapPins( "RNHR1000_MML130E" " ( p PLUS MINUS ) " )
+      swapPins( "RSNPO_MML130E" " ( p PLUS MINUS ) " )
+      swapPins( "RSPPO_MML130E" " ( p PLUS MINUS ) " )
+      swapPins( "RSND_MML130E" " ( p PLUS MINUS ) " )
+      swapPins( "RSPD_MML130E" " ( p PLUS MINUS ) " )
+      swapPins( "momcaps_sy_mm" " ( p PLUS MINUS ) " )
+      swapPins( "momcaps_asy_mm" nil )
+      swapPins( "momcaps_rf" " ( p PLUS MINUS ) " )
+      swapPins( "momcaps_asy_rf" nil )
+      swapPins( "rnhr_rf" " ( p PLUS MINUS ) " )
+      swapPins( "rnnpo_rf" " ( p PLUS MINUS ) " )
+      swapPins( "rnppo_rf" " ( p PLUS MINUS ) " )
+      swapPins( "rnnpo_mml130e" " ( p PLUS MINUS ) " )
+      swapPins( "rnppo_mml130e" " ( p PLUS MINUS ) " )
+      swapPins( "rnnd_mml130e" " ( p PLUS MINUS ) " )
+      swapPins( "rnpd_mml130e" " ( p PLUS MINUS ) " )
+      swapPins( "rnhr1000_mml130e" " ( p PLUS MINUS ) " )
+      swapPins( "rsnpo_mml130e" " ( p PLUS MINUS ) " )
+      swapPins( "rsppo_mml130e" " ( p PLUS MINUS ) " )
+      swapPins( "rsnd_mml130e" " ( p PLUS MINUS ) " )
+      swapPins( "rspd_mml130e" " ( p PLUS MINUS ) " )
+      swapPins( "MOMCAPS_ASMESH_MM" nil )
+      swapPins( "momcaps_asmesh_mm" nil )
+      swapPins( "MOMCAPS_SYMESH_MM" nil ) 
+      swapPins( "momcaps_symesh_mm" nil )
+      swapPins( "L_NWSY20KCT_RFVIL" "( p PLUS MINUS )" )
+      swapPins( "l_nwsy20kct_rfvil" "( p PLUS MINUS )" )
+      swapPins( "L_SY20KCT_RFVIL" "( p PLUS MINUS )" )
+      swapPins( "l_sy20kct_rfvil" "( p PLUS MINUS )" )
+      swapPins( "L_SY20K_RFVIL" "( p PLUS MINUS )" )
+      swapPins( "l_sy20k_rfvil" "( p PLUS MINUS )" )
+      swapPins( "L_NWSY20K_RFVIL" "( p PLUS MINUS )" )
+      swapPins( "l_nwsy20k_rfvil" "( p PLUS MINUS )" )
+
+  if( avSwitch("FTC_LIB") then 
+   joinNets( "*" "GNDO" "GNDK" "GND3I" ) 
+   )
+      ;filterOptions( "X" )
+)
+
+    layout(
+      setPower( all PWR1 )
+      setPower( all PWR2 )
+      setGround( all GND1 )
+      setGround( all GND2 )
+      resDevice( "rsnwell_mml130e(GENERIC)" ("PLUS" "MINUS" "B") )
+      resDevice( "rsnd_mml130e(GENERIC)" ("PLUS" "MINUS" "B") )
+      resDevice( "rspd_mml130e(GENERIC)" ("PLUS" "MINUS" "B") )
+      resDevice( "rsnpo_mml130e(GENERIC)" ("PLUS" "MINUS" "B") )
+      resDevice( "rsppo_mml130e(GENERIC)" ("PLUS" "MINUS" "B") )
+      resDevice( "rnhr1000_mml130e(GENERIC)" ("PLUS" "MINUS" "B") )
+      capDevice( "VARMIS_12_RF(GENERIC)" ( "PLUS" "MINUS" "PSUB" ) )
+      capDevice( "VARMIS_33_RF(GENERIC)" ( "PLUS" "MINUS" "PSUB" ) )
+;;//      capDevice( "MOMCAPS_ASY_RF(GENERIC)" ( "PLUS" "MINUS" "NW" "PSUB" nil ) )
+
+    if( avSwitch("FTC_LIB") || avSwitch("VST_LIB") then 
+      else
+      resDevice( "rnnd_mml130e(GENERIC)" ("PLUS" "MINUS" "B") )
+      resDevice( "rnppo_mml130e(GENERIC)" ("PLUS" "MINUS" "B") )
+     )
+
+      resDevice( "rnpd_mml130e(GENERIC)" ("PLUS" "MINUS" "B") )
+      resDevice( "rnnpo_mml130e(GENERIC)" ("PLUS" "MINUS" "B") )
+
+      
+
+  if( (avSwitch  "MIM15F") then 
+	capDevice( "mimcaps_15f_mml130e(GENERIC)" ("PLUS" "MINUS" nil ) )
+	else
+  if( (avSwitch  "MIM20F") then 
+	capDevice( "mimcaps_20f_mml130e(GENERIC)" ("PLUS" "MINUS" nil ) )
+	else
+	capDevice( "mimcaps_mml130e(GENERIC)" ("PLUS" "MINUS" nil ) )
+))
+
+    if( avSwitch("FDK") then 
+
+      mosDevice( "n_12_rf(GENERIC)" ( "D" "G" "S" "B" ) )
+      mosDevice( "p_12_rf(GENERIC)" ( "D" "G" "S" "B" "PSUB" ) )
+      mosDevice( "n_33_rf(GENERIC)" ( "D" "G" "S" "B" ) )
+      mosDevice( "p_33_rf(GENERIC)" ( "D" "G" "S" "B" "PSUB" ) )
+      mosDevice( "n_bpw_12_rf(GENERIC)" ( "D" "G" "S" "B" "NW" "PSUB" ) )
+      mosDevice( "n_bpw_33_rf(GENERIC)" ( "D" "G" "S" "B" "NW" "PSUB" ) )
+      dioDevice( "diop_esd_rf(GENERIC)" ( "PLUS" "MINUS" "PSUB" ) )
+      capDevice( "varmis_12_rf(GENERIC)" ( "PLUS" "MINUS" "PSUB" ) )
+      capDevice( "varmis_33_rf(GENERIC)" ( "PLUS" "MINUS" "PSUB" ) )
+      capDevice( "vardiop_rf(GENERIC)" ( "PLUS" "MINUS" "PSUB" ) )
+      bjtDevice( "pnp_nv50x50_rf(GENERIC)" ( "C" "B" "E" nil ) )
+      bjtDevice( "pnp_nvl20_rf(GENERIC)" ( "C" "B" "E" nil ) )
+      bjtDevice( "npn_nv50x50_rf(GENERIC)" ( "C" "B" "E" "S" ) )
+      bjtDevice( "npn_nvl20_rf(GENERIC)" ( "C" "B" "E" "S" ) )
+      bjtDevice( "npn_sv50x50_rf(GENERIC)" ( "C" "B" "E" "S" ) )
+      bjtDevice( "npn_svl20_rf(GENERIC)" ( "C" "B" "E" "S" ) )
+      capDevice( "pad_rf(GENERIC)" ( "PLUS" "PSUB" nil ) )
+      capDevice( "MOMCAPS_SY_MM(GENERIC)" ( "PLUS" "MINUS" nil ) )
+      capDevice( "MOMCAPS_ASY_MM(GENERIC)" ( "PLUS" "MINUS" nil ) )
+;;//      capDevice( "MOMCAPS_ASY_RF(GENERIC)" ( "PLUS" "MINUS" "NW" "PSUB" nil ) )
+      capDevice( "MOMCAPS_ASMESH_MM(GENERIC)" ( "PLUS1" "MINUS1" "PLUS2" "MINUS2" nil ) )
+      capDevice( "MOMCAPS_SYMESH_MM(GENERIC)" ( "PLUS1" "MINUS1" "PLUS2" "MINUS2" nil ) )
+      capDevice( "MOMCAPS_Array_VP3_RF(GENERIC)" ( "PLUS" "MINUS" "NW" "PSUB" nil ) )
+      capDevice( "MOMCAPS_Array_VP4_RF(GENERIC)" ( "PLUS" "MINUS" "NW" "PSUB" nil ) )
+      capDevice( "VARMIS_12_RF(GENERIC)" ( "PLUS" "MINUS" "PSUB" ) )
+      capDevice( "VARMIS_33_RF(GENERIC)" ( "PLUS" "MINUS" "PSUB" ) )
+     )  ;; end of "FDK"
+
+      swapPins( "MOMCAPS_SY_MM(Generic)" " ( p PLUS MINUS ) " )
+      swapPins( "MOMCAPS_ASY_MM(Generic)" nil )
+      swapPins( "MOMCAPS_RF(Generic)" " ( p PLUS MINUS ) " )
+      swapPins( "MOMCAPS_ASY_RF(Generic)" nil )
+      swapPins( "RNHR_RF(Generic)" " ( p PLUS MINUS ) " )
+      swapPins( "RNNPO_RF(Generic)" " ( p PLUS MINUS ) " )
+      swapPins( "RNPPO_RF(Generic)" " ( p PLUS MINUS ) " )
+      swapPins( "RNNPO_MML130E(Generic)" " ( p PLUS MINUS ) " )
+      swapPins( "RNPPO_MML130E(Generic)" " ( p PLUS MINUS ) " )
+      swapPins( "RNND_MML130E(Generic)" " ( p PLUS MINUS ) " )
+      swapPins( "RNPD_MML130E(Generic)" " ( p PLUS MINUS ) " )
+      swapPins( "RNHR1000_MML130E(Generic)" " ( p PLUS MINUS ) " )
+      swapPins( "RSNPO_MML130E(Generic)" " ( p PLUS MINUS ) " )
+      swapPins( "RSPPO_MML130E(Generic)" " ( p PLUS MINUS ) " )
+      swapPins( "RSND_MML130E(Generic)" " ( p PLUS MINUS ) " )
+      swapPins( "RSPD_MML130E(Generic)" " ( p PLUS MINUS ) " )
+      swapPins( "MOMCAPS_ASMESH_MM(Generic)" nil )
+      swapPins( "MOMCAPS_SYMESH_MM(Generic)" nil )
+      swapPins( "MOMCAPS_Array_VP3_RF(Generic)" nil )
+      swapPins( "MOMCAPS_Array_VP4_RF(Generic)" nil )
+
+;filterOptions( "X" )
+
+)
+    
+    ; To report filterd devices or to list devices statistics when LVS is clean.
+    filterReduceStatistics() 
+    listFilteredDevices() 
+   
+    ;  bindingFile( "./bind.Model" )
+  ) ; avCompareRules complete
+
+
+
+;----------------------------------------------------------------------------
+; avCompareRules Section from Run Submit Form
+; Created by the Assura UI
+;----------------------------------------------------------------------------
+
+avCompareRules(
+schematic(
+netlist( dfII "/home/23247166/Downloads/elec5503-pixel-design/dff-standalone_PT.vlr" )
+)
+)
+
+
+avLVS()
+
