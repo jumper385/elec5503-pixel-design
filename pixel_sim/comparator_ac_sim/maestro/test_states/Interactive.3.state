@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<statedb ICVersion="IC6.1.7-64b.500.1" modifiedTime="05/21/2025 20:27:14" version="5">ExplorerRun.0
+<statedb ICVersion="IC6.1.7-64b.500.1" modifiedTime="05/21/2025 20:29:44" version="5">Interactive.3
 	<Test Name="pixel_sim:comparator_ac_sim:TG00">
 		<component Name="adeInfo" Type="skillTable">adeinfo
 			<field Name="designInfo" Type="list">("pixel_sim" "comparator_ac_sim" "schematic" "spectre")</field>
@@ -84,7 +84,7 @@
 					<partition Name="fields">
 						<field Name="param" Type="string">""</field>
 						<field Name="enable" Type="list">(t)</field>
-						<field Name="stop" Type="string">"200n"</field>
+						<field Name="stop" Type="string">"100u"</field>
 						<field Name="errpreset" Type="string">""</field>
 						<field Name="tranNoise" Type="string">""</field>
 						<field Name="noisefmax" Type="string">""</field>
@@ -802,7 +802,7 @@
 					<partition Name="fields">
 						<field Name="param" Type="string">""</field>
 						<field Name="enable" Type="list">(t)</field>
-						<field Name="stop" Type="string">"200n"</field>
+						<field Name="stop" Type="string">"100u"</field>
 						<field Name="errpreset" Type="string">""</field>
 						<field Name="tranNoise" Type="string">""</field>
 						<field Name="noisefmax" Type="string">""</field>
@@ -1123,6 +1123,7 @@
 				<field Name="opRegion" Type="list">nil</field>
 			</partition>
 		</component>
+		<component Name="paramSetup" Type="skillTable">expr</component>
 		<component Name="relxOptions" Type="skillTable">asiEnvSaveTable
 			<partition Name="relxOpts">
 				<field Name="checknegagingtype" Type="string">"error"</field>
@@ -1519,7 +1520,7 @@
 					<partition Name="fields">
 						<field Name="param" Type="string">""</field>
 						<field Name="enable" Type="list">(t)</field>
-						<field Name="stop" Type="string">"200n"</field>
+						<field Name="stop" Type="string">"100u"</field>
 						<field Name="errpreset" Type="string">""</field>
 						<field Name="tranNoise" Type="string">""</field>
 						<field Name="noisefmax" Type="string">""</field>
@@ -1840,6 +1841,7 @@
 				<field Name="opRegion" Type="list">nil</field>
 			</partition>
 		</component>
+		<component Name="paramSetup" Type="skillTable">expr</component>
 		<component Name="relxOptions" Type="skillTable">asiEnvSaveTable
 			<partition Name="relxOpts">
 				<field Name="checknegagingtype" Type="string">"error"</field>
@@ -2439,7 +2441,7 @@
 						<field Name="areaTable" Type="list">nil</field>
 						<field Name="selectionDetail" Type="list">nil</field>
 						<field Name="value" Type="list">nil</field>
-						<field Name="plot" Type="symbol">t</field>
+						<field Name="plot" Type="list">nil</field>
 						<field Name="save" Type="list">nil</field>
 						<field Name="march" Type="list">nil</field>
 						<field Name="index" Type="fixnum">1</field>
@@ -2535,7 +2537,7 @@
 						<field Name="areaTable" Type="list">nil</field>
 						<field Name="selectionDetail" Type="list">nil</field>
 						<field Name="value" Type="list">nil</field>
-						<field Name="plot" Type="symbol">t</field>
+						<field Name="plot" Type="list">nil</field>
 						<field Name="save" Type="list">nil</field>
 						<field Name="march" Type="list">nil</field>
 						<field Name="index" Type="fixnum">4</field>

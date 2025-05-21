@@ -1,12 +1,24 @@
 <?xml version="1.0"?>
-<statedb ICVersion="IC6.1.7-64b.500.1" modifiedTime="05/21/2025 19:46:59" version="5">active
-	<Test Name="pixel_sim:integration_sim:1">
+<statedb ICVersion="IC6.1.7-64b.500.1" modifiedTime="05/21/2025 20:13:11" version="5">pixel_sim:comparator_ac_sim:TG01:1_state
+	<Test Name="pixel_sim:comparator_ac_sim:TG01:1">
 		<component Name="adeInfo" Type="skillTable">adeinfo
-			<field Name="designInfo" Type="list">("pixel_sim" "integration_sim" "schematic" "spectre")</field>
-			<field Name="projectDir" Type="string">"/home/23195279/simulation/pixel_sim/integration_sim/maestro/results/maestro/.tmpADEDir_23195279/pixel_sim:integration_sim:1/simulation"</field>
+			<field Name="designInfo" Type="list">("pixel_sim" "comparator_ac_sim" "schematic" "spectre")</field>
+			<field Name="projectDir" Type="string">"/home/23195279/simulation/pixel_sim/comparator_ac_sim/maestro/results/maestro/.tmpADEDir_23195279/pixel_sim:comparator_ac_sim:TG01/simulation"</field>
 			<field Name="descriptiontext" Type="string">"None"</field>
 		</component>
-		<component Name="rfstim" Type="skillTable">rfstim</component>
+		<component Name="rfstim" Type="skillTable">rfstim
+			<field Name="&quot;1&quot;" Type="skillDpl">
+				<field Name="name" Type="string">"1"</field>
+				<field Name="fundName" Type="string">""</field>
+				<field Name="freqVar" Type="string">"100K"</field>
+				<field Name="freq" Type="string">"100K"</field>
+				<field Name="signal" Type="string">"Moderate"</field>
+				<field Name="srcId" Type="string">"V3"</field>
+				<field Name="maxHarms" Type="string">"3"</field>
+				<field Name="freqIndex" Type="string">"freq"</field>
+				<field Name="oversample" Type="string">"1"</field>
+			</field>
+		</component>
 		<component Name="analyses" Type="skillTable">asiEnvSaveTable
 			<analyses Name="analysis">
 				<analysis Name="tran">
@@ -72,8 +84,8 @@
 					<partition Name="fields">
 						<field Name="param" Type="string">""</field>
 						<field Name="enable" Type="list">(t)</field>
-						<field Name="stop" Type="string">".2u"</field>
-						<field Name="errpreset" Type="string">"liberal"</field>
+						<field Name="stop" Type="string">"200n"</field>
+						<field Name="errpreset" Type="string">""</field>
 						<field Name="tranNoise" Type="string">""</field>
 						<field Name="noisefmax" Type="string">""</field>
 						<field Name="noisefmin" Type="string">""</field>
@@ -169,7 +181,7 @@
 				<field Name="switchViewList" Type="list">("spectre" "cmos_sch" "cmos.sch" "schematic" "veriloga")</field>
 				<field Name="analysisOrder" Type="list">("pz" "dcmatch" "stb" "tran" "envlp" "ac" "dc" "lf" "noise" "xf" "sp" "pss" "pac" "pstb" "pnoise" "pxf" "psp" "qpss" "qpac" "qpnoise" "qpxf" "qpsp" "hb" "hbac" "hbnoise" "sens" "acmatch")</field>
 				<field Name="sst2usecolon" Type="list">nil</field>
-				<field Name="firstRun" Type="symbol">t</field>
+				<field Name="firstRun" Type="list">nil</field>
 				<field Name="pllPlugin" Type="string">""</field>
 				<field Name="emirSumList" Type="list">nil</field>
 				<field Name="paramRangeCheckFile" Type="string">""</field>
@@ -255,8 +267,8 @@
 				<field Name="outputList" Type="skillList">
 					<field Name="outputList_0" Type="defstruct">sevOutputStruct
 						<field Name="name" Type="list">nil</field>
-						<field Name="expression" Type="list">nil</field>
-						<field Name="signal" Type="string">"/GR"</field>
+						<field Name="expression" Type="list">VT("/VIN")</field>
+						<field Name="signal" Type="list">nil</field>
 						<field Name="scriptFile" Type="list">nil</field>
 						<field Name="type2" Type="list">nil</field>
 						<field Name="evalType" Type="list">nil</field>
@@ -271,11 +283,11 @@
 						<field Name="origin" Type="list">nil</field>
 						<field Name="sweepSet" Type="list">nil</field>
 						<field Name="depList" Type="list">nil</field>
-						<field Name="type" Type="symbol">net</field>
+						<field Name="type" Type="list">nil</field>
 						<field Name="areaTable" Type="list">nil</field>
-						<field Name="selectionDetail" Type="list">((color ("y2" "drawing")))</field>
+						<field Name="selectionDetail" Type="list">nil</field>
 						<field Name="value" Type="list">nil</field>
-						<field Name="plot" Type="symbol">t</field>
+						<field Name="plot" Type="list">nil</field>
 						<field Name="save" Type="list">nil</field>
 						<field Name="march" Type="list">nil</field>
 						<field Name="index" Type="fixnum">1</field>
@@ -284,12 +296,11 @@
 						<field Name="yaxisLabel" Type="list">nil</field>
 						<field Name="label" Type="list">nil</field>
 						<field Name="yaxisUnit" Type="list">nil</field>
-						<field Name="inLastSet" Type="list">nil</field>
 					</field>
 					<field Name="outputList_1" Type="defstruct">sevOutputStruct
 						<field Name="name" Type="list">nil</field>
-						<field Name="expression" Type="list">nil</field>
-						<field Name="signal" Type="string">"/VPD"</field>
+						<field Name="expression" Type="list">cross(VT("/OUT") 0.6 1 "rising" nil nil)</field>
+						<field Name="signal" Type="list">nil</field>
 						<field Name="scriptFile" Type="list">nil</field>
 						<field Name="type2" Type="list">nil</field>
 						<field Name="evalType" Type="list">nil</field>
@@ -304,11 +315,11 @@
 						<field Name="origin" Type="list">nil</field>
 						<field Name="sweepSet" Type="list">nil</field>
 						<field Name="depList" Type="list">nil</field>
-						<field Name="type" Type="symbol">net</field>
+						<field Name="type" Type="list">nil</field>
 						<field Name="areaTable" Type="list">nil</field>
-						<field Name="selectionDetail" Type="list">((color ("y3" "drawing")))</field>
+						<field Name="selectionDetail" Type="list">nil</field>
 						<field Name="value" Type="list">nil</field>
-						<field Name="plot" Type="symbol">t</field>
+						<field Name="plot" Type="list">nil</field>
 						<field Name="save" Type="list">nil</field>
 						<field Name="march" Type="list">nil</field>
 						<field Name="index" Type="fixnum">2</field>
@@ -317,12 +328,11 @@
 						<field Name="yaxisLabel" Type="list">nil</field>
 						<field Name="label" Type="list">nil</field>
 						<field Name="yaxisUnit" Type="list">nil</field>
-						<field Name="inLastSet" Type="list">nil</field>
 					</field>
 					<field Name="outputList_2" Type="defstruct">sevOutputStruct
 						<field Name="name" Type="list">nil</field>
-						<field Name="expression" Type="list">nil</field>
-						<field Name="signal" Type="string">"/B11"</field>
+						<field Name="expression" Type="list">value(VT("/VIN") cross(VT("/OUT") 0.6 1 "rising" nil nil))</field>
+						<field Name="signal" Type="list">nil</field>
 						<field Name="scriptFile" Type="list">nil</field>
 						<field Name="type2" Type="list">nil</field>
 						<field Name="evalType" Type="list">nil</field>
@@ -337,42 +347,9 @@
 						<field Name="origin" Type="list">nil</field>
 						<field Name="sweepSet" Type="list">nil</field>
 						<field Name="depList" Type="list">nil</field>
-						<field Name="type" Type="symbol">net</field>
+						<field Name="type" Type="list">nil</field>
 						<field Name="areaTable" Type="list">nil</field>
-						<field Name="selectionDetail" Type="list">((color ("y2" "drawing")))</field>
-						<field Name="value" Type="list">nil</field>
-						<field Name="plot" Type="symbol">t</field>
-						<field Name="save" Type="list">nil</field>
-						<field Name="march" Type="list">nil</field>
-						<field Name="index" Type="fixnum">19</field>
-						<field Name="timeStamp" Type="list">nil</field>
-						<field Name="graphType" Type="list">nil</field>
-						<field Name="yaxisLabel" Type="list">nil</field>
-						<field Name="label" Type="list">nil</field>
-						<field Name="yaxisUnit" Type="list">nil</field>
-						<field Name="inLastSet" Type="list">nil</field>
-					</field>
-					<field Name="outputList_3" Type="defstruct">sevOutputStruct
-						<field Name="name" Type="list">nil</field>
-						<field Name="expression" Type="list">nil</field>
-						<field Name="signal" Type="string">"/COMP"</field>
-						<field Name="scriptFile" Type="list">nil</field>
-						<field Name="type2" Type="list">nil</field>
-						<field Name="evalType" Type="list">nil</field>
-						<field Name="displayIt" Type="list">nil</field>
-						<field Name="internalName" Type="list">nil</field>
-						<field Name="masterName" Type="list">nil</field>
-						<field Name="masterScriptFile" Type="list">nil</field>
-						<field Name="saveScriptFile" Type="list">nil</field>
-						<field Name="saveMasterScriptFile" Type="list">nil</field>
-						<field Name="isReferenced" Type="list">nil</field>
-						<field Name="lastEvalTime" Type="list">nil</field>
-						<field Name="origin" Type="list">nil</field>
-						<field Name="sweepSet" Type="list">nil</field>
-						<field Name="depList" Type="list">nil</field>
-						<field Name="type" Type="symbol">net</field>
-						<field Name="areaTable" Type="list">nil</field>
-						<field Name="selectionDetail" Type="list">((color ("y4" "drawing")))</field>
+						<field Name="selectionDetail" Type="list">nil</field>
 						<field Name="value" Type="list">nil</field>
 						<field Name="plot" Type="symbol">t</field>
 						<field Name="save" Type="list">nil</field>
@@ -383,12 +360,11 @@
 						<field Name="yaxisLabel" Type="list">nil</field>
 						<field Name="label" Type="list">nil</field>
 						<field Name="yaxisUnit" Type="list">nil</field>
-						<field Name="inLastSet" Type="list">nil</field>
 					</field>
-					<field Name="outputList_4" Type="defstruct">sevOutputStruct
+					<field Name="outputList_3" Type="defstruct">sevOutputStruct
 						<field Name="name" Type="list">nil</field>
-						<field Name="expression" Type="list">nil</field>
-						<field Name="signal" Type="string">"/ASR"</field>
+						<field Name="expression" Type="list">VT("/OUT")</field>
+						<field Name="signal" Type="list">nil</field>
 						<field Name="scriptFile" Type="list">nil</field>
 						<field Name="type2" Type="list">nil</field>
 						<field Name="evalType" Type="list">nil</field>
@@ -403,9 +379,9 @@
 						<field Name="origin" Type="list">nil</field>
 						<field Name="sweepSet" Type="list">nil</field>
 						<field Name="depList" Type="list">nil</field>
-						<field Name="type" Type="symbol">net</field>
+						<field Name="type" Type="list">nil</field>
 						<field Name="areaTable" Type="list">nil</field>
-						<field Name="selectionDetail" Type="list">((color ("y5" "drawing")))</field>
+						<field Name="selectionDetail" Type="list">nil</field>
 						<field Name="value" Type="list">nil</field>
 						<field Name="plot" Type="list">nil</field>
 						<field Name="save" Type="list">nil</field>
@@ -416,469 +392,6 @@
 						<field Name="yaxisLabel" Type="list">nil</field>
 						<field Name="label" Type="list">nil</field>
 						<field Name="yaxisUnit" Type="list">nil</field>
-						<field Name="inLastSet" Type="list">nil</field>
-					</field>
-					<field Name="outputList_5" Type="defstruct">sevOutputStruct
-						<field Name="name" Type="list">nil</field>
-						<field Name="expression" Type="list">nil</field>
-						<field Name="signal" Type="string">"/DC"</field>
-						<field Name="scriptFile" Type="list">nil</field>
-						<field Name="type2" Type="list">nil</field>
-						<field Name="evalType" Type="list">nil</field>
-						<field Name="displayIt" Type="list">nil</field>
-						<field Name="internalName" Type="list">nil</field>
-						<field Name="masterName" Type="list">nil</field>
-						<field Name="masterScriptFile" Type="list">nil</field>
-						<field Name="saveScriptFile" Type="list">nil</field>
-						<field Name="saveMasterScriptFile" Type="list">nil</field>
-						<field Name="isReferenced" Type="list">nil</field>
-						<field Name="lastEvalTime" Type="list">nil</field>
-						<field Name="origin" Type="list">nil</field>
-						<field Name="sweepSet" Type="list">nil</field>
-						<field Name="depList" Type="list">nil</field>
-						<field Name="type" Type="symbol">net</field>
-						<field Name="areaTable" Type="list">nil</field>
-						<field Name="selectionDetail" Type="list">((color ("y6" "drawing")))</field>
-						<field Name="value" Type="list">nil</field>
-						<field Name="plot" Type="symbol">t</field>
-						<field Name="save" Type="list">nil</field>
-						<field Name="march" Type="list">nil</field>
-						<field Name="index" Type="fixnum">5</field>
-						<field Name="timeStamp" Type="list">nil</field>
-						<field Name="graphType" Type="list">nil</field>
-						<field Name="yaxisLabel" Type="list">nil</field>
-						<field Name="label" Type="list">nil</field>
-						<field Name="yaxisUnit" Type="list">nil</field>
-						<field Name="inLastSet" Type="list">nil</field>
-					</field>
-					<field Name="outputList_6" Type="defstruct">sevOutputStruct
-						<field Name="name" Type="list">nil</field>
-						<field Name="expression" Type="list">nil</field>
-						<field Name="signal" Type="string">"/RST"</field>
-						<field Name="scriptFile" Type="list">nil</field>
-						<field Name="type2" Type="list">nil</field>
-						<field Name="evalType" Type="list">nil</field>
-						<field Name="displayIt" Type="list">nil</field>
-						<field Name="internalName" Type="list">nil</field>
-						<field Name="masterName" Type="list">nil</field>
-						<field Name="masterScriptFile" Type="list">nil</field>
-						<field Name="saveScriptFile" Type="list">nil</field>
-						<field Name="saveMasterScriptFile" Type="list">nil</field>
-						<field Name="isReferenced" Type="list">nil</field>
-						<field Name="lastEvalTime" Type="list">nil</field>
-						<field Name="origin" Type="list">nil</field>
-						<field Name="sweepSet" Type="list">nil</field>
-						<field Name="depList" Type="list">nil</field>
-						<field Name="type" Type="symbol">net</field>
-						<field Name="areaTable" Type="list">nil</field>
-						<field Name="selectionDetail" Type="list">((color ("y7" "drawing")))</field>
-						<field Name="value" Type="list">nil</field>
-						<field Name="plot" Type="symbol">t</field>
-						<field Name="save" Type="list">nil</field>
-						<field Name="march" Type="list">nil</field>
-						<field Name="index" Type="fixnum">6</field>
-						<field Name="timeStamp" Type="list">nil</field>
-						<field Name="graphType" Type="list">nil</field>
-						<field Name="yaxisLabel" Type="list">nil</field>
-						<field Name="label" Type="list">nil</field>
-						<field Name="yaxisUnit" Type="list">nil</field>
-						<field Name="inLastSet" Type="list">nil</field>
-					</field>
-					<field Name="outputList_7" Type="defstruct">sevOutputStruct
-						<field Name="name" Type="list">nil</field>
-						<field Name="expression" Type="list">nil</field>
-						<field Name="signal" Type="string">"/CONT"</field>
-						<field Name="scriptFile" Type="list">nil</field>
-						<field Name="type2" Type="list">nil</field>
-						<field Name="evalType" Type="list">nil</field>
-						<field Name="displayIt" Type="list">nil</field>
-						<field Name="internalName" Type="list">nil</field>
-						<field Name="masterName" Type="list">nil</field>
-						<field Name="masterScriptFile" Type="list">nil</field>
-						<field Name="saveScriptFile" Type="list">nil</field>
-						<field Name="saveMasterScriptFile" Type="list">nil</field>
-						<field Name="isReferenced" Type="list">nil</field>
-						<field Name="lastEvalTime" Type="list">nil</field>
-						<field Name="origin" Type="list">nil</field>
-						<field Name="sweepSet" Type="list">nil</field>
-						<field Name="depList" Type="list">nil</field>
-						<field Name="type" Type="symbol">net</field>
-						<field Name="areaTable" Type="list">nil</field>
-						<field Name="selectionDetail" Type="list">((color ("y8" "drawing")))</field>
-						<field Name="value" Type="list">nil</field>
-						<field Name="plot" Type="symbol">t</field>
-						<field Name="save" Type="list">nil</field>
-						<field Name="march" Type="list">nil</field>
-						<field Name="index" Type="fixnum">7</field>
-						<field Name="timeStamp" Type="list">nil</field>
-						<field Name="graphType" Type="list">nil</field>
-						<field Name="yaxisLabel" Type="list">nil</field>
-						<field Name="label" Type="list">nil</field>
-						<field Name="yaxisUnit" Type="list">nil</field>
-						<field Name="inLastSet" Type="list">nil</field>
-					</field>
-					<field Name="outputList_8" Type="defstruct">sevOutputStruct
-						<field Name="name" Type="list">nil</field>
-						<field Name="expression" Type="list">nil</field>
-						<field Name="signal" Type="string">"/B0"</field>
-						<field Name="scriptFile" Type="list">nil</field>
-						<field Name="type2" Type="list">nil</field>
-						<field Name="evalType" Type="list">nil</field>
-						<field Name="displayIt" Type="list">nil</field>
-						<field Name="internalName" Type="list">nil</field>
-						<field Name="masterName" Type="list">nil</field>
-						<field Name="masterScriptFile" Type="list">nil</field>
-						<field Name="saveScriptFile" Type="list">nil</field>
-						<field Name="saveMasterScriptFile" Type="list">nil</field>
-						<field Name="isReferenced" Type="list">nil</field>
-						<field Name="lastEvalTime" Type="list">nil</field>
-						<field Name="origin" Type="list">nil</field>
-						<field Name="sweepSet" Type="list">nil</field>
-						<field Name="depList" Type="list">nil</field>
-						<field Name="type" Type="symbol">net</field>
-						<field Name="areaTable" Type="list">nil</field>
-						<field Name="selectionDetail" Type="list">((color ("y9" "drawing")))</field>
-						<field Name="value" Type="list">nil</field>
-						<field Name="plot" Type="symbol">t</field>
-						<field Name="save" Type="list">nil</field>
-						<field Name="march" Type="list">nil</field>
-						<field Name="index" Type="fixnum">8</field>
-						<field Name="timeStamp" Type="list">nil</field>
-						<field Name="graphType" Type="list">nil</field>
-						<field Name="yaxisLabel" Type="list">nil</field>
-						<field Name="label" Type="list">nil</field>
-						<field Name="yaxisUnit" Type="list">nil</field>
-						<field Name="inLastSet" Type="list">nil</field>
-					</field>
-					<field Name="outputList_9" Type="defstruct">sevOutputStruct
-						<field Name="name" Type="list">nil</field>
-						<field Name="expression" Type="list">nil</field>
-						<field Name="signal" Type="string">"/B1"</field>
-						<field Name="scriptFile" Type="list">nil</field>
-						<field Name="type2" Type="list">nil</field>
-						<field Name="evalType" Type="list">nil</field>
-						<field Name="displayIt" Type="list">nil</field>
-						<field Name="internalName" Type="list">nil</field>
-						<field Name="masterName" Type="list">nil</field>
-						<field Name="masterScriptFile" Type="list">nil</field>
-						<field Name="saveScriptFile" Type="list">nil</field>
-						<field Name="saveMasterScriptFile" Type="list">nil</field>
-						<field Name="isReferenced" Type="list">nil</field>
-						<field Name="lastEvalTime" Type="list">nil</field>
-						<field Name="origin" Type="list">nil</field>
-						<field Name="sweepSet" Type="list">nil</field>
-						<field Name="depList" Type="list">nil</field>
-						<field Name="type" Type="symbol">net</field>
-						<field Name="areaTable" Type="list">nil</field>
-						<field Name="selectionDetail" Type="list">((color ("y1" "drawing")))</field>
-						<field Name="value" Type="list">nil</field>
-						<field Name="plot" Type="symbol">t</field>
-						<field Name="save" Type="list">nil</field>
-						<field Name="march" Type="list">nil</field>
-						<field Name="index" Type="fixnum">9</field>
-						<field Name="timeStamp" Type="list">nil</field>
-						<field Name="graphType" Type="list">nil</field>
-						<field Name="yaxisLabel" Type="list">nil</field>
-						<field Name="label" Type="list">nil</field>
-						<field Name="yaxisUnit" Type="list">nil</field>
-						<field Name="inLastSet" Type="list">nil</field>
-					</field>
-					<field Name="outputList_10" Type="defstruct">sevOutputStruct
-						<field Name="name" Type="list">nil</field>
-						<field Name="expression" Type="list">nil</field>
-						<field Name="signal" Type="string">"/B2"</field>
-						<field Name="scriptFile" Type="list">nil</field>
-						<field Name="type2" Type="list">nil</field>
-						<field Name="evalType" Type="list">nil</field>
-						<field Name="displayIt" Type="list">nil</field>
-						<field Name="internalName" Type="list">nil</field>
-						<field Name="masterName" Type="list">nil</field>
-						<field Name="masterScriptFile" Type="list">nil</field>
-						<field Name="saveScriptFile" Type="list">nil</field>
-						<field Name="saveMasterScriptFile" Type="list">nil</field>
-						<field Name="isReferenced" Type="list">nil</field>
-						<field Name="lastEvalTime" Type="list">nil</field>
-						<field Name="origin" Type="list">nil</field>
-						<field Name="sweepSet" Type="list">nil</field>
-						<field Name="depList" Type="list">nil</field>
-						<field Name="type" Type="symbol">net</field>
-						<field Name="areaTable" Type="list">nil</field>
-						<field Name="selectionDetail" Type="list">((color ("y2" "drawing")))</field>
-						<field Name="value" Type="list">nil</field>
-						<field Name="plot" Type="symbol">t</field>
-						<field Name="save" Type="list">nil</field>
-						<field Name="march" Type="list">nil</field>
-						<field Name="index" Type="fixnum">10</field>
-						<field Name="timeStamp" Type="list">nil</field>
-						<field Name="graphType" Type="list">nil</field>
-						<field Name="yaxisLabel" Type="list">nil</field>
-						<field Name="label" Type="list">nil</field>
-						<field Name="yaxisUnit" Type="list">nil</field>
-						<field Name="inLastSet" Type="list">nil</field>
-					</field>
-					<field Name="outputList_11" Type="defstruct">sevOutputStruct
-						<field Name="name" Type="list">nil</field>
-						<field Name="expression" Type="list">nil</field>
-						<field Name="signal" Type="string">"/B3"</field>
-						<field Name="scriptFile" Type="list">nil</field>
-						<field Name="type2" Type="list">nil</field>
-						<field Name="evalType" Type="list">nil</field>
-						<field Name="displayIt" Type="list">nil</field>
-						<field Name="internalName" Type="list">nil</field>
-						<field Name="masterName" Type="list">nil</field>
-						<field Name="masterScriptFile" Type="list">nil</field>
-						<field Name="saveScriptFile" Type="list">nil</field>
-						<field Name="saveMasterScriptFile" Type="list">nil</field>
-						<field Name="isReferenced" Type="list">nil</field>
-						<field Name="lastEvalTime" Type="list">nil</field>
-						<field Name="origin" Type="list">nil</field>
-						<field Name="sweepSet" Type="list">nil</field>
-						<field Name="depList" Type="list">nil</field>
-						<field Name="type" Type="symbol">net</field>
-						<field Name="areaTable" Type="list">nil</field>
-						<field Name="selectionDetail" Type="list">((color ("y3" "drawing")))</field>
-						<field Name="value" Type="list">nil</field>
-						<field Name="plot" Type="symbol">t</field>
-						<field Name="save" Type="list">nil</field>
-						<field Name="march" Type="list">nil</field>
-						<field Name="index" Type="fixnum">11</field>
-						<field Name="timeStamp" Type="list">nil</field>
-						<field Name="graphType" Type="list">nil</field>
-						<field Name="yaxisLabel" Type="list">nil</field>
-						<field Name="label" Type="list">nil</field>
-						<field Name="yaxisUnit" Type="list">nil</field>
-						<field Name="inLastSet" Type="list">nil</field>
-					</field>
-					<field Name="outputList_12" Type="defstruct">sevOutputStruct
-						<field Name="name" Type="list">nil</field>
-						<field Name="expression" Type="list">nil</field>
-						<field Name="signal" Type="string">"/B4"</field>
-						<field Name="scriptFile" Type="list">nil</field>
-						<field Name="type2" Type="list">nil</field>
-						<field Name="evalType" Type="list">nil</field>
-						<field Name="displayIt" Type="list">nil</field>
-						<field Name="internalName" Type="list">nil</field>
-						<field Name="masterName" Type="list">nil</field>
-						<field Name="masterScriptFile" Type="list">nil</field>
-						<field Name="saveScriptFile" Type="list">nil</field>
-						<field Name="saveMasterScriptFile" Type="list">nil</field>
-						<field Name="isReferenced" Type="list">nil</field>
-						<field Name="lastEvalTime" Type="list">nil</field>
-						<field Name="origin" Type="list">nil</field>
-						<field Name="sweepSet" Type="list">nil</field>
-						<field Name="depList" Type="list">nil</field>
-						<field Name="type" Type="symbol">net</field>
-						<field Name="areaTable" Type="list">nil</field>
-						<field Name="selectionDetail" Type="list">((color ("y4" "drawing")))</field>
-						<field Name="value" Type="list">nil</field>
-						<field Name="plot" Type="symbol">t</field>
-						<field Name="save" Type="list">nil</field>
-						<field Name="march" Type="list">nil</field>
-						<field Name="index" Type="fixnum">12</field>
-						<field Name="timeStamp" Type="list">nil</field>
-						<field Name="graphType" Type="list">nil</field>
-						<field Name="yaxisLabel" Type="list">nil</field>
-						<field Name="label" Type="list">nil</field>
-						<field Name="yaxisUnit" Type="list">nil</field>
-						<field Name="inLastSet" Type="list">nil</field>
-					</field>
-					<field Name="outputList_13" Type="defstruct">sevOutputStruct
-						<field Name="name" Type="list">nil</field>
-						<field Name="expression" Type="list">nil</field>
-						<field Name="signal" Type="string">"/B5"</field>
-						<field Name="scriptFile" Type="list">nil</field>
-						<field Name="type2" Type="list">nil</field>
-						<field Name="evalType" Type="list">nil</field>
-						<field Name="displayIt" Type="list">nil</field>
-						<field Name="internalName" Type="list">nil</field>
-						<field Name="masterName" Type="list">nil</field>
-						<field Name="masterScriptFile" Type="list">nil</field>
-						<field Name="saveScriptFile" Type="list">nil</field>
-						<field Name="saveMasterScriptFile" Type="list">nil</field>
-						<field Name="isReferenced" Type="list">nil</field>
-						<field Name="lastEvalTime" Type="list">nil</field>
-						<field Name="origin" Type="list">nil</field>
-						<field Name="sweepSet" Type="list">nil</field>
-						<field Name="depList" Type="list">nil</field>
-						<field Name="type" Type="symbol">net</field>
-						<field Name="areaTable" Type="list">nil</field>
-						<field Name="selectionDetail" Type="list">((color ("y5" "drawing")))</field>
-						<field Name="value" Type="list">nil</field>
-						<field Name="plot" Type="symbol">t</field>
-						<field Name="save" Type="list">nil</field>
-						<field Name="march" Type="list">nil</field>
-						<field Name="index" Type="fixnum">13</field>
-						<field Name="timeStamp" Type="list">nil</field>
-						<field Name="graphType" Type="list">nil</field>
-						<field Name="yaxisLabel" Type="list">nil</field>
-						<field Name="label" Type="list">nil</field>
-						<field Name="yaxisUnit" Type="list">nil</field>
-						<field Name="inLastSet" Type="list">nil</field>
-					</field>
-					<field Name="outputList_14" Type="defstruct">sevOutputStruct
-						<field Name="name" Type="list">nil</field>
-						<field Name="expression" Type="list">nil</field>
-						<field Name="signal" Type="string">"/B6"</field>
-						<field Name="scriptFile" Type="list">nil</field>
-						<field Name="type2" Type="list">nil</field>
-						<field Name="evalType" Type="list">nil</field>
-						<field Name="displayIt" Type="list">nil</field>
-						<field Name="internalName" Type="list">nil</field>
-						<field Name="masterName" Type="list">nil</field>
-						<field Name="masterScriptFile" Type="list">nil</field>
-						<field Name="saveScriptFile" Type="list">nil</field>
-						<field Name="saveMasterScriptFile" Type="list">nil</field>
-						<field Name="isReferenced" Type="list">nil</field>
-						<field Name="lastEvalTime" Type="list">nil</field>
-						<field Name="origin" Type="list">nil</field>
-						<field Name="sweepSet" Type="list">nil</field>
-						<field Name="depList" Type="list">nil</field>
-						<field Name="type" Type="symbol">net</field>
-						<field Name="areaTable" Type="list">nil</field>
-						<field Name="selectionDetail" Type="list">((color ("y6" "drawing")))</field>
-						<field Name="value" Type="list">nil</field>
-						<field Name="plot" Type="symbol">t</field>
-						<field Name="save" Type="list">nil</field>
-						<field Name="march" Type="list">nil</field>
-						<field Name="index" Type="fixnum">14</field>
-						<field Name="timeStamp" Type="list">nil</field>
-						<field Name="graphType" Type="list">nil</field>
-						<field Name="yaxisLabel" Type="list">nil</field>
-						<field Name="label" Type="list">nil</field>
-						<field Name="yaxisUnit" Type="list">nil</field>
-						<field Name="inLastSet" Type="list">nil</field>
-					</field>
-					<field Name="outputList_15" Type="defstruct">sevOutputStruct
-						<field Name="name" Type="list">nil</field>
-						<field Name="expression" Type="list">nil</field>
-						<field Name="signal" Type="string">"/B7"</field>
-						<field Name="scriptFile" Type="list">nil</field>
-						<field Name="type2" Type="list">nil</field>
-						<field Name="evalType" Type="list">nil</field>
-						<field Name="displayIt" Type="list">nil</field>
-						<field Name="internalName" Type="list">nil</field>
-						<field Name="masterName" Type="list">nil</field>
-						<field Name="masterScriptFile" Type="list">nil</field>
-						<field Name="saveScriptFile" Type="list">nil</field>
-						<field Name="saveMasterScriptFile" Type="list">nil</field>
-						<field Name="isReferenced" Type="list">nil</field>
-						<field Name="lastEvalTime" Type="list">nil</field>
-						<field Name="origin" Type="list">nil</field>
-						<field Name="sweepSet" Type="list">nil</field>
-						<field Name="depList" Type="list">nil</field>
-						<field Name="type" Type="symbol">net</field>
-						<field Name="areaTable" Type="list">nil</field>
-						<field Name="selectionDetail" Type="list">((color ("y7" "drawing")))</field>
-						<field Name="value" Type="list">nil</field>
-						<field Name="plot" Type="symbol">t</field>
-						<field Name="save" Type="list">nil</field>
-						<field Name="march" Type="list">nil</field>
-						<field Name="index" Type="fixnum">15</field>
-						<field Name="timeStamp" Type="list">nil</field>
-						<field Name="graphType" Type="list">nil</field>
-						<field Name="yaxisLabel" Type="list">nil</field>
-						<field Name="label" Type="list">nil</field>
-						<field Name="yaxisUnit" Type="list">nil</field>
-						<field Name="inLastSet" Type="list">nil</field>
-					</field>
-					<field Name="outputList_16" Type="defstruct">sevOutputStruct
-						<field Name="name" Type="list">nil</field>
-						<field Name="expression" Type="list">nil</field>
-						<field Name="signal" Type="string">"/B8"</field>
-						<field Name="scriptFile" Type="list">nil</field>
-						<field Name="type2" Type="list">nil</field>
-						<field Name="evalType" Type="list">nil</field>
-						<field Name="displayIt" Type="list">nil</field>
-						<field Name="internalName" Type="list">nil</field>
-						<field Name="masterName" Type="list">nil</field>
-						<field Name="masterScriptFile" Type="list">nil</field>
-						<field Name="saveScriptFile" Type="list">nil</field>
-						<field Name="saveMasterScriptFile" Type="list">nil</field>
-						<field Name="isReferenced" Type="list">nil</field>
-						<field Name="lastEvalTime" Type="list">nil</field>
-						<field Name="origin" Type="list">nil</field>
-						<field Name="sweepSet" Type="list">nil</field>
-						<field Name="depList" Type="list">nil</field>
-						<field Name="type" Type="symbol">net</field>
-						<field Name="areaTable" Type="list">nil</field>
-						<field Name="selectionDetail" Type="list">((color ("y8" "drawing")))</field>
-						<field Name="value" Type="list">nil</field>
-						<field Name="plot" Type="symbol">t</field>
-						<field Name="save" Type="list">nil</field>
-						<field Name="march" Type="list">nil</field>
-						<field Name="index" Type="fixnum">16</field>
-						<field Name="timeStamp" Type="list">nil</field>
-						<field Name="graphType" Type="list">nil</field>
-						<field Name="yaxisLabel" Type="list">nil</field>
-						<field Name="label" Type="list">nil</field>
-						<field Name="yaxisUnit" Type="list">nil</field>
-						<field Name="inLastSet" Type="list">nil</field>
-					</field>
-					<field Name="outputList_17" Type="defstruct">sevOutputStruct
-						<field Name="name" Type="list">nil</field>
-						<field Name="expression" Type="list">nil</field>
-						<field Name="signal" Type="string">"/B9"</field>
-						<field Name="scriptFile" Type="list">nil</field>
-						<field Name="type2" Type="list">nil</field>
-						<field Name="evalType" Type="list">nil</field>
-						<field Name="displayIt" Type="list">nil</field>
-						<field Name="internalName" Type="list">nil</field>
-						<field Name="masterName" Type="list">nil</field>
-						<field Name="masterScriptFile" Type="list">nil</field>
-						<field Name="saveScriptFile" Type="list">nil</field>
-						<field Name="saveMasterScriptFile" Type="list">nil</field>
-						<field Name="isReferenced" Type="list">nil</field>
-						<field Name="lastEvalTime" Type="list">nil</field>
-						<field Name="origin" Type="list">nil</field>
-						<field Name="sweepSet" Type="list">nil</field>
-						<field Name="depList" Type="list">nil</field>
-						<field Name="type" Type="symbol">net</field>
-						<field Name="areaTable" Type="list">nil</field>
-						<field Name="selectionDetail" Type="list">((color ("y9" "drawing")))</field>
-						<field Name="value" Type="list">nil</field>
-						<field Name="plot" Type="symbol">t</field>
-						<field Name="save" Type="list">nil</field>
-						<field Name="march" Type="list">nil</field>
-						<field Name="index" Type="fixnum">17</field>
-						<field Name="timeStamp" Type="list">nil</field>
-						<field Name="graphType" Type="list">nil</field>
-						<field Name="yaxisLabel" Type="list">nil</field>
-						<field Name="label" Type="list">nil</field>
-						<field Name="yaxisUnit" Type="list">nil</field>
-						<field Name="inLastSet" Type="list">nil</field>
-					</field>
-					<field Name="outputList_18" Type="defstruct">sevOutputStruct
-						<field Name="name" Type="list">nil</field>
-						<field Name="expression" Type="list">nil</field>
-						<field Name="signal" Type="string">"/B10"</field>
-						<field Name="scriptFile" Type="list">nil</field>
-						<field Name="type2" Type="list">nil</field>
-						<field Name="evalType" Type="list">nil</field>
-						<field Name="displayIt" Type="list">nil</field>
-						<field Name="internalName" Type="list">nil</field>
-						<field Name="masterName" Type="list">nil</field>
-						<field Name="masterScriptFile" Type="list">nil</field>
-						<field Name="saveScriptFile" Type="list">nil</field>
-						<field Name="saveMasterScriptFile" Type="list">nil</field>
-						<field Name="isReferenced" Type="list">nil</field>
-						<field Name="lastEvalTime" Type="list">nil</field>
-						<field Name="origin" Type="list">nil</field>
-						<field Name="sweepSet" Type="list">nil</field>
-						<field Name="depList" Type="list">nil</field>
-						<field Name="type" Type="symbol">net</field>
-						<field Name="areaTable" Type="list">nil</field>
-						<field Name="selectionDetail" Type="list">((color ("y1" "drawing")))</field>
-						<field Name="value" Type="list">nil</field>
-						<field Name="plot" Type="symbol">t</field>
-						<field Name="save" Type="list">nil</field>
-						<field Name="march" Type="list">nil</field>
-						<field Name="index" Type="fixnum">18</field>
-						<field Name="timeStamp" Type="list">nil</field>
-						<field Name="graphType" Type="list">nil</field>
-						<field Name="yaxisLabel" Type="list">nil</field>
-						<field Name="label" Type="list">nil</field>
-						<field Name="yaxisUnit" Type="list">nil</field>
-						<field Name="inLastSet" Type="list">nil</field>
 					</field>
 				</field>
 			</partition>
@@ -892,7 +405,6 @@
 				<field Name="opRegion" Type="list">nil</field>
 			</partition>
 		</component>
-		<component Name="paramSetup" Type="skillTable">expr</component>
 		<component Name="relxOptions" Type="skillTable">asiEnvSaveTable
 			<partition Name="relxOpts">
 				<field Name="checknegagingtype" Type="string">"error"</field>
@@ -1116,7 +628,7 @@
 				<field Name="gmin_check" Type="string">""</field>
 				<field Name="sensfileonly" Type="string">""</field>
 				<field Name="colslog" Type="string">""</field>
-				<field Name="nthreads" Type="string">"3"</field>
+				<field Name="nthreads" Type="string">""</field>
 				<field Name="nportcompress" Type="string">""</field>
 				<field Name="maxnotestologfile" Type="string">""</field>
 				<field Name="senstype" Type="string">""</field>
@@ -1139,7 +651,7 @@
 				<field Name="cols" Type="string">"80"</field>
 				<field Name="warn" Type="string">""</field>
 				<field Name="ivth_vdsmin" Type="string">""</field>
-				<field Name="multithread" Type="string">"on"</field>
+				<field Name="multithread" Type="string">""</field>
 				<field Name="diagnose" Type="string">""</field>
 				<field Name="icpriority" Type="string">""</field>
 				<field Name="ahdllint" Type="string">""</field>
@@ -1167,7 +679,7 @@
 				<field Name="optvdd" Type="flonum">3.3</field>
 				<field Name="psrFmax" Type="string">""</field>
 				<field Name="dcOPSolver" Type="string">"APS"</field>
-				<field Name="errorLevel" Type="string">"Liberal"</field>
+				<field Name="errorLevel" Type="string">"Do not override"</field>
 				<field Name="digitalSubcktValue" Type="list">nil</field>
 				<field Name="preserveInst" Type="list">nil</field>
 				<field Name="digitalInstValue" Type="list">nil</field>
@@ -1189,6 +701,20 @@
 				<field Name="virtualPowerNodes" Type="list">nil</field>
 				<field Name="rcrNetFmax" Type="list">nil</field>
 			</partition>
+		</component>
+		<component Name="variables" Type="skillTable">variableTable
+			<field Name="saveComponent" Type="skillList">
+				<field Name="saveComponent_0" Type="defstruct">sevVariableStruct
+					<field Name="name" Type="string">"Va"</field>
+					<field Name="expression" Type="string">"0"</field>
+					<field Name="index" Type="fixnum">1</field>
+				</field>
+				<field Name="saveComponent_1" Type="defstruct">sevVariableStruct
+					<field Name="name" Type="string">"Vb"</field>
+					<field Name="expression" Type="string">"1.2"</field>
+					<field Name="index" Type="fixnum">2</field>
+				</field>
+			</field>
 		</component>
 	</Test>
 </statedb>
