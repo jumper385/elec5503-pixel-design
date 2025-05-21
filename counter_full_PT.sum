@@ -5,7 +5,7 @@
 @(#)$CDS: aveng_64 version av4.1:Production:dfII6.1.7-64b:IC6.1.7-64b.78 12/24/2015 12:01 (sjflg007) $
 sub-version 4.1_USR5, integ signature 2015-12-24-1122
 
-run on vdi-l-cos-009 from /usr/local/cadence6/ASSURA415-001-617/tools.lnx86/assura/bin/64bit/aveng on Thu May 22 04:53:09 2025
+run on vdi-l-cos-009 from /usr/local/cadence6/ASSURA415-001-617/tools.lnx86/assura/bin/64bit/aveng on Thu May 22 05:04:45 2025
 
 Echoing run specific file...
     ;----------------------------------------------------------------------------
@@ -35,7 +35,7 @@ Echoing run specific file...
 
                   Time Summary - Database
 
-reading DFII data. . . .      0 cpu      0 elap 3593.7M virt    1035 pf
+reading DFII data. . . .      0 cpu      0 elap 3611.8M virt    1083 pf
 duplicate inst removal .      0 cpu      0 elap  162.0M virt       0 pf
 cell boundary layer. . .      0 cpu      0 elap  162.0M virt       0 pf
 small cell flattening. .      0 cpu      0 elap  164.5M virt       0 pf
@@ -58,7 +58,7 @@ duplicate cell removal .      0 cpu      0 elap  166.9M virt       0 pf
 create background layer.      0 cpu      0 elap  166.9M virt       0 pf
 final VDB processing . .      0 cpu      0 elap  166.9M virt       0 pf
 -----------------------------------------------------------------------
-TOTALS (secs). . . . . .      0 cpu      0 elap 3593.7M virt    1035 pf
+TOTALS (secs). . . . . .      0 cpu      0 elap 3611.8M virt    1083 pf
 
 
 ************************************************************************
@@ -290,7 +290,7 @@ TOTALS (secs). . . . . .      0 cpu      0 elap 3593.7M virt    1035 pf
 
  ;# 57
     PO1 = geomOr( PO1 ) 
-    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 235
+    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 237
 
  ;# 58
     dataReduction( PO1 ) 
@@ -526,7 +526,7 @@ TOTALS (secs). . . . . .      0 cpu      0 elap 3593.7M virt    1035 pf
 
  ;# 116
     ME1 = geomOr( ME1 ) 
-    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 638
+    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 637
 
  ;# 117
     dataReduction( ME1 ) 
@@ -534,7 +534,7 @@ TOTALS (secs). . . . . .      0 cpu      0 elap 3593.7M virt    1035 pf
 
  ;# 118
  ;  region( ME1 )
-    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 638
+    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 637
 
  ;# 119
     IND = geomOr( IND ) 
@@ -818,7 +818,7 @@ TOTALS (secs). . . . . .      0 cpu      0 elap 3593.7M virt    1035 pf
 
  ;# 189
     SM1_024 = geomAndNot( ME1 T?468 ) 
-    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 277
+    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 278
 
  ;# 190
     dataReduction( SM1_024 ) 
@@ -826,7 +826,7 @@ TOTALS (secs). . . . . .      0 cpu      0 elap 3593.7M virt    1035 pf
 
  ;# 191
  ;  region( SM1_024 )
-    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 277
+    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 278
 
  ;# 192
     T?470 = drc( ME1 width < 0.16 ) 
@@ -943,7 +943,7 @@ TOTALS (secs). . . . . .      0 cpu      0 elap 3593.7M virt    1035 pf
 
  ;# 220
     T?483 = geomAndNot( ME1 PAD_MK_ALL ) 
-    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 638
+    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 637
 
  ;# 221
     dataReduction( T?483 ) 
@@ -951,7 +951,7 @@ TOTALS (secs). . . . . .      0 cpu      0 elap 3593.7M virt    1035 pf
 
  ;# 222
  ;  region( T?483 )
-    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 638
+    cpu: 0.0   elapsed: 0   virtual: 189M   task sum: 637
 
  ;# 223
     T?484 = geomWidth( T?483 25 < keep ) 
@@ -1032,7 +1032,7 @@ TOTALS (secs). . . . . .      0 cpu      0 elap 3593.7M virt    1035 pf
     geomConnect(
         buttOrOver( ME1 null )
     ) 
-    cpu: 0.0   elapsed: 0   virtual: 223M   task sum: 638
+    cpu: 0.0   elapsed: 0   virtual: 223M   task sum: 637
 
  ;# 242
     geomStamp( WM1_176 ME1 ) 
@@ -15129,9 +15129,9 @@ TOTALS (secs). . . . . .      0 cpu      0 elap 3593.7M virt    1035 pf
 Total cells checked = 1
 Total rules checked = 3675
 
-Run time =  1.00 seconds
-CPU time =  0.44 seconds
-VM HWM   =  3594 Mbytes
+Run time =  0.00 seconds
+CPU time =  0.46 seconds
+VM HWM   =  3612 Mbytes
 Disk HWM =     3 Mbytes
 Disk end =     3 Mbytes
 Eman HWM =     0 Mbytes

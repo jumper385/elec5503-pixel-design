@@ -20,4 +20,4 @@ umc13mmrf N_12_HSL130E layout 276
 umc13mmrf P_12_HSL130E layout 274
 pixel dff_PT_even layout 20413
 pixel dff_PT_odd layout 34770
-pixel counter_full_PT layout 81965
+pixel counter_full_PT layout 82225
