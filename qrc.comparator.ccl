@@ -1,0 +1,45 @@
+#--------------------------------------------------------------------------------------
+# OPTION COMMAND FILE created by Cadence Extraction Quantus QRC UI Version 15.20-p076
+#--------------------------------------------------------------------------------------
+
+capacitance \
+	 -decoupling_factor 1.0 \
+	 -ground_net "GND"
+extract \
+	 -selection "all" \
+	 -type "rc_decoupled"
+extraction_setup \
+	 -array_vias_spacing auto \
+	 -max_fracture_length infinite \
+	 -max_fracture_length_unit "MICRONS" \
+	 -macro_cells_type "default"  \
+	 -max_via_array_size "auto" \
+	 -net_name_space "LAYOUT"
+filter_res \
+	 -min_res 0.001
+input_db -type assura \
+	 -design_cell_name "comparator layout pixel" \
+	 -run_name "comparator" \
+	 -directory_name "/home/23195279/working-dir/elec5503-pixel-design" \
+	 -format "DFII"
+output_db -type extracted_view \
+	 -cap_component "pcapacitor" \
+	 -cap_property_name "c" \
+	 -enable_cellview_check false \
+	 -include_cap_model "false" \
+	 -include_parasitic_cap_model "false" \
+	 -include_res_model "false" \
+	 -include_parasitic_res_model "comment" \
+	 -include_parasitic_res_width true \
+	 -res_component "presistor" \
+	 -res_property_name "r" \
+	 -view_name "av_extracted"
+output_setup \
+	 -temporary_directory_name "comparator"
+process_technology \
+	 -technology_corner \
+		"LVS_2.3_p9" \
+	 -technology_library_file "/home/23195279/working-dir/elec5503-pixel-design/assura_tech.lib" \
+	 -technology_name "Assura_LVS" \
+	 -temperature \
+		25.0
