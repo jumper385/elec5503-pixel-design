@@ -2,6 +2,20 @@
 ***** Begin Label Report *****
 
  Label in cell 'counter_full_PT layout pixel':
+  info: Assign pin label "RST" at (5.010, -24.340) to layer `ME5_c'.
+  info: Assign pin label "GSEL" at (13.260, -21.770) to layer `ME4_c'.
+  info: Assign pin label "B0" at (14.530, -23.170) to layer `ME1_c'.
+  info: Assign pin label "B1" at (14.550, -20.830) to layer `ME1_c'.
+  info: Assign pin label "B2" at (14.510, -18.540) to layer `ME1_c'.
+  info: Assign pin label "B3" at (14.530, -16.240) to layer `ME1_c'.
+  info: Assign pin label "B4" at (14.510, -13.980) to layer `ME1_c'.
+  info: Assign pin label "B5" at (14.530, -11.680) to layer `ME1_c'.
+  info: Assign pin label "B6" at (14.510, -9.420) to layer `ME1_c'.
+  info: Assign pin label "B7" at (14.530, -7.110) to layer `ME1_c'.
+  info: Assign pin label "B8" at (14.510, -4.860) to layer `ME1_c'.
+  info: Assign pin label "B9" at (14.530, -2.530) to layer `ME1_c'.
+  info: Assign pin label "B10" at (14.480, -0.250) to layer `ME1_c'.
+  info: Assign pin label "B11" at (14.570, 1.980) to layer `ME1_c'.
 
 ***** End of Label Report *****
 

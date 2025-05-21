@@ -1,0 +1,9 @@
+; Assura generated file -- DO NOT EDIT --
+; Do NOT rely on the content of this file, it may change.
+;
+2 unmatched shorts opens unbound model ambig ambig_model ambig_swapex ambig_maybe unmatched_dir
+5 0 ((L "avC8"))
+5 2 ((L "GND")(L "avC8"))
+1 4 ((L "avC8") "2mux")
+1 0 ((S "CLK"))
+1 3 ((S "CLK")(S "VDD")(S "GND")(S "CONT"))

@@ -1,0 +1,11 @@
+Schematic                        | Layout                         | Status
+-------------------------------------------------------------------------------
+dff-standalone_PT schematic pixel| dff-standalone_PT layout pixel | matched 
+dff_PT_even schematic pixel      | dff_PT_even layout pixel       | matched 
+dff_PT_odd schematic pixel       | dff_PT_odd layout pixel        | matched 
+2mux schematic pixel             | 2mux layout pixel              | errors   *
+counter_full_PT schematic pixel  | counter_full_PT layout pixel   | errors   *
+
+Mismatch between Schematic and Layout
+   2 cells with errors
+   3 cells matched

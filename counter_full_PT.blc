@@ -1,0 +1,8 @@
+"p_12_hsl130e(MOS)" "P_12_HSL130E(MOS)"
+"n_12_hsl130e(MOS)" "N_12_HSL130E(MOS)"
+"dff_PT_odd layout pixel" "dff_PT_odd schematic pixel" "p_12_hsl130e(MOS)" "n_12_hsl130e(MOS)"
+"dff_PT_even layout pixel" "dff_PT_even schematic pixel" "p_12_hsl130e(MOS)" "n_12_hsl130e(MOS)"
+"dff-standalone_PT layout pixel" "dff-standalone_PT schematic pixel" "p_12_hsl130e(MOS)" "n_12_hsl130e(MOS)"
+"2mux layout pixel" "2mux schematic pixel" "p_12_hsl130e(MOS)" "n_12_hsl130e(MOS)"
+"counter_full_PT layout pixel" "counter_full_PT schematic pixel" "p_12_hsl130e(MOS)" "n_12_hsl130e(MOS)"
+Devices filtered from layout
