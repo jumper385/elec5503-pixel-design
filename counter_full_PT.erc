@@ -15,7 +15,7 @@
   info: Assign pin label "B8" at (14.510, -4.860) to layer `ME1_c'.
   info: Assign pin label "B9" at (14.530, -2.530) to layer `ME1_c'.
   info: Assign pin label "B10" at (14.480, -0.250) to layer `ME1_c'.
-  info: Assign pin label "B11" at (14.570, 1.980) to layer `ME1_c'.
+  info: Floating label discarded:  "B11" at (14.570, 1.980).
 
 ***** End of Label Report *****
 
