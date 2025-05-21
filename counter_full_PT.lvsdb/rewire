@@ -1,0 +1,27 @@
+; Assura generated file -- DO NOT EDIT --
+; Do NOT rely on the content of this file, it may change.
+;
+2 terminal shorts opens
+5 0 ( "B" "avD2_2" "VDD" "avC9" "VDD")
+5 0 ( "B" "avD2_1" "VDD" "avC9" "VDD")
+5 0 ( "B" "avD2_3" "VDD" "avC9" "VDD")
+5 0 ( "B" "avD1_2" "GND" "avC8" "GND")
+5 0 ( "B" "avD1_3" "GND" "avC8" "GND")
+5 0 ( "B" "avD1_1" "GND" "avC8" "GND")
+1 0 ( "GSEL" "I60" "avC1" "avC2" "GSEL")
+1 0 ( "GSEL" "I65" "avC1" "avC2" "GSEL")
+1 0 ( "RST" "I55" "avC5_8" "avC5_6" "RST")
+1 0 ( "RST" "I60" "avC5_8" "avC5_14" "RST")
+1 0 ( "RST" "I64" "avC5_8" "avC5_12" "RST")
+1 0 ( "RST" "I65" "avC5_8" "avC5_16" "RST")
+1 0 ( "RST" "I62" "avC5_8" "avC5_10" "RST")
+1 2 ((L "avC2_1")(L "avC4_1"))
+1 2 ((L "avC5_3")(L "avC5_4"))
+1 2 ((L "avC2_2")(L "avC4_2")(L "avC1_4"))
+1 2 ((L "avC12_6")(L "avC8_20"))
+1 2 ((L "avC6_6")(L "avC12_8"))
+1 2 ((L "avC12_10")(L "avC8_22"))
+1 2 ((L "avC12_12")(L "avC8_24"))
+1 2 ((L "avC12_14")(L "avC8_26"))
+1 2 ((L "avC4_4")(L "avC4_18"))
+1 2 ((L "avC3_4")(L "avC4_5"))

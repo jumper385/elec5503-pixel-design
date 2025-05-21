@@ -1,0 +1,42 @@
+@(#)$CDS: nvn_64 version av4.1:Production:dfII6.1.7-64b:IC6.1.7-64b.78 12/24/2015 12:05 (sjflg007) $
+sub-version 4.1_USR5, integ signature 2015-12-24-1122
+run on vdi-l-cos-009 at Wed May 21 18:19:09 2025
+
+Schematic                        | Layout                        | Status
+----------------------------------------------------------------------------------
+dff-standalone_PT schematic pixel| dff-standalone_PT layout pixel| matched       
+dff_PT_even schematic pixel      | dff_PT_even layout pixel      | matched       
+dff_PT_odd schematic pixel       | dff_PT_odd layout pixel       | matched       
+2mux schematic pixel             | 2mux layout pixel             | errors         *
+counter_full_PT schematic pixel  | counter_full_PT layout pixel  | errors,        *
+                                 |                               | fatal pin errs *
+
+Mismatch between Schematic and Layout
+   2 cells with errors
+   3 cells matched
+
+Schematic:
+  Library:pixel
+  Cell   :counter_full_PT
+  View   :schematic
+
+Layout:
+  Library:pixel
+  Cell   :counter_full_PT
+  View   :layout
+
+
+
+Extraction  Information
+--------------------
+     0 cells have 0 mal-formed device problems
+     0 cells have 0 label short problems
+     0 cells have 0 label open problems
+
+Mismatch  Information
+--------------------
+     2 cells have 45 Net mismatches
+     2 cells have 38 Device mismatches
+     2 cells have 5 Pin mismatches
+     0 cells have 0 Parameter mismatches
+

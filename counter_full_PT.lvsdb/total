@@ -1,0 +1,6 @@
+; Assura generated file -- DO NOT EDIT --
+; Do NOT rely on the content of this file, it may change.
+;
+2 device net parameter pin rewire total
+5  5 (( ( S "2mux layout pixel" )( L "2mux schematic pixel" ) )(( 3 1 0 )( 1 9 8 )( 4 6 0 )))
+1  5 (( ( S "counter_full_PT layout pixel" )( L "counter_full_PT schematic pixel" ) )(( 3 0 22 )( 1 189 56 )( 4 7 0 )( 0 17 15 )))
