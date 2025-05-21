@@ -1,0 +1,6 @@
+#!/bin/sh -f
+#--------------------------------------------------------------------------------------
+# THE RUN FILE created by Cadence Extraction Quantus QRC UI Version 15.20-p076
+#--------------------------------------------------------------------------------------
+
+qrc  -log_file /home/23247166/Downloads/elec5503-pixel-design/qrc.dff_PT_odd.log -cmd /home/23247166/Downloads/elec5503-pixel-design/qrc.dff_PT_odd.ccl
