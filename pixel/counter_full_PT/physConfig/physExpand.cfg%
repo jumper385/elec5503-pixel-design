@@ -1,0 +1,17 @@
+//Revision 2
+//NOTE
+//VXL Configuration
+//END_NOTE
+
+config counter_full_PT;
+design pixel.counter_full_PT:schematic;
+liblist pixel;
+
+viewlist physConfig, schematic, symbol;
+
+constraintviewlist constraint;
+stoplist layout, abstract;
+
+
+
+endconfig
