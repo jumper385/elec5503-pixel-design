@@ -5,5 +5,5 @@ umc13mmrf P_12_HSL130E layout 274
 umc13mmrf P_12_HSL130E layout 274
 umc13mmrf P_12_HSL130E layout 274
 pixel DCinv layout 1206
-pixel DCinv_pair layout 3589
-pixel delay_chain layout 10130
+pixel DCinv_pair layout 5861
+pixel delay_chain layout 10878
