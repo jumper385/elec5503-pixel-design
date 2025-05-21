@@ -1,6 +1,0 @@
-Schematic                      | Layout                      | Status
--------------------------------------------------------------------------------
-reset_cc schematic pixel       | reset_cc layout pixel       | errors        *
-
-Mismatch between Schematic and Layout
-   1 cell with errors
