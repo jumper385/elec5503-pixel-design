@@ -3,4 +3,4 @@
 ;
 2 filter reduce swap match
 5 3 ( ( "N_12_HSL130E" "n_12_hsl130e" "MOS" 3 3 0 0) ( "P_12_HSL130E" "p_12_hsl130e" "MOS" 3 3 0 0))
-1 3 ( ( "N_12_HSL130E" "n_12_hsl130e" "MOS" 3 3 0 0) ( "P_12_HSL130E" "p_12_hsl130e" "MOS" 3 3 0 0) ( "2mux" "2mux" "Cell" 2 2 2 2) ( "dff-standalone_PT" "dff-standalone_PT" "Cell" 3 3 3 3) ( "dff_PT_even" "dff_PT_even" "Cell" 6 6 0 0) ( "dff_PT_odd" "dff_PT_odd" "Cell" 6 6 6 6) ( "N_12_HSL130E" "n_12_hsl130e" "MOS" 1 3 1 3) ( "P_12_HSL130E" "p_12_hsl130e" "MOS" 1 3 1 3) ( "N_12_HSL130E:SerMos2#1" "-" "MosBlk" 1 0 1 0) ( "P_12_HSL130E:ParMos2#1" "-" "MosBlk" 1 0 1 0))
+1 3 ( ( "N_12_HSL130E" "n_12_hsl130e" "MOS" 3 3 0 0) ( "P_12_HSL130E" "p_12_hsl130e" "MOS" 3 3 0 0) ( "2mux" "2mux" "Cell" 2 2 2 2) ( "dff-standalone_PT" "dff-standalone_PT" "Cell" 3 3 3 3) ( "dff_PT_even" "dff_PT_even" "Cell" 6 6 0 0) ( "dff_PT_odd" "dff_PT_odd" "Cell" 6 6 0 0) ( "N_12_HSL130E" "n_12_hsl130e" "MOS" 1 3 1 3) ( "P_12_HSL130E" "p_12_hsl130e" "MOS" 1 3 1 3) ( "N_12_HSL130E:SerMos2#1" "-" "MosBlk" 1 0 1 0) ( "P_12_HSL130E:ParMos2#1" "-" "MosBlk" 1 0 1 0))

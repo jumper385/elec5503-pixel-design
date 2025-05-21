@@ -9,5 +9,5 @@ umc13mmrf P_12_HSL130E layout 274
 umc13mmrf P_12_HSL130E layout 274
 umc13mmrf N_12_HSL130E layout 276
 umc13mmrf N_12_HSL130E layout 276
-pixel dff-standalone_PT layout 34289
-pixel dff_PT_odd layout 33565
+pixel dff-standalone_PT layout 34299
+pixel dff_PT_odd layout 33820
