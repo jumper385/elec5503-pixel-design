@@ -13,9 +13,9 @@ avParameters(
   ?inputLayout ( "df2" "pixel" )
   ?cellName "counter_full_PT"
   ?viewName "layout"
-  ?technology "Assura_DRC_BEOL"
+  ?technology "Assura_DRC_FEOL"
   ?techLib "./assura_tech.lib"
-  ?techRuleSet "DRC_2.3p3"
-  ?set ("Select_Check_20KA" "Select_Check_low-K_dielectric_process" "Select_ONLY_MANHATTAN_CHECK" "Skip_BOAC_PAD_Die_Corner_Checks" "Skip_Check_PAD_Inline_50" "Skip_Check_PAD_Staggered_35" "Skip_DFM_Checks" "Skip_LOGO_Check" "Skip_Metal_Density_Checks" "Skip_Seal_Ring_Checks" "Skip_Soft-Connect_Checks" "Skip_VASS_RF_PAD_Die_Corner_Checks")
+  ?techRuleSet "DRC_2.5p1"
+  ?set ("Skip_NPLUS_checks" "Skip_Poly_Density_Check" "Skip_Soft-Connect_Checks" "skip_DIFF_density_check")
   ?avrpt t
 )
